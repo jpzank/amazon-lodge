@@ -1,0 +1,167 @@
+.nossa-historia {
+  min-height: 100vh;
+}
+
+.page-hero.history {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url('../images/kiko.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+.hero-content h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-content p {
+  font-size: 1.5rem;
+  max-width: 800px;
+  margin: 0 auto;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.history-intro {
+  background-color: #f8f9fa;
+  padding: 4rem 0;
+}
+
+.intro-text {
+  font-size: 1.25rem;
+  line-height: 1.8;
+  color: #2c3e50;
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.timeline {
+  padding: 4rem 0;
+  background-color: #ffffff;
+  position: relative;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  width: 4px;
+  background-color: #2ecc71;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -2px;
+}
+
+.timeline-item {
+  margin: 2rem 0;
+  position: relative;
+  width: 100%;
+  padding: 2rem 0;
+}
+
+.timeline-item::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: #2ecc71;
+  border: 4px solid #fff;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.timeline-content {
+  position: relative;
+  width: 45%;
+  padding: 2rem;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-item:nth-child(odd) .timeline-content {
+  margin-left: auto;
+}
+
+.timeline-item:nth-child(even) .timeline-content {
+  margin-right: auto;
+}
+
+.timeline-content h3 {
+  color: #2ecc71;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.timeline-content h4 {
+  color: #2c3e50;
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.timeline-content p {
+  color: #34495e;
+  line-height: 1.6;
+}
+
+.legacy {
+  background-color: #f8f9fa;
+  padding: 4rem 0;
+}
+
+.legacy-content {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.legacy-content h2 {
+  color: #2c3e50;
+  margin-bottom: 1.5rem;
+}
+
+.legacy-content p {
+  color: #34495e;
+  line-height: 1.8;
+}
+
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-content p {
+    font-size: 1.2rem;
+  }
+
+  .timeline::before {
+    left: 31px;
+  }
+
+  .timeline-item::after {
+    left: 31px;
+  }
+
+  .timeline-content {
+    width: calc(100% - 80px);
+    margin-left: 80px !important;
+  }
+
+  .container {
+    padding: 1rem;
+  }
+} 

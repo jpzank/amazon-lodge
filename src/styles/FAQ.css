@@ -1,0 +1,114 @@
+.faq {
+  min-height: 70vh;
+}
+
+.page-hero.faq::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('../images/birds.jpg') center/cover no-repeat;
+  filter: brightness(0.7);
+  z-index: -1;
+}
+
+.faq-content {
+  padding: 4rem 0;
+}
+
+.faq-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.faq-section {
+  background: #fff;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.faq-section h3 {
+  color: #2c5282;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+.faq-item {
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+
+.faq-item:last-child {
+  margin-bottom: 0;
+}
+
+.faq-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0;
+}
+
+.faq-question h4 {
+  color: #1a365d;
+  font-size: 1.1rem;
+  margin: 0;
+  font-weight: 600;
+  flex: 1;
+}
+
+.arrow {
+  color: #2c5282;
+  font-size: 0.8rem;
+  transition: transform 0.3s ease;
+}
+
+.arrow.expanded {
+  transform: rotate(180deg);
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out, padding 0.3s ease;
+  padding: 0 1rem;
+}
+
+.faq-answer.expanded {
+  max-height: 500px;
+  padding: 1rem;
+  border-top: 1px solid #e2e8f0;
+}
+
+.faq-answer p {
+  color: #4a5568;
+  line-height: 1.6;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .faq-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .faq-section {
+    padding: 1rem;
+  }
+  
+  .faq-section h3 {
+    font-size: 1.25rem;
+  }
+  
+  .faq-question h4 {
+    font-size: 1rem;
+  }
+} 

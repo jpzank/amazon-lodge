@@ -1,0 +1,354 @@
+.trilhas {
+  background-color: #fafafa;
+}
+
+.page-hero.trails {
+  height: 70vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../images/kiko.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  position: relative;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.hero-content h1 {
+  font-size: 4.5rem;
+  margin-bottom: 1.5rem;
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hero-content p {
+  font-size: 1.8rem;
+  line-height: 1.4;
+  font-weight: 300;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+section {
+  padding: 8rem 0;
+}
+
+section h2 {
+  text-align: center;
+  font-size: 2.8rem;
+  color: #2c3e50;
+  margin-bottom: 1.5rem;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+.section-intro {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 4rem;
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #5d6d7e;
+}
+
+/* Trilhas Grid */
+.trilhas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 3rem;
+  margin-top: 3rem;
+  padding: 0 1rem;
+}
+
+.trilha-card {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.trilha-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+.trilha-image {
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.trilha-image::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100px;
+  background: linear-gradient(to top, rgba(0,0,0,0.4), transparent);
+}
+
+.trilha-content {
+  padding: 2.5rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.trilha-content h3 {
+  font-size: 2rem;
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.trilha-content h5 {
+  font-size: 1.2rem;
+  color: #45B5AA;
+  margin-bottom: 1rem;
+  font-weight: 400;
+}
+
+.trilha-description {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #5d6d7e;
+  margin-bottom: 2rem;
+  flex-grow: 1;
+}
+
+.trilha-info {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  padding: 1.5rem;
+  background: #f8f9fa;
+  border-radius: 12px;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  font-size: 1.1rem;
+  color: #2c3e50;
+  font-weight: 500;
+}
+
+.info-icon {
+  color: #45B5AA;
+  font-size: 1.3rem;
+}
+
+/* Roteiros Section */
+.roteiros-lista {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.roteiro-expander {
+  margin-bottom: 1.5rem;
+}
+
+.roteiro-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  background: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.roteiro-header:hover {
+  background: #f8f9fa;
+}
+
+.roteiro-header h3 {
+  font-size: 1.4rem;
+  color: #2c3e50;
+  margin: 0;
+  font-weight: 500;
+}
+
+.expander-icon {
+  font-size: 1.2rem;
+  color: #45B5AA;
+  transition: transform 0.3s ease;
+}
+
+.expanded .expander-icon {
+  transform: rotate(180deg);
+}
+
+.roteiro-content {
+  background: white;
+  padding: 2rem;
+  border-radius: 0 0 12px 12px;
+  margin-top: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* Experiências Especiais */
+.experiencias-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2.5rem;
+  margin-top: 3rem;
+}
+
+.experiencia-card {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.experiencia-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: #45B5AA;
+}
+
+.experiencia-card h3 {
+  font-size: 1.4rem;
+  color: #2c3e50;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.experiencia-card p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #5d6d7e;
+}
+
+/* Recomendações */
+.recomendacoes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2.5rem;
+  margin-top: 3rem;
+}
+
+.recomendacao-card {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.recomendacao-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: #45B5AA;
+}
+
+.recomendacao-card h3 {
+  font-size: 1.4rem;
+  color: #2c3e50;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+}
+
+.recomendacao-card ul {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+}
+
+.recomendacao-card li {
+  font-size: 1rem;
+  color: #5d6d7e;
+  margin-bottom: 0.8rem;
+  padding-left: 1.8rem;
+  position: relative;
+}
+
+.recomendacao-card li::before {
+  content: "✓";
+  color: #45B5AA;
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 3.2rem;
+  }
+
+  .hero-content p {
+    font-size: 1.4rem;
+  }
+
+  section {
+    padding: 5rem 0;
+  }
+
+  section h2 {
+    font-size: 2.2rem;
+  }
+
+  .section-intro {
+    font-size: 1.1rem;
+  }
+
+  .trilhas-grid {
+    grid-template-columns: 1fr;
+    padding: 0;
+  }
+
+  .trilha-image {
+    height: 250px;
+  }
+
+  .trilha-content {
+    padding: 2rem;
+  }
+
+  .trilha-content h3 {
+    font-size: 1.8rem;
+  }
+
+  .trilha-description {
+    font-size: 1rem;
+  }
+
+  .info-item {
+    font-size: 1rem;
+  }
+
+  .experiencia-icon,
+  .recomendacao-icon {
+    font-size: 2rem;
+  }
+} 

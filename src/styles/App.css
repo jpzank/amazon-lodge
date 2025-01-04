@@ -1,0 +1,66 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Buttons */
+.cta-button {
+  padding: 12px 24px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+  background-color: #45a049;
+}
+
+/* Typography */
+h1, h2, h3, h4 {
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+/* Sections */
+section {
+  padding: 4rem 0;
+}

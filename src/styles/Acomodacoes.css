@@ -1,0 +1,735 @@
+.acomodacoes {
+  min-height: 100vh;
+}
+
+.page-hero.accommodations {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url('../images/acomodacoes.png');
+  background-size: cover;
+  background-position: center;
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+.hero-content h1 {
+  font-size: 4rem;
+  margin-bottom: 1.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  letter-spacing: 2px;
+}
+
+.hero-content p {
+  font-size: 1.8rem;
+  max-width: 800px;
+  margin: 0 auto;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  font-weight: 300;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.room-intro {
+  padding: 6rem 0;
+  background-color: var(--background-light);
+}
+
+.intro-content {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.intro-icon {
+  font-size: 3rem;
+  color: var(--primary-color);
+  margin-bottom: 2rem;
+}
+
+.intro-text {
+  font-size: 1.4rem;
+  line-height: 1.8;
+  color: var(--text-color);
+  font-weight: 300;
+}
+
+.room-types {
+  padding: 6rem 0;
+  background-color: white;
+}
+
+.room-navigation {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.nav-button {
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1.2rem;
+}
+
+.nav-button:hover {
+  background: var(--secondary-color);
+  transform: scale(1.1);
+}
+
+.room-card {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  flex: 1;
+}
+
+.room-image-container {
+  position: relative;
+  height: 400px;
+}
+
+.room-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background-size: cover;
+  background-position: center;
+}
+
+.room-badge {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 0.8rem 1.5rem;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.room-badge svg {
+  font-size: 1.2rem;
+}
+
+.room-content {
+  padding: 2.5rem;
+}
+
+.room-content h2 {
+  font-size: 2rem;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.room-description {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: var(--text-color);
+  margin-bottom: 2rem;
+}
+
+.room-features {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 2rem;
+  margin: 2rem 0;
+  text-align: center;
+  width: 100%;
+}
+
+.feature-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-color);
+  flex: 1;
+}
+
+.feature-icon {
+  color: var(--primary-color);
+  font-size: 1.5rem;
+}
+
+.feature-item span {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.subitems-section {
+  margin: 2rem 0;
+  padding: 2rem;
+  background: var(--background-light);
+  border-radius: 15px;
+}
+
+.subitems-section h3 {
+  color: var(--primary-color);
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.subitem-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.subitem-card:last-child {
+  margin-bottom: 0;
+}
+
+.subitem-card h4 {
+  color: var(--primary-color);
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.subitem-card p {
+  color: var(--text-color);
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+.subitem-features {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 2rem;
+  margin: 1rem 0;
+  width: 100%;
+}
+
+.room-amenities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.amenity-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.8rem;
+  background-color: var(--background-light);
+  border-radius: 10px;
+  transition: transform 0.2s ease;
+}
+
+.amenity-item:hover {
+  transform: translateX(5px);
+}
+
+.amenity-item svg {
+  color: var(--primary-color);
+  font-size: 1.2rem;
+}
+
+.room-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.btn-book {
+  flex: 1;
+  padding: 1rem 2rem;
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn-book:hover {
+  background: var(--secondary-color);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.policies-section {
+  padding: 6rem 0;
+  background-color: var(--background-light);
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  margin-bottom: 3rem;
+}
+
+.policies-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.policy-card {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.policy-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.policy-header svg {
+  font-size: 2rem;
+  color: var(--primary-color);
+}
+
+.policy-header h3 {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  margin: 0;
+}
+
+.policy-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.policy-card li {
+  padding: 0.8rem 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  color: var(--text-color);
+}
+
+.policy-card li:last-child {
+  border-bottom: none;
+}
+
+.policy-card li:empty {
+  padding: 0.8rem 0;
+  border: none;
+}
+
+.policy-card li.separator {
+  border-bottom: 2px solid var(--primary-color);
+  opacity: 0.3;
+  padding: 0;
+  margin: 0.8rem 0;
+}
+
+.cta-section {
+  padding: 8rem 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+              url('../images/kiko.jpg') center/cover no-repeat fixed;
+  text-align: center;
+  color: white;
+}
+
+.cta-section h2 {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  color: white;
+}
+
+.cta-section p {
+  font-size: 1.4rem;
+  margin-bottom: 3rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  color: white;
+  opacity: 0.9;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.btn-primary, .btn-secondary {
+  padding: 1.2rem 3rem;
+  border-radius: 50px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.btn-primary:hover, .btn-secondary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn-details {
+  flex: 1;
+  padding: 1rem 2rem;
+  background: transparent;
+  color: var(--primary-color);
+  border: 2px solid var(--primary-color);
+  border-radius: 50px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.btn-details:hover {
+  background: var(--primary-color);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 2rem;
+  overflow-y: auto;
+}
+
+.modal-content {
+  background: white;
+  border-radius: 20px;
+  max-width: 900px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  padding: 2rem;
+}
+
+.modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: var(--text-color);
+  cursor: pointer;
+  padding: 0.5rem;
+  line-height: 1;
+  transition: all 0.3s ease;
+}
+
+.modal-close:hover {
+  color: var(--primary-color);
+  transform: rotate(90deg);
+}
+
+.modal-image {
+  width: 100%;
+  height: 400px;
+  margin-bottom: 2rem;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.modal-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.modal-description {
+  color: var(--text-color);
+}
+
+.modal-description h2 {
+  color: var(--primary-color);
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.modal-description p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.modal-features,
+.modal-amenities,
+.modal-subitems {
+  margin: 2rem 0;
+}
+
+.modal-features h3,
+.modal-amenities h3,
+.modal-subitems h3 {
+  color: var(--primary-color);
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.features-grid {
+  display: flex;
+  justify-content: space-around;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.modal-subitem-card {
+  background: var(--background-light);
+  padding: 1.5rem;
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+}
+
+.modal-subitem-card h4 {
+  color: var(--primary-color);
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+.amenities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.modal-cta {
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.modal-gallery,
+.subitem-gallery {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  margin-bottom: 2rem;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.gallery-main-image {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.gallery-main-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.gallery-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 2;
+  transition: all 0.3s ease;
+}
+
+.gallery-nav:hover {
+  background: white;
+  transform: translateY(-50%) scale(1.1);
+}
+
+.gallery-nav.prev {
+  left: 20px;
+}
+
+.gallery-nav.next {
+  right: 20px;
+}
+
+.gallery-nav svg {
+  color: var(--primary-color);
+  font-size: 1.2rem;
+}
+
+.gallery-counter {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+}
+
+.room-counter {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 32px;
+  height: 32px;
+  background: var(--primary-color);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  font-family: 'Nunito', 'Poppins', sans-serif;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  letter-spacing: 0px;
+}
+
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 3rem;
+  }
+
+  .hero-content p {
+    font-size: 1.4rem;
+  }
+
+  .room-navigation {
+    flex-direction: column;
+  }
+
+  .nav-button {
+    transform: rotate(90deg);
+  }
+
+  .room-features,
+  .subitem-features {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .room-amenities-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .policies-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .btn-primary, .btn-secondary {
+    width: 100%;
+  }
+
+  .modal-content {
+    padding: 1.5rem;
+    margin: 1rem;
+  }
+
+  .modal-image {
+    height: 250px;
+  }
+
+  .features-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .modal-description h2 {
+    font-size: 2rem;
+  }
+
+  .modal-gallery,
+  .subitem-gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .modal-gallery,
+  .subitem-gallery {
+    height: 300px;
+  }
+
+  .gallery-nav {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+@media (max-width: 480px) {
+  .modal-gallery,
+  .subitem-gallery {
+    grid-template-columns: 1fr;
+  }
+}
+
+.subitem-actions {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+.subitem-card .btn-details {
+  width: auto;
+  min-width: 200px;
+  padding: 0.8rem 1.5rem;
+  font-size: 0.9rem;
+} 

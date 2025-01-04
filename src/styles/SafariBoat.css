@@ -1,0 +1,399 @@
+/* Base Styles */
+.safari-boat {
+  min-height: 100vh;
+  color: #2c3e50;
+}
+
+/* Hero Section */
+.page-hero.boat {
+  height: 70vh;
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+              url('../images/safari-boat.jpg') center/cover no-repeat;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.page-hero.boat::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  animation: waterFlow 30s infinite alternate;
+}
+
+.hero-content {
+  max-width: 800px;
+  padding: 0 2rem;
+}
+
+.hero-content h1 {
+  font-size: 4.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.hero-content p {
+  font-size: 1.8rem;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+}
+
+/* Section Styles */
+section {
+  padding: 6rem 0;
+}
+
+section:nth-child(even) {
+  background-color: #f8f9fa;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+h2 {
+  font-size: 2.8rem;
+  font-weight: 600;
+  margin-bottom: 3rem;
+  text-align: center;
+  color: #1a3a4a;
+}
+
+/* Rio Claro Section */
+.rio-claro {
+  background-color: white;
+}
+
+.rio-description, .rio-wildlife {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #546e7a;
+  max-width: 900px;
+  margin: 0 auto 2rem;
+  text-align: center;
+}
+
+/* Wildlife Section */
+.wildlife {
+  background-color: #f8f9fa;
+  padding: 6rem 0;
+}
+
+.wildlife-intro {
+  max-width: 900px;
+  margin: 0 auto 4rem;
+  text-align: center;
+  font-size: 1.3rem;
+  line-height: 1.8;
+  color: #546e7a;
+}
+
+.wildlife-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+  margin: 0 auto 4rem;
+  max-width: 1200px;
+}
+
+.species-item {
+  background-color: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  transition: all 0.4s ease;
+}
+
+.species-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+}
+
+.species-image {
+  height: 240px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  transition: transform 0.4s ease;
+}
+
+.species-item:hover .species-image {
+  transform: scale(1.05);
+}
+
+.species-content {
+  padding: 2rem;
+}
+
+.species-name {
+  display: block;
+  font-style: italic;
+  font-size: 1.3rem;
+  color: #1a3a4a;
+  margin-bottom: 0.5rem;
+}
+
+.common-name {
+  display: block;
+  font-size: 1.1rem;
+  color: #546e7a;
+  margin-bottom: 1rem;
+}
+
+.species-description {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #546e7a;
+}
+
+.source {
+  display: block;
+  font-size: 0.85rem;
+  color: #90a4ae;
+  font-style: italic;
+  margin-top: 1rem;
+}
+
+.wildlife-note {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #546e7a;
+  padding: 2rem;
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+.category-note {
+  font-size: 1rem;
+  color: #546e7a;
+  font-style: italic;
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background-color: #f8f9fa;
+  border-radius: 12px;
+  border-left: 4px solid #e67e22;
+}
+
+/* River Map Section */
+.river-map {
+  background-color: white;
+}
+
+.map-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  text-align: center;
+}
+
+.map-description {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #546e7a;
+}
+
+.route-features {
+  margin-top: 2rem;
+}
+
+.route-features li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+  color: #546e7a;
+}
+
+.route-icon {
+  font-size: 2rem;
+  margin-right: 1.5rem;
+}
+
+.map-image {
+  height: 500px;
+  border-radius: 16px;
+  background-color: #f8f9fa;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* Safety Section */
+.safety-info {
+  background-color: #f8f9fa;
+}
+
+.safety-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.safety-card {
+  background: white;
+  padding: 3rem;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  transition: transform 0.4s ease;
+}
+
+.safety-card:hover {
+  transform: translateY(-5px);
+}
+
+.safety-icon {
+  font-size: 3.5rem;
+  margin-bottom: 2rem;
+}
+
+.safety-card h3 {
+  font-size: 1.8rem;
+  color: #1a3a4a;
+  margin-bottom: 2rem;
+}
+
+.safety-card ul {
+  list-style: none;
+  text-align: left;
+}
+
+.safety-card li {
+  font-size: 1.1rem;
+  color: #546e7a;
+  margin-bottom: 1rem;
+  padding-left: 2rem;
+  position: relative;
+}
+
+.safety-card li::before {
+  content: "•";
+  color: #e67e22;
+  position: absolute;
+  left: 0;
+  font-size: 1.5rem;
+}
+
+/* CTA Section */
+.booking-cta {
+  padding: 8rem 0;
+  background: linear-gradient(45deg, #1a3a4a, #2c5060);
+  color: white;
+  text-align: center;
+}
+
+.booking-cta h2 {
+  color: white;
+  font-size: 3.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.booking-cta p {
+  font-size: 1.4rem;
+  margin-bottom: 3rem;
+  opacity: 0.9;
+}
+
+.btn-primary {
+  display: inline-block;
+  padding: 1.2rem 3rem;
+  background-color: #e67e22;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+
+.btn-primary:hover {
+  background-color: #d35400;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1200px) {
+  .wildlife-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  .hero-content h1 {
+    font-size: 3.5rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  section {
+    padding: 4rem 0;
+  }
+
+  h2 {
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+  }
+
+  .hero-content h1 {
+    font-size: 2.8rem;
+  }
+
+  .hero-content p {
+    font-size: 1.4rem;
+  }
+
+  .wildlife-grid,
+  .safety-grid,
+  .map-content {
+    grid-template-columns: 1fr;
+  }
+
+  .species-image {
+    height: 200px;
+  }
+
+  .map-image {
+    height: 300px;
+  }
+
+  .safety-card {
+    padding: 2rem;
+  }
+
+  .booking-cta {
+    padding: 6rem 0;
+  }
+
+  .booking-cta h2 {
+    font-size: 2.5rem;
+  }
+
+  .wildlife-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .species-image {
+    height: 200px;
+  }
+
+  .wildlife-note {
+    font-size: 1rem;
+    padding: 1.5rem;
+  }
+} 

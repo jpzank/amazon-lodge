@@ -1,0 +1,355 @@
+.primatas {
+  min-height: 100vh;
+}
+
+.page-hero.primatas {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/primates-hero.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+.hero-content h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.hero-content p {
+  font-size: 1.5rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.intro {
+  padding: 5rem 0;
+  background-color: #fff;
+}
+
+.highlight-text {
+  max-width: 800px;
+  margin: 0 auto 1.5rem;
+  text-align: center;
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #666;
+}
+
+/* Espécies Emblemáticas */
+.featured-species {
+  padding: 5rem 0;
+  background-color: #f9f9f9;
+}
+
+.species-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.species-card {
+  background-color: white;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.species-image {
+  height: 180px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.status-badge {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  padding: 0.35rem 0.75rem;
+  border-radius: 3px;
+  color: white;
+  font-weight: 600;
+  font-size: 0.8rem;
+}
+
+.status-badge.cr {
+  background-color: #dc3545;
+}
+
+.status-badge.vu {
+  background-color: #fd7e14;
+}
+
+.species-content {
+  padding: 1.25rem;
+}
+
+.species-content h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.35rem;
+  color: #333;
+}
+
+.scientific-name {
+  font-style: italic;
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 0.35rem;
+}
+
+.english-name {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 0.75rem;
+}
+
+.species-description {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #666;
+}
+
+/* Programa */
+.program {
+  padding: 5rem 0;
+  background-color: #fff;
+}
+
+.activities-list {
+  max-width: 800px;
+  margin: 2rem auto;
+  text-align: center;
+}
+
+.activities-list ul {
+  list-style: none;
+  padding: 0;
+  display: inline-block;
+  text-align: left;
+}
+
+.activities-list li {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 1rem;
+  padding-left: 2rem;
+  position: relative;
+}
+
+.activities-list li::before {
+  content: "•";
+  color: #e67e22;
+  position: absolute;
+  left: 0.5rem;
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+@media (max-width: 768px) {
+  .activities-list li {
+    font-size: 1.1rem;
+  }
+}
+
+/* Tour Opcional */
+.optional-tour {
+  padding: 5rem 0;
+  background-color: #f9f9f9;
+}
+
+.optional-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #666;
+}
+
+/* Recomendações */
+.recommendations {
+  padding: 5rem 0;
+  background-color: #fff;
+}
+
+.recommendations-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.recommendation-card {
+  background-color: #f9f9f9;
+  padding: 2rem;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.recommendation-card h3 {
+  font-size: 1.3rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.recommendation-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.recommendation-card li {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 0.75rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.recommendation-card li::before {
+  content: "✓";
+  color: #e67e22;
+  position: absolute;
+  left: 0;
+}
+
+/* Pesquisa */
+.research {
+  padding: 5rem 0;
+  background-color: #f9f9f9;
+}
+
+.research-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.research-content p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #666;
+  margin-bottom: 1.5rem;
+}
+
+/* Referências */
+.references {
+  padding: 5rem 0;
+  background-color: #fff;
+}
+
+.reference-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.reference-links a {
+  padding: 1rem 1.5rem;
+  background-color: #f9f9f9;
+  border-radius: 4px;
+  color: #333;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.reference-links a:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Rota de Primatas */
+.primate-route {
+  padding: 5rem 0;
+  background-color: #fff;
+}
+
+.route-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.route-intro {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #666;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.route-box {
+  background-color: #f9f9f9;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+.route-box h3 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #e67e22;
+}
+
+.route-box p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+.route-features {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.feature h4 {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.feature p {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 0;
+}
+
+.route-note {
+  font-style: italic;
+  text-align: center;
+  color: #666;
+  font-size: 1rem;
+  padding: 1rem;
+  border-left: 3px solid #e67e22;
+  background-color: #f9f9f9;
+}
+
+@media (max-width: 768px) {
+  .route-intro {
+    font-size: 1.1rem;
+  }
+
+  .route-box {
+    padding: 1.5rem;
+  }
+
+  .route-box h3 {
+    font-size: 1.3rem;
+  }
+
+  .route-box p {
+    font-size: 1rem;
+  }
+} 
