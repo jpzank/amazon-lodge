@@ -25,3 +25,24 @@ yarn-error.log*
 # IDE
 .idea/
 .vscode/
+
+# Media files
+*.mp4
+*.mov
+*.wmv
+*.avi
+*.webm
+*.mkv
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.webp
+*.ico
+*.svg
+
+# Specific directories
+public/src/images/
+public/src/logos/
+public/videos/
+src/images/
