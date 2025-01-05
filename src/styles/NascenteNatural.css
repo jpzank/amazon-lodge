@@ -3,5 +3,5 @@
 }
 
 .page-hero.spring::before {
-  background: url('../../public/images/kiko.jpg') center/cover no-repeat;
+  background: url('https://res.cloudinary.com/dxlhv2mji/image/upload/v1/nascente-natural/hero') center/cover no-repeat;
 }

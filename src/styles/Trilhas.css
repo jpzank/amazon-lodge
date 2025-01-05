@@ -4,7 +4,8 @@
 
 .page-hero.trails {
   height: 70vh;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../../public/images/kiko.jpg');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
+    url('https://res.cloudinary.com/dxlhv2mji/image/upload/v1/trilhas/hero');
   background-size: cover;
   background-position: center;
   display: flex;

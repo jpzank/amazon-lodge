@@ -30,7 +30,7 @@ h1, h2, h3, h4, h5, h6 {
 .page-hero {
   height: 70vh;
   background: linear-gradient(rgba(30, 57, 42, 0.7), rgba(30, 57, 42, 0.85)),
-              url('../../public/images/kiko.jpg');
+              url('https://res.cloudinary.com/dxlhv2mji/image/upload/v1/shared/kiko');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;

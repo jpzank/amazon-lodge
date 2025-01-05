@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { Image } from 'cloudinary-react';
 import '../styles/Home.css';
 
 function Home() {
@@ -108,21 +109,45 @@ function Home() {
         <div className="section-container">
           <div className="recognition-grid">
             <div className="recognition-item">
-              <img src="/src/logos/save-brasil.png" alt="SAVE Brasil Badge" className="recognition-icon" />
+              <Image 
+                cloudName="dxlhv2mji"
+                publicId="logos/save-brasil"
+                alt="SAVE Brasil Badge"
+                className="recognition-icon"
+                width="auto"
+                crop="scale"
+                quality="auto"
+              />
               <div className="recognition-content">
                 <h3>Important Bird Area</h3>
                 <p>Reconhecido pela BirdLife International e SAVE Brasil</p>
               </div>
             </div>
             <div className="recognition-item">
-              <img src="/src/logos/ebird.png" alt="Ebird Badge" className="recognition-icon" />
+              <Image 
+                cloudName="dxlhv2mji"
+                publicId="logos/ebird"
+                alt="Ebird Badge"
+                className="recognition-icon"
+                width="auto"
+                crop="scale"
+                quality="auto"
+              />
               <div className="recognition-content">
                 <h3>TOP 3 Hotspot</h3>
                 <p>E-bird / The Cornell Lab of Ornithology</p>
               </div>
             </div>
             <div className="recognition-item">
-              <img src="/src/logos/i-eco.png" alt="Instituto Ecotono Badge" className="recognition-icon" />
+              <Image 
+                cloudName="dxlhv2mji"
+                publicId="logos/i-eco"
+                alt="Instituto Ecotono Badge"
+                className="recognition-icon"
+                width="auto"
+                crop="scale"
+                quality="auto"
+              />
               <div className="recognition-content">
                 <h3>Instituto Ecótono</h3>
                 <p>Parceria com o IECO no em estudos científicos</p>
@@ -136,7 +161,14 @@ function Home() {
         <div className="section-container">
           <div className="about-grid">
             <div className="about-image">
-              <img src="src\images\vista-aerea-lodge.jpg" alt="Vista aérea do Lodge" />
+              <Image 
+                cloudName="dxlhv2mji"
+                publicId="home/vista-aerea-lodge"
+                alt="Vista aérea do Lodge"
+                width="auto"
+                crop="scale"
+                quality="auto"
+              />
             </div>
             <div className="about-content">
               <h2>SANTUÁRIO ECOLÓGICO</h2>
@@ -263,6 +295,20 @@ function Home() {
           </div>
         </div>
       </section>
+
+      <style>{`
+        .experience-image.birdwatching {
+          background-image: url('https://res.cloudinary.com/dxlhv2mji/image/upload/v1/home/birdwatching');
+        }
+        
+        .experience-image.primates {
+          background-image: url('https://res.cloudinary.com/dxlhv2mji/image/upload/v1/home/primates');
+        }
+        
+        .experience-image.safari {
+          background-image: url('https://res.cloudinary.com/dxlhv2mji/image/upload/v1/home/safari');
+        }
+      `}</style>
     </div>
   );
 }

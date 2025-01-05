@@ -1,5 +1,6 @@
 import React from 'react';
 import '../styles/Gastronomia.css';
+import { Image } from 'cloudinary-react';
 
 function Gastronomia() {
   return (
@@ -15,42 +16,84 @@ function Gastronomia() {
         <div className="container">
           <div className="gallery-grid">
             <div className="gallery-item">
-              <img src="/src/images/gastronomia/prato-especial-do-chef.png" alt="Prato especial do chef" />
+              <Image 
+                cloudName="dxlhv2mji"
+                publicId="gastronomia/prato-especial-do-chef"
+                alt="Prato especial do chef"
+                width="auto"
+                crop="scale"
+                quality="auto"
+              />
               <div className="gallery-caption">
                 <h3>Prato Especial do Chef</h3>
                 <p>Criações exclusivas com ingredientes da estação</p>
               </div>
             </div>
             <div className="gallery-item">
-              <img src="/src/images/gastronomia/cafe-da-manha.png" alt="Café da manhã regional" />
+              <Image 
+                cloudName="dxlhv2mji"
+                publicId="gastronomia/cafe-da-manha"
+                alt="Café da manhã regional"
+                width="auto"
+                crop="scale"
+                quality="auto"
+              />
               <div className="gallery-caption">
                 <h3>Café da Manhã Regional</h3>
                 <p>Delícias matinais com produtos locais</p>
               </div>
             </div>
             <div className="gallery-item">
-              <img src="/src/images/gastronomia/pratos-tipicos.png" alt="Pratos típicos" />
+              <Image 
+                cloudName="dxlhv2mji"
+                publicId="gastronomia/pratos-tipicos"
+                alt="Pratos típicos"
+                width="auto"
+                crop="scale"
+                quality="auto"
+              />
               <div className="gallery-caption">
                 <h3>Pratos Típicos</h3>
                 <p>Sabores autênticos da região</p>
               </div>
             </div>
             <div className="gallery-item">
-              <img src="/src/images/gastronomia/sobremesas-especiais.png" alt="Sobremesas especiais" />
+              <Image 
+                cloudName="dxlhv2mji"
+                publicId="gastronomia/sobremesas-especiais"
+                alt="Sobremesas especiais"
+                width="auto"
+                crop="scale"
+                quality="auto"
+              />
               <div className="gallery-caption">
                 <h3>Sobremesas Especiais</h3>
                 <p>Doces artesanais e frutas da região</p>
               </div>
             </div>
             <div className="gallery-item">
-              <img src="/src/images/gastronomia/pratos-casa.png" alt="Pratos da casa" />
+              <Image 
+                cloudName="dxlhv2mji"
+                publicId="gastronomia/pratos-casa"
+                alt="Pratos da casa"
+                width="auto"
+                crop="scale"
+                quality="auto"
+              />
               <div className="gallery-caption">
                 <h3>Pratos da Casa</h3>
                 <p>Especialidades preparadas com carinho</p>
               </div>
             </div>
             <div className="gallery-item">
-              <img src="/src/images/gastronomia/especiarias-regionais.png" alt="Especialidades regionais" />
+              <Image 
+                cloudName="dxlhv2mji"
+                publicId="gastronomia/especiarias-regionais"
+                alt="Especialidades regionais"
+                width="auto"
+                crop="scale"
+                quality="auto"
+              />
               <div className="gallery-caption">
                 <h3>Culinária Regional</h3>
                 <p>O melhor da gastronomia local</p>
@@ -64,7 +107,14 @@ function Gastronomia() {
         <div className="container">
           <div className="chef-content">
             <div className="chef-image">
-              <img src="/src/images/gastronomia/chef-jose-sergio.png" alt="Chef José Sérgio" />
+              <Image 
+                cloudName="dxlhv2mji"
+                publicId="gastronomia/chef-jose-sergio"
+                alt="Chef José Sérgio"
+                width="auto"
+                crop="scale"
+                quality="auto"
+              />
             </div>
             <div className="chef-quote">
               <h2>A Essência da Nossa Cozinha</h2>
@@ -94,7 +144,14 @@ function Gastronomia() {
           <div className="menu-grid">
             <div className="menu-card">
               <div className="menu-image">
-                <img src="/src/images/gastronomia/cafe-da-manha.jpg" alt="Café da Manhã" />
+                <Image 
+                  cloudName="dxlhv2mji"
+                  publicId="gastronomia/cafe-da-manha"
+                  alt="Café da Manhã"
+                  width="auto"
+                  crop="scale"
+                  quality="auto"
+                />
               </div>
               <div className="menu-content">
                 <h3>Café da Manhã</h3>
@@ -110,7 +167,14 @@ function Gastronomia() {
 
             <div className="menu-card">
               <div className="menu-image">
-                <img src="/src/images/gastronomia/almoco.png" alt="Almoço" />
+                <Image 
+                  cloudName="dxlhv2mji"
+                  publicId="gastronomia/almoco"
+                  alt="Almoço"
+                  width="auto"
+                  crop="scale"
+                  quality="auto"
+                />
               </div>
               <div className="menu-content">
                 <h3>Almoço</h3>
@@ -126,7 +190,14 @@ function Gastronomia() {
 
             <div className="menu-card">
               <div className="menu-image">
-                <img src="/src/images/gastronomia/jantar.png" alt="Jantar" />
+                <Image 
+                  cloudName="dxlhv2mji"
+                  publicId="gastronomia/jantar"
+                  alt="Jantar"
+                  width="auto"
+                  crop="scale"
+                  quality="auto"
+                />
               </div>
               <div className="menu-content">
                 <h3>Jantar</h3>

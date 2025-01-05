@@ -1,13 +1,15 @@
 import React from 'react';
 import '../styles/Birdwatching.css';
-import { birdwatching, kiko } from '../images';
+import { Image } from 'cloudinary-react';
 
 const Birdwatching = () => {
   return (
     <div className="birdwatching">
       <div 
         className="page-hero birdwatching"
-        style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${birdwatching})` }}
+        style={{ 
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://res.cloudinary.com/dxlhv2mji/image/upload/v1/birdwatching/hero)` 
+        }}
       >
         <div className="hero-content">
           <h1>Observação de Aves</h1>
@@ -40,9 +42,67 @@ const Birdwatching = () => {
 
       <section className="featured-species">
         <div className="container">
-          <h2>Espécies em Destaque</h2>
+          <h2>Espécies Emblemáticas</h2>
           <div className="species-grid">
-            {/* Add your species cards here */}
+            <div className="species-card">
+              <div className="species-image">
+                <Image 
+                  cloudName="dxlhv2mji"
+                  publicId="birdwatching/tie-bicudo"
+                  alt="Tiê-bicudo"
+                  width="auto"
+                  crop="scale"
+                  quality="auto"
+                />
+                <span className="status-badge cr">CR</span>
+              </div>
+              {/* ... rest of species card content ... */}
+            </div>
+
+            <div className="species-card">
+              <div className="species-image">
+                <Image 
+                  cloudName="dxlhv2mji"
+                  publicId="birdwatching/curica"
+                  alt="Curica-de-bochecha-laranja"
+                  width="auto"
+                  crop="scale"
+                  quality="auto"
+                />
+                <span className="status-badge nt">NT</span>
+              </div>
+              {/* ... rest of species card content ... */}
+            </div>
+
+            <div className="species-card">
+              <div className="species-image">
+                <Image 
+                  cloudName="dxlhv2mji"
+                  publicId="birdwatching/mutum"
+                  alt="Mutum-cavalo"
+                  width="auto"
+                  crop="scale"
+                  quality="auto"
+                />
+                <span className="status-badge nt">NT</span>
+              </div>
+              {/* ... rest of species card content ... */}
+            </div>
+
+            <div className="species-card">
+              <div className="species-image">
+                <Image 
+                  cloudName="dxlhv2mji"
+                  publicId="birdwatching/anambe"
+                  alt="Anambé-preto"
+                  width="auto"
+                  crop="scale"
+                  quality="auto"
+                />
+                <span className="status-badge lc">LC</span>
+              </div>
+              {/* ... rest of species card content ... */}
+            </div>
           </div>
         </div>
       </section>
