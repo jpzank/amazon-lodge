@@ -333,11 +333,11 @@
 }
 
 .experience-image.birdwatching {
-  background-image: url('../images/birdwatching.jpg');
+  background-image: url('/images/birdwatching.jpg');
 }
 
 .experience-image.primates {
-  background-image: url('/images/primates.jpg');
+  background-image: url('../images/primates.jpg');
 }
 
 .experience-image.safari {
