@@ -337,11 +337,11 @@
 }
 
 .experience-image.primates {
-  background-image: url('/src/images/primates.jpg');
+  background-image: url('/images/primates.jpg');
 }
 
 .experience-image.safari {
-  background-image: url('/src/images/safari-rio-claro.jpg');
+  background-image: url('/images/safari-rio-claro.jpg');
 }
 
 .experience-overlay {
