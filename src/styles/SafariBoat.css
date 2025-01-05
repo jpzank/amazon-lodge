@@ -8,7 +8,7 @@
 .page-hero.boat {
   height: 70vh;
   background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
-              url('/images/safari-boat.jpg') center/cover no-repeat;
+              url('../../public/images/safari-boat.jpg') center/cover no-repeat;
   position: relative;
   display: flex;
   align-items: center;

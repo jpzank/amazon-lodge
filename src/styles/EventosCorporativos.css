@@ -7,7 +7,7 @@
 }
 
 .page-hero.corporate {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/images/kiko.jpg');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../../public/images/kiko.jpg');
   background-size: cover;
   background-position: center;
   height: 70vh;
@@ -172,7 +172,7 @@
 .contact-cta {
   padding: 8rem 0;
   text-align: center;
-  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('/images/kiko.jpg');
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('../../public/images/kiko.jpg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;

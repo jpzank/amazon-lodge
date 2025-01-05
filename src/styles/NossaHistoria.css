@@ -4,7 +4,7 @@
 
 .page-hero.history {
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url('/images/kiko.jpg');
+    url('../../public/images/kiko.jpg');
   background-size: cover;
   background-position: center;
   height: 70vh;

@@ -3,5 +3,5 @@
 }
 
 .page-hero.spring::before {
-  background: url('/images/kiko.jpg') center/cover no-repeat;
+  background: url('../../public/images/kiko.jpg') center/cover no-repeat;
 }

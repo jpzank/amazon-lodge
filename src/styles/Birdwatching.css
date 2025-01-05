@@ -3,7 +3,7 @@
 }
 
 .page-hero.birdwatching {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/images/birdwatching.jpg');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../../public/images/birdwatching.jpg');
   background-size: cover;
   background-position: center;
   height: 70vh;
@@ -284,7 +284,7 @@
 .cta {
   padding: 5rem 0;
   text-align: center;
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/images/kiko.jpg');
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../../public/images/kiko.jpg');
   background-size: cover;
   background-position: center;
   color: white;
