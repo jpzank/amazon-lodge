@@ -4,7 +4,7 @@
 }
 
 .page-hero.gastronomy {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/src/images/gatronomia-hero.jpg');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/images/gatronomia-hero.jpg');
   background-size: cover;
   background-position: center;
   height: 70vh;
