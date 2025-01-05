@@ -1,4 +1,4 @@
-import { Cloudinary } from 'cloudinary-react';
+import { CloudinaryContext } from 'cloudinary-react';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
@@ -8,9 +8,9 @@ import reportWebVitals from './reportWebVitals';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Cloudinary cloudName="dxlhv2mji">
+    <CloudinaryContext cloudName="dxlhv2mji">
       <App />
-    </Cloudinary>
+    </CloudinaryContext>
   </React.StrictMode>
 );
 

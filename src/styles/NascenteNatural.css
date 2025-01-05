@@ -3,5 +3,7 @@
 }
 
 .page-hero.spring::before {
-  background: url('https://res.cloudinary.com/dxlhv2mji/image/upload/v1/nascente-natural/hero') center/cover no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }

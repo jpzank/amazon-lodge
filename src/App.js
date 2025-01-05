@@ -20,6 +20,7 @@ import EventosCorporativos from './pages/EventosCorporativos';
 import Trilhas from './pages/Trilhas';
 import NossaHistoria from './pages/NossaHistoria';
 import FalaramDeNos from './pages/FalaramDeNos';
+import CloudinaryDemo from './pages/CloudinaryDemo';
 import './styles/App.css';
 import './styles/shared.css';
 
@@ -46,6 +47,7 @@ function App() {
           <Route path="/trilhas" element={<Trilhas />} />
           <Route path="/nossa-historia" element={<NossaHistoria />} />
           <Route path="/falaram-de-nos" element={<FalaramDeNos />} />
+          <Route path="/cloudinary-demo" element={<CloudinaryDemo />} />
         </Routes>
         <Footer />
       </div>

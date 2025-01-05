@@ -3,10 +3,10 @@
 }
 
 .page-hero.accommodations {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url('../../public/images/kiko.jpg');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
   height: 70vh;
   display: flex;
   align-items: center;
@@ -368,7 +368,7 @@
 .cta-section {
   padding: 8rem 0;
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-              url('../../public/images/kiko.jpg') center/cover no-repeat fixed;
+              url('https://res.cloudinary.com/dxlhv2mji/image/upload/f_auto,q_auto/amazon-lodge/kiko') center/cover no-repeat fixed;
   text-align: center;
   color: white;
 }

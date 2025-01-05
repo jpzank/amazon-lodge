@@ -1,8 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/AreasExternas.css';
+import { getFolderImage } from '../config/cloudinaryConfig';
 
 function AreasExternas() {
+  const heroStyle = {
+    backgroundImage: `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(${getFolderImage('area-externa', 'hero')})`
+  };
+
   const areas = [
     {
       id: 'piscina',
@@ -14,7 +19,7 @@ function AreasExternas() {
         'Imersão total na natureza',
         'Passarela pela floresta para acesso exclusivo'
       ],
-      image: 'src/images/area-externa/piscina.jpg',
+      image: getFolderImage('area-externa', 'piscina'),
       link: null
     },
     {
@@ -27,7 +32,7 @@ function AreasExternas() {
         'Pontos de observação',
         'Áreas de descanso'
       ],
-      image: 'src/images/area-externa/trilhas.jpg',
+      image: getFolderImage('trilhas', 'hero'),
       link: '/trilhas'
     },
     {
@@ -42,13 +47,13 @@ function AreasExternas() {
         'Casa de bonecas',
         'Mini-quadra de areia'
       ],
-      image: 'src/images/area-externa/convivencia.jpg'
+      image: getFolderImage('shared', 'convivencia')
     }
   ];
 
   return (
     <div className="areas-externas">
-      <div className="page-hero areas">
+      <div className="page-hero areas" style={heroStyle}>
         <div className="hero-content">
           <h1>Áreas Externas</h1>
           <p>Espaços únicos em harmonia com a natureza</p>

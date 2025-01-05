@@ -12,10 +12,9 @@
   left: 0;
   right: 0;
   height: var(--navbar-height);
-  z-index: 9999;
+  z-index: 100;
   background-color: var(--navbar-bg);
-  transition: all 0.3s ease;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
 }
 
 /* Home page specific styles */
@@ -29,7 +28,6 @@
 
 /* Container */
 .navbar-container {
-  position: relative;
   max-width: 1400px;
   height: 100%;
   margin: 0 auto;

@@ -1,10 +1,25 @@
 import React from 'react';
 import '../styles/SafariBoat.css';
+import { getFolderImage } from '../config/cloudinaryConfig';
 
 function SafariBoat() {
+  const heroStyle = {
+    backgroundImage: `url(${getFolderImage('safari-boat', 'hero')})`,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center'
+  };
+
+  const speciesStyles = {
+    pirarucu: {
+      backgroundImage: `url(${getFolderImage('safari-boat', 'pirarucu')})`,
+      backgroundSize: 'cover',
+      backgroundPosition: 'center'
+    }
+  };
+
   return (
     <div className="safari-boat">
-      <div className="page-hero boat">
+      <div className="page-hero boat" style={heroStyle}>
         <div className="hero-content">
           <h1>Safari Boat</h1>
           <p>Aventuras pelos Rios da Amazônia</p>
@@ -36,7 +51,7 @@ function SafariBoat() {
           
           <div className="wildlife-grid">
             <div className="species-item">
-              <div className="species-image" style={{ backgroundImage: `url('src/images/birdwatching/pirarucu.png')` }}></div>
+              <div className="species-image" style={speciesStyles.pirarucu}></div>
               <div className="species-content">
                 <span className="species-name">Arapaima gigas</span>
                 <span className="common-name">(Pirarucu)</span>

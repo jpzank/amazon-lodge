@@ -3,10 +3,10 @@
 }
 
 .page-hero.primatas {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
-    url('https://res.cloudinary.com/dxlhv2mji/image/upload/v1/primatas/hero');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
   height: 70vh;
   display: flex;
   align-items: center;

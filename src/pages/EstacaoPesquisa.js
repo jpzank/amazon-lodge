@@ -1,10 +1,17 @@
 import React from 'react';
 import '../styles/EstacaoPesquisa.css';
+import { getFolderImage } from '../config/cloudinaryConfig';
 
 function EstacaoPesquisa() {
+  const heroStyle = {
+    backgroundImage: `url(${getFolderImage('estacao-pesquisa/hero')})`,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+  };
+
   return (
     <div className="estacao-pesquisa">
-      <div className="page-hero research">
+      <div className="page-hero" style={heroStyle}>
         <div className="hero-content">
           <h1>Estação de Pesquisa Jardim da Amazônia</h1>
           <p>Preservando a biodiversidade através da ciência e educação ambiental</p>

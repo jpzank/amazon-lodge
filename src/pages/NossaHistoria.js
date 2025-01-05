@@ -1,10 +1,17 @@
 import React from 'react';
+import { getFolderImage } from '../config/cloudinaryConfig';
 import '../styles/NossaHistoria.css';
 
 function NossaHistoria() {
+  const heroStyle = {
+    backgroundImage: `url(${getFolderImage('nossa-historia/hero')})`,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+  };
+
   return (
     <div className="nossa-historia">
-      <div className="page-hero history">
+      <div className="page-hero history" style={heroStyle}>
         <div className="hero-content">
           <h1>Nossa História</h1>
           <p>Uma jornada de preservação e amor pela natureza</p>

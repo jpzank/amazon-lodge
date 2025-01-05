@@ -15,7 +15,21 @@
 
 /* Global Styles */
 .home {
-  overflow-x: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.page-hero.home {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
 }
 
 /* Button Styles */
@@ -65,22 +79,37 @@
 /* Hero Section */
 .video-hero {
   position: relative;
-  height: 100vh;
   width: 100%;
+  height: 100vh;
   overflow: hidden;
+}
+
+.video-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.8;
 }
 
 .background-video {
   position: absolute;
-  inset: 0;
+  top: 50%;
+  left: 50%;
   width: 100%;
   height: 100%;
+  transform: translate(-50%, -50%) scale(1.25);
   object-fit: cover;
+  border: none;
 }
 
 .hero-overlay {
   position: absolute;
-  inset: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.7));
   display: flex;
   flex-direction: column;
@@ -89,6 +118,7 @@
   color: var(--light-text);
   text-align: center;
   padding: 2rem;
+  z-index: 2;
 }
 
 .hero-content {
@@ -324,24 +354,12 @@
 .experience-image {
   width: 100%;
   height: 100%;
-  background-size: cover;
-  background-position: center;
-  transition: transform 0.4s ease;
   position: absolute;
   top: 0;
   left: 0;
-}
-
-.experience-image.birdwatching {
-  background-image: url('/images/birdwatching.jpg');
-}
-
-.experience-image.primates {
-  background-image: url('');
-}
-
-.experience-image.safari {
-  background-image: url('');
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.5s ease;
 }
 
 .experience-overlay {

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Image } from 'cloudinary-react';
 import '../styles/Home.css';
+import { getFolderImage, getCloudinaryUrl, folderImageMapping } from '../config/cloudinaryConfig';
 
 function Home() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -42,27 +43,30 @@ function Home() {
     };
   }, [testimonials.length]);
 
+  const experienceStyles = {
+    birdwatching: {
+      backgroundImage: `url(${getFolderImage('birdwatching', 'hero')})`
+    },
+    primates: {
+      backgroundImage: `url(${getFolderImage('primatas', 'hero')})`
+    },
+    safari: {
+      backgroundImage: `url(${getFolderImage('safari-boat', 'hero')})`
+    }
+  };
+
   return (
     <div className="home">
       <section className="video-hero">
-        <div style={{ position: 'absolute', top: 0, left: 0, width: '100vw', height: '100vh', overflow: 'hidden' }}>
+        <div className="video-container">
           <iframe
             src="https://player.vimeo.com/video/1043999382?muted=1&loop=1&background=1&autoplay=1&dnt=1&app_id=58479&quality=1080p&quality_selector=1"
             frameBorder="0"
             allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
-            style={{ 
-              position: 'absolute',
-              top: '50%',
-              left: '50%',
-              width: '100vw',
-              height: '100vh',
-              transform: 'translate(-50%, -50%) scale(1.25)',
-              objectFit: 'cover'
-            }}
-            title="Jardim da Amazonia">
-          </iframe>
+            className="background-video"
+            title="Jardim da Amazonia"
+          ></iframe>
         </div>
-        <script src="https://player.vimeo.com/api/player.js"></script>
         <div className={`hero-overlay ${isScrolled ? 'scrolled' : ''}`}>
           <div className="hero-content">
             <h1>JARDIM DA AMAZÔNIA</h1>
@@ -111,7 +115,7 @@ function Home() {
             <div className="recognition-item">
               <Image 
                 cloudName="dxlhv2mji"
-                publicId="logos/save-brasil"
+                publicId={folderImageMapping.logos['save-brasil']}
                 alt="SAVE Brasil Badge"
                 className="recognition-icon"
                 width="auto"
@@ -126,7 +130,7 @@ function Home() {
             <div className="recognition-item">
               <Image 
                 cloudName="dxlhv2mji"
-                publicId="logos/ebird"
+                publicId={folderImageMapping.logos['ebird']}
                 alt="Ebird Badge"
                 className="recognition-icon"
                 width="auto"
@@ -141,7 +145,7 @@ function Home() {
             <div className="recognition-item">
               <Image 
                 cloudName="dxlhv2mji"
-                publicId="logos/i-eco"
+                publicId={folderImageMapping.logos['i-eco']}
                 alt="Instituto Ecotono Badge"
                 className="recognition-icon"
                 width="auto"
@@ -163,7 +167,7 @@ function Home() {
             <div className="about-image">
               <Image 
                 cloudName="dxlhv2mji"
-                publicId="home/vista-aerea-lodge"
+                publicId={folderImageMapping.home['vista-aerea-lodge']}
                 alt="Vista aérea do Lodge"
                 width="auto"
                 crop="scale"
@@ -208,7 +212,7 @@ function Home() {
           </div>
           <div className="experiences-grid">
             <div className="experience-card">
-              <div className="experience-image birdwatching"></div>
+              <div className="experience-image" style={experienceStyles.birdwatching}></div>
               <div className="experience-overlay">
                 <h3>Birdwatching</h3>
                 <p>Um dos melhores destinos de observação de aves do Brasil</p>
@@ -216,7 +220,7 @@ function Home() {
               </div>
             </div>
             <div className="experience-card">
-              <div className="experience-image primates"></div>
+              <div className="experience-image" style={experienceStyles.primates}></div>
               <div className="experience-overlay">
                 <h3>Primatas</h3>
                 <p>Descubra e explore a fascinante Rota dos Primatas</p>
@@ -224,7 +228,7 @@ function Home() {
               </div>
             </div>
             <div className="experience-card">
-              <div className="experience-image safari"></div>
+              <div className="experience-image" style={experienceStyles.safari}></div>
               <div className="experience-overlay">
                 <h3>Safari no Rio Claro</h3>
                 <p>Navegue por águas cristalinas em meio à natureza</p>
@@ -298,15 +302,15 @@ function Home() {
 
       <style>{`
         .experience-image.birdwatching {
-          background-image: url('https://res.cloudinary.com/dxlhv2mji/image/upload/v1/home/birdwatching');
+          background-image: url('${getCloudinaryUrl('hero', 'birdwatching')}');
         }
         
         .experience-image.primates {
-          background-image: url('https://res.cloudinary.com/dxlhv2mji/image/upload/v1/home/primates');
+          background-image: url('${getCloudinaryUrl('gallery', 'primatas')}');
         }
         
         .experience-image.safari {
-          background-image: url('https://res.cloudinary.com/dxlhv2mji/image/upload/v1/home/safari');
+          background-image: url('${getCloudinaryUrl('hero', 'safari-boat')}');
         }
       `}</style>
     </div>

@@ -1,13 +1,15 @@
 .guias-campo {
   width: 100%;
   overflow-x: hidden;
+  min-height: 100vh;
 }
 
 .page-hero.guides {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   height: 70vh;
-  position: relative;
-  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
-              url('../../public/images/kiko.jpg') center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;

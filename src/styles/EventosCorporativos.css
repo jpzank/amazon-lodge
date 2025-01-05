@@ -4,12 +4,14 @@
   --text-color: #2c3e50;
   --light-bg: #f8f9fa;
   --card-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  min-height: 100vh;
 }
 
 .page-hero.corporate {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../../public/images/kiko.jpg');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
   height: 70vh;
   display: flex;
   align-items: center;
@@ -172,7 +174,8 @@
 .contact-cta {
   padding: 8rem 0;
   text-align: center;
-  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('../../public/images/kiko.jpg');
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), 
+              url('https://res.cloudinary.com/dxlhv2mji/image/upload/f_auto,q_auto/amazon-lodge/kiko');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;

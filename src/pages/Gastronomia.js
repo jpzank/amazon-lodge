@@ -1,11 +1,18 @@
 import React from 'react';
 import '../styles/Gastronomia.css';
 import { Image } from 'cloudinary-react';
+import { getFolderImage } from '../config/cloudinaryConfig';
 
 function Gastronomia() {
+  const heroStyle = {
+    backgroundImage: `url(${getFolderImage('gastronomia/hero-gastronomia')})`,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+  };
+
   return (
     <div className="gastronomia">
-      <div className="page-hero gastronomy">
+      <div className="page-hero gastronomy" style={heroStyle}>
         <div className="hero-content">
           <h1>Gastronomia</h1>
           <p>Do Produtor Para Mesa</p>

@@ -1,7 +1,22 @@
 import React, { useState } from 'react';
+import { getFolderImage } from '../config/cloudinaryConfig';
 import '../styles/GuiasCampo.css';
 
 function GuiasCampo() {
+  const heroStyle = {
+    backgroundImage: `url(${getFolderImage('guias-campo/hero')})`,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+  };
+
+  const categoryImages = {
+    aves: getFolderImage('guias-campo/aves'),
+    mamiferos: getFolderImage('guias-campo/mamiferos'),
+    repteis: getFolderImage('guias-campo/repteis'),
+    borboletas: getFolderImage('guias-campo/borboletas'),
+    vegetacao: getFolderImage('guias-campo/vegetacao')
+  };
+
   const [activeCategory, setActiveCategory] = useState('aves');
 
   const categories = {
@@ -60,7 +75,7 @@ function GuiasCampo() {
 
   return (
     <div className="guias-campo">
-      <div className="page-hero guides">
+      <div className="page-hero guides" style={heroStyle}>
         <div className="hero-content">
           <h1>Guias de Campo</h1>
           <p>Conheça a biodiversidade do Jardim da Amazônia</p>

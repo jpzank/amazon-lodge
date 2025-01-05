@@ -1,11 +1,18 @@
 import React from 'react';
 import '../styles/ComoChegar.css';
 import { FaWhatsapp, FaEnvelope, FaMapMarkerAlt, FaCar } from 'react-icons/fa';
+import { getFolderImage } from '../config/cloudinaryConfig';
+
+const heroStyle = {
+  backgroundImage: `url(${getFolderImage('como-chegar/hero')})`,
+  backgroundSize: 'cover',
+  backgroundPosition: 'center',
+};
 
 function ComoChegar() {
   return (
     <div className="como-chegar">
-      <div className="page-hero directions">
+      <div className="page-hero directions" style={heroStyle}>
         <div className="hero-content">
           <h1>Como Chegar</h1>
           <p>Sua jornada até o Jardim da Amazônia</p>

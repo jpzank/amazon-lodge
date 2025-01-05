@@ -5,8 +5,9 @@
 /* Hero Section */
 .page-hero.areas {
   height: 70vh;
-  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
-              url('https://res.cloudinary.com/dxlhv2mji/image/upload/v1/areas-externas/hero') center/cover no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;

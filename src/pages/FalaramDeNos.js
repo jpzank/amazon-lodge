@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { getFolderImage } from '../config/cloudinaryConfig';
 import '../styles/FalaramDeNos.css';
 
 function FalaramDeNos() {
@@ -16,28 +17,22 @@ function FalaramDeNos() {
       data: "2024",
       link: "https://glamurama.uol.com.br/modo-de-vida/amazonia-o-novo-refugio-para-amantes-da-natureza-e-da-biodiversidade-rara/",
       descricao: "Reconhecido internacionalmente como um dos três melhores destinos para observação de aves e espécies raras, o lodge oferece uma experiência única para os amantes da biodiversidade.",
-      imagem: "https://static.glamurama.uol.com.br/2024/12/image0-1.jpeg",
-      conteudoCompleto: `Nos últimos anos, o turismo ecológico tem se fortalecido, especialmente no Brasil, com a Amazônia emergindo como um dos destinos mais cobiçados por viajantes em busca de imersão na natureza. Um dos locais que se destaca nesse cenário é o Jardim da Amazônia Lodge, situado no coração da floresta tropical. Reconhecido internacionalmente como um dos três melhores destinos para observação de aves e espécies raras, o lodge oferece uma experiência única e essencial para os amantes da biodiversidade.
-
-Com uma estrutura sustentável e práticas focadas na preservação ambiental, o Jardim da Amazônia Lodge proporciona aos visitantes a oportunidade de conhecer de perto espécies ameaçadas de extinção, como a arara-azul-grande, o mutum-de-penacho e o gavião-real. A região, que conta com uma biodiversidade impressionante, abriga uma grande variedade de flora e fauna, e é explorada por meio de passeios guiados realizados por especialistas que compartilham os desafios e a importância da conservação deste ecossistema vital.
-
-Raquel Zanchet, diretora do Jardim da Amazônia Lodge, destaca a importância do turismo ecológico não apenas como uma tendência crescente, mas como uma ferramenta crucial para conscientizar sobre a preservação ambiental. "Nosso objetivo é proporcionar uma experiência transformadora para os visitantes, ao mesmo tempo em que contribuímos ativamente para a conservação da biodiversidade amazônica", afirma.`
+      imagem: getFolderImage('falaram-de-nos/glamurama-1'),
+      conteudoCompleto: `Nos últimos anos, o turismo ecológico tem se fortalecido...`
     },
     {
       id: 3,
       titulo: "Wanderlust Magazine destaca o Jardim da Amazônia",
-      veiculo: "Wanderlust Magazine",
+      veiculo: "Wanderlust Magazine", 
       data: "2024",
       link: "https://www.wanderlustmagazine.com/",
       descricao: "Na edição de dezembro/janeiro, o Jardim da Amazônia é destacado como uma experiência imperdível no coração do Brasil, onde o Pantanal encontra a Amazônia.",
-      imagem: "/src/images/falaram-de-nos/wonderlust.jpg",
+      imagem: getFolderImage('falaram-de-nos/wonderlust'),
       imagens: [
-        "/src/images/falaram-de-nos/wonderlust-1.jpg",
-        "/src/images/falaram-de-nos/wonderlust-2.jpg"
+        getFolderImage('falaram-de-nos/wonderlust-1'),
+        getFolderImage('falaram-de-nos/wonderlust-2')
       ],
-      conteudoCompleto: `Na edição de dezembro/janeiro da revista Wanderlust, o Jardim da Amazônia foi destacado como uma experiência imperdível no coração do Brasil. Descrito como um lugar onde "o Pantanal encontra a Amazônia", o artigo ressaltou a singularidade da nossa localização e a abundância de vida selvagem ao redor. Eles recomendaram o Jardim da Amazônia como uma base ideal para explorar a rica biodiversidade e paisagens deslumbrantes da região, especialmente durante a temporada seca, quando os animais são mais facilmente avistados.
-
-O artigo também enfatizou o charme da nossa hospitalidade e a oportunidade de conexão profunda com a natureza, proporcionando uma experiência autêntica e memorável para quem busca se aventurar pela beleza selvagem do Pantanal.`
+      conteudoCompleto: `Na edição de dezembro/janeiro da revista Wanderlust...`
     },
     {
       id: 4,
@@ -46,12 +41,8 @@ O artigo também enfatizou o charme da nossa hospitalidade e a oportunidade de c
       data: "2024",
       link: "https://www.mammalwatching.com/community-post/brazilian-primates-piaui-maranhao-para-and-matto-gross/",
       descricao: "Lodge é destacado como ponto estratégico para observação de primatas na região amazônica.",
-      imagem: "https://www.mammalwatching.com/wp-content/uploads/2024/10/Screenshot-2024-10-08-171951.jpg",
-      conteudoCompleto: `O Jardim da Amazônia foi novamente destaque em um relato de viagem memorável de observação de primatas no Brasil, onde se destacou como parte essencial da inovadora "Rota de Observação de Primatas de Mato Grosso". O projeto, idealizado por especialistas renomados como Russ Mittermeier e Gustavo Canale, visa priorizar a conservação e a observação de 16 espécies de primatas na região, das quais 10 estão ameaçadas de extinção.
-
-Durante a visita ao Jardim, os viajantes ficaram impressionados com a diversidade de espécies avistadas, incluindo sakis de cara branca de Mittermeier, macacos-aranha-negros e macacos-prego-de-Azara, além de capivaras e tamanduás. A infraestrutura acolhedora do lodge, administrado pela família Zanchet, foi elogiada por seus serviços impecáveis, gastronomia gourmet e envolvimento com a preservação ambiental, como a criação de corredores de árvores para a fauna local.
-
-O artigo ainda destaca a área de floresta alagada próxima à piscina natural, onde famílias de sakis se alimentam frequentemente, proporcionando encontros únicos para os visitantes. Esse projeto reforça a posição do Jardim da Amazônia como um destino indispensável para turismo sustentável e científico.`
+      imagem: getFolderImage('falaram-de-nos/mammalwatching'),
+      conteudoCompleto: `O Jardim da Amazônia foi novamente destaque...`
     },
     {
       id: 1,

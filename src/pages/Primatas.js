@@ -1,10 +1,23 @@
 import React from 'react';
+import { getFolderImage } from '../config/cloudinaryConfig';
 import '../styles/Primatas.css';
 
 function Primatas() {
+  const heroStyle = {
+    backgroundImage: `url(${getFolderImage('primatas', 'hero')})`,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+  };
+
+  const zogueZogueStyle = {
+    backgroundImage: `url(${getFolderImage('primatas', 'zogue-zogue')})`,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+  };
+
   return (
     <div className="primatas">
-      <div className="page-hero primatas">
+      <div className="page-hero primatas" style={heroStyle}>
         <div className="hero-content">
           <h1>Observação de Primatas</h1>
           <p>Uma aventura em busca de importantes primatas da região sul da Amazônia</p>
@@ -31,9 +44,8 @@ function Primatas() {
         <div className="container">
           <h2>Espécies Emblemáticas</h2>
           <div className="species-grid">
-            {/* Criticamente em Perigo (CR) */}
             <div className="species-card">
-              <div className="species-image" style={{ backgroundImage: `url('src/images/birdwatching/zogue-zogue.jpg')` }}>
+              <div className="species-image" style={zogueZogueStyle}>
                 <span className="status-badge cr">CR</span>
               </div>
               <div className="species-content">

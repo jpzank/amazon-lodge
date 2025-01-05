@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import '../styles/Trilhas.css';
 import { motion } from 'framer-motion';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { getFolderImage } from '../config/cloudinaryConfig';
 import { 
   faClock, 
   faRulerHorizontal, 
@@ -20,31 +21,31 @@ function Trilhas() {
 
   const atividades = {
     'Trilha do Jatobá': {
-      imagem: '/images/atividades/trilha-jatoba.jpg',
+      imagem: getFolderImage('atividades/trilha-jatoba'),
       descricao: 'Trilha que permite apreciar a diversidade da floresta e árvores como o imponente jatobá, considerado sagrado pelos povos indígenas.'
     },
     'Lagoa das Araras': {
-      imagem: '/images/atividades/lagoa-araras.jpg',
+      imagem: getFolderImage('atividades/lagoa-araras'),
       descricao: 'Visita ao importante remanescente de floresta que protege um Ninhal que abriga uma diversidade de papagaios e araras.'
     },
     'Trilha do Laboratório': {
-      imagem: '/images/atividades/trilha-laboratorio.jpg',
+      imagem: getFolderImage('atividades/trilha-laboratorio'),
       descricao: 'Trilha educativa com foco em pesquisa e observação da biodiversidade local.'
     },
     'Visita ao Rio Arinos': {
-      imagem: '/images/atividades/rio-arinos.jpg',
+      imagem: getFolderImage('atividades/rio-arinos'),
       descricao: 'Exploração das margens do Rio Arinos, com suas águas cristalinas e rica biodiversidade aquática.'
     },
     'Trilha do Piquiá': {
-      imagem: '/images/atividades/trilha-piquia.jpg',
+      imagem: getFolderImage('atividades/trilha-piquia'),
       descricao: 'Trilha intensa em ambiente de floresta, com acesso pelo Rio Claro, ideal para observação da flora nativa.'
     },
     'Trilha do Angelim': {
-      imagem: '/images/atividades/trilha-angelim.jpg',
+      imagem: getFolderImage('atividades/trilha-angelim'),
       descricao: 'Trilha que abrange uma variedade de habitats, ideal para observação de primatas e da majestosa árvore Angelim.'
     },
     'Visita a agriculturas locais': {
-      imagem: '/images/atividades/agricultura-local.jpg',
+      imagem: getFolderImage('atividades/agricultura-local'),
       descricao: 'Conhecimento das práticas agrícolas sustentáveis da região e interação com a comunidade local.'
     }
   };

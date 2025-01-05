@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { getFolderImage } from '../config/cloudinaryConfig';
 import '../styles/Acomodacoes.css';
 import { 
   FaWifi, 
@@ -27,6 +28,12 @@ import {
   MdFamilyRestroom
 } from 'react-icons/md';
 import { GiPalmTree, GiForestCamp } from 'react-icons/gi';
+
+const heroStyle = {
+  backgroundImage: `url(${getFolderImage('acomodacoes/hero')})`,
+  backgroundSize: 'cover',
+  backgroundPosition: 'center'
+};
 
 function Acomodacoes() {
   const [selectedRoom, setSelectedRoom] = useState(null);

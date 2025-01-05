@@ -1,10 +1,17 @@
 import React from 'react';
 import '../styles/NascenteNatural.css';
+import { getFolderImage } from '../config/cloudinaryConfig';
 
 function NascenteNatural() {
+  const heroStyle = {
+    backgroundImage: `url(${getFolderImage('nascente/hero')})`,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+  };
+
   return (
     <div className="nascente-natural">
-      <div className="page-hero spring">
+      <div className="page-hero spring" style={heroStyle}>
         <div className="hero-content">
           <h1>Nascente Natural</h1>
           <p>Fonte de Vida na Floresta</p>
@@ -22,7 +29,6 @@ function NascenteNatural() {
         </div>
       </section>
 
-      {/* Placeholder for natural spring content */}
       <section className="content-placeholder">
         <div className="container">
           <p>Conteúdo em desenvolvimento</p>

@@ -1,5 +1,6 @@
 import React from 'react';
 import '../styles/EventosCorporativos.css';
+import { getFolderImage } from '../config/cloudinaryConfig';
 import { 
   MdBusinessCenter, 
   MdNaturePeople, 
@@ -8,9 +9,15 @@ import {
 import { BsCheckCircle } from 'react-icons/bs';
 
 function EventosCorporativos() {
+  const heroStyle = {
+    backgroundImage: `url(${getFolderImage('heroes/eventos-corporativos')})`,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+  };
+
   return (
     <div className="eventos-corporativos">
-      <section className="page-hero corporate">
+      <section className="page-hero corporate" style={heroStyle}>
         <div className="hero-content">
           <h1>Eventos Corporativos</h1>
           <p>Transforme suas reuniões em experiências memoráveis em meio à natureza</p>
@@ -23,7 +30,7 @@ function EventosCorporativos() {
           <div className="packages-grid">
             <div className="package-card">
               <div className="package-image">
-                <img src="src/images/eventos/reuniao-executiva.png" alt="Reuniões Executivas" />
+                <img src={getFolderImage('eventos/reuniao-executiva')} alt="Reuniões Executivas" />
               </div>
               <div className="package-content">
                 <div className="package-icon">
@@ -46,7 +53,7 @@ function EventosCorporativos() {
 
             <div className="package-card">
               <div className="package-image">
-                <img src="/src/images/eventos/team-building.png" alt="Team Building" />
+                <img src={getFolderImage('eventos/team-building')} alt="Team Building" />
               </div>
               <div className="package-content">
                 <div className="package-icon">
@@ -69,7 +76,7 @@ function EventosCorporativos() {
 
             <div className="package-card">
               <div className="package-image">
-                <img src="/src/images/eventos/eventos-especiais.jpg" alt="Eventos Especiais" />
+                <img src={getFolderImage('eventos/eventos-especiais')} alt="Eventos Especiais" />
               </div>
               <div className="package-content">
                 <div className="package-icon">

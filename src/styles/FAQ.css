@@ -1,17 +1,19 @@
 .faq {
-  min-height: 70vh;
+  min-height: 100vh;
 }
 
-.page-hero.faq::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: url('../../public/images/birds.jpg') center/cover no-repeat;
-  filter: brightness(0.7);
-  z-index: -1;
+.page-hero.faq {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  position: relative;
 }
 
 .faq-content {

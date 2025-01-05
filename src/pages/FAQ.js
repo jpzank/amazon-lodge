@@ -1,8 +1,15 @@
 import React, { useState } from 'react';
+import { getFolderImage } from '../config/cloudinaryConfig';
 import '../styles/FAQ.css';
 
 function FAQ() {
   const [expandedItems, setExpandedItems] = useState({});
+
+  const heroStyle = {
+    backgroundImage: `url(${getFolderImage('hero/faq-hero')})`,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+  };
 
   const toggleItem = (sectionId, itemId) => {
     setExpandedItems(prev => ({
@@ -13,7 +20,7 @@ function FAQ() {
 
   return (
     <div className="faq">
-      <div className="page-hero faq">
+      <div className="page-hero faq" style={heroStyle}>
         <div className="hero-content">
           <h1>Perguntas Frequentes</h1>
           <p>Tudo que você precisa saber sobre sua estadia</p>

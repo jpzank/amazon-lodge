@@ -5,15 +5,18 @@
   box-sizing: border-box;
 }
 
+html, body {
+  height: 100%;
+}
+
 body {
   font-family: 'Arial', sans-serif;
   line-height: 1.6;
 }
 
-.app {
+.App {
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+  position: relative;
 }
 
 /* Container */
