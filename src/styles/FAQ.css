@@ -9,7 +9,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: url('../images/birds.jpg') center/cover no-repeat;
+  background: url('/images/birds.jpg') center/cover no-repeat;
   filter: brightness(0.7);
   z-index: -1;
 }

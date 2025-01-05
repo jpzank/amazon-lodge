@@ -4,7 +4,7 @@
 
 .page-hero.directions {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)),
-              url('../images/kiko.jpg');
+              url('/images/kiko.jpg');
   background-size: cover;
   background-position: center;
   height: 70vh;
