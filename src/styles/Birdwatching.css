@@ -3,7 +3,7 @@
 }
 
 .page-hero.birdwatching {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../../public/images/birdwatching.jpg');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/images/birdwatching.jpeg');
   background-size: cover;
   background-position: center;
   height: 70vh;
