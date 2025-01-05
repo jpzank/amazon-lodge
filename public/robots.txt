@@ -1,3 +1,32 @@
-# https://www.robotstxt.org/robotstxt.html
+# robots.txt for Jardim Amazonia Lodge
 User-agent: *
-Disallow:
+Allow: /
+
+# Main Pages
+Allow: /acomodacoes
+Allow: /areas-externas
+Allow: /gastronomia
+Allow: /birdwatching
+Allow: /primatas
+Allow: /safari-boat
+Allow: /guias-campo
+Allow: /estacao-pesquisa
+Allow: /nascente-natural
+Allow: /faq
+Allow: /como-chegar
+Allow: /eventos-corporativos
+Allow: /trilhas
+Allow: /nossa-historia
+Allow: /falaram-de-nos
+
+# Protect sensitive areas
+Disallow: /admin/
+Disallow: /api/
+Disallow: /internal/
+Disallow: /*?*query=
+
+# Crawl-delay for better server performance
+Crawl-delay: 10
+
+# Sitemap
+Sitemap: https://www.jardimamazonia.com.br/sitemap.xml

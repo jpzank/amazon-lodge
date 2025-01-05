@@ -15,6 +15,12 @@
   color: white;
 }
 
+@media (max-width: 768px) {
+  .page-hero.research {
+    height: 50vh;
+  }
+}
+
 .hero-content h1 {
   font-size: 3.5rem;
   margin-bottom: 1rem;
@@ -177,5 +183,19 @@ section {
 
   .method-grid, .species-columns {
     grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .page-hero.research {
+    height: 50vh;
+  }
+
+  .hero-content h1 {
+    font-size: 2.8rem;
+  }
+
+  .hero-content p {
+    font-size: 1.2rem;
   }
 } 

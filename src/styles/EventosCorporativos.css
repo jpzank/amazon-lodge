@@ -18,6 +18,12 @@
   color: white;
 }
 
+@media (max-width: 768px) {
+  .page-hero.corporate {
+    height: 50vh;
+  }
+}
+
 .hero-content {
   max-width: 800px;
   padding: 0 2rem;
@@ -269,5 +275,19 @@
   .cta-button {
     width: 100%;
     padding: 1.2rem 2rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .page-hero.corporate {
+    height: 50vh;
+  }
+
+  .hero-content h1 {
+    font-size: 2.8rem;
+  }
+
+  .hero-content p {
+    font-size: 1.2rem;
   }
 } 

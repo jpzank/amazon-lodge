@@ -341,6 +341,10 @@ h2 {
 }
 
 @media screen and (max-width: 768px) {
+  .page-hero.boat {
+    height: 50vh;
+  }
+
   section {
     padding: 4rem 0;
   }
@@ -356,6 +360,10 @@ h2 {
 
   .hero-content p {
     font-size: 1.4rem;
+  }
+
+  .hero-banner {
+    height: 50vh;
   }
 
   .wildlife-grid,
@@ -396,4 +404,4 @@ h2 {
     font-size: 1rem;
     padding: 1.5rem;
   }
-} 
+}

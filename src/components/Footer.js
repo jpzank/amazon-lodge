@@ -70,7 +70,7 @@ function Footer() {
           </a>
         </div>
         <p className="copyright">
-          © 2024 Jardim da Amazônia / CNPJ: 02.025.529/0001-95
+          © 2025 Jardim da Amazônia / CNPJ: 02.025.529/0001-95
         </p>
       </div>
     </footer>

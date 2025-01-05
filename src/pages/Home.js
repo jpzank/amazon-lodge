@@ -44,19 +44,28 @@ function Home() {
   return (
     <div className="home">
       <section className="video-hero">
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          className="background-video"
-        >
-          <source src="/videos/Jardim da Amazonia.mp4" type="video/mp4" />
-        </video>
+        <div style={{ position: 'absolute', top: 0, left: 0, width: '100vw', height: '100vh', overflow: 'hidden' }}>
+          <iframe
+            src="https://player.vimeo.com/video/1043999382?muted=1&loop=1&background=1&autoplay=1&dnt=1&app_id=58479&quality=1080p&quality_selector=1"
+            frameBorder="0"
+            allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
+            style={{ 
+              position: 'absolute',
+              top: '50%',
+              left: '50%',
+              width: '100vw',
+              height: '100vh',
+              transform: 'translate(-50%, -50%) scale(1.25)',
+              objectFit: 'cover'
+            }}
+            title="Jardim da Amazonia">
+          </iframe>
+        </div>
+        <script src="https://player.vimeo.com/api/player.js"></script>
         <div className={`hero-overlay ${isScrolled ? 'scrolled' : ''}`}>
           <div className="hero-content">
             <h1>JARDIM DA AMAZÔNIA</h1>
-            <p>Onde a Natureza Revela Seus Maiores Tesouros</p>
+            <p>Um Refúgio de Riquezas Naturais</p>
             <div className="hero-buttons">
               <a href="https://book.omnibees.com/hotel/19972?lang=pt-BR&currencyId=16&version=4" target="_blank" rel="noopener noreferrer" className="btn-primary">Reserve Sua Experiência</a>
             </div>
@@ -132,7 +141,7 @@ function Home() {
             <div className="about-content">
               <h2>SANTUÁRIO ECOLÓGICO</h2>
               <p>
-                Localizado às margens do cristalino Rio Claro, o Jardim da Amazônia é um refúgio onde a 
+                Localizado às margens do Rio Claro, o Jardim da Amazônia é um refúgio onde a 
                 Floresta Amazônica encontra o Cerrado, criando um dos ecossistemas mais diversos do Brasil. 
                 Nossa missão é proporcionar experiências únicas de conexão com a natureza, enquanto 
                 preservamos este tesouro natural para as futuras gerações.

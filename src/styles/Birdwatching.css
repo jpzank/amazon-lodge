@@ -75,7 +75,7 @@
 
 .species-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 400px), 1fr));
   gap: 1.5rem;
   margin-top: 2rem;
 }
@@ -317,7 +317,18 @@
   background-color: #d35400;
 }
 
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
 @media (max-width: 768px) {
+  .container {
+    padding: 0 1rem;
+    width: 100%;
+  }
+
   .hero-content h1 {
     font-size: 2.5rem;
   }
@@ -328,12 +339,11 @@
 
   .recognition-badges {
     flex-direction: column;
-    align-items: center;
+    gap: 1rem;
   }
 
   .badge {
-    width: 100%;
-    max-width: 300px;
+    padding: 1.5rem;
   }
 
   .tour-details {
@@ -342,19 +352,38 @@
 
   .reference-links {
     flex-direction: column;
-    align-items: center;
   }
 
   .reference-links a {
-    width: 100%;
-    max-width: 300px;
+    margin: 0.5rem 0;
   }
 
   .species-grid {
-    grid-template-columns: 1fr;
+    display: grid;
+    grid-template-columns: 1fr !important;
+    gap: 2rem;
+    margin: 2rem 0;
   }
 
-  .species-image {
-    height: 160px;
+  .species-card {
+    width: 100%;
+    margin: 0;
+  }
+
+  .featured-species {
+    padding: 3rem 0;
+  }
+
+  .species-content {
+    padding: 1.5rem;
+  }
+
+  .species-content h3 {
+    font-size: 1.4rem;
+  }
+
+  .species-description {
+    font-size: 1rem;
+    line-height: 1.6;
   }
 } 

@@ -107,9 +107,11 @@ Esses reconhecimentos reforçam o compromisso do Jardim da Amazônia com a suste
 
   return (
     <div className="falaram-de-nos">
-      <div className="hero-section">
-        <h1>Falaram de Nós</h1>
-        <p>Confira o que a mídia tem falado sobre o Jardim da Amazônia</p>
+      <div className="page-hero testimonials">
+        <div className="hero-content">
+          <h1>Falaram de Nós</h1>
+          <p>O que a mídia e nossos visitantes dizem sobre o Jardim da Amazônia</p>
+        </div>
       </div>
       
       <div className="noticias-container">

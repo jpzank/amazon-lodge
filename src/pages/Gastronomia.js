@@ -7,7 +7,7 @@ function Gastronomia() {
       <div className="page-hero gastronomy">
         <div className="hero-content">
           <h1>Gastronomia</h1>
-          <p>Do Produtor Para Mesa | Farm To Table</p>
+          <p>Do Produtor Para Mesa</p>
         </div>
       </div>
 

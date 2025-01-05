@@ -181,7 +181,7 @@
 
 .recommendations-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 400px), 1fr));
   gap: 2rem;
   margin-top: 2rem;
 }
@@ -351,5 +351,34 @@
 
   .route-box p {
     font-size: 1rem;
+  }
+
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-content p {
+    font-size: 1.2rem;
+  }
+
+  .species-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 0;
+  }
+
+  .recommendations-grid {
+    grid-template-columns: 1fr !important;
+    gap: 2rem;
+    padding: 0;
+  }
+
+  .recommendation-card {
+    width: 100%;
+    margin: 0;
+  }
+
+  .activities-list li {
+    font-size: 1.1rem;
   }
 } 

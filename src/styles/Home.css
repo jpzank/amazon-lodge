@@ -810,4 +810,179 @@
   margin-bottom: 3rem;
   font-weight: 700;
   letter-spacing: 1px;
+}
+
+@media screen and (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+
+  .section-container {
+    padding: 3rem 1rem;
+  }
+
+  .biodiversity-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+
+  .biodiversity-stat {
+    padding: 1.5rem;
+  }
+
+  .stat-number {
+    font-size: 2.5rem;
+  }
+
+  .recognition-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .about-image {
+    height: 300px;
+  }
+
+  .about-content {
+    padding: 0;
+  }
+
+  .about-features {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .experiences-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .experience-card {
+    height: 300px;
+  }
+
+  .testimonial-item {
+    padding: 2rem 1rem;
+  }
+
+  .testimonial-item blockquote {
+    font-size: 1.1rem;
+  }
+
+  .conservation-content {
+    padding: 3rem 1rem;
+  }
+
+  .conservation-content h2 {
+    font-size: 2rem;
+  }
+
+  .video-hero iframe {
+    width: 250vw !important;
+    height: 100vh !important;
+  }
+
+  .section-header h2 {
+    font-size: 2rem;
+    padding: 0 1rem;
+    word-wrap: break-word;
+    hyphens: auto;
+  }
+
+  .hero-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  .hero-buttons .btn-primary,
+  .hero-buttons a {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  .btn-primary,
+  .btn-secondary,
+  .btn-explore {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+    display: block;
+  }
+
+  .experience-card {
+    height: 300px;
+  }
+
+  .experience-overlay {
+    transform: translateY(0);
+    background: linear-gradient(to top, 
+      rgba(0, 0, 0, 0.9) 0%,
+      rgba(0, 0, 0, 0.7) 50%,
+      rgba(0, 0, 0, 0.4) 100%);
+  }
+
+  .experience-overlay p,
+  .experience-overlay .btn-explore {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .biodiversity-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stat-number {
+    font-size: 2rem;
+  }
+
+  .about-image {
+    height: 250px;
+  }
+
+  .experience-card {
+    height: 250px;
+  }
+
+  .testimonial-item blockquote {
+    font-size: 1rem;
+  }
+
+  .section-header h2 {
+    font-size: 1.75rem;
+  }
+
+  .section-header p {
+    font-size: 1.1rem;
+  }
+
+  .hero-content {
+    width: 100%;
+    padding: 0 1rem;
+  }
+
+  .hero-buttons {
+    padding: 0 1rem;
+  }
 } 
