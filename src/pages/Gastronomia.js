@@ -1,21 +1,32 @@
 import React from 'react';
 import '../styles/Gastronomia.css';
 import { Image } from 'cloudinary-react';
-import { getFolderImage } from '../config/cloudinaryConfig';
+import { getFolderImage, folderImageMapping } from '../config/cloudinaryConfig';
 
 function Gastronomia() {
   const heroStyle = {
-    backgroundImage: `url(${getFolderImage('gastronomia/hero-gastronomia')})`,
+    backgroundImage: `url(${getFolderImage('gastronomia', 'hero')})`,
     backgroundSize: 'cover',
     backgroundPosition: 'center',
+  };
+
+  const cloudinaryCommonProps = {
+    cloudName: "dxlhv2mji",
+    width: "auto",
+    crop: "scale",
+    loading: "lazy",
+    quality: "auto:best",
+    fetchFormat: "auto"
   };
 
   return (
     <div className="gastronomia">
       <div className="page-hero gastronomy" style={heroStyle}>
-        <div className="hero-content">
-          <h1>Gastronomia</h1>
-          <p>Do Produtor Para Mesa</p>
+        <div className="hero-overlay">
+          <div className="hero-content">
+            <h1>Gastronomia</h1>
+            <p>Do Produtor Para Mesa</p>
+          </div>
         </div>
       </div>
 
@@ -24,12 +35,9 @@ function Gastronomia() {
           <div className="gallery-grid">
             <div className="gallery-item">
               <Image 
-                cloudName="dxlhv2mji"
-                publicId="gastronomia/prato-especial-do-chef"
+                {...cloudinaryCommonProps}
+                publicId={folderImageMapping.gastronomia['prato-especial-do-chef']}
                 alt="Prato especial do chef"
-                width="auto"
-                crop="scale"
-                quality="auto"
               />
               <div className="gallery-caption">
                 <h3>Prato Especial do Chef</h3>
@@ -38,12 +46,9 @@ function Gastronomia() {
             </div>
             <div className="gallery-item">
               <Image 
-                cloudName="dxlhv2mji"
-                publicId="gastronomia/cafe-da-manha"
+                {...cloudinaryCommonProps}
+                publicId={folderImageMapping.gastronomia['cafe-da-manha']}
                 alt="Café da manhã regional"
-                width="auto"
-                crop="scale"
-                quality="auto"
               />
               <div className="gallery-caption">
                 <h3>Café da Manhã Regional</h3>
@@ -52,12 +57,9 @@ function Gastronomia() {
             </div>
             <div className="gallery-item">
               <Image 
-                cloudName="dxlhv2mji"
-                publicId="gastronomia/pratos-tipicos"
+                {...cloudinaryCommonProps}
+                publicId={folderImageMapping.gastronomia['pratos-tipicos']}
                 alt="Pratos típicos"
-                width="auto"
-                crop="scale"
-                quality="auto"
               />
               <div className="gallery-caption">
                 <h3>Pratos Típicos</h3>
@@ -66,12 +68,9 @@ function Gastronomia() {
             </div>
             <div className="gallery-item">
               <Image 
-                cloudName="dxlhv2mji"
-                publicId="gastronomia/sobremesas-especiais"
+                {...cloudinaryCommonProps}
+                publicId={folderImageMapping.gastronomia['sobremesas-especiais']}
                 alt="Sobremesas especiais"
-                width="auto"
-                crop="scale"
-                quality="auto"
               />
               <div className="gallery-caption">
                 <h3>Sobremesas Especiais</h3>
@@ -80,12 +79,9 @@ function Gastronomia() {
             </div>
             <div className="gallery-item">
               <Image 
-                cloudName="dxlhv2mji"
-                publicId="gastronomia/pratos-casa"
+                {...cloudinaryCommonProps}
+                publicId={folderImageMapping.gastronomia['pratos-casa']}
                 alt="Pratos da casa"
-                width="auto"
-                crop="scale"
-                quality="auto"
               />
               <div className="gallery-caption">
                 <h3>Pratos da Casa</h3>
@@ -94,12 +90,9 @@ function Gastronomia() {
             </div>
             <div className="gallery-item">
               <Image 
-                cloudName="dxlhv2mji"
-                publicId="gastronomia/especiarias-regionais"
+                {...cloudinaryCommonProps}
+                publicId={folderImageMapping.gastronomia['especiarias-regionais']}
                 alt="Especialidades regionais"
-                width="auto"
-                crop="scale"
-                quality="auto"
               />
               <div className="gallery-caption">
                 <h3>Culinária Regional</h3>
@@ -115,12 +108,10 @@ function Gastronomia() {
           <div className="chef-content">
             <div className="chef-image">
               <Image 
-                cloudName="dxlhv2mji"
-                publicId="gastronomia/chef-jose-sergio"
+                {...cloudinaryCommonProps}
+                publicId={folderImageMapping.gastronomia['chef-jose-sergio']}
                 alt="Chef José Sérgio"
-                width="auto"
-                crop="scale"
-                quality="auto"
+                className="chef-photo"
               />
             </div>
             <div className="chef-quote">
@@ -152,12 +143,9 @@ function Gastronomia() {
             <div className="menu-card">
               <div className="menu-image">
                 <Image 
-                  cloudName="dxlhv2mji"
-                  publicId="gastronomia/cafe-da-manha"
+                  {...cloudinaryCommonProps}
+                  publicId={folderImageMapping.gastronomia['cafe-da-manha']}
                   alt="Café da Manhã"
-                  width="auto"
-                  crop="scale"
-                  quality="auto"
                 />
               </div>
               <div className="menu-content">
@@ -175,12 +163,9 @@ function Gastronomia() {
             <div className="menu-card">
               <div className="menu-image">
                 <Image 
-                  cloudName="dxlhv2mji"
-                  publicId="gastronomia/almoco"
+                  {...cloudinaryCommonProps}
+                  publicId={folderImageMapping.gastronomia['almoco']}
                   alt="Almoço"
-                  width="auto"
-                  crop="scale"
-                  quality="auto"
                 />
               </div>
               <div className="menu-content">
@@ -198,12 +183,9 @@ function Gastronomia() {
             <div className="menu-card">
               <div className="menu-image">
                 <Image 
-                  cloudName="dxlhv2mji"
-                  publicId="gastronomia/jantar"
+                  {...cloudinaryCommonProps}
+                  publicId={folderImageMapping.gastronomia['jantar']}
                   alt="Jantar"
-                  width="auto"
-                  crop="scale"
-                  quality="auto"
                 />
               </div>
               <div className="menu-content">

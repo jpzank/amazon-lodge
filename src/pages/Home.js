@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useCallback, useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import { Image } from 'cloudinary-react';
 import '../styles/Home.css';
@@ -8,7 +8,8 @@ function Home() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeTestimonial, setActiveTestimonial] = useState(0);
 
-  const testimonials = [
+  // Memoize testimonials data to prevent unnecessary re-renders
+  const testimonials = useMemo(() => [
     {
       quote: "Jardim da Amazônia – Uma incrível empresa familiar na linha de frente da conservação da Floresta Amazônica!",
       author: "M Carr - USA",
@@ -24,26 +25,45 @@ function Home() {
       author: "John Miller - UK",
       date: "May 2023"
     }
-  ];
+  ], []);
+
+  // Optimize scroll handler with useCallback and debounce
+  const handleScroll = useCallback(() => {
+    const scrollPosition = window.scrollY;
+    if ((scrollPosition > 50 && !isScrolled) || (scrollPosition <= 50 && isScrolled)) {
+      setIsScrolled(scrollPosition > 50);
+    }
+  }, [isScrolled]);
 
   useEffect(() => {
-    const handleScroll = () => {
-      const scrollPosition = window.scrollY;
-      setIsScrolled(scrollPosition > 50);
+    let scrollTimeout;
+    const debouncedScroll = () => {
+      if (scrollTimeout) {
+        window.cancelAnimationFrame(scrollTimeout);
+      }
+      scrollTimeout = window.requestAnimationFrame(() => handleScroll());
     };
 
+    window.addEventListener('scroll', debouncedScroll, { passive: true });
+    return () => {
+      window.removeEventListener('scroll', debouncedScroll);
+      if (scrollTimeout) {
+        window.cancelAnimationFrame(scrollTimeout);
+      }
+    };
+  }, [handleScroll]);
+
+  // Testimonial auto-rotation with cleanup
+  useEffect(() => {
     const testimonialInterval = setInterval(() => {
       setActiveTestimonial((prev) => (prev + 1) % testimonials.length);
     }, 5000);
 
-    window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-      clearInterval(testimonialInterval);
-    };
+    return () => clearInterval(testimonialInterval);
   }, [testimonials.length]);
 
-  const experienceStyles = {
+  // Memoize experience styles to prevent recalculation on each render
+  const experienceStyles = useMemo(() => ({
     birdwatching: {
       backgroundImage: `url(${getFolderImage('birdwatching', 'hero')})`
     },
@@ -53,18 +73,29 @@ function Home() {
     safari: {
       backgroundImage: `url(${getFolderImage('safari-boat', 'hero')})`
     }
-  };
+  }), []);
+
+  // Memoize common Cloudinary image props
+  const cloudinaryCommonProps = useMemo(() => ({
+    cloudName: "dxlhv2mji",
+    width: "auto",
+    crop: "scale",
+    loading: "lazy",
+    quality: "auto:best",
+    fetchFormat: "auto"
+  }), []);
 
   return (
     <div className="home">
       <section className="video-hero">
         <div className="video-container">
           <iframe
-            src="https://player.vimeo.com/video/1043999382?muted=1&loop=1&background=1&autoplay=1&dnt=1&app_id=58479&quality=1080p&quality_selector=1"
+            src="https://player.vimeo.com/video/1043999382?muted=1&loop=1&background=1&autoplay=1&dnt=1&app_id=58479&quality=auto"
             frameBorder="0"
             allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
             className="background-video"
             title="Jardim da Amazonia"
+            loading="lazy"
           ></iframe>
         </div>
         <div className={`hero-overlay ${isScrolled ? 'scrolled' : ''}`}>
@@ -72,7 +103,12 @@ function Home() {
             <h1>JARDIM DA AMAZÔNIA</h1>
             <p>Um Refúgio de Riquezas Naturais</p>
             <div className="hero-buttons">
-              <a href="https://book.omnibees.com/hotel/19972?lang=pt-BR&currencyId=16&version=4" target="_blank" rel="noopener noreferrer" className="btn-primary">Reserve Sua Experiência</a>
+              <a href="https://book.omnibees.com/hotel/19972?lang=pt-BR&currencyId=16&version=4" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="btn-primary">
+                Reserve Sua Experiência
+              </a>
             </div>
           </div>
           <div className="scroll-indicator">
@@ -85,26 +121,18 @@ function Home() {
       <section className="biodiversity">
         <div className="section-container">
           <div className="biodiversity-grid">
-            <div className="biodiversity-stat">
-              <div className="stat-number">580+</div>
-              <h3>Espécies de Aves</h3>
-              <p>Catalogadas em nossa reserva</p>
-            </div>
-            <div className="biodiversity-stat">
-              <div className="stat-number">7</div>
-              <h3>Espécies de Primatas</h3>
-              <p>Dos 29 reconhecidos em MT</p>
-            </div>
-            <div className="biodiversity-stat">
-              <div className="stat-number">30+</div>
-              <h3>Mamíferos</h3>
-              <p>De médio e grande porte</p>
-            </div>
-            <div className="biodiversity-stat">
-              <div className="stat-number">∞</div>
-              <h3>Experiências</h3>
-              <p>Únicas na natureza</p>
-            </div>
+            {[
+              { number: "580+", title: "Espécies de Aves", desc: "Catalogadas em nossa reserva" },
+              { number: "7", title: "Espécies de Primatas", desc: "Dos 29 reconhecidos em MT" },
+              { number: "30+", title: "Mamíferos", desc: "De médio e grande porte" },
+              { number: "∞", title: "Experiências", desc: "Únicas na natureza" }
+            ].map((stat, index) => (
+              <div key={index} className="biodiversity-stat">
+                <div className="stat-number">{stat.number}</div>
+                <h3>{stat.title}</h3>
+                <p>{stat.desc}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -112,51 +140,36 @@ function Home() {
       <section className="recognition">
         <div className="section-container">
           <div className="recognition-grid">
-            <div className="recognition-item">
-              <Image 
-                cloudName="dxlhv2mji"
-                publicId={folderImageMapping.logos['save-brasil']}
-                alt="SAVE Brasil Badge"
-                className="recognition-icon"
-                width="auto"
-                crop="scale"
-                quality="auto"
-              />
-              <div className="recognition-content">
-                <h3>Important Bird Area</h3>
-                <p>Reconhecido pela BirdLife International e SAVE Brasil</p>
+            {[
+              {
+                id: 'save-brasil',
+                title: 'Important Bird Area',
+                desc: 'Reconhecido pela BirdLife International e SAVE Brasil'
+              },
+              {
+                id: 'ebird',
+                title: 'TOP 3 Hotspot',
+                desc: 'E-bird / The Cornell Lab of Ornithology'
+              },
+              {
+                id: 'i-eco',
+                title: 'Instituto Ecótono',
+                desc: 'Parceria com o IECO no em estudos científicos'
+              }
+            ].map((item) => (
+              <div key={item.id} className="recognition-item">
+                <Image 
+                  {...cloudinaryCommonProps}
+                  publicId={folderImageMapping.logos[item.id]}
+                  alt={`${item.title} Badge`}
+                  className="recognition-icon"
+                />
+                <div className="recognition-content">
+                  <h3>{item.title}</h3>
+                  <p>{item.desc}</p>
+                </div>
               </div>
-            </div>
-            <div className="recognition-item">
-              <Image 
-                cloudName="dxlhv2mji"
-                publicId={folderImageMapping.logos['ebird']}
-                alt="Ebird Badge"
-                className="recognition-icon"
-                width="auto"
-                crop="scale"
-                quality="auto"
-              />
-              <div className="recognition-content">
-                <h3>TOP 3 Hotspot</h3>
-                <p>E-bird / The Cornell Lab of Ornithology</p>
-              </div>
-            </div>
-            <div className="recognition-item">
-              <Image 
-                cloudName="dxlhv2mji"
-                publicId={folderImageMapping.logos['i-eco']}
-                alt="Instituto Ecotono Badge"
-                className="recognition-icon"
-                width="auto"
-                crop="scale"
-                quality="auto"
-              />
-              <div className="recognition-content">
-                <h3>Instituto Ecótono</h3>
-                <p>Parceria com o IECO no em estudos científicos</p>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
@@ -166,12 +179,9 @@ function Home() {
           <div className="about-grid">
             <div className="about-image">
               <Image 
-                cloudName="dxlhv2mji"
+                {...cloudinaryCommonProps}
                 publicId={folderImageMapping.home['vista-aerea-lodge']}
                 alt="Vista aérea do Lodge"
-                width="auto"
-                crop="scale"
-                quality="auto"
               />
             </div>
             <div className="about-content">
@@ -183,18 +193,16 @@ function Home() {
                 preservamos este tesouro natural para as futuras gerações.
               </p>
               <div className="about-features">
-                <div className="feature">
-                  <i className="fas fa-leaf"></i>
-                  <span>Conservação Ativa</span>
-                </div>
-                <div className="feature">
-                  <i className="fas fa-home"></i>
-                  <span>Acomodações Sustentáveis</span>
-                </div>
-                <div className="feature">
-                  <i className="fas fa-users"></i>
-                  <span>Guias Especializados</span>
-                </div>
+                {[
+                  { icon: 'leaf', text: 'Conservação Ativa' },
+                  { icon: 'home', text: 'Acomodações Sustentáveis' },
+                  { icon: 'users', text: 'Guias Especializados' }
+                ].map((feature, index) => (
+                  <div key={index} className="feature">
+                    <i className={`fas fa-${feature.icon}`}></i>
+                    <span>{feature.text}</span>
+                  </div>
+                ))}
               </div>
               <div className="button-container">
                 <Link to="/nossa-historia" className="btn-explore">Conheça Nossa História</Link>
@@ -211,30 +219,35 @@ function Home() {
             <p>Aventuras no Coração da Natureza</p>
           </div>
           <div className="experiences-grid">
-            <div className="experience-card">
-              <div className="experience-image" style={experienceStyles.birdwatching}></div>
-              <div className="experience-overlay">
-                <h3>Birdwatching</h3>
-                <p>Um dos melhores destinos de observação de aves do Brasil</p>
-                <Link to="/birdwatching" className="btn-explore">Explorar</Link>
+            {[
+              {
+                style: experienceStyles.birdwatching,
+                title: 'Birdwatching',
+                desc: 'Um dos melhores destinos de observação de aves do Brasil',
+                link: '/birdwatching'
+              },
+              {
+                style: experienceStyles.primates,
+                title: 'Primatas',
+                desc: 'Descubra e explore a fascinante Rota dos Primatas',
+                link: '/primatas'
+              },
+              {
+                style: experienceStyles.safari,
+                title: 'Safari no Rio Claro',
+                desc: 'Navegue por águas cristalinas em meio à natureza',
+                link: '/safari-boat'
+              }
+            ].map((exp, index) => (
+              <div key={index} className="experience-card">
+                <div className="experience-image" style={exp.style}></div>
+                <div className="experience-overlay">
+                  <h3>{exp.title}</h3>
+                  <p>{exp.desc}</p>
+                  <Link to={exp.link} className="btn-explore">Explorar</Link>
+                </div>
               </div>
-            </div>
-            <div className="experience-card">
-              <div className="experience-image" style={experienceStyles.primates}></div>
-              <div className="experience-overlay">
-                <h3>Primatas</h3>
-                <p>Descubra e explore a fascinante Rota dos Primatas</p>
-                <Link to="/primatas" className="btn-explore">Explorar</Link>
-              </div>
-            </div>
-            <div className="experience-card">
-              <div className="experience-image" style={experienceStyles.safari}></div>
-              <div className="experience-overlay">
-                <h3>Safari no Rio Claro</h3>
-                <p>Navegue por águas cristalinas em meio à natureza</p>
-                <Link to="/safari-boat" className="btn-explore">Explorar</Link>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
@@ -248,24 +261,11 @@ function Home() {
                 key={index} 
                 className={`testimonial-item ${index === activeTestimonial ? 'active' : ''}`}
               >
-                <blockquote>
-                  {testimonial.quote}
-                  <footer>
-                    <span className="author">{testimonial.author}</span>
-                    <span className="date">{testimonial.date}</span>
-                  </footer>
-                </blockquote>
+                <blockquote>{testimonial.quote}</blockquote>
+                <cite>{testimonial.author}</cite>
+                <span className="date">{testimonial.date}</span>
               </div>
             ))}
-            <div className="testimonial-dots">
-              {testimonials.map((_, index) => (
-                <button
-                  key={index}
-                  className={`dot ${index === activeTestimonial ? 'active' : ''}`}
-                  onClick={() => setActiveTestimonial(index)}
-                />
-              ))}
-            </div>
           </div>
         </div>
       </section>
@@ -293,26 +293,19 @@ function Home() {
             <h2>Sua Aventura Começa Aqui</h2>
             <p>Descubra experiências únicas no coração da Amazônia</p>
             <div className="cta-buttons">
-              <a href="https://book.omnibees.com/hotel/19972?lang=pt-BR&currencyId=16&version=4" target="_blank" rel="noopener noreferrer" className="btn-primary">Reserve Agora</a>
-              <Link to="/como-chegar" className="btn-secondary">Como Chegar</Link>
+              <a href="https://book.omnibees.com/hotel/19972?lang=pt-BR&currencyId=16&version=4" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="btn-primary">
+                Reserve Agora
+              </a>
+              <Link to="/como-chegar" className="btn-secondary">
+                Como Chegar
+              </Link>
             </div>
           </div>
         </div>
       </section>
-
-      <style>{`
-        .experience-image.birdwatching {
-          background-image: url('${getCloudinaryUrl('hero', 'birdwatching')}');
-        }
-        
-        .experience-image.primates {
-          background-image: url('${getCloudinaryUrl('gallery', 'primatas')}');
-        }
-        
-        .experience-image.safari {
-          background-image: url('${getCloudinaryUrl('hero', 'safari-boat')}');
-        }
-      `}</style>
     </div>
   );
 }

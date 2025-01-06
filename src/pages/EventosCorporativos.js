@@ -10,7 +10,7 @@ import { BsCheckCircle } from 'react-icons/bs';
 
 function EventosCorporativos() {
   const heroStyle = {
-    backgroundImage: `url(${getFolderImage('heroes/eventos-corporativos')})`,
+    backgroundImage: `url(${getFolderImage('eventos', 'fogo-no-rio')})`,
     backgroundSize: 'cover',
     backgroundPosition: 'center',
   };
@@ -30,7 +30,7 @@ function EventosCorporativos() {
           <div className="packages-grid">
             <div className="package-card">
               <div className="package-image">
-                <img src={getFolderImage('eventos/reuniao-executiva')} alt="Reuniões Executivas" />
+                <img src={getFolderImage('eventos', 'reuniao-executiva')} alt="Reuniões Executivas" />
               </div>
               <div className="package-content">
                 <div className="package-icon">
@@ -53,7 +53,7 @@ function EventosCorporativos() {
 
             <div className="package-card">
               <div className="package-image">
-                <img src={getFolderImage('eventos/team-building')} alt="Team Building" />
+                <img src={getFolderImage('eventos', 'ocasioes-especiais')} alt="Team Building" />
               </div>
               <div className="package-content">
                 <div className="package-icon">
@@ -76,7 +76,7 @@ function EventosCorporativos() {
 
             <div className="package-card">
               <div className="package-image">
-                <img src={getFolderImage('eventos/eventos-especiais')} alt="Eventos Especiais" />
+                <img src={getFolderImage('eventos', 'eventos-especiais')} alt="Eventos Especiais" />
               </div>
               <div className="package-content">
                 <div className="package-icon">

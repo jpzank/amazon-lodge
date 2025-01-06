@@ -4,7 +4,7 @@ import '../styles/GuiasCampo.css';
 
 function GuiasCampo() {
   const heroStyle = {
-    backgroundImage: `url(${getFolderImage('guias-campo/hero')})`,
+    backgroundImage: `url(${getFolderImage('eventos', 'fogo-no-rio')})`,
     backgroundSize: 'cover',
     backgroundPosition: 'center',
   };

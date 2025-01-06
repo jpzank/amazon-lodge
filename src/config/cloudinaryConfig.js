@@ -16,11 +16,47 @@ const DEFAULT_TRANSFORMATIONS = 'f_auto,q_auto';
 // Folder-specific image mappings
 export const folderImageMapping = {
   acomodacoes: {
-    'bangalo1': 'v1736085714/bangalo1_nktctx',
-    'bangalo-familia': 'v1736085689/bangalo-familia_rsafvb',
-    'bangalo-jardim': 'v1736085676/bangalo-jardim_fvql79',
-    'casa-fazenda': 'v1736085704/casa-fazenda_n6bscy',
-    'hero': 'v1736085769/acomodacoes_ghqhpo'
+    'hero': 'acomodacoes_ghqhpo',
+    'casa-fazenda': 'casa-fazenda_n6bscy',
+    'casa-fazenda-1': '7fazenda-1_ceheai',
+    'casa-fazenda-2': '7fazenda-2_rmxj02',
+    'casa-fazenda-3': '7fazenda-3_gnrzph',
+    'casa-fazenda-4': '7fazenda-4_tcprqe',
+    
+    'bangalo-familia': 'familia-hero_tjgrgj',
+    'bangalo-familia-1': 'familia-1_vdrp6r',
+    'bangalo-familia-2': 'familia-2_u3gvx4',
+    'bangalo-familia-3': 'familia-3_iytw3g',
+    'bangalo-familia-4': 'familia-4_ubeuml',
+    'bangalo-familia-5': 'familia-5_qtabos',
+    'bangalo-familia-6': 'familia-6_e1wlfl',
+    
+    'bangalo-jardim': 'jardim-hero_wi8rlu',
+    'bangalo-jardim-1': 'jardim-1_m4axtr',
+    'bangalo-jardim-2': 'jardim-2_ukfgpv',
+    'bangalo-jardim-3': 'jardim-3_p58x8k',
+    'bangalo-jardim-4': 'jardim-4_ky0akd',
+    'bangalo-jardim-5': 'jardim-5_wukn6z',
+    'bangalo-jardim-6': 'jardim-6_jvgxqs',
+    
+    'bangalo-mata': 'mata-hero_lfg1g8',
+    'bangalo-mata-1': 'mata-1_pbggfy',
+    'bangalo-mata-2': 'mata-2_sdizvm',
+    'bangalo-mata-3': 'mata-3_jzdaaz',
+    'bangalo-mata-4': 'mata-4_dlcx9i',
+    'bangalo-mata-5': 'mata-5_prf7pi',
+    'bangalo-mata-6': 'mata-6_jeycpm',
+    
+    'apto-5-1': '5fazenda-1_wguam6',
+    'apto-5-2': '5fazenda-2_olpvv7',
+    'apto-5-3': '5fazenda-3_vhejif',
+    'apto-5-4': '5fazenda-4_rdubmo',
+    'apto-5-5': '5fazenda-5_jpx0xg',
+    
+    'apto-6-1': '6fazenda-1_oxbxca',
+    'apto-6-3': '6fazenda-3_dhnwre',
+    'apto-6-4': '6fazenda-4_ncigri',
+    'apto-6-5': '6fazenda-5_jjgbpg'
   },
   'area-externa': {
     'hero': 'v1736092424/area-externa_ml9enj',
@@ -36,7 +72,8 @@ export const folderImageMapping = {
   eventos: {
     'reuniao-executiva': 'v1736085711/reuniao-executiva_ouxhas',
     'eventos-especiais': 'v1736085709/eventos-especiais_wkym1o',
-    'ocasioes-especiais': 'v1736085783/ocasioes-especiais_h44ve8'
+    'ocasioes-especiais': 'v1736085783/ocasioes-especiais_h44ve8',
+    'fogo-no-rio': 'fogo-no-rio_u7cpws'
   },
   'falaram-de-nos': {
     'wonderlust': 'v1736085727/wonderlust_alvd9p',
@@ -54,7 +91,8 @@ export const folderImageMapping = {
     'pratos-tipicos': 'v1736085776/pratos-tipicos_f4meuw',
     'sobremesas-especiais': 'v1736085770/sobremesas-especiais_osgafx',
     'prato-especial-do-chef': 'v1736085763/prato-especial-do-chef_w8ep8h',
-    'especiarias-regionais': 'v1736085761/especiarias-regionais_vutp3x'
+    'especiarias-regionais': 'v1736085761/especiarias-regionais_vutp3x',
+    'chef-jose-sergio': 'chef-jose-sergio_t9kpgf'
   },
   home: {
     'vista-aerea-lodge': 'v1736085794/vista-aerea-lodge_p33y1g',

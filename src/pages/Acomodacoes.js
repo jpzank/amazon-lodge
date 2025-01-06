@@ -30,9 +30,10 @@ import {
 import { GiPalmTree, GiForestCamp } from 'react-icons/gi';
 
 const heroStyle = {
-  backgroundImage: `url(${getFolderImage('acomodacoes/hero')})`,
+  backgroundImage: `url(${getFolderImage('acomodacoes', 'hero')})`,
   backgroundSize: 'cover',
-  backgroundPosition: 'center'
+  backgroundPosition: 'center',
+  backgroundRepeat: 'no-repeat'
 };
 
 function Acomodacoes() {
@@ -96,8 +97,15 @@ function Acomodacoes() {
         { icon: <MdNaturePeople />, name: 'Vista para o Rio Claro' },
         { icon: <FaHeart />, name: 'Ideal para Famílias' }
       ],
-      image: 'src/images/acomodacoes/bangalo-familia.png',
-      gallery: Array(6).fill('/src/images/kiko.jpg')
+      image: getFolderImage('acomodacoes', 'bangalo-familia'),
+      gallery: [
+        getFolderImage('acomodacoes', 'bangalo-familia-1'),
+        getFolderImage('acomodacoes', 'bangalo-familia-2'),
+        getFolderImage('acomodacoes', 'bangalo-familia-3'),
+        getFolderImage('acomodacoes', 'bangalo-familia-4'),
+        getFolderImage('acomodacoes', 'bangalo-familia-5'),
+        getFolderImage('acomodacoes', 'bangalo-familia-6')
+      ]
     },
     {
       id: 'bangalo-jardim',
@@ -110,8 +118,15 @@ function Acomodacoes() {
         { icon: <MdNaturePeople />, name: 'Vista para o Jardim' },
         { icon: <FaHeart />, name: 'Ideal para Casais' }
       ],
-      image: 'src/images/acomodacoes/bangalo-jardim.jpg',
-      gallery: Array(6).fill('/src/images/kiko.jpg')
+      image: getFolderImage('acomodacoes', 'bangalo-jardim'),
+      gallery: [
+        getFolderImage('acomodacoes', 'bangalo-jardim-1'),
+        getFolderImage('acomodacoes', 'bangalo-jardim-2'),
+        getFolderImage('acomodacoes', 'bangalo-jardim-3'),
+        getFolderImage('acomodacoes', 'bangalo-jardim-4'),
+        getFolderImage('acomodacoes', 'bangalo-jardim-5'),
+        getFolderImage('acomodacoes', 'bangalo-jardim-6')
+      ]
     },
     {
       id: 'casa-fazenda',
@@ -124,8 +139,13 @@ function Acomodacoes() {
         { icon: <MdNaturePeople />, name: 'Vista Panorâmica' },
         { icon: <FaHeart />, name: 'Experiência Histórica' }
       ],
-      image: 'src/images/acomodacoes/casa-fazenda.png',
-      gallery: Array(6).fill('/src/images/kiko.jpg'),
+      image: getFolderImage('acomodacoes', 'casa-fazenda'),
+      gallery: [
+        getFolderImage('acomodacoes', 'casa-fazenda-1'),
+        getFolderImage('acomodacoes', 'casa-fazenda-2'),
+        getFolderImage('acomodacoes', 'casa-fazenda-3'),
+        getFolderImage('acomodacoes', 'casa-fazenda-4')
+      ],
       subitems: [
         {
           id: 'apartamento-5',
@@ -136,7 +156,13 @@ function Acomodacoes() {
             { icon: <MdHotel />, name: 'Mobília de Época' },
             { icon: <MdNaturePeople />, name: 'Vista Panorâmica' }
           ],
-          gallery: Array(6).fill('/src/images/kiko.jpg')
+          gallery: [
+            getFolderImage('acomodacoes', 'apto-5-1'),
+            getFolderImage('acomodacoes', 'apto-5-2'),
+            getFolderImage('acomodacoes', 'apto-5-3'),
+            getFolderImage('acomodacoes', 'apto-5-4'),
+            getFolderImage('acomodacoes', 'apto-5-5')
+          ]
         },
         {
           id: 'apartamento-6',
@@ -147,7 +173,12 @@ function Acomodacoes() {
             { icon: <MdHotel />, name: 'Mobília de Época' },
             { icon: <MdFamilyRestroom />, name: 'Ideal para Famílias' }
           ],
-          gallery: Array(6).fill('/src/images/kiko.jpg')
+          gallery: [
+            getFolderImage('acomodacoes', 'apto-6-1'),
+            getFolderImage('acomodacoes', 'apto-6-3'),
+            getFolderImage('acomodacoes', 'apto-6-4'),
+            getFolderImage('acomodacoes', 'apto-6-5')
+          ]
         },
         {
           id: 'apartamento-7',
@@ -158,7 +189,12 @@ function Acomodacoes() {
             { icon: <MdHotel />, name: 'Mobília de Época' },
             { icon: <FaHeart />, name: 'Ideal para Casais' }
           ],
-          gallery: Array(6).fill('/src/images/kiko.jpg')
+          gallery: [
+            getFolderImage('acomodacoes', 'casa-fazenda-1'),
+            getFolderImage('acomodacoes', 'casa-fazenda-2'),
+            getFolderImage('acomodacoes', 'casa-fazenda-3'),
+            getFolderImage('acomodacoes', 'casa-fazenda-4')
+          ]
         }
       ]
     },
@@ -173,8 +209,15 @@ function Acomodacoes() {
         { icon: <MdNaturePeople />, name: 'Vista para a Mata' },
         { icon: <FaMountain />, name: 'Experiência Imersiva' }
       ],
-      image: 'src/images/acomodacoes/casa-mata.jpg',
-      gallery: Array(6).fill('/src/images/kiko.jpg')
+      image: getFolderImage('acomodacoes', 'bangalo-mata'),
+      gallery: [
+        getFolderImage('acomodacoes', 'bangalo-mata-1'),
+        getFolderImage('acomodacoes', 'bangalo-mata-2'),
+        getFolderImage('acomodacoes', 'bangalo-mata-3'),
+        getFolderImage('acomodacoes', 'bangalo-mata-4'),
+        getFolderImage('acomodacoes', 'bangalo-mata-5'),
+        getFolderImage('acomodacoes', 'bangalo-mata-6')
+      ]
     }
   ];
 
@@ -204,10 +247,12 @@ function Acomodacoes() {
 
   return (
     <div className="acomodacoes">
-      <section className="page-hero accommodations">
-        <div className="hero-content">
-          <h1>ACOMODAÇÕES</h1>
-          <p>Conforto e História em Harmonia com a Natureza</p>
+      <section className="page-hero" style={heroStyle}>
+        <div className="hero-overlay">
+          <div className="hero-content">
+            <h1>ACOMODAÇÕES</h1>
+            <p>Conforto e História em Harmonia com a Natureza</p>
+          </div>
         </div>
       </section>
 
@@ -231,10 +276,11 @@ function Acomodacoes() {
             {accommodations.map((accommodation) => (
               <div key={accommodation.id} className="room-card">
                 <div className="room-image-container">
-                  <div 
-                    className="room-image" 
-                    style={{backgroundImage: `url(${accommodation.image})`}}
-                  ></div>
+                  <img 
+                    src={accommodation.image}
+                    alt={accommodation.name}
+                    className="room-image"
+                  />
                 </div>
                 <div className="room-content">
                   <h2>{accommodation.name}</h2>

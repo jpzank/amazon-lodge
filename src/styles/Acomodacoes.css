@@ -2,32 +2,47 @@
   min-height: 100vh;
 }
 
-.page-hero.accommodations {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+.page-hero {
+  position: relative;
   height: 70vh;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
+  color: var(--light-text);
   text-align: center;
-  color: white;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.7));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-content {
+  max-width: 800px;
+  padding: 0 2rem;
+  z-index: 1;
 }
 
 .hero-content h1 {
   font-size: 4rem;
-  margin-bottom: 1.5rem;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-weight: 700;
+  margin-bottom: 1rem;
   letter-spacing: 2px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
 }
 
 .hero-content p {
-  font-size: 1.8rem;
-  max-width: 800px;
-  margin: 0 auto;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-  font-weight: 300;
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
 }
 
 .container {
@@ -701,14 +716,10 @@
 }
 
 @media (max-width: 768px) {
-  .page-hero.accommodations {
-    height: 50vh;
-  }
-
   .hero-content h1 {
     font-size: 2.5rem;
   }
-
+  
   .hero-content p {
     font-size: 1.2rem;
   }
