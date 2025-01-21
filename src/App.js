@@ -21,8 +21,8 @@ import Trilhas from './pages/Trilhas';
 import NossaHistoria from './pages/NossaHistoria';
 import FalaramDeNos from './pages/FalaramDeNos';
 import CloudinaryDemo from './pages/CloudinaryDemo';
-import './styles/App.css';
-import './styles/shared.css';
+import Template from './pages/Template';
+import Documentos from './pages/Documentos';
 
 function App() {
   return (
@@ -48,6 +48,8 @@ function App() {
           <Route path="/nossa-historia" element={<NossaHistoria />} />
           <Route path="/falaram-de-nos" element={<FalaramDeNos />} />
           <Route path="/cloudinary-demo" element={<CloudinaryDemo />} />
+          <Route path="/template" element={<Template />} />
+          <Route path="/documentos" element={<Documentos />} />
         </Routes>
         <Footer />
       </div>

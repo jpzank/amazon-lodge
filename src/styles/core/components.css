@@ -1,0 +1,9 @@
+/* Core Components */
+@import './components/cards.css';
+@import './components/video-hero.css';
+@import './components/recognition.css';
+@import './components/biodiversity.css';
+@import './components/experience-card.css';
+@import './components/section-header.css';
+@import './components/testimonials.css';
+@import './components/cta.css'; 

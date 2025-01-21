@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jardim da Amazônia - Internal Document</title>
+    <style>
+        @page {
+            size: A4;
+            margin: 0;
+        }
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .internal-paper {
+            width: 21cm;
+            min-height: 29.7cm;
+            margin: 0 auto;
+            padding: 2.54cm;
+            padding-top: 1.5cm;
+            position: relative;
+            background: white;
+        }
+        .internal-header {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 3rem;
+        }
+        .internal-logo img {
+            height: 140px;
+            width: auto;
+        }
+        .internal-content {
+            min-height: 600px;
+        }
+        .internal-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        .internal-title h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: #45a049;
+        }
+        .document-info {
+            font-size: 1rem;
+            color: #666;
+            margin-bottom: 0.25rem;
+        }
+        .document-date {
+            font-size: 0.9rem;
+            color: #666;
+        }
+        .document-body {
+            line-height: 1.8;
+            margin-top: 2rem;
+        }
+        .internal-footer {
+            position: absolute;
+            bottom: 2.54cm;
+            left: 2.54cm;
+            right: 2.54cm;
+            text-align: center;
+        }
+        .footer-line {
+            height: 1px;
+            background-color: #45a049;
+            margin-bottom: 1rem;
+        }
+        .internal-footer p {
+            color: #666;
+            font-size: 0.8rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="internal-paper">
+        <div class="internal-header">
+            <div class="internal-logo">
+                <img src="/Logo_Jardim_Amazonia_COLORIDO.png" alt="Jardim da Amazônia">
+            </div>
+        </div>
+
+        <div class="internal-content">
+            <div class="internal-title">
+                <h2>[TÍTULO DO DOCUMENTO]</h2>
+                <p class="document-info">Documento Interno - [CÓDIGO/REFERÊNCIA]</p>
+                <p class="document-date">Data: [DATA]</p>
+            </div>
+            
+            <div class="document-body">
+                <p>[Conteúdo do documento]</p>
+            </div>
+        </div>
+
+        <div class="internal-footer">
+            <div class="footer-line"></div>
+            <p>Documento Interno - Jardim da Amazônia</p>
+        </div>
+    </div>
+</body>
+</html> 

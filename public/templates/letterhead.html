@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jardim da Amazônia - Letterhead</title>
+    <style>
+        @page {
+            size: A4;
+            margin: 0;
+        }
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .letterhead-paper {
+            width: 21cm;
+            min-height: 29.7cm;
+            margin: 0 auto;
+            padding: 2.54cm;
+            position: relative;
+            background: white;
+        }
+        .letterhead-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 4rem;
+            border-bottom: 2px solid #45a049;
+            padding-bottom: 1rem;
+        }
+        .letterhead-logo img {
+            height: 140px;
+            width: auto;
+        }
+        .letterhead-contact {
+            text-align: right;
+            font-size: 0.9rem;
+            color: #333;
+        }
+        .contact-item {
+            margin-bottom: 0.5rem;
+        }
+        .letterhead-content {
+            min-height: 600px;
+        }
+        .date-area {
+            margin-bottom: 2rem;
+            text-align: right;
+        }
+        .recipient-area {
+            margin-bottom: 2rem;
+        }
+        .recipient-area p {
+            margin-bottom: 0.25rem;
+        }
+        .letter-body {
+            line-height: 1.8;
+        }
+        .signature-area {
+            margin-top: 4rem;
+        }
+        .signature-line {
+            width: 200px;
+            height: 1px;
+            background-color: #000;
+            margin: 2rem 0 0.5rem;
+        }
+        .letterhead-footer {
+            position: absolute;
+            bottom: 2.54cm;
+            left: 2.54cm;
+            right: 2.54cm;
+            text-align: center;
+        }
+        .footer-line {
+            height: 1px;
+            background-color: #45a049;
+            margin-bottom: 1rem;
+        }
+        .letterhead-footer p {
+            color: #45a049;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="letterhead-paper">
+        <div class="letterhead-header">
+            <div class="letterhead-logo">
+                <img src="/Logo_Jardim_Amazonia_COLORIDO.png" alt="Jardim da Amazônia">
+            </div>
+            <div class="letterhead-contact">
+                <div class="contact-item">
+                    RODOVIA MT 10 - KM 88, SÃO JOSÉ DO RIO CLARO, MT
+                </div>
+                <div class="contact-item">
+                    +55 (65) 9 9675-1401
+                </div>
+                <div class="contact-item">
+                    atendimento@jardimamazonia.com
+                </div>
+            </div>
+        </div>
+
+        <div class="letterhead-content">
+            <div class="date-area">
+                <p>São José do Rio Claro, [DATA]</p>
+            </div>
+            <div class="recipient-area">
+                <p>[Nome do Destinatário]</p>
+                <p>[Cargo/Empresa]</p>
+                <p>[Endereço]</p>
+            </div>
+            <div class="letter-body">
+                <p>Prezado(a) Senhor(a),</p>
+                <p>[Conteúdo da carta]</p>
+                <div class="signature-area">
+                    <p>Atenciosamente,</p>
+                    <div class="signature-line"></div>
+                    <p>Jardim da Amazônia</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="letterhead-footer">
+            <div class="footer-line"></div>
+            <p>www.jardimdaamazonia.com.br</p>
+        </div>
+    </div>
+</body>
+</html> 
