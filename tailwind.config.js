@@ -85,6 +85,20 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    function({ addComponents }) {
+      addComponents({
+        '.btn-primary': {
+          '@apply inline-flex items-center justify-center px-6 py-3 rounded-md bg-primary text-white font-medium transition-colors duration-300 hover:bg-primary-dark focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2': {},
+        },
+        '.btn-secondary': {
+          '@apply inline-flex items-center justify-center px-6 py-3 rounded-md bg-white text-primary font-medium border-2 border-primary transition-colors duration-300 hover:bg-primary hover:text-white focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2': {},
+        },
+        '.btn-accent': {
+          '@apply inline-flex items-center justify-center px-8 py-4 rounded-full bg-accent text-primary font-semibold transition-all duration-300 hover:-translate-y-1 hover:shadow-lg': {},
+        },
+      })
+    }
+  ],
 }
 

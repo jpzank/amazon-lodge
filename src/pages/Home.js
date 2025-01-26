@@ -7,6 +7,7 @@ import { siteConfig, featureFlags } from '../config';
 const Home = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeTestimonial, setActiveTestimonial] = useState(0);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
 
   // Move all hooks to the top level
   const testimonials = useMemo(() => siteConfig?.home?.testimonials?.items || [], []);
@@ -75,6 +76,16 @@ const Home = () => {
     return () => clearInterval(testimonialInterval);
   }, [testimonials.length]);
 
+  // Handle window resize
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   // Debug siteConfig
   console.log('siteConfig:', siteConfig);
   console.log('conservation:', siteConfig?.home?.conservation);
@@ -85,7 +96,7 @@ const Home = () => {
       <section className="relative h-screen overflow-hidden">
         <div className="absolute inset-0 overflow-hidden transform scale-[1.3] origin-center">
           <iframe
-            src={`${siteConfig?.home?.hero?.videoUrl}?muted=1&loop=1&background=1&autoplay=1&dnt=1&app_id=58479&quality=auto`}
+            src={`${isMobile ? siteConfig?.home?.hero?.mobileVideoUrl : siteConfig?.home?.hero?.videoUrl}?muted=1&loop=1&background=1&autoplay=1&dnt=1&app_id=58479&quality=auto`}
             frameBorder="0"
             allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
             className="w-full h-full object-cover"
@@ -104,7 +115,7 @@ const Home = () => {
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center max-w-6xl mx-auto">
             <div className="space-y-8">
-              <p className="text-lg text-gray-700 leading-relaxed">
+              <p className="text-lg text-gray-700 leading-relaxed text-justify">
               Situado às margens do Rio Claro, o Jardim da Amazônia é um refúgio que une a Floresta Amazônica 
               e o Cerrado, oferecendo um dos ecossistemas mais ricos e diversificados do Brasil. Nosso objetivo 
               é proporcionar uma experiência autêntica de conexão com a natureza, em um ambiente tranquilo e preservado, 
@@ -130,12 +141,12 @@ const Home = () => {
                   <span className="font-medium">Guias Especializados</span>
                 </div>
               </div>
-              <div className="text-center lg:text-left">
+              <div className="flex justify-center">
                 <Link 
                   to={siteConfig.buttonLinks.ourHistory} 
-                  className="text-white/90 hover:text-white transition-default"
+                  className="btn-primary"
                 >
-                  Saiba mais sobre nossa história
+                  Conheça Nossa História
                 </Link>
               </div>
             </div>
@@ -208,7 +219,7 @@ const Home = () => {
                   <p className="text-white/90 mb-6">{exp.desc}</p>
                   <Link 
                     to={exp.link} 
-                    className="inline-flex items-center justify-center px-6 py-2 bg-white/20 backdrop-blur-sm rounded-md text-white hover:bg-white/30 transition-colors duration-300"
+                    className="btn-secondary"
                   >
                     Explorar
                   </Link>

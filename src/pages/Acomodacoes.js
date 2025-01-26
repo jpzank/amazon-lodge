@@ -317,9 +317,7 @@ function Acomodacoes() {
                   {/* Action Button */}
                   <button
                     onClick={() => handleShowDetails(accommodation)}
-                    className="w-full py-3 px-6 bg-primary text-white rounded-full font-medium
-                      hover:bg-primary/90 hover:-translate-y-0.5 hover:shadow-md 
-                      transition-all duration-300 ease-in-out"
+                    className="btn-primary w-full"
                   >
                     Ver Detalhes
                   </button>
@@ -376,15 +374,13 @@ function Acomodacoes() {
               href={siteConfig.buttonLinks.bookNow}
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-accent text-primary px-8 py-4 rounded-full text-lg font-semibold
-                hover:-translate-y-1 hover:shadow-lg transition-all duration-300"
+              className="btn-primary"
             >
               Reserve Agora
             </a>
             <Link
               to={siteConfig.buttonLinks.contato}
-              className="px-8 py-4 rounded-full text-lg font-semibold border-2 border-white
-                hover:-translate-y-1 hover:shadow-lg hover:bg-white/10 transition-all duration-300"
+              className="btn-secondary"
             >
               Entre em Contato
             </Link>
@@ -481,8 +477,7 @@ function Acomodacoes() {
                 href={siteConfig.buttonLinks.bookNow}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block w-full text-center bg-accent text-primary py-4 rounded-full
-                  font-semibold hover:-translate-y-1 hover:shadow-lg transition-all duration-300"
+                className="btn-primary"
               >
                 Reserve Agora
               </a>

@@ -8,7 +8,7 @@ function Cestas() {
       <div className="flex justify-center mb-8">
         <button 
           onClick={printCestas} 
-          className="flex items-center gap-2 px-5 py-3 rounded-full font-semibold text-base bg-black text-white hover:bg-gray-800 transition-all duration-300 hover:-translate-y-0.5"
+          className="btn-primary flex items-center gap-2"
         >
           <FaPrint /> Imprimir Cestas
         </button>

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import siteConfig from '../config/siteConfig';
 
 function Hero() {
   return (
@@ -23,19 +24,16 @@ function Hero() {
         {/* CTA Buttons */}
         <div className="flex flex-col md:flex-row gap-4 md:gap-6 justify-center mb-12">
           <a
-            href="https://book.omnibees.com/hotel/19972?lang=pt-BR&currencyId=16&version=4"
+            href={siteConfig.buttonLinks.bookNow}
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-accent text-primary px-8 py-4 rounded-full text-lg font-semibold uppercase 
-              tracking-wider hover:-translate-y-1 hover:shadow-lg transition-all duration-300"
+            className="btn-primary"
           >
             Reserve Agora
           </a>
           <Link
             to="/nossa-historia"
-            className="px-8 py-4 rounded-full text-lg font-semibold uppercase tracking-wider
-              border-2 border-white hover:-translate-y-1 hover:shadow-lg hover:bg-white/10
-              transition-all duration-300"
+            className="btn-secondary"
           >
             Explore Nossa História
           </Link>

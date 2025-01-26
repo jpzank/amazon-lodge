@@ -89,7 +89,7 @@ const Gastronomia = () => {
                   "Valorizamos os produtores locais e as tradições culinárias da região, sempre buscando inovar e surpreender nossos hóspedes com sabores únicos e apresentações memoráveis."
                 </p>
                 <footer className="font-semibold text-primary mt-8 not-italic">
-                  Chef João Silva
+                  Chef José Sérgio
                 </footer>
               </blockquote>
             </div>

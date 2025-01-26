@@ -66,7 +66,8 @@ export const siteConfig = {
     hero: {
       title: 'JARDIM DA AMAZÔNIA',
       subtitle: 'Um Refúgio de Riquezas Naturais',
-      videoUrl: 'https://player.vimeo.com/video/1050426624'
+      videoUrl: 'https://player.vimeo.com/video/1050426624',
+      mobileVideoUrl: 'https://player.vimeo.com/video/1050452277'
     },
 
     biodiversity: {

@@ -186,18 +186,15 @@ function Template() {
             <p className="text-gray-600 mb-8">Botões com diferentes níveis de ênfase e propósito</p>
 
             <div className="flex flex-wrap gap-4 justify-center">
-              <button className="flex items-center gap-2 px-6 py-3 bg-primary text-white rounded-full font-semibold hover:bg-primary/90 transition-all duration-300">
+              <button className="btn-accent">
+                Reservar
+              </button>
+              <button className="btn-primary flex items-center gap-2">
                 <span>Primary Action</span>
                 <FaChevronRight />
               </button>
-              <button className="px-6 py-3 bg-gray-800 text-white rounded-full font-semibold hover:bg-gray-700 transition-all duration-300">
+              <button className="btn-secondary">
                 Secondary Action
-              </button>
-              <button className="px-6 py-3 border-2 border-primary text-primary rounded-full font-semibold hover:bg-primary/5 transition-all duration-300">
-                Outline Button
-              </button>
-              <button className="px-6 py-3 text-primary font-semibold hover:bg-primary/5 rounded-full transition-all duration-300">
-                Text Button
               </button>
             </div>
           </div>
