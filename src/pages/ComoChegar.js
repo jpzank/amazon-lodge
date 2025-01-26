@@ -177,7 +177,7 @@ const ComoChegar = () => {
                   <FaEnvelope className="w-8 h-8 text-primary" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">Email</h3>
-                <p className="text-gray-600">reservas@jardimdaamazonia.com.br</p>
+                <p className="text-gray-600">atendimento@jardimamazonia.com</p>
               </div>
 
               <div className="bg-white p-8 rounded-xl shadow-lg transition-transform duration-300 hover:-translate-y-2">

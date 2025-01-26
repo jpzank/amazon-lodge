@@ -83,10 +83,10 @@ const Gastronomia = () => {
               <h2 className="text-4xl font-semibold text-primary mb-8">Nossa Filosofia Culinária</h2>
               <blockquote className="text-lg leading-relaxed text-gray-700 italic pl-8 border-l-4 border-primary">
                 <p className="mb-6">
-                  "Nossa cozinha é um tributo à riqueza da Amazônia. Cada prato é cuidadosamente elaborado para proporcionar uma experiência autêntica, combinando ingredientes locais frescos com técnicas refinadas de preparo."
+                  "A gastronomia sempre teve o grande objetivo de unir pessoas, seja através da cocção dos alimentos ou do próprio alimento in natura. Mas o grande objetivo é alimentar a "alma" antes de alimentar o corpo, nessa grande busca pelo prazer em alimentar e proporcionar grandes momentos, grandes encontros, desde a nossa ancestralidade essa busca era constante, nos tempos atuais isso não é diferente, temos uma infinidade de produtos e produtores, nasceu então o "FARM TO TABLE", algo da terra para a mesa, essa busca me trouxe como chef para uma imersão no Ecótono, Amazônia / Cerrado, buscando essa união me deparei com um lugar incrível chamado Jardim da Amazônia, com uma cozinha muito caseira comandada por uma senhora chamada CARMELITA ZANCHET."
                 </p>
                 <p className="mb-6">
-                  "Valorizamos os produtores locais e as tradições culinárias da região, sempre buscando inovar e surpreender nossos hóspedes com sabores únicos e apresentações memoráveis."
+                  "Nessa jornada descobri que o simples é essencial aos olhos e a alma. Frutos, sementes, hortaliças, peixes, vegetais e outras iguarias que encontrei nessa fusão Amazônia / Cerrado é indiscutivelmente a busca pelo meu projeto de vida como cozinheiro. Encontrei um porto serguro ou "cozinha segura". Onde essa jornada vai me conduzir? Ainda estou descobrindo e sem pressa de chegar ao fim! Cozinhar é antes de tudo um grande ato de AMOR."
                 </p>
                 <footer className="font-semibold text-primary mt-8 not-italic">
                   Chef José Sérgio

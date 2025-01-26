@@ -22,7 +22,7 @@ const EstacaoPesquisa = () => {
         <div className="container mx-auto px-4 max-w-4xl">
           <p className="text-xl text-gray-700 leading-relaxed text-center">
             A Estação de Pesquisa Jardim da Amazônia, em sua fase inicial, conta com a infraestrutura da 
-            Pousada Jardim da Amazônia, um dos locais do Brasil mais visitados por observadores de aves. 
+            Jardim da Amazônia, um dos locais do Brasil mais visitados por observadores de aves. 
             Nossa estação é um centro dedicado à pesquisa, educação ambiental e conservação, oferecendo 
             espaço para oficinas, cursos e reuniões através de três programas integrados.
           </p>

@@ -23,6 +23,7 @@ import FalaramDeNos from './pages/FalaramDeNos';
 import Documentos from './pages/Documentos';
 import Template from './pages/Template';
 import EventosNatureza from './pages/EventosNatureza';
+import Galeria from './pages/Galeria';
 
 function App() {
   return (
@@ -50,6 +51,7 @@ function App() {
             <Route path="/template" element={<Template />} />
             <Route path="/documentos" element={<Documentos />} />
             <Route path="/eventos-natureza" element={<EventosNatureza />} />
+            <Route path="/galeria" element={<Galeria />} />
           </Routes>
         </main>
         <Footer />

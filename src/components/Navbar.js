@@ -157,6 +157,7 @@ function Navbar() {
                   <Link to={siteConfig.buttonLinks.estacaoPesquisa} className="block px-8 lg:px-6 py-3 text-white/90 lg:text-white text-base lg:text-[0.9rem] font-primary tracking-wide lg:hover:bg-white/10 lg:hover:pl-8 transition-all duration-200" onClick={handleLinkClick}>Estação de Pesquisa</Link>
                   <Link to={siteConfig.buttonLinks.nascenteNatural} className="block px-8 lg:px-6 py-3 text-white/90 lg:text-white text-base lg:text-[0.9rem] font-primary tracking-wide lg:hover:bg-white/10 lg:hover:pl-8 transition-all duration-200" onClick={handleLinkClick}>Nascente Natural</Link>
                   <Link to={siteConfig.buttonLinks.falaramDeNos} className="block px-8 lg:px-6 py-3 text-white/90 lg:text-white text-base lg:text-[0.9rem] font-primary tracking-wide lg:hover:bg-white/10 lg:hover:pl-8 transition-all duration-200" onClick={handleLinkClick}>Falaram de Nós</Link>
+                  <Link to={siteConfig.buttonLinks.galeria} className="block px-8 lg:px-6 py-3 text-white/90 lg:text-white text-base lg:text-[0.9rem] font-primary tracking-wide lg:hover:bg-white/10 lg:hover:pl-8 transition-all duration-200" onClick={handleLinkClick}>Galeria de Fotos</Link>
                 </div>
               </li>
 

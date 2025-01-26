@@ -219,7 +219,7 @@ const Home = () => {
                   <p className="text-white/90 mb-6">{exp.desc}</p>
                   <Link 
                     to={exp.link} 
-                    className="btn-secondary"
+                    className="btn-dark"
                   >
                     Explorar
                   </Link>

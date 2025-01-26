@@ -80,7 +80,9 @@ export const folderImageMapping = {
     'wonderlust-1': 'v1736085722/wonderlust-1_cnm4vl',
     'wonderlust-2': 'v1736085728/wonderlust-2_wn6zao',
     'camalote-capa': 'v1736085712/camalote-capa_xaeyct',
-    'camalote-pagina1': 'v1736085720/camalote-pagina1_dz0ek4'
+    'camalote-pagina1': 'v1736085720/camalote-pagina1_dz0ek4',
+    'camalote-pagina2': 'v1736085725/camalote-pagina2_ep900h',
+    'camalote-pagina3': 'v1736085740/camalote-pagina3_af3v7z'
   },
   gastronomia: {
     'hero': 'v1736085785/gatronomia-hero_kqnp26',
