@@ -43,7 +43,7 @@ const AreasExternas = () => {
         'Pontos de observação',
         'Áreas de descanso'
       ],
-      image: getFolderImage('trilhas', 'hero'),
+      image: getFolderImage('area-externa', 'trilha'),
       link: '/trilhas'
     },
     {

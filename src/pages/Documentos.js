@@ -1,9 +1,9 @@
 import React from 'react';
-import Menu from '../components/Menu';
-import WineList from '../components/WineList';
-import Receptivo from '../components/Receptivo';
-import Cestas from '../components/Cestas';
-import GoogleReviews from '../components/GoogleReviews';
+import Menu from '../documents/Menu';
+import WineList from '../documents/WineList';
+import Receptivo from '../documents/Receptivo';
+import Cestas from '../documents/Cestas';
+import GoogleReviews from '../documents/GoogleReviews';
 import { getFolderImage } from '../config/cloudinaryConfig';
 
 const heroStyle = {

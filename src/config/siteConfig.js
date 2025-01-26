@@ -17,7 +17,7 @@ export const siteConfig = {
     instagram: 'https://instagram.com/jardimdaamazonia',
     facebook: 'https://facebook.com/jardimdaamazonia',
     tripadvisor: 'https://tripadvisor.com/jardimdaamazonia',
-    email: 'mailto:atendimento@jardimamazonia.com',
+    email: 'atendimento@jardimamazonia.com',
     
     // Main Navigation
     home: '/',

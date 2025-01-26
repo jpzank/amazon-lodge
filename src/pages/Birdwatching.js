@@ -3,7 +3,7 @@ import { getFolderImage } from '../config/cloudinaryConfig';
 import { siteConfig } from '../config/siteConfig';
 
 const Birdwatching = () => {
-  const heroImageUrl = getFolderImage('birdwatching', 'hero');
+  const heroImageUrl = getFolderImage('birdwatching', 'gallery');
   console.log('Hero image URL:', heroImageUrl); // For debugging
 
   const heroStyle = {
@@ -76,7 +76,7 @@ const Birdwatching = () => {
             <div className="bg-white rounded-xl shadow-lg overflow-hidden transition-transform duration-300 hover:-translate-y-2">
               <div className="relative h-48">
                 <img 
-                  src="/src/images/birdwatching/tie-bicudo.jpg"
+                  src={getFolderImage('birdwatching', 'tie-bicudo')}
                   alt="Tiê-bicudo"
                   className="w-full h-full object-cover"
                 />
@@ -98,7 +98,7 @@ const Birdwatching = () => {
             <div className="bg-white rounded-xl shadow-lg overflow-hidden transition-transform duration-300 hover:-translate-y-2">
               <div className="relative h-48">
                 <img 
-                  src="src/images/birdwatching/curica.jpg"
+                  src={getFolderImage('birdwatching', 'curica')}
                   alt="Curica-de-bochecha-laranja"
                   className="w-full h-full object-cover"
                 />
@@ -119,8 +119,8 @@ const Birdwatching = () => {
             <div className="bg-white rounded-xl shadow-lg overflow-hidden transition-transform duration-300 hover:-translate-y-2">
               <div className="relative h-48">
                 <img 
-                  src="src/images/birdwatching/mutum.jpg"
-                  alt="Mutum-cavalo"
+                  src={getFolderImage('safari-boat', 'bigua')}
+                  alt="Biguá"
                   className="w-full h-full object-cover"
                 />
                 <span className="absolute top-4 right-4 px-2 py-1 text-xs font-semibold text-white bg-yellow-600 rounded">
@@ -128,11 +128,11 @@ const Birdwatching = () => {
                 </span>
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Mutum-cavalo</h3>
-                <p className="text-sm text-primary italic mb-4">Mitu tuberosum</p>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">Biguá</h3>
+                <p className="text-sm text-primary italic mb-4">Nannopterum brasilianus</p>
                 <p className="text-gray-600 text-sm leading-relaxed">
-                  Ave grande escura de florestas não perturbada. Seu bico vermelho com uma protuberância 
-                  é facilmente reconhecível.
+                  Ave aquática de médio porte, excelente mergulhadora. 
+                  Comum em rios e lagos da região, contribui para o equilíbrio do ecossistema.
                 </p>
               </div>
             </div>
@@ -141,7 +141,7 @@ const Birdwatching = () => {
             <div className="bg-white rounded-xl shadow-lg overflow-hidden transition-transform duration-300 hover:-translate-y-2">
               <div className="relative h-48">
                 <img 
-                  src="src/images/birdwatching/anambe.jpg"
+                  src={getFolderImage('birdwatching', 'anambe')}
                   alt="Anambé-preto"
                   className="w-full h-full object-cover"
                 />
@@ -180,24 +180,32 @@ const Birdwatching = () => {
               <div className="bg-white p-8 rounded-xl shadow-lg">
                 <h3 className="text-2xl font-semibold text-gray-900 mb-6">Espécies Amazônicas</h3>
                 <ul className="space-y-4">
-                  <li className="flex items-center text-gray-600">
-                    <span className="w-2 h-2 bg-red-500 rounded-full mr-3"></span>
-                    Capitão-de-cinta (Capito dayi)
+                  <li className="flex items-center justify-between text-gray-600">
+                    <div className="flex items-center">
+                      <span className="w-2 h-2 bg-red-500 rounded-full mr-3"></span>
+                      <span>Capitão-de-cinta (Capito dayi)</span>
+                    </div>
                     <span className="ml-2 px-2 py-1 text-xs font-semibold text-white bg-red-500 rounded">VU</span>
                   </li>
-                  <li className="flex items-center text-gray-600">
-                    <span className="w-2 h-2 bg-green-500 rounded-full mr-3"></span>
-                    Coroa-de-fogo (Heterocercus linteatus)
+                  <li className="flex items-center justify-between text-gray-600">
+                    <div className="flex items-center">
+                      <span className="w-2 h-2 bg-green-500 rounded-full mr-3"></span>
+                      <span>Coroa-de-fogo (Heterocercus linteatus)</span>
+                    </div>
                     <span className="ml-2 px-2 py-1 text-xs font-semibold text-white bg-green-500 rounded">LC</span>
                   </li>
-                  <li className="flex items-center text-gray-600">
-                    <span className="w-2 h-2 bg-yellow-500 rounded-full mr-3"></span>
-                    Cambaxirra-cinzenta (Odontorchilus cinereus)
+                  <li className="flex items-center justify-between text-gray-600">
+                    <div className="flex items-center">
+                      <span className="w-2 h-2 bg-yellow-500 rounded-full mr-3"></span>
+                      <span>Cambaxirra-cinzenta (Odontorchilus cinereus)</span>
+                    </div>
                     <span className="ml-2 px-2 py-1 text-xs font-semibold text-white bg-yellow-500 rounded">NT</span>
                   </li>
-                  <li className="flex items-center text-gray-600">
-                    <span className="w-2 h-2 bg-red-500 rounded-full mr-3"></span>
-                    Topetinho-do-brasil-central (Lophornis gouldii)
+                  <li className="flex items-center justify-between text-gray-600">
+                    <div className="flex items-center">
+                      <span className="w-2 h-2 bg-red-500 rounded-full mr-3"></span>
+                      <span>Topetinho-do-brasil-central (Lophornis gouldii)</span>
+                    </div>
                     <span className="ml-2 px-2 py-1 text-xs font-semibold text-white bg-red-500 rounded">VU</span>
                   </li>
                 </ul>
@@ -206,24 +214,32 @@ const Birdwatching = () => {
               <div className="bg-white p-8 rounded-xl shadow-lg">
                 <h3 className="text-2xl font-semibold text-gray-900 mb-6">Destaques Regionais</h3>
                 <ul className="space-y-4">
-                  <li className="flex items-center text-gray-600">
-                    <span className="w-2 h-2 bg-yellow-500 rounded-full mr-3"></span>
-                    Uiraçu (Morphnus guianensis)
+                  <li className="flex items-center justify-between text-gray-600">
+                    <div className="flex items-center">
+                      <span className="w-2 h-2 bg-yellow-500 rounded-full mr-3"></span>
+                      <span>Uiraçu (Morphnus guianensis)</span>
+                    </div>
                     <span className="ml-2 px-2 py-1 text-xs font-semibold text-white bg-yellow-500 rounded">NT</span>
                   </li>
-                  <li className="flex items-center text-gray-600">
-                    <span className="w-2 h-2 bg-green-500 rounded-full mr-3"></span>
-                    Urubu-rei (Sarcoramphus papa)
+                  <li className="flex items-center justify-between text-gray-600">
+                    <div className="flex items-center">
+                      <span className="w-2 h-2 bg-green-500 rounded-full mr-3"></span>
+                      <span>Urubu-rei (Sarcoramphus papa)</span>
+                    </div>
                     <span className="ml-2 px-2 py-1 text-xs font-semibold text-white bg-green-500 rounded">LC</span>
                   </li>
-                  <li className="flex items-center text-gray-600">
-                    <span className="w-2 h-2 bg-green-500 rounded-full mr-3"></span>
-                    Limpa-folha-do-buriti (Berlepschia rikeri)
+                  <li className="flex items-center justify-between text-gray-600">
+                    <div className="flex items-center">
+                      <span className="w-2 h-2 bg-green-500 rounded-full mr-3"></span>
+                      <span>Limpa-folha-do-buriti (Berlepschia rikeri)</span>
+                    </div>
                     <span className="ml-2 px-2 py-1 text-xs font-semibold text-white bg-green-500 rounded">LC</span>
                   </li>
-                  <li className="flex items-center text-gray-600">
-                    <span className="w-2 h-2 bg-red-500 rounded-full mr-3"></span>
-                    Tucano-de-papo-branco (Ramphastos tucanus)
+                  <li className="flex items-center justify-between text-gray-600">
+                    <div className="flex items-center">
+                      <span className="w-2 h-2 bg-red-500 rounded-full mr-3"></span>
+                      <span>Tucano-de-papo-branco (Ramphastos tucanus)</span>
+                    </div>
                     <span className="ml-2 px-2 py-1 text-xs font-semibold text-white bg-red-500 rounded">VU</span>
                   </li>
                 </ul>
@@ -232,6 +248,26 @@ const Birdwatching = () => {
           </div>
         </div>
       </section>
+
+      {/* Legend Section */}
+      <div className="container mx-auto px-4 -mt-12 mb-24">
+        <div className="max-w-4xl mx-auto">
+          <div className="flex flex-wrap justify-center gap-4 text-xs text-gray-500">
+            <div className="flex items-center">
+              <span className="w-2 h-2 bg-red-500 rounded-full mr-2"></span>
+              <span>VU - Vulnerável</span>
+            </div>
+            <div className="flex items-center">
+              <span className="w-2 h-2 bg-yellow-500 rounded-full mr-2"></span>
+              <span>NT - Quase Ameaçada</span>
+            </div>
+            <div className="flex items-center">
+              <span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
+              <span>LC - Pouco Preocupante</span>
+            </div>
+          </div>
+        </div>
+      </div>
 
       {/* Observation Spots Section */}
       <section className="py-24 bg-gray-50">
@@ -243,9 +279,9 @@ const Birdwatching = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             <div className="bg-white p-8 rounded-xl shadow-lg transition-transform duration-300 hover:-translate-y-2">
-              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6">
-                <svg className="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+              <div className="w-16 h-16 bg-[#E8F0EA] rounded-full flex items-center justify-center mb-6">
+                <svg className="w-7 h-7 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
                 </svg>
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Matas Ciliares do Rio Claro</h3>
@@ -256,9 +292,9 @@ const Birdwatching = () => {
             </div>
 
             <div className="bg-white p-8 rounded-xl shadow-lg transition-transform duration-300 hover:-translate-y-2">
-              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6">
-                <svg className="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+              <div className="w-16 h-16 bg-[#E8F0EA] rounded-full flex items-center justify-center mb-6">
+                <svg className="w-7 h-7 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
                 </svg>
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Trilha do Jatobá</h3>
@@ -268,9 +304,9 @@ const Birdwatching = () => {
             </div>
 
             <div className="bg-white p-8 rounded-xl shadow-lg transition-transform duration-300 hover:-translate-y-2">
-              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6">
-                <svg className="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 10l-2 1m0 0l-2-1m2 1v2.5M20 7l-2 1m2-1l-2-1m2 1v2.5M14 4l-2-1-2 1M4 7l2-1M4 7l2 1M4 7v2.5M12 21l-2-1m2 1l2-1m-2 1v-2.5M6 18l-2-1v-2.5M18 18l2-1v-2.5" />
+              <div className="w-16 h-16 bg-[#E8F0EA] rounded-full flex items-center justify-center mb-6">
+                <svg className="w-7 h-7 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" />
                 </svg>
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Lagoa do Tiê-bicudo</h3>
@@ -347,6 +383,10 @@ const Birdwatching = () => {
               Referências Internacionais
               <span className="absolute bottom-[-1rem] left-1/2 transform -translate-x-1/2 w-20 h-1 bg-primary"></span>
             </h2>
+            
+            <p className="text-xl text-gray-600 mb-12">
+              Fique por dentro das novidades de birdwatching do Jardim da Amazônia dentro dos principais sites de birdwatching:
+            </p>
             
             <div className="flex flex-col md:flex-row items-center justify-center gap-8">
               <a 

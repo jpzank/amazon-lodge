@@ -9,14 +9,11 @@ const GuiasCampo = () => {
     backgroundPosition: 'center',
   };
 
-  const [activeCategory, setActiveCategory] = useState('aves');
+  const [activeCategory, setActiveCategory] = useState('mamiferos');
 
   const categories = {
-    aves: 'Aves',
     mamiferos: 'Mamíferos',
-    repteis: 'Répteis',
-    borboletas: 'Borboletas',
-    vegetacao: 'Vegetação'
+    aves: 'Aves'
   };
 
   const vegetationTypes = [
@@ -45,9 +42,10 @@ const GuiasCampo = () => {
         {
           title: 'Aves do Jardim da Amazônia',
           authors: 'Equipe de Pesquisa do Jardim da Amazônia',
-          year: '2023',
-          description: 'Catálogo completo das espécies de aves observadas na região.',
-          downloadUrl: '/docs/aves-jardim-amazonia.pdf'
+          year: '-',
+          description: 'Catálogo das espécies de aves observadas na região. Conteúdo em desenvolvimento.',
+          downloadUrl: null,
+          status: 'Em desenvolvimento'
         }
       ]
     },
@@ -56,9 +54,18 @@ const GuiasCampo = () => {
       items: [
         {
           title: 'Mamíferos do Jardim da Amazônia',
-          authors: 'Equipe de Pesquisa do Jardim da Amazônia',
+          authors: 'Colaboração entre:',
+          institutions: [
+            'Jardim da Amazônia',
+            'University of Salford - Manchester',
+            'GECAS - Grupo de Ecologia Aplicada UFMT - Campus Sinop',
+            'U. Porto (University of Porto)',
+            'Vida Selvagem - Medicina da Conservação',
+            'UFMT (Universidade Federal de Mato Grosso)',
+            'Instituto Ecótono - IEco'
+          ],
           year: '2023',
-          description: 'Lista atualizada dos mamíferos registrados na área.',
+          description: 'Lista dos mamíferos registrados na área do Jardim da Amazônia.',
           downloadUrl: '/docs/mamiferos-jardim-amazonia.pdf'
         }
       ]
@@ -69,7 +76,7 @@ const GuiasCampo = () => {
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <div 
-        className="relative h-[70vh] flex items-center justify-center text-center text-white mb-16"
+        className="relative h-[70vh] flex items-center justify-center text-center text-white mb-8"
         style={heroStyle}
       >
         <div className="absolute inset-0 bg-black/60 z-10"></div>
@@ -84,7 +91,7 @@ const GuiasCampo = () => {
       </div>
 
       {/* Guides Intro Section */}
-      <section className="py-24 bg-white">
+      <section className="py-12 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold text-center mb-8">Listas de Espécies</h2>
           <p className="text-xl text-gray-600 text-center max-w-4xl mx-auto leading-relaxed">
@@ -96,7 +103,7 @@ const GuiasCampo = () => {
       </section>
 
       {/* Species Lists Section */}
-      <section className="py-24 bg-gray-50">
+      <section className="py-12 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="flex flex-wrap justify-center gap-4 mb-12">
             {Object.entries(categories).map(([key, value]) => (
@@ -114,27 +121,42 @@ const GuiasCampo = () => {
             ))}
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {scientificPublications
-              .find(cat => cat.category === activeCategory)?.items
-              .map((pub, index) => (
-                <div key={index} className="bg-white rounded-xl shadow-lg p-8 transition-transform duration-300 hover:-translate-y-2">
-                  <div className="space-y-4">
-                    <h3 className="text-2xl font-semibold text-gray-900">{pub.title}</h3>
-                    <p className="text-gray-600 font-medium">{pub.authors}</p>
-                    <p className="text-gray-500">Ano: {pub.year}</p>
-                    <p className="text-gray-600">{pub.description}</p>
-                    <a 
-                      href={pub.downloadUrl} 
-                      className="inline-flex items-center justify-center px-6 py-3 bg-primary text-white rounded-lg hover:bg-primary-dark transition-colors duration-300"
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                    >
-                      Download PDF
-                    </a>
+          <div className="flex justify-center">
+            <div className="w-full max-w-xl">
+              {scientificPublications
+                .find(cat => cat.category === activeCategory)?.items
+                .map((pub, index) => (
+                  <div key={index} className="bg-white rounded-xl shadow-lg p-8 transition-transform duration-300 hover:-translate-y-2 mb-8 last:mb-0">
+                    <div className="space-y-4">
+                      <h3 className="text-2xl font-semibold text-gray-900">{pub.title}</h3>
+                      <p className="text-gray-600 font-medium">{pub.authors}</p>
+                      {pub.institutions && (
+                        <ul className="text-gray-600 list-none space-y-1">
+                          {pub.institutions.map((institution, idx) => (
+                            <li key={idx}>{institution}</li>
+                          ))}
+                        </ul>
+                      )}
+                      <p className="text-gray-500">Ano: {pub.year}</p>
+                      <p className="text-gray-600">{pub.description}</p>
+                      {pub.downloadUrl ? (
+                        <a 
+                          href={pub.downloadUrl} 
+                          className="inline-flex items-center justify-center px-6 py-3 bg-primary text-white rounded-lg hover:bg-primary-dark transition-colors duration-300"
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                        >
+                          Open PDF
+                        </a>
+                      ) : (
+                        <span className="inline-flex items-center justify-center px-6 py-3 bg-gray-300 text-gray-600 rounded-lg cursor-not-allowed">
+                          {pub.status}
+                        </span>
+                      )}
+                    </div>
                   </div>
-                </div>
-              ))}
+                ))}
+            </div>
           </div>
         </div>
       </section>
@@ -157,7 +179,7 @@ const GuiasCampo = () => {
       )}
 
       {/* Research Support Section */}
-      <section className="py-24 bg-gray-50">
+      <section className="py-12 bg-gray-50">
         <div className="container mx-auto px-4 max-w-4xl text-center">
           <h2 className="text-4xl font-bold mb-8">Apoio à Pesquisa</h2>
           <p className="text-xl text-gray-600 mb-12">
@@ -167,41 +189,17 @@ const GuiasCampo = () => {
           </p>
           <div className="flex justify-center">
             <a 
-              href={siteConfig.buttonLinks.email} 
-              className="text-primary hover:text-primary-dark transition-colors duration-300"
+              href="mailto:adm@jardimamazonia.com"
+              className="inline-flex items-center justify-center px-6 py-3 bg-primary text-white rounded-lg hover:bg-primary-dark transition-colors duration-300"
             >
-              adm@jardimdaamazonia.com.br
+              Enviar E-mail
             </a>
           </div>
         </div>
       </section>
 
-      {/* Books Section */}
-      <section className="py-24 bg-white">
-        <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center mb-16">Livros de Interesse</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            <div className="bg-gray-50 rounded-xl overflow-hidden shadow-lg transition-transform duration-300 hover:-translate-y-2">
-              <div className="aspect-[4/3] bg-gray-200 flex items-center justify-center">
-                <span className="text-gray-500">Imagem do Livro</span>
-              </div>
-              <div className="p-8">
-                <h3 className="text-2xl font-semibold text-gray-900 mb-4">Guia de Aves da Amazônia</h3>
-                <p className="text-gray-600 mb-6">Guia completo com as principais espécies da região</p>
-                <button 
-                  className="inline-flex items-center justify-center px-6 py-3 bg-primary text-white rounded-lg hover:bg-primary-dark transition-colors duration-300"
-                  onClick={() => window.open(siteConfig.buttonLinks.ebirdHotspot, '_blank')}
-                >
-                  Saiba Mais
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Climate Section */}
-      <section className="py-24 bg-gray-50">
+      <section className="py-12 bg-gray-50">
         <div className="container mx-auto px-4 max-w-4xl">
           <h2 className="text-4xl font-bold text-center mb-8">Clima</h2>
           <div className="space-y-12">

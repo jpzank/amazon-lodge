@@ -13,7 +13,7 @@ const ComoChegar = () => {
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <div 
-        className="relative h-[70vh] flex items-center justify-center text-center text-white mb-16"
+        className="relative h-[70vh] flex items-center justify-center text-center text-white mb-8"
         style={heroStyle}
       >
         <div className="relative z-20 px-4">
@@ -27,14 +27,14 @@ const ComoChegar = () => {
       </div>
 
       {/* Location Section */}
-      <section className="py-24 bg-white">
+      <section className="py-12 bg-white">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-semibold text-center mb-16 relative">
+          <h2 className="text-4xl font-semibold text-center mb-12 relative">
             Nossa Localização
             <span className="absolute bottom-[-1rem] left-1/2 transform -translate-x-1/2 w-20 h-1 bg-primary"></span>
           </h2>
           
-          <div className="max-w-4xl mx-auto bg-white rounded-2xl shadow-xl p-8 md:p-12">
+          <div className="max-w-4xl mx-auto bg-white rounded-2xl shadow-xl p-8">
             <div className="flex flex-col md:flex-row items-center gap-8">
               <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
                 <FaMapMarkerAlt className="w-8 h-8 text-primary" />
@@ -53,9 +53,9 @@ const ComoChegar = () => {
       </section>
 
       {/* Route Options Section */}
-      <section className="py-24 bg-gray-50">
+      <section className="py-12 bg-gray-50">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-semibold text-center mb-16 relative">
+          <h2 className="text-4xl font-semibold text-center mb-12 relative">
             Rotas de Acesso
             <span className="absolute bottom-[-1rem] left-1/2 transform -translate-x-1/2 w-20 h-1 bg-primary"></span>
           </h2>
@@ -139,9 +139,9 @@ const ComoChegar = () => {
       </section>
 
       {/* Map Section */}
-      <section className="py-24 bg-white">
+      <section className="py-12 bg-white">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-semibold text-center mb-16 relative">
+          <h2 className="text-4xl font-semibold text-center mb-12 relative">
             Localização no Mapa
             <span className="absolute bottom-[-1rem] left-1/2 transform -translate-x-1/2 w-20 h-1 bg-primary"></span>
           </h2>
@@ -163,11 +163,11 @@ const ComoChegar = () => {
       </section>
 
       {/* Contact Section */}
-      <section className="py-24 bg-gray-50">
+      <section className="py-12 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl font-semibold mb-6">Precisa de Ajuda?</h2>
-            <p className="text-lg text-gray-600 mb-12">
+            <p className="text-xl text-gray-600 mb-12">
               Nossa equipe está pronta para auxiliar no planejamento da sua viagem
             </p>
             
@@ -193,11 +193,11 @@ const ComoChegar = () => {
       </section>
 
       {/* Important Note Section */}
-      <section className="py-16 bg-primary/5">
+      <section className="py-12 bg-primary/5">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto bg-white rounded-2xl shadow-xl p-8 md:p-12">
+          <div className="max-w-4xl mx-auto bg-white rounded-2xl shadow-xl p-8">
             <h3 className="text-2xl font-semibold text-gray-900 mb-4">Observação Importante</h3>
-            <p className="text-gray-600 leading-relaxed">
+            <p className="text-xl text-gray-600 leading-relaxed">
               Para a rota alternativa no km 644 (próximo a duas antenas grandes na altura do posto São Genaro) 
               a São José do Rio Claro, por favor, solicite informações detalhadas.
             </p>

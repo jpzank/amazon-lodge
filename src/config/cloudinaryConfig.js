@@ -61,13 +61,15 @@ export const folderImageMapping = {
   'area-externa': {
     'hero': 'v1736092424/area-externa_ml9enj',
     'piscina': 'v1736085772/piscina_knlf8d',
-    'lagoa': 'v1736085748/lagoa_uaetsf'
+    'lagoa': 'v1736085748/lagoa_uaetsf',
+    'trilha': 'v1736085696/trilha-lagoa_pafxet'
   },
   birdwatching: {
     'hero': 'v1736085800/birdwatching_yywf16',
     'gallery': 'v1736085772/birdwatching_roqgxe',
     'tie-bicudo': 'v1736085691/tie-bicudo_wblb9s',
-    'anambe': 'v1736085691/anambe_hlzcsj'
+    'anambe': 'v1736085691/anambe_hlzcsj',
+    'curica': 'v1736085702/curica_enlrcd',
   },
   eventos: {
     'reuniao-executiva': 'v1736085711/reuniao-executiva_ouxhas',
@@ -113,23 +115,44 @@ export const folderImageMapping = {
     'hero': 'v1736085793/primates-hero_lodpmk',
     'gallery': 'v1736085802/primates_vklwye',
     'zogue-zogue': 'v1736085691/zogue-zogue_eqbdel',
-    'parauacu': 'v1736085680/parauacu_udmaqc'
+    'parauacu': 'v1736085680/parauacu_udmaqc',
+    'macaco-aranha': 'v1736085706/macaco-aranha_b3z78a'
   },
   'safari-boat': {
     'hero': 'v1736085789/safari-rio-claro_rdbh6e',
     'mutum': 'v1736085678/mutum_iwmptx',
     'sucuri': 'v1736085678/sucuri_a6v6wa',
     'pintado': 'v1736085676/pintado_tdk4hx',
-    'pirarucu': 'v1736085685/pirarucu_nwglqt'
+    'pirarucu': 'v1736085685/pirarucu_nwglqt',
+    'bigua': 'v1736085697/bigua_es90jj',
+    'martim': 'v1736085735/martim_rwesvz'
   },
   shared: {
     'kiko': 'v1736085779/kiko_a7tmas',
     'birds': 'v1736085771/birds_wtstwh',
-    'martim': 'v1736085735/martim_rwesvz'
   },
   trilhas: {
-    'hero': 'v1736085696/trilhas_pafxet'
-  }
+    'hero': {
+      id: 'v1737919751/trilhas-hero_qjfilt',
+      photographer: 'João Marcos Rosa'
+    },
+    'jatoba': {
+      id: 'v1736085696/trilha-jatoba_pafxet',
+      photographer: 'João Marcos Rosa'
+    },
+    'angelim': {
+      id: 'v1736085696/trilha-angelim_pafxet',
+      photographer: 'João Marcos Rosa'
+    },
+    'lagoa': {
+      id: 'v1736085696/trilha-lagoa_pafxet',
+      photographer: 'João Marcos Rosa'
+    },
+    'piquia': {
+      id: 'v1736085696/trilha-piquia_pafxet',
+      photographer: 'João Marcos Rosa'
+    }
+  },
 };
 
 // Function to get image URL from specific folder
@@ -140,12 +163,14 @@ export const getFolderImage = (folder, imageName, transformations = DEFAULT_TRAN
     return '';
   }
 
-  const imageId = folderMappings[imageName];
-  if (!imageId) {
+  const imageData = folderMappings[imageName];
+  if (!imageData) {
     console.warn(`No image mapping found for: ${imageName} in folder: ${folder}`);
     return '';
   }
 
+  // Handle both old string format and new object format
+  const imageId = typeof imageData === 'string' ? imageData : imageData.id;
   return `${CLOUDINARY_BASE_URL}/${transformations}/${imageId}`;
 };
 
@@ -167,4 +192,19 @@ export const getCloudinaryUrlWithTransforms = (imageName, folder = 'shared', tra
     return '';
   }
   return `${CLOUDINARY_BASE_URL}/${transformations}/${folderMappings[imageName]}`;
+};
+
+// Add a new function to get photographer info
+export const getImagePhotographer = (folder, imageName) => {
+  const folderMappings = folderImageMapping[folder];
+  if (!folderMappings) {
+    return '';
+  }
+
+  const imageData = folderMappings[imageName];
+  if (!imageData || typeof imageData === 'string') {
+    return '';
+  }
+
+  return imageData.photographer || '';
 }; 
