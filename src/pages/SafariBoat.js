@@ -1,8 +1,7 @@
 import React from 'react';
-import '../styles/SafariBoat.css';
 import { getFolderImage } from '../config/cloudinaryConfig';
 
-function SafariBoat() {
+const SafariBoat = () => {
   const heroStyle = {
     backgroundImage: `url(${getFolderImage('safari-boat', 'hero')})`,
     backgroundSize: 'cover',
@@ -18,92 +17,105 @@ function SafariBoat() {
   };
 
   return (
-    <div className="safari-boat">
-      <div className="page-hero boat" style={heroStyle}>
-        <div className="hero-content">
-          <h1>Safari Boat</h1>
-          <p>Aventuras pelos Rios da Amazônia</p>
+    <div className="min-h-screen bg-white">
+      {/* Hero Section */}
+      <div 
+        className="relative h-[70vh] flex items-center justify-center text-center text-white mb-16"
+        style={heroStyle}
+      >
+        <div className="absolute inset-0 bg-black/60 z-10"></div>
+        <div className="relative z-20 px-4">
+          <h1 className="text-5xl md:text-6xl font-bold mb-6 tracking-wide text-shadow">
+            Safari Boat
+          </h1>
+          <p className="text-lg md:text-xl max-w-3xl mx-auto tracking-wide text-shadow">
+            Aventuras pelos Rios da Amazônia
+          </p>
         </div>
       </div>
 
-      <section className="rio-claro">
-        <div className="container">
-          <h2>Safari no Rio Claro</h2>
-          <p className="rio-description">
-            O Rio Claro, como revela o nome, um rio de águas muito claras que quanto mais avança a estação seca, 
-            entre maio e setembro, mais transparentes ficam suas águas. Então, formam-se belas praias de areia 
-            branca e sua água tem temperatura sempre agradável.
-          </p>
-          <p className="rio-wildlife">
-            As matas de galeria ao longo do rio Claro e principalmente a vegetação de mata aberta ao longo dos lagos, 
-            são hábitats do Conothraupis mesoleuca (tiê bicudo), registrado no local em 2006. O rio Claro é a 
-            principal área conhecida de ocorrência da espécie.
-          </p>
+      {/* Rio Claro Section */}
+      <section className="py-24 bg-white">
+        <div className="container mx-auto px-4 max-w-4xl">
+          <h2 className="text-4xl font-bold text-center mb-12">Safari no Rio Claro</h2>
+          <div className="space-y-8 text-gray-600 text-lg leading-relaxed">
+            <p>
+              O Rio Claro, como revela o nome, um rio de águas muito claras que quanto mais avança a estação seca, 
+              entre maio e setembro, mais transparentes ficam suas águas. Então, formam-se belas praias de areia 
+              branca e sua água tem temperatura sempre agradável.
+            </p>
+            <p>
+              As matas de galeria ao longo do rio Claro e principalmente a vegetação de mata aberta ao longo dos lagos, 
+              são hábitats do Conothraupis mesoleuca (tiê bicudo), registrado no local em 2006. O rio Claro é a 
+              principal área conhecida de ocorrência da espécie.
+            </p>
+          </div>
         </div>
       </section>
 
-      <section className="wildlife">
-        <div className="container">
-          <h2>Vida Selvagem</h2>
-          <p className="wildlife-intro">
+      {/* Wildlife Section */}
+      <section className="py-24 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <h2 className="text-4xl font-bold text-center mb-8">Vida Selvagem</h2>
+          <p className="text-xl text-gray-600 text-center max-w-4xl mx-auto mb-16">
             O Rio Claro e seus arredores são um refúgio para uma incrível diversidade de vida selvagem, cada expedição representa oportunidades de observar espécies fascinantes, como:
           </p>
           
-          <div className="wildlife-grid">
-            <div className="species-item">
-              <div className="species-image" style={speciesStyles.pirarucu}></div>
-              <div className="species-content">
-                <span className="species-name">Arapaima gigas</span>
-                <span className="common-name">(Pirarucu)</span>
-                <p className="species-description">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <div className="bg-white rounded-xl shadow-lg overflow-hidden transition-transform duration-300 hover:-translate-y-2">
+              <div className="h-48 relative" style={speciesStyles.pirarucu}></div>
+              <div className="p-6">
+                <span className="block text-xl font-semibold text-gray-900">Arapaima gigas</span>
+                <span className="block text-primary font-medium mb-4">(Pirarucu)</span>
+                <p className="text-gray-600">
                   O Pirarucu é um dos maiores peixes de água doce do mundo, podendo atingir até 3 metros 
                   de comprimento e pesar mais de 200 kg.
                 </p>
               </div>
             </div>
 
-            <div className="species-item">
-              <div className="species-image" style={{ backgroundImage: `url('src/images/birdwatching/pintado.jpg')` }}></div>
-              <div className="species-content">
-                <span className="species-name">Pseudoplatystoma corruscans</span>
-                <span className="common-name">(Pintado)</span>
-                <p className="species-description">
+            <div className="bg-white rounded-xl shadow-lg overflow-hidden transition-transform duration-300 hover:-translate-y-2">
+              <div className="h-48 relative bg-cover bg-center" style={{ backgroundImage: `url('src/images/birdwatching/pintado.jpg')` }}></div>
+              <div className="p-6">
+                <span className="block text-xl font-semibold text-gray-900">Pseudoplatystoma corruscans</span>
+                <span className="block text-primary font-medium mb-4">(Pintado)</span>
+                <p className="text-gray-600">
                   O Pintado é um peixe de couro com coloração acinzentada e manchas escuras, podendo 
                   alcançar até 1,8 metro de comprimento e pesar cerca de 86 kg.
                 </p>
               </div>
             </div>
 
-            <div className="species-item">
-              <div className="species-image" style={{ backgroundImage: `url('src/images/birdwatching/martim.jpg')` }}></div>
-              <div className="species-content">
-                <span className="species-name">Megaceryle torquata</span>
-                <span className="common-name">(Martim-pescador-grande)</span>
-                <p className="species-description">
+            <div className="bg-white rounded-xl shadow-lg overflow-hidden transition-transform duration-300 hover:-translate-y-2">
+              <div className="h-48 relative bg-cover bg-center" style={{ backgroundImage: `url('src/images/birdwatching/martim.jpg')` }}></div>
+              <div className="p-6">
+                <span className="block text-xl font-semibold text-gray-900">Megaceryle torquata</span>
+                <span className="block text-primary font-medium mb-4">(Martim-pescador-grande)</span>
+                <p className="text-gray-600">
                   Ave pescadora de coloração azulada e peito branco, especialista em capturar peixes 
                   com seus mergulhos precisos.
                 </p>
               </div>
             </div>
 
-            <div className="species-item">
-              <div className="species-image" style={{ backgroundImage: `url('src/images/birdwatching/bigua.jpg')` }}></div>
-              <div className="species-content">
-                <span className="species-name">Nannopterum brasilianum</span>
-                <span className="common-name">(Biguá)</span>
-                <p className="species-description">
+            <div className="bg-white rounded-xl shadow-lg overflow-hidden transition-transform duration-300 hover:-translate-y-2">
+              <div className="h-48 relative bg-cover bg-center" style={{ backgroundImage: `url('src/images/birdwatching/bigua.jpg')` }}></div>
+              <div className="p-6">
+                <span className="block text-xl font-semibold text-gray-900">Nannopterum brasilianum</span>
+                <span className="block text-primary font-medium mb-4">(Biguá)</span>
+                <p className="text-gray-600">
                   Ave mergulhadora comum em rios e lagos, de plumagem escura, exímia nadadora que 
                   pode permanecer submersa por longos períodos.
                 </p>
               </div>
             </div>
 
-            <div className="species-item">
-              <div className="species-image" style={{ backgroundImage: `url('src/images/birdwatching/sucuri.jpg')` }}></div>
-              <div className="species-content">
-                <span className="species-name">Eunectes murinus</span>
-                <span className="common-name">(Sucuri ou Anaconda)</span>
-                <p className="species-description">
+            <div className="bg-white rounded-xl shadow-lg overflow-hidden transition-transform duration-300 hover:-translate-y-2">
+              <div className="h-48 relative bg-cover bg-center" style={{ backgroundImage: `url('src/images/birdwatching/sucuri.jpg')` }}></div>
+              <div className="p-6">
+                <span className="block text-xl font-semibold text-gray-900">Eunectes murinus</span>
+                <span className="block text-primary font-medium mb-4">(Sucuri ou Anaconda)</span>
+                <p className="text-gray-600">
                   Serpente aquática de grande porte, frequentemente encontrada em corpos d'água da região, 
                   perfeitamente adaptada ao ambiente aquático.
                 </p>
@@ -111,7 +123,7 @@ function SafariBoat() {
             </div>
           </div>
 
-          <p className="wildlife-note">
+          <p className="text-lg text-gray-600 text-center max-w-4xl mx-auto mt-16">
             Além destas espécies emblemáticas, o Rio Claro abriga uma extraordinária variedade de vida selvagem, 
             incluindo diversos peixes amazônicos, aves aquáticas, jacarés e tartarugas. Cada expedição oferece 
             oportunidades especiais de observação da fauna em seu habitat natural.
@@ -119,41 +131,67 @@ function SafariBoat() {
         </div>
       </section>
 
-      <section className="safety-info">
-        <div className="container">
-          <h2>Segurança e Conforto</h2>
-          <div className="safety-grid">
-            <div className="safety-card">
-              <div className="safety-icon">🦺</div>
-              <h3>Segurança Garantida</h3>
-              <ul>
-                <li>Coletes salva-vidas</li>
-                <li>Kit primeiros socorros</li>
-                <li>Comunicação por rádio</li>
-                <li>Controle do limite de passageiros</li>
+      {/* Safety Section */}
+      <section className="py-24 bg-white">
+        <div className="container mx-auto px-4">
+          <h2 className="text-4xl font-bold text-center mb-16">Segurança e Conforto</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <div className="bg-gray-50 rounded-xl p-8 shadow-lg">
+              <div className="text-4xl text-center mb-6">🦺</div>
+              <h3 className="text-2xl font-semibold text-gray-900 text-center mb-6">Segurança Garantida</h3>
+              <ul className="space-y-4 text-gray-600">
+                <li className="flex items-center gap-3">
+                  <div className="w-2 h-2 rounded-full bg-primary flex-shrink-0"></div>
+                  Coletes salva-vidas
+                </li>
+                <li className="flex items-center gap-3">
+                  <div className="w-2 h-2 rounded-full bg-primary flex-shrink-0"></div>
+                  Kit primeiros socorros
+                </li>
+                <li className="flex items-center gap-3">
+                  <div className="w-2 h-2 rounded-full bg-primary flex-shrink-0"></div>
+                  Comunicação por rádio
+                </li>
+                <li className="flex items-center gap-3">
+                  <div className="w-2 h-2 rounded-full bg-primary flex-shrink-0"></div>
+                  Controle do limite de passageiros
+                </li>
               </ul>
             </div>
 
-            <div className="safety-card">
-              <div className="safety-icon">🌡️</div>
-              <h3>Para o seu conforto, traga:</h3>
-              <ul>
-                <li>Protetor solar indispensável</li>
-                <li>Água mineral para hidratação</li>
-                <li>Repelente para sua proteção contra insetos</li>
+            <div className="bg-gray-50 rounded-xl p-8 shadow-lg">
+              <div className="text-4xl text-center mb-6">🌡️</div>
+              <h3 className="text-2xl font-semibold text-gray-900 text-center mb-6">Para o seu conforto, traga:</h3>
+              <ul className="space-y-4 text-gray-600">
+                <li className="flex items-center gap-3">
+                  <div className="w-2 h-2 rounded-full bg-primary flex-shrink-0"></div>
+                  Protetor solar indispensável
+                </li>
+                <li className="flex items-center gap-3">
+                  <div className="w-2 h-2 rounded-full bg-primary flex-shrink-0"></div>
+                  Água mineral para hidratação
+                </li>
+                <li className="flex items-center gap-3">
+                  <div className="w-2 h-2 rounded-full bg-primary flex-shrink-0"></div>
+                  Repelente para sua proteção contra insetos
+                </li>
               </ul>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="booking-cta">
-        <div className="container">
-          <h2>Reserve Sua Aventura</h2>
-          <p>
+      {/* Booking CTA Section */}
+      <section className="py-24 bg-primary/5">
+        <div className="container mx-auto px-4 max-w-4xl text-center">
+          <h2 className="text-4xl font-bold mb-6">Reserve Sua Aventura</h2>
+          <p className="text-xl text-gray-600 mb-12">
             Embarque em uma jornada inesquecível pelos rios da Amazônia
           </p>
-          <button className="btn-primary" onClick={() => window.open('https://book.omnibees.com/hotel/19972?lang=pt-BR&currencyId=16&version=4', '_blank')}>
+          <button 
+            className="inline-flex items-center justify-center px-8 py-3 bg-primary text-white rounded-lg hover:bg-primary-dark transition-colors duration-300 shadow-lg hover:shadow-xl"
+            onClick={() => window.open('https://book.omnibees.com/hotel/19972?lang=pt-BR&currencyId=16&version=4', '_blank')}
+          >
             Reserve Agora
           </button>
         </div>

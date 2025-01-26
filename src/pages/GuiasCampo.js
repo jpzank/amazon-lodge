@@ -1,20 +1,12 @@
 import React, { useState } from 'react';
 import { getFolderImage } from '../config/cloudinaryConfig';
-import '../styles/GuiasCampo.css';
+import { siteConfig } from '../config/siteConfig';
 
-function GuiasCampo() {
+const GuiasCampo = () => {
   const heroStyle = {
     backgroundImage: `url(${getFolderImage('eventos', 'fogo-no-rio')})`,
     backgroundSize: 'cover',
     backgroundPosition: 'center',
-  };
-
-  const categoryImages = {
-    aves: getFolderImage('guias-campo/aves'),
-    mamiferos: getFolderImage('guias-campo/mamiferos'),
-    repteis: getFolderImage('guias-campo/repteis'),
-    borboletas: getFolderImage('guias-campo/borboletas'),
-    vegetacao: getFolderImage('guias-campo/vegetacao')
   };
 
   const [activeCategory, setActiveCategory] = useState('aves');
@@ -74,18 +66,28 @@ function GuiasCampo() {
   ];
 
   return (
-    <div className="guias-campo">
-      <div className="page-hero guides" style={heroStyle}>
-        <div className="hero-content">
-          <h1>Guias de Campo</h1>
-          <p>Conheça a biodiversidade do Jardim da Amazônia</p>
+    <div className="min-h-screen bg-white">
+      {/* Hero Section */}
+      <div 
+        className="relative h-[70vh] flex items-center justify-center text-center text-white mb-16"
+        style={heroStyle}
+      >
+        <div className="absolute inset-0 bg-black/60 z-10"></div>
+        <div className="relative z-20 px-4">
+          <h1 className="text-5xl md:text-6xl font-bold mb-6 tracking-wide text-shadow">
+            Guias de Campo
+          </h1>
+          <p className="text-lg md:text-xl max-w-3xl mx-auto tracking-wide text-shadow">
+            Conheça a biodiversidade do Jardim da Amazônia
+          </p>
         </div>
       </div>
 
-      <section className="guides-intro">
-        <div className="container">
-          <h2>Listas de Espécies</h2>
-          <p className="intro-text">
+      {/* Guides Intro Section */}
+      <section className="py-24 bg-white">
+        <div className="container mx-auto px-4">
+          <h2 className="text-4xl font-bold text-center mb-8">Listas de Espécies</h2>
+          <p className="text-xl text-gray-600 text-center max-w-4xl mx-auto leading-relaxed">
             Nossa região abriga uma extraordinária biodiversidade, documentada através 
             de anos de pesquisa científica. Aqui você encontra guias e publicações 
             sobre nossa fauna e flora.
@@ -93,13 +95,18 @@ function GuiasCampo() {
         </div>
       </section>
 
-      <section className="species-lists">
-        <div className="container">
-          <div className="category-filters">
+      {/* Species Lists Section */}
+      <section className="py-24 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-wrap justify-center gap-4 mb-12">
             {Object.entries(categories).map(([key, value]) => (
               <button
                 key={key}
-                className={`filter-button ${activeCategory === key ? 'active' : ''}`}
+                className={`px-6 py-3 rounded-full font-medium transition-colors duration-300 ${
+                  activeCategory === key 
+                    ? 'bg-primary text-white' 
+                    : 'bg-white text-gray-600 hover:bg-gray-100'
+                }`}
                 onClick={() => setActiveCategory(key)}
               >
                 {value}
@@ -107,17 +114,22 @@ function GuiasCampo() {
             ))}
           </div>
 
-          <div className="publications-grid">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {scientificPublications
               .find(cat => cat.category === activeCategory)?.items
               .map((pub, index) => (
-                <div key={index} className="publication-card">
-                  <div className="publication-content">
-                    <h3>{pub.title}</h3>
-                    <p className="authors">{pub.authors}</p>
-                    <p className="year">Ano: {pub.year}</p>
-                    <p className="description">{pub.description}</p>
-                    <a href={pub.downloadUrl} className="btn-download" target="_blank" rel="noopener noreferrer">
+                <div key={index} className="bg-white rounded-xl shadow-lg p-8 transition-transform duration-300 hover:-translate-y-2">
+                  <div className="space-y-4">
+                    <h3 className="text-2xl font-semibold text-gray-900">{pub.title}</h3>
+                    <p className="text-gray-600 font-medium">{pub.authors}</p>
+                    <p className="text-gray-500">Ano: {pub.year}</p>
+                    <p className="text-gray-600">{pub.description}</p>
+                    <a 
+                      href={pub.downloadUrl} 
+                      className="inline-flex items-center justify-center px-6 py-3 bg-primary text-white rounded-lg hover:bg-primary-dark transition-colors duration-300"
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                    >
                       Download PDF
                     </a>
                   </div>
@@ -127,15 +139,16 @@ function GuiasCampo() {
         </div>
       </section>
 
+      {/* Vegetation Types Section */}
       {activeCategory === 'vegetacao' && (
-        <section className="vegetation-types">
-          <div className="container">
-            <h2>Tipos de Vegetação</h2>
-            <div className="vegetation-grid">
+        <section className="py-24 bg-white">
+          <div className="container mx-auto px-4">
+            <h2 className="text-4xl font-bold text-center mb-16">Tipos de Vegetação</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
               {vegetationTypes.map((type, index) => (
-                <div key={index} className="vegetation-card">
-                  <h3>{type.title}</h3>
-                  <p>{type.description}</p>
+                <div key={index} className="bg-gray-50 rounded-xl p-8 shadow-lg transition-transform duration-300 hover:-translate-y-2">
+                  <h3 className="text-2xl font-semibold text-gray-900 mb-4">{type.title}</h3>
+                  <p className="text-gray-600">{type.description}</p>
                 </div>
               ))}
             </div>
@@ -143,57 +156,68 @@ function GuiasCampo() {
         </section>
       )}
 
-      <section className="research-support">
-        <div className="container">
-          <h2>Apoio à Pesquisa</h2>
-          <p>
+      {/* Research Support Section */}
+      <section className="py-24 bg-gray-50">
+        <div className="container mx-auto px-4 max-w-4xl text-center">
+          <h2 className="text-4xl font-bold mb-8">Apoio à Pesquisa</h2>
+          <p className="text-xl text-gray-600 mb-12">
             O Jardim da Amazônia apoia ativamente a pesquisa científica em nossa região. 
             Se você é pesquisador e tem interesse em desenvolver estudos em nossa área, 
             entre em contato conosco.
           </p>
-          <div className="contact-buttons">
-            <a href="mailto:adm@jardimdaamazonia.com.br" className="btn-primary">
-              Contato para Pesquisadores
+          <div className="flex justify-center">
+            <a 
+              href={siteConfig.buttonLinks.email} 
+              className="text-primary hover:text-primary-dark transition-colors duration-300"
+            >
+              adm@jardimdaamazonia.com.br
             </a>
           </div>
         </div>
       </section>
 
-      <section className="books-interest">
-        <div className="container">
-          <h2>Livros de Interesse</h2>
-          <div className="books-grid">
-            <div className="book-card">
-              <div className="book-image">
-                <div className="image-placeholder">Imagem do Livro</div>
+      {/* Books Section */}
+      <section className="py-24 bg-white">
+        <div className="container mx-auto px-4">
+          <h2 className="text-4xl font-bold text-center mb-16">Livros de Interesse</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <div className="bg-gray-50 rounded-xl overflow-hidden shadow-lg transition-transform duration-300 hover:-translate-y-2">
+              <div className="aspect-[4/3] bg-gray-200 flex items-center justify-center">
+                <span className="text-gray-500">Imagem do Livro</span>
               </div>
-              <div className="book-content">
-                <h3>Guia de Aves da Amazônia</h3>
-                <p>Guia completo com as principais espécies da região</p>
-                <a href="#" className="btn-more">Saiba Mais</a>
+              <div className="p-8">
+                <h3 className="text-2xl font-semibold text-gray-900 mb-4">Guia de Aves da Amazônia</h3>
+                <p className="text-gray-600 mb-6">Guia completo com as principais espécies da região</p>
+                <button 
+                  className="inline-flex items-center justify-center px-6 py-3 bg-primary text-white rounded-lg hover:bg-primary-dark transition-colors duration-300"
+                  onClick={() => window.open(siteConfig.buttonLinks.ebirdHotspot, '_blank')}
+                >
+                  Saiba Mais
+                </button>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="climate-info">
-        <div className="container">
-          <h2>Clima</h2>
-          <div className="climate-content">
-            <p>
+      {/* Climate Section */}
+      <section className="py-24 bg-gray-50">
+        <div className="container mx-auto px-4 max-w-4xl">
+          <h2 className="text-4xl font-bold text-center mb-8">Clima</h2>
+          <div className="space-y-12">
+            <p className="text-xl text-gray-600 text-center">
               Nossa região apresenta um clima típico amazônico, com estações bem 
               definidas. O conhecimento das condições climáticas é essencial para 
               o planejamento de atividades de observação da fauna e flora.
             </p>
-            <div className="climate-seasons">
-              <div className="season">
-                <h3>Estação Chuvosa</h3>
-                <p>Novembro a Abril</p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div className="bg-white rounded-xl p-8 text-center shadow-lg">
+                <h3 className="text-2xl font-semibold text-gray-900 mb-4">Estação Chuvosa</h3>
+                <p className="text-gray-600">Novembro a Abril</p>
               </div>
-              <div className="season">
-                <h3>Estação Seca</h3>
-                <p>Maio a Outubro</p>
+              <div className="bg-white rounded-xl p-8 text-center shadow-lg">
+                <h3 className="text-2xl font-semibold text-gray-900 mb-4">Estação Seca</h3>
+                <p className="text-gray-600">Maio a Outubro</p>
               </div>
             </div>
           </div>

@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import '../styles/Trilhas.css';
 import { motion } from 'framer-motion';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { getFolderImage } from '../config/cloudinaryConfig';
@@ -16,7 +15,7 @@ import {
   faChevronUp
 } from '@fortawesome/free-solid-svg-icons';
 
-function Trilhas() {
+const Trilhas = () => {
   const [expandedRoteiro, setExpandedRoteiro] = useState(null);
 
   const atividades = {
@@ -70,14 +69,17 @@ function Trilhas() {
 
   const renderAtividade = (nome) => (
     <motion.div 
-      className="atividade-item"
+      className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
       whileHover={{ scale: 1.02 }}
       transition={{ duration: 0.2 }}
     >
-      <div className="atividade-imagem" style={{ backgroundImage: `url(${atividades[nome].imagem})` }}></div>
-      <div className="atividade-conteudo">
-        <h5>{nome}</h5>
-        <p>{atividades[nome].descricao}</p>
+      <div 
+        className="h-48 bg-cover bg-center" 
+        style={{ backgroundImage: `url(${atividades[nome].imagem})` }}
+      ></div>
+      <div className="p-6">
+        <h5 className="text-xl font-semibold mb-2">{nome}</h5>
+        <p className="text-gray-600">{atividades[nome].descricao}</p>
       </div>
     </motion.div>
   );
@@ -87,42 +89,52 @@ function Trilhas() {
   };
 
   return (
-    <div className="trilhas">
-      <div className="page-hero trails">
-        <div className="hero-content">
-          <h1>Roteiros e Trilhas</h1>
-          <p>Explore a biodiversidade do Jardim da Amazônia</p>
+    <div className="min-h-screen bg-white">
+      {/* Hero Section */}
+      <div className="relative min-h-[60vh] bg-cover bg-center flex items-center justify-center" 
+           style={{ backgroundImage: "url('/images/trilhas/hero-bg.jpg')" }}>
+        <div className="absolute inset-0 bg-black/50"></div>
+        <div className="relative z-10 text-center text-white px-4">
+          <h1 className="text-5xl md:text-6xl font-bold mb-4">Roteiros e Trilhas</h1>
+          <p className="text-xl md:text-2xl">Explore a biodiversidade do Jardim da Amazônia</p>
         </div>
       </div>
 
-      <section className="roteiros">
-        <div className="container">
-          <h2>Roteiros Sugeridos</h2>
-          <div className="roteiros-lista">
+      {/* Roteiros Section */}
+      <section className="py-24 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <h2 className="text-4xl font-bold text-center mb-16">
+            Roteiros Sugeridos
+            <div className="w-24 h-1 bg-primary mx-auto mt-4"></div>
+          </h2>
+          <div className="max-w-4xl mx-auto space-y-6">
             {Object.entries(roteiros).map(([id, roteiro]) => (
-              <div key={id} className="roteiro-expander">
+              <div key={id} className="bg-white rounded-xl shadow-lg overflow-hidden">
                 <button 
-                  className={`roteiro-header ${expandedRoteiro === id ? 'expanded' : ''}`}
+                  className={`w-full px-8 py-6 flex items-center justify-between hover:bg-gray-50 transition-colors duration-200
+                    ${expandedRoteiro === id ? 'bg-gray-50' : ''}`}
                   onClick={() => toggleRoteiro(id)}
                 >
-                  <h3>{roteiro.titulo}</h3>
+                  <h3 className="text-2xl font-semibold">{roteiro.titulo}</h3>
                   <FontAwesomeIcon 
                     icon={expandedRoteiro === id ? faChevronUp : faChevronDown} 
-                    className="expander-icon" 
+                    className="text-xl text-gray-500" 
                   />
                 </button>
                 {expandedRoteiro === id && (
-                  <div className="roteiro-content">
-                    <div className="periodo-section">
-                      <h4>Manhã</h4>
-                      <div className="atividades-list">
-                        {roteiro.manha.map((atividade) => renderAtividade(atividade))}
+                  <div className="px-8 pb-8">
+                    <div className="space-y-8">
+                      <div>
+                        <h4 className="text-xl font-semibold mb-4 text-primary">Manhã</h4>
+                        <div className="grid gap-6">
+                          {roteiro.manha.map((atividade) => renderAtividade(atividade))}
+                        </div>
                       </div>
-                    </div>
-                    <div className="periodo-section">
-                      <h4>Tarde</h4>
-                      <div className="atividades-list">
-                        {roteiro.tarde.map((atividade) => renderAtividade(atividade))}
+                      <div>
+                        <h4 className="text-xl font-semibold mb-4 text-primary">Tarde</h4>
+                        <div className="grid gap-6">
+                          {roteiro.tarde.map((atividade) => renderAtividade(atividade))}
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -133,41 +145,44 @@ function Trilhas() {
         </div>
       </section>
 
-      <section className="nossas-trilhas">
-        <div className="container">
-          <h2>Nossas Trilhas</h2>
-          <p className="section-intro">
+      <section className="py-24 bg-white">
+        <div className="container mx-auto px-4">
+          <h2 className="text-4xl font-bold text-center mb-4">Nossas Trilhas</h2>
+          <p className="text-xl text-gray-600 text-center max-w-3xl mx-auto mb-16">
             Descubra nossa rede de trilhas e roteiros para você explorar a Amazônia.
           </p>
           
-          <div className="trilhas-grid">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
             <motion.div 
-              className="trilha-card"
+              className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0 }}
             >
-              <div className="trilha-image" style={{ backgroundImage: `url('/images/trilhas/jatoba.jpg')` }}></div>
-              <div className="trilha-content">
-                <h3>Trilha do Jatobá</h3>
-                <p className="trilha-description">
+              <div 
+                className="h-64 bg-cover bg-center" 
+                style={{ backgroundImage: `url('/images/trilhas/jatoba.jpg')` }}
+              ></div>
+              <div className="p-8">
+                <h3 className="text-2xl font-semibold mb-4">Trilha do Jatobá</h3>
+                <p className="text-gray-600 mb-6">
                   Esta trilha permite que você aprecie a diversidade da floresta e árvores como o imponente 
                   jatobá (Hymenaea courbaril), considerado sagrado pelos povos indígenas. É a mais acessível 
                   e frequentada de nossas trilhas, sendo particularmente boa para a observação de aves como 
                   Capito dayi (capitão-de-cinta), Heterocercus linteatus (coroa-de-fogo) e também para a 
                   observação de muitas borboletas, com destaque para a Morpho.
                 </p>
-                <div className="trilha-info">
-                  <span className="info-item">
-                    <FontAwesomeIcon icon={faClock} className="info-icon" />
+                <div className="flex flex-wrap gap-4">
+                  <span className="flex items-center gap-2 text-gray-600">
+                    <FontAwesomeIcon icon={faClock} className="text-primary" />
                     2-3 horas
                   </span>
-                  <span className="info-item">
-                    <FontAwesomeIcon icon={faRulerHorizontal} className="info-icon" />
+                  <span className="flex items-center gap-2 text-gray-600">
+                    <FontAwesomeIcon icon={faRulerHorizontal} className="text-primary" />
                     3.2 km
                   </span>
-                  <span className="info-item">
-                    <FontAwesomeIcon icon={faBolt} className="info-icon" />
+                  <span className="flex items-center gap-2 text-gray-600">
+                    <FontAwesomeIcon icon={faBolt} className="text-primary" />
                     Moderada
                   </span>
                 </div>
@@ -175,31 +190,34 @@ function Trilhas() {
             </motion.div>
 
             <motion.div 
-              className="trilha-card"
+              className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 1 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
             >
-              <div className="trilha-image" style={{ backgroundImage: `url('/images/trilhas/angelim.jpg')` }}></div>
-              <div className="trilha-content">
-                <h3>Trilha do Angelim</h3>
-                <p className="trilha-description">
+              <div 
+                className="h-64 bg-cover bg-center" 
+                style={{ backgroundImage: `url('/images/trilhas/angelim.jpg')` }}
+              ></div>
+              <div className="p-8">
+                <h3 className="text-2xl font-semibold mb-4">Trilha do Angelim</h3>
+                <p className="text-gray-600 mb-6">
                   Com acesso pelo Rio Claro, abrange uma maior variedade de habitats, inundadas sazonalmente. 
                   O habitat é particularmente bom para observação de primatas como o macaco-aranha-de-cara-preta 
                   (Ateles chamek), uma espécie em perigo de extinção. O Angelim é uma árvore majestosa com 
                   aproximadamente 30m de altura.
                 </p>
-                <div className="trilha-info">
-                  <span className="info-item">
-                    <FontAwesomeIcon icon={faClock} className="info-icon" />
+                <div className="flex flex-wrap gap-4">
+                  <span className="flex items-center gap-2 text-gray-600">
+                    <FontAwesomeIcon icon={faClock} className="text-primary" />
                     1-2 horas
                   </span>
-                  <span className="info-item">
-                    <FontAwesomeIcon icon={faRulerHorizontal} className="info-icon" />
+                  <span className="flex items-center gap-2 text-gray-600">
+                    <FontAwesomeIcon icon={faRulerHorizontal} className="text-primary" />
                     800m
                   </span>
-                  <span className="info-item">
-                    <FontAwesomeIcon icon={faBolt} className="info-icon" />
+                  <span className="flex items-center gap-2 text-gray-600">
+                    <FontAwesomeIcon icon={faBolt} className="text-primary" />
                     Moderada
                   </span>
                 </div>
@@ -207,31 +225,34 @@ function Trilhas() {
             </motion.div>
 
             <motion.div 
-              className="trilha-card"
+              className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 2 }}
+              transition={{ duration: 0.5, delay: 0.4 }}
             >
-              <div className="trilha-image" style={{ backgroundImage: `url('/images/trilhas/lagoa.jpg')` }}></div>
-              <div className="trilha-content">
-                <h3>Trilha da Lagoa</h3>
-                <h5>Experiência ao Pôr do Sol</h5>
-                <p className="trilha-description">
+              <div 
+                className="h-64 bg-cover bg-center" 
+                style={{ backgroundImage: `url('/images/trilhas/lagoa.jpg')` }}
+              ></div>
+              <div className="p-8">
+                <h3 className="text-2xl font-semibold mb-2">Trilha da Lagoa</h3>
+                <h5 className="text-lg text-primary mb-4">Experiência ao Pôr do Sol</h5>
+                <p className="text-gray-600 mb-6">
                   Esta trilha permite apreciar a diversidade de aves como Capito dayi e Heterocercus linteatus, 
                   além de muitas borboletas. O pôr do sol oferece uma experiência perfeita para observação e 
                   fotografia.
                 </p>
-                <div className="trilha-info">
-                  <span className="info-item">
-                    <FontAwesomeIcon icon={faClock} className="info-icon" />
+                <div className="flex flex-wrap gap-4">
+                  <span className="flex items-center gap-2 text-gray-600">
+                    <FontAwesomeIcon icon={faClock} className="text-primary" />
                     2-3 horas
                   </span>
-                  <span className="info-item">
-                    <FontAwesomeIcon icon={faRulerHorizontal} className="info-icon" />
+                  <span className="flex items-center gap-2 text-gray-600">
+                    <FontAwesomeIcon icon={faRulerHorizontal} className="text-primary" />
                     3.2 km
                   </span>
-                  <span className="info-item">
-                    <FontAwesomeIcon icon={faBolt} className="info-icon" />
+                  <span className="flex items-center gap-2 text-gray-600">
+                    <FontAwesomeIcon icon={faBolt} className="text-primary" />
                     Moderada
                   </span>
                 </div>
@@ -239,29 +260,33 @@ function Trilhas() {
             </motion.div>
 
             <motion.div 
-              className="trilha-card"
+              className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 3 }}
+              transition={{ duration: 0.5, delay: 0.6 }}
             >
-              <div className="trilha-image" style={{ backgroundImage: `url('/images/trilhas/piquia.jpg')` }}></div>
-              <div className="trilha-content">
-                <h3>Trilha do Piquiá</h3>
-                <p className="trilha-description">
-                  Trilha intensa em ambiente de floresta, com acesso pelo Rio Claro, à 10 minutos da pousada. 
-                  Disponível somente para grupos.
+              <div 
+                className="h-64 bg-cover bg-center" 
+                style={{ backgroundImage: `url('/images/trilhas/piquia.jpg')` }}
+              ></div>
+              <div className="p-8">
+                <h3 className="text-2xl font-semibold mb-4">Trilha do Piquiá</h3>
+                <p className="text-gray-600 mb-6">
+                  Trilha intensa em ambiente de floresta, com acesso pelo Rio Claro, ideal para observação 
+                  da flora nativa. O Piquiá é uma árvore de grande porte que produz frutos muito apreciados 
+                  pela fauna local.
                 </p>
-                <div className="trilha-info">
-                  <span className="info-item">
-                    <FontAwesomeIcon icon={faClock} className="info-icon" />
-                    3-4 horas
+                <div className="flex flex-wrap gap-4">
+                  <span className="flex items-center gap-2 text-gray-600">
+                    <FontAwesomeIcon icon={faClock} className="text-primary" />
+                    2-3 horas
                   </span>
-                  <span className="info-item">
-                    <FontAwesomeIcon icon={faRulerHorizontal} className="info-icon" />
-                    1.5 km
+                  <span className="flex items-center gap-2 text-gray-600">
+                    <FontAwesomeIcon icon={faRulerHorizontal} className="text-primary" />
+                    2.5 km
                   </span>
-                  <span className="info-item">
-                    <FontAwesomeIcon icon={faBolt} className="info-icon" />
+                  <span className="flex items-center gap-2 text-gray-600">
+                    <FontAwesomeIcon icon={faBolt} className="text-primary" />
                     Intensa
                   </span>
                 </div>
@@ -271,87 +296,123 @@ function Trilhas() {
         </div>
       </section>
 
-      <section className="experiencias-especiais">
-        <div className="container">
-          <h2>Experiências Especiais</h2>
-          <div className="experiencias-grid">
+      <section className="py-24 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <h2 className="text-4xl font-bold text-center mb-16">
+            Experiências Especiais
+            <div className="w-24 h-1 bg-primary mx-auto mt-4"></div>
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             <motion.div 
-              className="experiencia-card"
+              className="bg-white rounded-xl shadow-lg p-8 transition-transform duration-300 hover:-translate-y-2"
               whileHover={{ scale: 1.03 }}
               transition={{ duration: 0.2 }}
             >
-              <div className="experiencia-icon">
-                <FontAwesomeIcon icon={faMoon} />
+              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                <FontAwesomeIcon icon={faMoon} className="text-3xl text-primary" />
               </div>
-              <h3>Avistamento Noturno</h3>
-              <p>Safari noturno na passarela do Buriti para avistamentos do menor jacaré do mundo 
-                (Jacaré anão - Paleosuchus palpebrosus) e diversas espécies de morcegos.</p>
+              <h3 className="text-2xl font-semibold text-center mb-4">Avistamento Noturno</h3>
+              <p className="text-gray-600 text-center">
+                Safari noturno na passarela do Buriti para avistamentos do menor jacaré do mundo 
+                (Jacaré anão - Paleosuchus palpebrosus) e diversas espécies de morcegos.
+              </p>
             </motion.div>
 
             <motion.div 
-              className="experiencia-card"
+              className="bg-white rounded-xl shadow-lg p-8 transition-transform duration-300 hover:-translate-y-2"
               whileHover={{ scale: 1.03 }}
               transition={{ duration: 0.2 }}
             >
-              <div className="experiencia-icon">
-                <FontAwesomeIcon icon={faSun} />
+              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                <FontAwesomeIcon icon={faSun} className="text-3xl text-primary" />
               </div>
-              <h3>Pôr do Sol no Ninhal das Araras</h3>
-              <p>Um importante remanescente de floresta que protege um Ninhal que abriga uma diversidade 
-                de papagaios e araras, tornando o pôr-do-sol um momento inesquecível.</p>
+              <h3 className="text-2xl font-semibold text-center mb-4">Pôr do Sol no Ninhal das Araras</h3>
+              <p className="text-gray-600 text-center">
+                Um importante remanescente de floresta que protege um Ninhal que abriga uma diversidade 
+                de papagaios e araras, tornando o pôr-do-sol um momento inesquecível.
+              </p>
             </motion.div>
 
             <motion.div 
-              className="experiencia-card"
+              className="bg-white rounded-xl shadow-lg p-8 transition-transform duration-300 hover:-translate-y-2"
               whileHover={{ scale: 1.03 }}
               transition={{ duration: 0.2 }}
             >
-              <div className="experiencia-icon">
-                <FontAwesomeIcon icon={faDove} />
+              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                <FontAwesomeIcon icon={faDove} className="text-3xl text-primary" />
               </div>
-              <h3>Lagoa do Tiê Bicudo</h3>
-              <p>Safari fotográfico de barco a motor no rio de águas claras e belas praias de areia branca. 
-                Habitat do Conothraupis mesoleuca (tiê-bicudo), registrado no local em 2008.</p>
+              <h3 className="text-2xl font-semibold text-center mb-4">Lagoa do Tiê Bicudo</h3>
+              <p className="text-gray-600 text-center">
+                Safari fotográfico de barco a motor no rio de águas claras e belas praias de areia branca. 
+                Habitat do Conothraupis mesoleuca (tiê-bicudo), registrado no local em 2008.
+              </p>
             </motion.div>
           </div>
         </div>
       </section>
 
-      <section className="recomendacoes">
-        <div className="container">
-          <h2>Recomendações</h2>
-          <div className="recomendacoes-grid">
+      <section className="py-24 bg-white">
+        <div className="container mx-auto px-4">
+          <h2 className="text-4xl font-bold text-center mb-16">
+            Recomendações
+            <div className="w-24 h-1 bg-primary mx-auto mt-4"></div>
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             <motion.div 
-              className="recomendacao-card"
+              className="bg-white rounded-xl shadow-lg p-8 transition-transform duration-300 hover:-translate-y-2"
               whileHover={{ scale: 1.03 }}
               transition={{ duration: 0.2 }}
             >
-              <div className="recomendacao-icon">
-                <FontAwesomeIcon icon={faShirt} />
+              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                <FontAwesomeIcon icon={faShirt} className="text-3xl text-primary" />
               </div>
-              <h3>O que vestir</h3>
-              <ul>
-                <li>Roupas leves e confortáveis</li>
-                <li>Calçados apropriados para caminhada</li>
-                <li>Chapéu ou boné</li>
-                <li>Meias extras</li>
+              <h3 className="text-2xl font-semibold text-center mb-6">O que vestir</h3>
+              <ul className="space-y-3 text-gray-600">
+                <li className="flex items-center gap-3">
+                  <div className="w-2 h-2 rounded-full bg-primary flex-shrink-0"></div>
+                  Roupas leves e confortáveis
+                </li>
+                <li className="flex items-center gap-3">
+                  <div className="w-2 h-2 rounded-full bg-primary flex-shrink-0"></div>
+                  Calçados apropriados para caminhada
+                </li>
+                <li className="flex items-center gap-3">
+                  <div className="w-2 h-2 rounded-full bg-primary flex-shrink-0"></div>
+                  Chapéu ou boné
+                </li>
+                <li className="flex items-center gap-3">
+                  <div className="w-2 h-2 rounded-full bg-primary flex-shrink-0"></div>
+                  Meias extras
+                </li>
               </ul>
             </motion.div>
 
             <motion.div 
-              className="recomendacao-card"
+              className="bg-white rounded-xl shadow-lg p-8 transition-transform duration-300 hover:-translate-y-2"
               whileHover={{ scale: 1.03 }}
               transition={{ duration: 0.2 }}
             >
-              <div className="recomendacao-icon">
-                <FontAwesomeIcon icon={faSuitcase} />
+              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                <FontAwesomeIcon icon={faSuitcase} className="text-3xl text-primary" />
               </div>
-              <h3>O que levar</h3>
-              <ul>
-                <li>Repelente</li>
-                <li>Protetor solar</li>
-                <li>Água</li>
-                <li>Câmera fotográfica</li>
+              <h3 className="text-2xl font-semibold text-center mb-6">O que levar</h3>
+              <ul className="space-y-3 text-gray-600">
+                <li className="flex items-center gap-3">
+                  <div className="w-2 h-2 rounded-full bg-primary flex-shrink-0"></div>
+                  Repelente
+                </li>
+                <li className="flex items-center gap-3">
+                  <div className="w-2 h-2 rounded-full bg-primary flex-shrink-0"></div>
+                  Protetor solar
+                </li>
+                <li className="flex items-center gap-3">
+                  <div className="w-2 h-2 rounded-full bg-primary flex-shrink-0"></div>
+                  Água
+                </li>
+                <li className="flex items-center gap-3">
+                  <div className="w-2 h-2 rounded-full bg-primary flex-shrink-0"></div>
+                  Câmera fotográfica
+                </li>
               </ul>
             </motion.div>
           </div>

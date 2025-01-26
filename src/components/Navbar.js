@@ -1,14 +1,12 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import '../styles/Navbar.css';
+import { siteConfig } from '../config/siteConfig';
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [language, setLanguage] = useState('PT');
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
-  const [touchStart, setTouchStart] = useState(null);
-  const dropdownRefs = useRef([]);
   const location = useLocation();
   const isHome = location.pathname === '/';
 
@@ -16,29 +14,10 @@ function Navbar() {
     setIsOpen(!isOpen);
     if (!isOpen) {
       document.body.style.overflow = 'hidden';
+      setActiveDropdown(null);
     } else {
       document.body.style.overflow = 'unset';
     }
-  };
-
-  const handleTouchStart = (e) => {
-    setTouchStart(e.touches[0].clientX);
-  };
-
-  const handleTouchMove = (e) => {
-    if (!touchStart) return;
-
-    const touchEnd = e.touches[0].clientX;
-    const diff = touchStart - touchEnd;
-
-    if (diff > 50) { // Swipe left
-      setIsOpen(false);
-      document.body.style.overflow = 'unset';
-    }
-  };
-
-  const toggleLanguage = () => {
-    setLanguage(language === 'PT' ? 'EN' : 'PT');
   };
 
   const handleDropdownClick = (index) => {
@@ -47,19 +26,15 @@ function Navbar() {
     }
   };
 
-  const handleClickOutside = React.useCallback((e) => {
-    if (isOpen && !e.target.closest('.nav-menu') && !e.target.closest('.nav-toggle')) {
-      setIsOpen(false);
-      document.body.style.overflow = 'unset';
-    }
-  }, [isOpen]);
+  const handleLinkClick = () => {
+    setIsOpen(false);
+    setActiveDropdown(null);
+    document.body.style.overflow = 'unset';
+  };
 
-  useEffect(() => {
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
-    };
-  }, [handleClickOutside]);
+  const toggleLanguage = () => {
+    setLanguage(language === 'PT' ? 'EN' : 'PT');
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -78,101 +53,179 @@ function Navbar() {
   }, [location]);
 
   return (
-    <nav className={`navbar ${isScrolled ? 'scrolled' : ''} ${isHome ? 'home' : ''}`}>
-      <div className="navbar-container">
-        <Link to="/" className="navbar-logo">
-          <img src="/logo-white.png" alt="Jardim da Amazônia" />
+    <nav className={`fixed top-0 left-0 right-0 h-20 lg:h-[80px] z-50 transition-colors duration-300
+      ${isScrolled || !isHome ? 'bg-primary-dark/85' : 'bg-transparent hover:bg-primary-dark/85'}`}>
+      <div className="max-w-[1400px] h-full mx-auto px-6 lg:px-8 flex justify-between items-center">
+        <Link to={siteConfig.buttonLinks.home} className="h-[50px] lg:h-[70px] flex items-center" onClick={handleLinkClick}>
+          <img src="/logo-white.png" alt="Jardim da Amazônia" className="h-full w-auto transition-transform duration-300" />
         </Link>
 
-        <div className={`nav-toggle ${isOpen ? 'active' : ''}`} onClick={toggleMenu}>
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-
-        <ul 
-          className={`nav-menu ${isOpen ? 'active' : ''}`}
-          onTouchStart={handleTouchStart}
-          onTouchMove={handleTouchMove}
+        {/* Mobile Menu Button */}
+        <button
+          className="lg:hidden flex flex-col justify-center gap-1.5 w-8 h-8 z-50"
+          onClick={toggleMenu}
+          aria-label="Toggle menu"
         >
-          <li 
-            className={`nav-item dropdown ${activeDropdown === 0 ? 'active' : ''}`}
-            ref={el => dropdownRefs.current[0] = el}
-            style={{"--item-index": 0}}
-          >
-            <span 
-              className="nav-links" 
-              onClick={() => handleDropdownClick(0)} 
-              tabIndex={0}
-              role="button"
-              aria-expanded={activeDropdown === 0}
+          <span className={`block w-6 h-0.5 bg-primary transition-all duration-300 transform origin-center
+            ${isOpen ? 'rotate-45 translate-y-2 bg-white' : ''}`} />
+          <span className={`block w-6 h-0.5 bg-primary transition-opacity duration-300
+            ${isOpen ? 'opacity-0' : ''}`} />
+          <span className={`block w-6 h-0.5 bg-primary transition-all duration-300 transform origin-center
+            ${isOpen ? '-rotate-45 -translate-y-2 bg-white' : ''}`} />
+        </button>
+
+        {/* Navigation Menu */}
+        <div className={`fixed lg:static top-0 right-0 bottom-0 lg:h-full w-full lg:w-auto
+          bg-primary-dark/95 lg:bg-transparent transform transition-transform duration-300 ease-out
+          ${isOpen ? 'translate-x-0' : 'translate-x-full lg:translate-x-0'}`}>
+          {/* Logo and Close Button Section - Mobile Only */}
+          <div className="lg:hidden flex justify-between items-center p-6 border-b border-white/10">
+            <Link to={siteConfig.buttonLinks.home} className="h-[50px] flex items-center" onClick={handleLinkClick}>
+              <img src="/logo-white.png" alt="Jardim da Amazônia" className="h-full w-auto" />
+            </Link>
+          </div>
+
+          {/* Menu Items */}
+          <div className="flex-1 overflow-y-auto py-6 lg:py-0 lg:overflow-visible">
+            <ul className="flex flex-col lg:flex-row gap-4 lg:gap-10 lg:items-center">
+              {/* Hospedagem Dropdown */}
+              <li className="w-full lg:w-auto lg:h-full lg:relative group">
+                <button
+                  onClick={() => handleDropdownClick(0)}
+                  className="w-full lg:w-auto px-6 lg:px-4 py-3 lg:py-8 text-white text-lg lg:text-[0.95rem] font-medium 
+                    uppercase tracking-wider font-primary hover:text-white/80 transition-colors duration-300
+                    flex justify-between lg:block items-center"
+                  aria-expanded={activeDropdown === 0}
+                >
+                  <span>Hospedagem</span>
+                  <span className="text-2xl lg:hidden">{activeDropdown === 0 ? '−' : '+'}</span>
+                </button>
+                <div className={`${activeDropdown === 0 ? 'block mt-2' : 'hidden'} lg:hidden lg:group-hover:block
+                  lg:absolute lg:top-full lg:left-1/2 lg:-translate-x-1/2 lg:mt-0 lg:w-[220px]
+                  lg:bg-primary-dark/95 lg:rounded-lg lg:py-2 lg:border lg:border-white/10 lg:shadow-lg
+                  lg:opacity-0 lg:invisible lg:group-hover:opacity-100 lg:group-hover:visible
+                  lg:translate-y-2 lg:group-hover:translate-y-0 lg:transition-all lg:duration-200`}>
+                  <Link to={siteConfig.buttonLinks.accommodation} className="block px-8 lg:px-6 py-3 text-white/90 lg:text-white text-base lg:text-[0.9rem] font-primary tracking-wide lg:hover:bg-white/10 lg:hover:pl-8 transition-all duration-200" onClick={handleLinkClick}>Acomodações</Link>
+                  <Link to={siteConfig.buttonLinks.areasExternas} className="block px-8 lg:px-6 py-3 text-white/90 lg:text-white text-base lg:text-[0.9rem] font-primary tracking-wide lg:hover:bg-white/10 lg:hover:pl-8 transition-all duration-200" onClick={handleLinkClick}>Áreas Externas</Link>
+                  <Link to={siteConfig.buttonLinks.gastronomy} className="block px-8 lg:px-6 py-3 text-white/90 lg:text-white text-base lg:text-[0.9rem] font-primary tracking-wide lg:hover:bg-white/10 lg:hover:pl-8 transition-all duration-200" onClick={handleLinkClick}>Gastronomia</Link>
+                  <Link to={siteConfig.buttonLinks.eventosNatureza} className="block px-8 lg:px-6 py-3 text-white/90 lg:text-white text-base lg:text-[0.9rem] font-primary tracking-wide lg:hover:bg-white/10 lg:hover:pl-8 transition-all duration-200" onClick={handleLinkClick}>Eventos na Natureza</Link>
+                </div>
+              </li>
+
+              {/* Experiências Dropdown */}
+              <li className="w-full lg:w-auto lg:h-full lg:relative group">
+                <button
+                  onClick={() => handleDropdownClick(1)}
+                  className="w-full lg:w-auto px-6 lg:px-4 py-3 lg:py-8 text-white text-lg lg:text-[0.95rem] font-medium 
+                    uppercase tracking-wider font-primary hover:text-white/80 transition-colors duration-300
+                    flex justify-between lg:block items-center"
+                  aria-expanded={activeDropdown === 1}
+                >
+                  <span>Experiências</span>
+                  <span className="text-2xl lg:hidden">{activeDropdown === 1 ? '−' : '+'}</span>
+                </button>
+                <div className={`${activeDropdown === 1 ? 'block mt-2' : 'hidden'} lg:hidden lg:group-hover:block
+                  lg:absolute lg:top-full lg:left-1/2 lg:-translate-x-1/2 lg:mt-0 lg:w-[220px]
+                  lg:bg-primary-dark/95 lg:rounded-lg lg:py-2 lg:border lg:border-white/10 lg:shadow-lg
+                  lg:opacity-0 lg:invisible lg:group-hover:opacity-100 lg:group-hover:visible
+                  lg:translate-y-2 lg:group-hover:translate-y-0 lg:transition-all lg:duration-200`}>
+                  <Link to={siteConfig.buttonLinks.birdwatching} className="block px-8 lg:px-6 py-3 text-white/90 lg:text-white text-base lg:text-[0.9rem] font-primary tracking-wide lg:hover:bg-white/10 lg:hover:pl-8 transition-all duration-200" onClick={handleLinkClick}>Birdwatching</Link>
+                  <Link to={siteConfig.buttonLinks.primates} className="block px-8 lg:px-6 py-3 text-white/90 lg:text-white text-base lg:text-[0.9rem] font-primary tracking-wide lg:hover:bg-white/10 lg:hover:pl-8 transition-all duration-200" onClick={handleLinkClick}>Observação de Primatas</Link>
+                  <Link to={siteConfig.buttonLinks.safariBoat} className="block px-8 lg:px-6 py-3 text-white/90 lg:text-white text-base lg:text-[0.9rem] font-primary tracking-wide lg:hover:bg-white/10 lg:hover:pl-8 transition-all duration-200" onClick={handleLinkClick}>Safari Boat</Link>
+                  <Link to={siteConfig.buttonLinks.trilhas} className="block px-8 lg:px-6 py-3 text-white/90 lg:text-white text-base lg:text-[0.9rem] font-primary tracking-wide lg:hover:bg-white/10 lg:hover:pl-8 transition-all duration-200" onClick={handleLinkClick}>Trilhas</Link>
+                  <Link to={siteConfig.buttonLinks.guiasCampo} className="block px-8 lg:px-6 py-3 text-white/90 lg:text-white text-base lg:text-[0.9rem] font-primary tracking-wide lg:hover:bg-white/10 lg:hover:pl-8 transition-all duration-200" onClick={handleLinkClick}>Guias de Campo</Link>
+                </div>
+              </li>
+
+              {/* Conservação Dropdown */}
+              <li className="w-full lg:w-auto lg:h-full lg:relative group">
+                <button
+                  onClick={() => handleDropdownClick(2)}
+                  className="w-full lg:w-auto px-6 lg:px-4 py-3 lg:py-8 text-white text-lg lg:text-[0.95rem] font-medium 
+                    uppercase tracking-wider font-primary hover:text-white/80 transition-colors duration-300
+                    flex justify-between lg:block items-center"
+                  aria-expanded={activeDropdown === 2}
+                >
+                  <span>Conservação</span>
+                  <span className="text-2xl lg:hidden">{activeDropdown === 2 ? '−' : '+'}</span>
+                </button>
+                <div className={`${activeDropdown === 2 ? 'block mt-2' : 'hidden'} lg:hidden lg:group-hover:block
+                  lg:absolute lg:top-full lg:left-1/2 lg:-translate-x-1/2 lg:mt-0 lg:w-[220px]
+                  lg:bg-primary-dark/95 lg:rounded-lg lg:py-2 lg:border lg:border-white/10 lg:shadow-lg
+                  lg:opacity-0 lg:invisible lg:group-hover:opacity-100 lg:group-hover:visible
+                  lg:translate-y-2 lg:group-hover:translate-y-0 lg:transition-all lg:duration-200`}>
+                  <Link to={siteConfig.buttonLinks.estacaoPesquisa} className="block px-8 lg:px-6 py-3 text-white/90 lg:text-white text-base lg:text-[0.9rem] font-primary tracking-wide lg:hover:bg-white/10 lg:hover:pl-8 transition-all duration-200" onClick={handleLinkClick}>Estação de Pesquisa</Link>
+                  <Link to={siteConfig.buttonLinks.nascenteNatural} className="block px-8 lg:px-6 py-3 text-white/90 lg:text-white text-base lg:text-[0.9rem] font-primary tracking-wide lg:hover:bg-white/10 lg:hover:pl-8 transition-all duration-200" onClick={handleLinkClick}>Nascente Natural</Link>
+                  <Link to={siteConfig.buttonLinks.falaramDeNos} className="block px-8 lg:px-6 py-3 text-white/90 lg:text-white text-base lg:text-[0.9rem] font-primary tracking-wide lg:hover:bg-white/10 lg:hover:pl-8 transition-all duration-200" onClick={handleLinkClick}>Falaram de Nós</Link>
+                </div>
+              </li>
+
+              {/* Prepare sua Viagem Dropdown */}
+              <li className="w-full lg:w-auto lg:h-full lg:relative group">
+                <button
+                  onClick={() => handleDropdownClick(3)}
+                  className="w-full lg:w-auto px-6 lg:px-4 py-3 lg:py-8 text-white text-lg lg:text-[0.95rem] font-medium 
+                    uppercase tracking-wider font-primary hover:text-white/80 transition-colors duration-300
+                    flex justify-between lg:block items-center"
+                  aria-expanded={activeDropdown === 3}
+                >
+                  <span>Prepare sua Viagem</span>
+                  <span className="text-2xl lg:hidden">{activeDropdown === 3 ? '−' : '+'}</span>
+                </button>
+                <div className={`${activeDropdown === 3 ? 'block mt-2' : 'hidden'} lg:hidden lg:group-hover:block
+                  lg:absolute lg:top-full lg:left-1/2 lg:-translate-x-1/2 lg:mt-0 lg:w-[220px]
+                  lg:bg-primary-dark/95 lg:rounded-lg lg:py-2 lg:border lg:border-white/10 lg:shadow-lg
+                  lg:opacity-0 lg:invisible lg:group-hover:opacity-100 lg:group-hover:visible
+                  lg:translate-y-2 lg:group-hover:translate-y-0 lg:transition-all lg:duration-200`}>
+                  <Link to={siteConfig.buttonLinks.faq} className="block px-8 lg:px-6 py-3 text-white/90 lg:text-white text-base lg:text-[0.9rem] font-primary tracking-wide lg:hover:bg-white/10 lg:hover:pl-8 transition-all duration-200" onClick={handleLinkClick}>Perguntas Frequentes</Link>
+                  <Link to={siteConfig.buttonLinks.comoChegar} className="block px-8 lg:px-6 py-3 text-white/90 lg:text-white text-base lg:text-[0.9rem] font-primary tracking-wide lg:hover:bg-white/10 lg:hover:pl-8 transition-all duration-200" onClick={handleLinkClick}>Como Chegar</Link>
+                </div>
+              </li>
+
+              {/* Language and Reserve Buttons */}
+              <li className="lg:flex items-center gap-6">
+                <button
+                  onClick={toggleLanguage}
+                  className="hidden lg:block px-3 py-1 text-white text-sm font-medium border border-white/20 rounded
+                    hover:bg-white/10 hover:border-accent transition-all duration-300"
+                >
+                  {language}
+                </button>
+
+                <a
+                  href={siteConfig.buttonLinks.bookNow}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hidden lg:block bg-accent text-primary font-semibold text-sm uppercase tracking-wider px-6 py-2.5
+                    rounded-full hover:-translate-y-0.5 hover:shadow-lg transition-all duration-300"
+                >
+                  Reservar
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          {/* Bottom Actions - Mobile Only */}
+          <div className="lg:hidden border-t border-white/10 p-6 space-y-4">
+            <button
+              onClick={toggleLanguage}
+              className="w-full px-4 py-2 text-white text-base font-medium border border-white/20 rounded
+                hover:bg-white/10 transition-colors duration-300"
             >
-              Hospedagem
-            </span>
-            <div className="dropdown-content">
-              <Link to="/acomodacoes" style={{"--item-index": 0}}>Acomodações</Link>
-              <Link to="/areas-externas" style={{"--item-index": 1}}>Áreas Externas</Link>
-              <Link to="/gastronomia" style={{"--item-index": 2}}>Gastronomia</Link>
-              <Link to="/eventos-corporativos" style={{"--item-index": 3}}>Eventos Corporativos</Link>
-            </div>
-          </li>
-          <li 
-            className={`nav-item dropdown ${activeDropdown === 1 ? 'active' : ''}`}
-            ref={el => dropdownRefs.current[1] = el}
-            style={{"--item-index": 1}}
-          >
-            <span className="nav-links" onClick={() => handleDropdownClick(1)} tabIndex={0}>
-              Experiências
-            </span>
-            <div className="dropdown-content">
-              <Link to="/birdwatching" style={{"--item-index": 0}}>Birdwatching</Link>
-              <Link to="/primatas" style={{"--item-index": 1}}>Observação de Primatas</Link>
-              <Link to="/safari-boat" style={{"--item-index": 2}}>Safari Boat</Link>
-              <Link to="/trilhas" style={{"--item-index": 3}}>Trilhas</Link>
-              <Link to="/guias-campo" style={{"--item-index": 4}}>Guias de Campo</Link>
-            </div>
-          </li>
-          <li 
-            className={`nav-item dropdown ${activeDropdown === 2 ? 'active' : ''}`}
-            ref={el => dropdownRefs.current[2] = el}
-            style={{"--item-index": 2}}
-          >
-            <span className="nav-links" onClick={() => handleDropdownClick(2)} tabIndex={0}>
-              Conservação
-            </span>
-            <div className="dropdown-content">
-              <Link to="/estacao-pesquisa" style={{"--item-index": 0}}>Estação de Pesquisa</Link>
-              <Link to="/nascente-natural" style={{"--item-index": 1}}>Nascente Natural</Link>
-              <Link to="/falaram-de-nos" style={{"--item-index": 2}}>Falaram de Nós</Link>
-            </div>
-          </li>
-          <li 
-            className={`nav-item dropdown ${activeDropdown === 3 ? 'active' : ''}`}
-            ref={el => dropdownRefs.current[3] = el}
-            style={{"--item-index": 3}}
-          >
-            <span className="nav-links" onClick={() => handleDropdownClick(3)} tabIndex={0}>
-              Prepare sua Viagem
-            </span>
-            <div className="dropdown-content">
-              <Link to="/faq">Perguntas Frequentes</Link>
-              <Link to="/como-chegar">Como Chegar</Link>
-            </div>
-          </li>
-          <li className="nav-item language-switch" onClick={toggleLanguage}>
-            {language}
-          </li>
-          <li className="nav-item">
-            <a 
-              href="https://book.omnibees.com/hotel/19972?lang=pt-BR&currencyId=16&version=4" 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              className="btn-primary"
+              {language}
+            </button>
+
+            <a
+              href={siteConfig.buttonLinks.bookNow}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block w-full bg-accent text-primary text-base font-semibold uppercase tracking-wider px-4 py-3
+                rounded-full text-center hover:bg-accent/90 transition-colors duration-300"
             >
               Reservar
             </a>
-          </li>
-        </ul>
+          </div>
+        </div>
       </div>
     </nav>
   );

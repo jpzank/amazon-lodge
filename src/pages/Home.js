@@ -1,11 +1,10 @@
 import React, { useEffect, useState, useCallback, useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import { Image } from 'cloudinary-react';
-import '../styles/core/components/index.css';
 import { getFolderImage, folderImageMapping } from '../config/cloudinaryConfig';
 import { siteConfig, featureFlags } from '../config';
 
-function Home() {
+const Home = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeTestimonial, setActiveTestimonial] = useState(0);
 
@@ -81,166 +80,213 @@ function Home() {
   console.log('conservation:', siteConfig?.home?.conservation);
 
   return (
-    <div className="home">
-      <section className="video-hero">
-        <div className="video-container">
+    <div className="min-h-screen bg-white">
+      {/* Video Hero Section */}
+      <section className="relative h-screen overflow-hidden">
+        <div className="absolute inset-0 overflow-hidden transform scale-[1.3] origin-center">
           <iframe
             src={`${siteConfig?.home?.hero?.videoUrl}?muted=1&loop=1&background=1&autoplay=1&dnt=1&app_id=58479&quality=auto`}
             frameBorder="0"
             allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
-            className="background-video"
+            className="w-full h-full object-cover"
             title={siteConfig?.site?.name}
             loading="lazy"
           ></iframe>
         </div>
-        <div className={`hero-overlay ${isScrolled ? 'scrolled' : ''}`}></div>
       </section>
 
-      <section className="about">
-        <div className="container">
-          <div className="section-header">
-            <h2>BEM-VINDO AO JARDIM DA AMAZÔNIA</h2>
-            <p>Onde a Amazônia encontra o Cerrado</p>
+      {/* About Section */}
+      <section className="py-24 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold mb-4">BEM-VINDO AO JARDIM DA AMAZÔNIA</h2>
+            <p className="text-xl text-gray-600">Descanso e Harmonia em Meio à Natureza Selvagem</p>
           </div>
-          <div className="about-grid">
-            <div className="about-content">
-              <p className="about-description">
-                Localizado às margens do Rio Claro, o Jardim da Amazônia é um refúgio onde a 
-                Floresta Amazônica encontra o Cerrado, criando um dos ecossistemas mais diversos do Brasil. 
-                Nossa missão é proporcionar experiências únicas de conexão com a natureza, enquanto 
-                preservamos este tesouro natural para as futuras gerações.
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center max-w-6xl mx-auto">
+            <div className="space-y-8">
+              <p className="text-lg text-gray-700 leading-relaxed">
+              Situado às margens do Rio Claro, o Jardim da Amazônia é um refúgio que une a Floresta Amazônica 
+              e o Cerrado, oferecendo um dos ecossistemas mais ricos e diversificados do Brasil. Nosso objetivo 
+              é proporcionar uma experiência autêntica de conexão com a natureza, em um ambiente tranquilo e preservado, 
+              enquanto cuidamos do legado natural para as gerações futuras.
               </p>
-              <div className="about-features">
-                <div className="feature">
-                  <div className="feature-icon">
-                    <i className="fas fa-leaf"></i>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div className="flex flex-col items-center text-center p-4 rounded-xl bg-primary/5">
+                  <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+                    <span className="material-icons text-primary text-2xl">eco</span>
                   </div>
-                  <span>Conservação Ativa</span>
+                  <span className="font-medium">Conservação Ativa</span>
                 </div>
-                <div className="feature">
-                  <div className="feature-icon">
-                    <i className="fas fa-home"></i>
+                <div className="flex flex-col items-center text-center p-4 rounded-xl bg-primary/5">
+                  <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+                    <span className="material-icons text-primary text-2xl">cottage</span>
                   </div>
-                  <span>Acomodações Sustentáveis</span>
+                  <span className="font-medium">Acomodações Sustentáveis</span>
                 </div>
-                <div className="feature">
-                  <div className="feature-icon">
-                    <i className="fas fa-users"></i>
+                <div className="flex flex-col items-center text-center p-4 rounded-xl bg-primary/5">
+                  <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+                    <span className="material-icons text-primary text-2xl">hiking</span>
                   </div>
-                  <span>Guias Especializados</span>
+                  <span className="font-medium">Guias Especializados</span>
                 </div>
               </div>
-              <div className="about-cta">
-                <Link to="/nossa-historia" className="btn-primary">
-                  Conheça Nossa História
+              <div className="text-center lg:text-left">
+                <Link 
+                  to={siteConfig.buttonLinks.ourHistory} 
+                  className="text-white/90 hover:text-white transition-default"
+                >
+                  Saiba mais sobre nossa história
                 </Link>
               </div>
             </div>
-            <div className="about-image">
+            <div className="relative rounded-2xl overflow-hidden shadow-2xl">
               <Image 
                 {...cloudinaryCommonProps}
                 publicId={folderImageMapping.home['vista-aerea-lodge']}
                 alt="Vista aérea do Lodge"
-                className="image-hover"
+                className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
               />
             </div>
           </div>
         </div>
       </section>
 
-      <section className="biodiversity">
-        <div className="biodiversity-grid">
-          {siteConfig?.home?.biodiversity?.stats?.map((stat, index) => (
-            <div key={index} className="biodiversity-stat">
-              <div className="biodiversity-number">{stat.number}</div>
-              <div className="biodiversity-label">{stat.title}</div>
-              <p>{stat.desc}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      <section className="recognition">
-        <div className="recognition-grid">
-          {siteConfig?.home?.recognition?.items?.map((item) => (
-            <div key={item.id} className="recognition-item">
-              <Image 
-                {...cloudinaryCommonProps}
-                publicId={folderImageMapping.logos[item.id]}
-                alt={`${item.title} Badge`}
-                className="recognition-icon"
-              />
-              <div className="recognition-content">
-                <h3>{item.title}</h3>
-                <p>{item.desc}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      <section className="experiences">
-        <div className="experiences-header">
-          <h2>{siteConfig?.home?.experiences?.title}</h2>
-          <p>{siteConfig?.home?.experiences?.subtitle}</p>
-        </div>
-        <div className="experiences-grid">
-          {siteConfig?.home?.experiences?.items?.map((exp, index) => (
-            <div key={index} className="experience-card">
-              <div className="experience-image" style={experienceStyles[exp.id]}></div>
-              <div className="experience-overlay">
-                <h3 className="experience-title">{exp.title}</h3>
-                <p className="experience-description">{exp.desc}</p>
-                <Link to={exp.link} className="btn-explore">Explorar</Link>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {featureFlags?.enableTestimonials && (
-        <section className="testimonials">
-          <div className="testimonials-header">
-            <h2>{siteConfig?.home?.testimonials?.title}</h2>
-          </div>
-          <div className="testimonial-slider">
-            {testimonials?.map((testimonial, index) => (
-              <div 
-                key={index} 
-                className={`testimonial-item ${index === activeTestimonial ? 'active' : ''}`}
-              >
-                <blockquote>{testimonial.quote}</blockquote>
-                <cite className="author">{testimonial.author}</cite>
-                <span className="date">{testimonial.date}</span>
+      {/* Biodiversity Section */}
+      <section className="py-24 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+            {siteConfig?.home?.biodiversity?.stats?.map((stat, index) => (
+              <div key={index} className="text-center p-8 bg-white rounded-xl shadow-lg">
+                <div className="text-4xl font-bold text-primary mb-4">{stat.number}</div>
+                <div className="text-xl font-semibold text-gray-900 mb-3">{stat.title}</div>
+                <p className="text-gray-600">{stat.desc}</p>
               </div>
             ))}
-            <div className="testimonial-nav">
-              {testimonials?.map((_, index) => (
-                <button
-                  key={index}
-                  className={`testimonial-dot ${index === activeTestimonial ? 'active' : ''}`}
-                  onClick={() => setActiveTestimonial(index)}
+          </div>
+        </div>
+      </section>
+
+      {/* Recognition Section */}
+      <section className="py-24 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {siteConfig?.home?.recognition?.items?.map((item) => (
+              <div key={item.id} className="flex flex-col items-center p-8 bg-gray-50 rounded-xl hover:shadow-lg transition-shadow duration-300">
+                <Image 
+                  {...cloudinaryCommonProps}
+                  publicId={folderImageMapping.logos[item.id]}
+                  alt={`${item.title} Badge`}
+                  className="w-24 h-24 object-contain mb-6"
                 />
+                <div className="text-center">
+                  <h3 className="text-xl font-semibold text-gray-900 mb-3">{item.title}</h3>
+                  <p className="text-gray-600">{item.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Experiences Section */}
+      <section className="py-24 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold mb-4">{siteConfig?.home?.experiences?.title}</h2>
+            <p className="text-xl text-gray-600">{siteConfig?.home?.experiences?.subtitle}</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {siteConfig?.home?.experiences?.items?.map((exp, index) => (
+              <div key={index} className="group relative h-[400px] rounded-xl overflow-hidden shadow-lg">
+                <div 
+                  className="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110" 
+                  style={experienceStyles[exp.id]}
+                ></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 to-black/20"></div>
+                <div className="absolute inset-0 p-8 flex flex-col justify-end text-white">
+                  <h3 className="text-2xl font-semibold mb-3">{exp.title}</h3>
+                  <p className="text-white/90 mb-6">{exp.desc}</p>
+                  <Link 
+                    to={exp.link} 
+                    className="inline-flex items-center justify-center px-6 py-2 bg-white/20 backdrop-blur-sm rounded-md text-white hover:bg-white/30 transition-colors duration-300"
+                  >
+                    Explorar
+                  </Link>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials Section */}
+      {featureFlags?.enableTestimonials && (
+        <section className="py-24 bg-white">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold">{siteConfig?.home?.testimonials?.title}</h2>
+            </div>
+            <div className="max-w-4xl mx-auto">
+              {testimonials?.map((testimonial, index) => (
+                <div 
+                  key={index} 
+                  className={`transition-all duration-500 ${
+                    index === activeTestimonial 
+                      ? 'opacity-100 translate-y-0' 
+                      : 'opacity-0 translate-y-8 absolute'
+                  }`}
+                >
+                  <blockquote className="text-xl text-gray-700 text-center italic mb-8">
+                    {testimonial.quote}
+                  </blockquote>
+                  <div className="text-center">
+                    <cite className="text-lg font-semibold text-gray-900 not-italic">
+                      {testimonial.author}
+                    </cite>
+                    <span className="block text-sm text-gray-500 mt-1">{testimonial.date}</span>
+                  </div>
+                </div>
               ))}
+              <div className="flex justify-center items-center gap-3 mt-12">
+                {testimonials?.map((_, index) => (
+                  <button
+                    key={index}
+                    className={`w-3 h-3 rounded-full transition-colors duration-300 ${
+                      index === activeTestimonial 
+                        ? 'bg-primary' 
+                        : 'bg-gray-300 hover:bg-gray-400'
+                    }`}
+                    onClick={() => setActiveTestimonial(index)}
+                  />
+                ))}
+              </div>
             </div>
           </div>
         </section>
       )}
 
-      <section className="cta">
-        <div className="cta-content">
-          <h2>{siteConfig?.home?.cta?.title}</h2>
-          <p>{siteConfig?.home?.cta?.subtitle}</p>
-          <div className="cta-buttons">
-            <a href={siteConfig?.site?.bookingUrl} 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              className="btn-primary">
-              Reserve Agora
-            </a>
-            <Link to="/como-chegar" className="btn-secondary">
-              Como Chegar
-            </Link>
+      {/* CTA Section */}
+      <section className="py-24 bg-primary/5">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl font-bold mb-6">{siteConfig?.home?.cta?.title}</h2>
+            <p className="text-xl text-gray-700 mb-12">{siteConfig?.home?.cta?.subtitle}</p>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
+              <a 
+                href={siteConfig.buttonLinks.bookNow} 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="btn-primary"
+              >
+                Reserve Agora
+              </a>
+              <Link 
+                to={siteConfig.buttonLinks.comoChegar} 
+                className="btn-secondary"
+              >
+                Como Chegar
+              </Link>
+            </div>
           </div>
         </div>
       </section>

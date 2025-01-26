@@ -7,6 +7,53 @@ export const siteConfig = {
     bookingUrl: 'https://book.omnibees.com/hotel/19972?lang=pt-BR&currencyId=16&version=4'
   },
 
+  // Button Links Configuration
+  buttonLinks: {
+    // Booking related
+    bookNow: 'https://book.omnibees.com/hotel/19972?lang=pt-BR&currencyId=16&version=4',
+    
+    // Social Media and Contact
+    whatsapp: 'https://wa.me/556540420595',
+    instagram: 'https://instagram.com/jardimdaamazonia',
+    facebook: 'https://facebook.com/jardimdaamazonia',
+    tripadvisor: 'https://tripadvisor.com/jardimdaamazonia',
+    email: 'mailto:atendimento@jardimamazonia.com',
+    
+    // Main Navigation
+    home: '/',
+    
+    // Experience Pages
+    birdwatching: '/birdwatching',
+    safariBoat: '/safari-boat',
+    primates: '/primatas',
+    gastronomy: '/gastronomia',
+    accommodation: '/acomodacoes',
+    areasExternas: '/areas-externas',
+    trilhas: '/trilhas',
+    guiasCampo: '/guias-campo',
+    eventosCorporativos: '/eventos-corporativos',
+    eventosNatureza: '/eventos-natureza',
+    
+    // Information Pages
+    ourHistory: '/nossa-historia',
+    documents: '/documentos',
+    faq: '/faq',
+    comoChegar: '/como-chegar',
+    contato: '/contato',
+    reservas: '/reservas',
+    galeria: '/galeria',
+    
+    // Research and Nature
+    estacaoPesquisa: '/estacao-pesquisa',
+    nascenteNatural: '/nascente-natural',
+    falaramDeNos: '/falaram-de-nos',
+    
+    // External Research Links
+    ebirdHotspot: 'https://ebird.org/hotspot/L968651',
+    birdlifeDatazone: 'https://datazone.birdlife.org/site/factsheet/rio-claro-iba-brazil',
+    wikiAves: 'https://www.wikiaves.com.br/municipio_5107305'
+  },
+
   // Social media links
   social: {
     instagram: 'https://instagram.com/jardimdaamazonia',
@@ -19,7 +66,7 @@ export const siteConfig = {
     hero: {
       title: 'JARDIM DA AMAZÔNIA',
       subtitle: 'Um Refúgio de Riquezas Naturais',
-      videoUrl: 'https://player.vimeo.com/video/1043999382'
+      videoUrl: 'https://player.vimeo.com/video/1050426624'
     },
 
     biodiversity: {
@@ -27,7 +74,7 @@ export const siteConfig = {
         { number: '580+', title: 'Espécies de Aves', desc: 'Catalogadas em nossa reserva' },
         { number: '7', title: 'Espécies de Primatas', desc: 'Dos 29 reconhecidos em MT' },
         { number: '30+', title: 'Mamíferos', desc: 'De médio e grande porte' },
-        { number: '∞', title: 'Experiências', desc: 'Únicas na natureza' }
+        { number: '∞', title: 'Experiências', desc: 'na natureza' }
       ]
     },
 
@@ -58,7 +105,7 @@ export const siteConfig = {
         {
           id: 'birdwatching',
           title: 'Birdwatching',
-          desc: 'Um dos melhores destinos de observação de aves do Brasil',
+          desc: 'Top 3 melhores destinos de observação de aves do Brasil',
           link: '/birdwatching'
         },
         {
@@ -80,14 +127,24 @@ export const siteConfig = {
       title: 'O QUE DIZEM NOSSOS VISITANTES',
       items: [
         {
+          quote: "Uma experiência maravilhosa que recomendo de coração! Tudo foi incrível: o local, os quartos, o atendimento – tudo impecável. A piscina de águas cristalinas e naturais foi inesquecível e me deixou uma eterna saudade.",
+          author: "Aquila Neves - Tapurah, MT",
+          date: "February 2025"
+        },
+        {
+          quote: "The Perfect Combination: Northern Pantanal & Southern Amazon Forest! Who would have known that, in addition to traveling to the Pantanal from Cuiabá, just 300 km north of the capital of Mato Grosso, you can also reach the Amazon Forest? Well, it's true! I strongly recommend that anyone traveling to the Northern Pantanal consider combining their trip with a visit to the Gardens of the Amazon Lodge. This combination will be a once-in-a-lifetime experience!!!!",
+          author: "Z2652DKpaulob - Mato Grosso",
+          date: "February 2024"
+        },
+        {
+          quote: "Absolutely lovely Amazon hotel. This hotel has so many garden features, bird feeders, and ponds. It is just fun to walk around. We went on hikes to look for birds and animals. The spring-fed pool was a very nice place to cool off after a walk. Our dietary needs were accommodated with pleasure.",
+          author: "Julietravelsalot - Minnesota, USA",
+          date: "September 2023"
+        },
+        {
           quote: "Jardim da Amazônia – Uma incrível empresa familiar na linha de frente da conservação da Floresta Amazônica!",
           author: "M Carr - USA",
           date: "April 2023"
-        },
-        {
-          quote: "Uma experiência única de imersão na natureza. O encontro perfeito entre conforto e aventura sustentável.",
-          author: "Ana Silva - Brasil",
-          date: "Março 2023"
         },
         {
           quote: "Paradise for birdwatchers! The diversity of species and professional guidance made our stay unforgettable.",

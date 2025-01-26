@@ -1,9 +1,0 @@
-.nascente-natural {
-  min-height: 70vh;
-}
-
-.page-hero.spring::before {
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-}

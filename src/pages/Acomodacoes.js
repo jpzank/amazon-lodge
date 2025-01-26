@@ -1,13 +1,12 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { getFolderImage } from '../config/cloudinaryConfig';
-import '../styles/Acomodacoes.css';
+import { siteConfig } from '../config/siteConfig';
 import { 
   FaWifi, 
   FaShower, 
   FaFan, 
-  FaBed, 
-  FaLeaf,
+  FaBed,
   FaMountain,
   FaHeart,
   FaSnowflake,
@@ -29,18 +28,13 @@ import {
 } from 'react-icons/md';
 import { GiPalmTree, GiForestCamp } from 'react-icons/gi';
 
-const heroStyle = {
-  backgroundImage: `url(${getFolderImage('acomodacoes', 'hero')})`,
-  backgroundSize: 'cover',
-  backgroundPosition: 'center',
-  backgroundRepeat: 'no-repeat'
-};
-
 function Acomodacoes() {
   const [selectedRoom, setSelectedRoom] = useState(null);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [isFullScreen, setIsFullScreen] = useState(false);
 
   const commonAmenities = [
+    { icon: <FaBed />, name: "Cama King Size" },
     { icon: <FaWifi />, name: "Wi-Fi" },
     { icon: <FaSnowflake />, name: "Ar Condicionado" },
     { icon: <FaFan />, name: "Ventilador de Teto" },
@@ -64,13 +58,13 @@ function Acomodacoes() {
       ]
     },
     {
-      title: "Incluído na Diária",
+      title: "Incluído na Hospedagem",
       icon: <FaCheckCircle />,
       items: [
         "Café da manhã completo",
-        "Pensão completa",
+        "Almoço e jantar completo",
         "Wi-Fi nas áreas comuns",
-        "Estacionamento"
+        "Acesso à Piscina Natural"
       ]
     },
     {
@@ -246,98 +240,89 @@ function Acomodacoes() {
   };
 
   return (
-    <div className="acomodacoes">
-      <section className="page-hero" style={heroStyle}>
-        <div className="hero-overlay">
-          <div className="hero-content">
-            <h1>ACOMODAÇÕES</h1>
-            <p>Conforto e História em Harmonia com a Natureza</p>
-          </div>
-        </div>
-      </section>
+    <div className="min-h-screen bg-white">
+      {/* Hero Section */}
+      <div 
+        className="relative h-[70vh] flex items-center justify-center text-center text-white mb-16"
+        style={{
+          backgroundImage: `url(${getFolderImage('acomodacoes', 'hero')})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      >
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/40 to-black/70" />
 
-      <section className="room-intro">
-        <div className="container">
-          <div className="intro-content">
-            <FaLeaf className="intro-icon" />
-            <p className="intro-text">
-              Os apartamentos na antiga casa da fazenda, construída em 1986, foram inspirados nas casas de 
-              palafitas no Salto das Andorinhas - Rio Roosevelt | Aripuanã-MT pelo proprietário Almor Zanchet. 
-              Os móveis fazem parte de um acervo de mobiliário de época, cuidadosamente garimpados por Raquel Zanchet e
-              Carmelita Zanchet, trazendo história e personalidade para cada ambiente.
+        {/* Content */}
+        <div className="relative z-10 max-w-[800px] px-8">
+          <h1 className="text-4xl md:text-6xl font-bold mb-4 tracking-wider drop-shadow-lg">
+            Acomodações
+          </h1>
+          <p className="text-lg md:text-2xl mb-8 drop-shadow-md">
+            Conforto e natureza em perfeita harmonia
+          </p>
+        </div>
+      </div>
+
+      {/* Room Introduction */}
+      <section className="py-24 bg-background-light">
+        <div className="container mx-auto px-4 max-w-[900px]">
+          <div className="flex flex-col items-center gap-6">
+            <div className="flex items-center gap-4">
+              <span className="text-4xl text-primary"><MdHotel /></span>
+            </div>
+            <p className="text-xl leading-relaxed text-text font-light text-center">
+              Nossos bangalôs e apartamentos foram cuidadosamente projetados para proporcionar o máximo 
+              conforto durante sua estadia, mantendo uma conexão harmoniosa com a natureza. Cada 
+              acomodação oferece uma experiência singular, alguns com vistas e todas com toda a infraestrutura 
+              necessária para o seu conforto.
             </p>
           </div>
         </div>
       </section>
 
-      <section className="room-types">
-        <div className="container">
-          <div className="room-navigation">
+      {/* Room Types Section */}
+      <section className="py-24 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-[1000px] mx-auto flex flex-col gap-16">
             {accommodations.map((accommodation) => (
-              <div key={accommodation.id} className="room-card">
-                <div className="room-image-container">
+              <div key={accommodation.id} className="bg-white rounded-xl overflow-hidden shadow-lg
+                hover:-translate-y-1 hover:shadow-xl transition-all duration-300">
+                {/* Room Image */}
+                <div className="relative h-[300px]">
                   <img 
-                    src={accommodation.image}
+                    src={accommodation.image} 
                     alt={accommodation.name}
-                    className="room-image"
+                    className="w-full h-full object-cover"
                   />
                 </div>
-                <div className="room-content">
-                  <h2>{accommodation.name}</h2>
-                  <p className="room-description">{accommodation.description}</p>
-                  <div className="room-features">
-                    {accommodation.features.map((feature, idx) => (
-                      <div key={idx} className="feature-item">
-                        <span className="feature-icon">{feature.icon}</span>
-                        <span>{feature.name}</span>
+
+                {/* Room Content */}
+                <div className="p-6">
+                  <h2 className="text-2xl text-primary mb-3">{accommodation.name}</h2>
+                  <p className="text-base text-text leading-relaxed mb-6">
+                    {accommodation.description}
+                  </p>
+
+                  {/* Features */}
+                  <div className="flex justify-start items-center gap-6 mb-6">
+                    {accommodation.features.map((feature, index) => (
+                      <div key={index} className="flex items-center gap-2 text-text">
+                        <span className="text-xl text-primary">{feature.icon}</span>
+                        <span className="text-sm font-medium">{feature.name}</span>
                       </div>
                     ))}
                   </div>
-                  {accommodation.subitems && (
-                    <div className="subitems-section">
-                      <h3>Opções de Apartamentos</h3>
-                      {accommodation.subitems.map((subitem) => (
-                        <div key={subitem.id} className="subitem-card">
-                          <h4>{subitem.name}</h4>
-                          <p>{subitem.description}</p>
-                          <div className="subitem-features">
-                            {subitem.features.map((feature, idx) => (
-                              <div key={idx} className="feature-item">
-                                <span className="feature-icon">{feature.icon}</span>
-                                <span>{feature.name}</span>
-                              </div>
-                            ))}
-                          </div>
-                          <div className="subitem-actions">
-                            <button 
-                              className="btn-details"
-                              onClick={() => handleShowDetails(subitem)}
-                            >
-                              Ver Detalhes
-                            </button>
-                          </div>
-                        </div>
-                      ))}
-                    </div>
-                  )}
-                  <div className="room-amenities-grid">
-                    {commonAmenities.map((amenity, idx) => (
-                      <div key={idx} className="amenity-item">
-                        {amenity.icon}
-                        <span>{amenity.name}</span>
-                      </div>
-                    ))}
-                  </div>
-                  {!accommodation.subitems && (
-                    <div className="room-actions">
-                      <button 
-                        className="btn-details"
-                        onClick={() => handleShowDetails(accommodation)}
-                      >
-                        Ver Detalhes
-                      </button>
-                    </div>
-                  )}
+
+                  {/* Action Button */}
+                  <button
+                    onClick={() => handleShowDetails(accommodation)}
+                    className="w-full py-3 px-6 bg-primary text-white rounded-full font-medium
+                      hover:bg-primary/90 hover:-translate-y-0.5 hover:shadow-md 
+                      transition-all duration-300 ease-in-out"
+                  >
+                    Ver Detalhes
+                  </button>
                 </div>
               </div>
             ))}
@@ -345,23 +330,30 @@ function Acomodacoes() {
         </div>
       </section>
 
-      <section className="policies-section">
-        <div className="container">
-          <h2 className="section-title">Informações Úteis</h2>
-          <div className="policies-grid">
+      {/* Policies Section */}
+      <section className="py-24 bg-white">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl md:text-4xl text-primary text-center font-bold mb-16">
+            Informações Importantes
+          </h2>
+          <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
             {policies.map((policy, index) => (
-              <div key={index} className="policy-card">
-                <div className="policy-header">
-                  {policy.icon}
-                  <h3>{policy.title}</h3>
+              <div
+                key={index}
+                className="bg-background-light rounded-2xl p-8 hover:shadow-lg transition-all duration-300"
+              >
+                <div className="flex items-center gap-4 mb-6">
+                  <span className="text-2xl text-primary">{policy.icon}</span>
+                  <h3 className="text-xl font-semibold text-primary">{policy.title}</h3>
                 </div>
-                <ul>
-                  {policy.items.map((item, itemIndex) => (
-                    item === "separator" ? (
-                      <li key={itemIndex} className="separator"></li>
-                    ) : (
-                      <li key={itemIndex}>{item}</li>
-                    )
+                <ul className="space-y-3">
+                  {policy.items.map((item, idx) => (
+                    <li
+                      key={idx}
+                      className={`text-text ${!item && 'h-4'} ${item === '' && 'border-b border-gray-200 my-4'}`}
+                    >
+                      {item}
+                    </li>
                   ))}
                 </ul>
               </div>
@@ -370,88 +362,187 @@ function Acomodacoes() {
         </div>
       </section>
 
-      <section className="cta-section">
-        <div className="container">
-          <h2>Pronto para uma Experiência em meio à Natureza?</h2>
-          <p>Reserve sua estadia e prepare-se para momentos inesquecíveis no coração da Amazônia</p>
-          <div className="cta-buttons">
-            <a 
-              href="https://book.omnibees.com/hotel/19972?lang=pt-BR&currencyId=16&version=4" 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              className="btn-primary"
+      {/* CTA Section */}
+      <section className="py-24 bg-primary text-white text-center">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+            Pronto para Viver essa Experiência?
+          </h2>
+          <p className="text-xl md:text-2xl text-white/90 mb-12 max-w-2xl mx-auto">
+            Reserve agora sua estadia e prepare-se para momentos inesquecíveis em meio à natureza
+          </p>
+          <div className="flex flex-col md:flex-row gap-6 justify-center">
+            <a
+              href={siteConfig.buttonLinks.bookNow}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-accent text-primary px-8 py-4 rounded-full text-lg font-semibold
+                hover:-translate-y-1 hover:shadow-lg transition-all duration-300"
             >
               Reserve Agora
             </a>
-            <Link to="/como-chegar" className="btn-secondary">Como Chegar</Link>
+            <Link
+              to={siteConfig.buttonLinks.contato}
+              className="px-8 py-4 rounded-full text-lg font-semibold border-2 border-white
+                hover:-translate-y-1 hover:shadow-lg hover:bg-white/10 transition-all duration-300"
+            >
+              Entre em Contato
+            </Link>
           </div>
         </div>
       </section>
 
+      {/* Room Details Modal */}
       {selectedRoom && (
-        <div className={`modal-overlay ${selectedRoom ? 'active' : ''}`} onClick={handleCloseDetails}>
-          <div className="modal-content" onClick={e => e.stopPropagation()}>
-            <button className="modal-close" onClick={handleCloseDetails}>
-              <FaTimes />
-            </button>
-            <h2>{selectedRoom.name}</h2>
-            
-            <div className="modal-gallery">
-              <button onClick={handlePrevImage} className="gallery-nav prev">
+        <div 
+          className="fixed inset-0 bg-black/80 z-50 flex items-center justify-center
+            transition-opacity duration-300"
+          onClick={handleCloseDetails}
+        >
+          <div 
+            className="bg-white rounded-2xl max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto
+              transform transition-all duration-300"
+            onClick={e => e.stopPropagation()}
+          >
+            {/* Gallery */}
+            <div className="relative h-[50vh]">
+              <img
+                src={selectedRoom.gallery[currentImageIndex]}
+                alt={selectedRoom.name}
+                className="w-full h-full object-cover cursor-pointer"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  setIsFullScreen(true);
+                }}
+              />
+              
+              {/* Navigation Buttons */}
+              <button
+                onClick={handlePrevImage}
+                className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full
+                  bg-black/50 text-white flex items-center justify-center
+                  hover:bg-black/70 transition-colors duration-300"
+              >
                 <FaChevronLeft />
               </button>
-              <div className="gallery-main-image">
-                <img 
-                  src={selectedRoom.gallery[currentImageIndex]} 
-                  alt={`${selectedRoom.name} - Imagem ${currentImageIndex + 1}`} 
-                />
-                <div className="gallery-counter">
-                  {currentImageIndex + 1} / {selectedRoom.gallery.length}
-                </div>
-              </div>
-              <button onClick={handleNextImage} className="gallery-nav next">
+              <button
+                onClick={handleNextImage}
+                className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full
+                  bg-black/50 text-white flex items-center justify-center
+                  hover:bg-black/70 transition-colors duration-300"
+              >
                 <FaChevronRight />
+              </button>
+
+              {/* Image Counter */}
+              <div className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-black/50 text-white
+                px-4 py-2 rounded-full text-sm">
+                {currentImageIndex + 1} / {selectedRoom.gallery.length}
+              </div>
+
+              {/* Close Button */}
+              <button
+                onClick={handleCloseDetails}
+                className="absolute top-4 right-4 w-10 h-10 rounded-full bg-black/50 text-white
+                  flex items-center justify-center hover:bg-black/70 transition-colors duration-300"
+              >
+                <FaTimes />
               </button>
             </div>
 
-            <div className="modal-description">
-              <p>{selectedRoom.description}</p>
-              
-              <div className="modal-features">
-                <h3>Características</h3>
-                <div className="features-grid">
-                  {selectedRoom.features.map((feature, idx) => (
-                    <div key={idx} className="feature-item">
-                      <span className="feature-icon">{feature.icon}</span>
-                      <span>{feature.name}</span>
-                    </div>
-                  ))}
-                </div>
+            {/* Content */}
+            <div className="p-8">
+              <h2 className="text-3xl text-primary font-bold mb-4">{selectedRoom.name}</h2>
+              <p className="text-lg text-text leading-relaxed mb-8">{selectedRoom.description}</p>
+
+              {/* Features */}
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-6 mb-8">
+                {selectedRoom.features.map((feature, index) => (
+                  <div key={index} className="flex items-center gap-3">
+                    <span className="text-2xl text-primary">{feature.icon}</span>
+                    <span className="text-text">{feature.name}</span>
+                  </div>
+                ))}
               </div>
 
-              <div className="modal-amenities">
-                <h3>Comodidades</h3>
-                <div className="amenities-grid">
-                  {commonAmenities.map((amenity, idx) => (
-                    <div key={idx} className="amenity-item">
-                      {amenity.icon}
-                      <span>{amenity.name}</span>
-                    </div>
-                  ))}
-                </div>
+              {/* Amenities */}
+              <h3 className="text-xl text-primary font-semibold mb-6">Comodidades</h3>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8">
+                {commonAmenities.map((amenity, index) => (
+                  <div key={index} className="flex items-center gap-3">
+                    <span className="text-xl text-primary">{amenity.icon}</span>
+                    <span className="text-text">{amenity.name}</span>
+                  </div>
+                ))}
               </div>
 
-              <div className="modal-cta">
-                <a 
-                  href="https://book.omnibees.com/hotel/19972?lang=pt-BR&currencyId=16&version=4" 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
-                  className="btn-book"
-                >
-                  Reservar Agora
-                </a>
-              </div>
+              {/* CTA Button */}
+              <a
+                href={siteConfig.buttonLinks.bookNow}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block w-full text-center bg-accent text-primary py-4 rounded-full
+                  font-semibold hover:-translate-y-1 hover:shadow-lg transition-all duration-300"
+              >
+                Reserve Agora
+              </a>
             </div>
+          </div>
+        </div>
+      )}
+
+      {/* Full Screen Image Modal */}
+      {isFullScreen && selectedRoom && (
+        <div 
+          className="fixed inset-0 bg-black z-[60] flex items-center justify-center"
+          onClick={() => setIsFullScreen(false)}
+        >
+          <div className="relative w-full h-full flex items-center justify-center">
+            <img
+              key={currentImageIndex}
+              src={selectedRoom.gallery[currentImageIndex]}
+              alt={selectedRoom.name}
+              className="max-h-screen max-w-full object-contain animate-fadeIn"
+            />
+          </div>
+          
+          {/* Navigation Buttons */}
+          <button
+            onClick={(e) => {
+              e.stopPropagation();
+              handlePrevImage(e);
+            }}
+            className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full
+              bg-black/50 text-white flex items-center justify-center
+              hover:bg-black/70 transition-colors duration-300"
+          >
+            <FaChevronLeft />
+          </button>
+          <button
+            onClick={(e) => {
+              e.stopPropagation();
+              handleNextImage(e);
+            }}
+            className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full
+              bg-black/50 text-white flex items-center justify-center
+              hover:bg-black/70 transition-colors duration-300"
+          >
+            <FaChevronRight />
+          </button>
+
+          {/* Close Button */}
+          <button
+            onClick={() => setIsFullScreen(false)}
+            className="absolute top-4 right-4 w-10 h-10 rounded-full bg-black/50 text-white
+              flex items-center justify-center hover:bg-black/70 transition-colors duration-300"
+          >
+            <FaTimes />
+          </button>
+
+          {/* Image Counter */}
+          <div className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-black/50 text-white
+            px-4 py-2 rounded-full text-sm">
+            {currentImageIndex + 1} / {selectedRoom.gallery.length}
           </div>
         </div>
       )}
