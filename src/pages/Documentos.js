@@ -4,6 +4,7 @@ import WineList from '../documents/WineList';
 import Receptivo from '../documents/Receptivo';
 import Cestas from '../documents/Cestas';
 import GoogleReviews from '../documents/GoogleReviews';
+import TarifarioEventos from '../documents/TarifarioEventos';
 import { getFolderImage } from '../config/cloudinaryConfig';
 
 const heroStyle = {
@@ -59,6 +60,15 @@ function Documentos() {
                 <div className="p-6">
                   <h2 className="text-2xl font-bold text-center mb-6">Cestas de Piquenique</h2>
                   <Cestas />
+                </div>
+              </div>
+            </div>
+
+            <div className="transform hover:scale-[1.02] transition-transform duration-300 md:col-span-2">
+              <div className="bg-white rounded-xl shadow-lg overflow-hidden">
+                <div className="p-6">
+                  <h2 className="text-2xl font-bold text-center mb-6">Tarifário de Eventos</h2>
+                  <TarifarioEventos />
                 </div>
               </div>
             </div>

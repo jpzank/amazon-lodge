@@ -254,6 +254,20 @@ function Menu() {
                       </span>
                     </div>
                   </div>
+                  <div className="flex items-baseline justify-between w-full mb-0.5 leading-tight">
+                    <span className="pr-1 text-sm text-gray-800 bg-white">Torta Pra-já</span>
+                    <div className="flex-1 mx-1 border-b border-dotted border-black relative -top-1"></div>
+                    <div className="flex flex-col items-end gap-0.5 pl-1 bg-white">
+                      <span className="font-semibold text-black whitespace-nowrap text-sm leading-tight">R$ 16</span>
+                    </div>
+                  </div>
+                  <div className="flex items-baseline justify-between w-full mb-0.5 leading-tight">
+                    <span className="pr-1 text-sm text-gray-800 bg-white">Pudim de Sorvetão em potinho</span>
+                    <div className="flex-1 mx-1 border-b border-dotted border-black relative -top-1"></div>
+                    <div className="flex flex-col items-end gap-0.5 pl-1 bg-white">
+                      <span className="font-semibold text-black whitespace-nowrap text-sm leading-tight">R$ 16</span>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -275,7 +289,7 @@ function Menu() {
             </div>
 
             <div className="flex justify-center">
-              <img src="/QRCode.jpg" alt="Google Review QR Code" className="max-w-[100px]" />
+              <img src="/QRCode.jpg" alt="Google Review QR Code" className="max-w-[60px]" />
             </div>
           </div>
         </div>

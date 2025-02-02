@@ -1,5 +1,3 @@
-import React from 'react';
-
 /**
  * Generic print function that handles the printing of any HTML content
  * @param {string} content - The HTML content to print
@@ -86,9 +84,20 @@ export const printMenu = () => {
 
   const styles = `
     .menu-content {
-      max-width: none;
-      margin: 0;
-      padding: 0.5cm 2cm;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0.5cm;
+      box-sizing: border-box;
+    }
+    @media print {
+      .menu-content {
+        zoom: 0.9;
+        max-width: 100%;
+      }
+      .menu-content img[alt="Google Review QR Code"] {
+        max-width: 80px !important;
+        height: auto !important;
+      }
     }
   `;
 

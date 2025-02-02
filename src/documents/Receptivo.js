@@ -77,8 +77,13 @@ function Receptivo() {
                 </ul>
               </div>
 
-              <div className="bg-yellow-50 p-6 rounded-xl">
-                <p className="text-yellow-800 font-medium">Quadros de decoração no bangalô, se quebrar, uma taxa de R$450 será cobrada</p>
+              <div className="bg-blue-50 p-6 rounded-xl">
+                <h4 className="text-lg font-semibold mb-4">Serviço de Cozinha</h4>
+                <ul className="space-y-2 text-gray-700">
+                  <li>Sexta e Sábado: Buffet</li>
+                  <li>Domingo a Quinta-feira à noite: Prato do dia</li>
+                  <li className="text-sm italic mt-2">*Os serviços podem ser alterados conforme a demanda</li>
+                </ul>
               </div>
 
               <div className="bg-primary/5 p-6 rounded-xl">
