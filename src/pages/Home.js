@@ -107,11 +107,14 @@ const Home = () => {
       </section>
 
       {/* About Section */}
-      <section className="py-24 bg-white">
+      <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">BEM-VINDO AO JARDIM DA AMAZÔNIA</h2>
-            <p className="text-xl text-gray-600">Descanso e Harmonia em Meio à Natureza Selvagem</p>
+            <h2 className="text-4xl font-bold mb-4">
+              <span className="block text-lg mb-2 font-normal">BEM VINDO!</span>
+              <span className="block text-5xl">JARDIM DA AMAZÔNIA</span>
+            </h2>
+            <p className="text-xl text-gray-600">UM OÁSIS DE ÁGUAS CRISTALINAS AO SUL DA AMAZÔNIA</p>
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center max-w-6xl mx-auto">
             <div className="space-y-8">
@@ -126,19 +129,19 @@ const Home = () => {
                   <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
                     <span className="material-icons text-primary text-2xl">eco</span>
                   </div>
-                  <span className="font-medium">Conservação Ativa</span>
+                  <span className="font-medium">Piscina Natural</span>
                 </div>
                 <div className="flex flex-col items-center text-center p-4 rounded-xl bg-primary/5">
                   <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
                     <span className="material-icons text-primary text-2xl">cottage</span>
                   </div>
-                  <span className="font-medium">Acomodações Sustentáveis</span>
+                  <span className="font-medium">Acomodações Aconchegantes</span>
                 </div>
                 <div className="flex flex-col items-center text-center p-4 rounded-xl bg-primary/5">
                   <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
                     <span className="material-icons text-primary text-2xl">hiking</span>
                   </div>
-                  <span className="font-medium">Guias Especializados</span>
+                  <span className="font-medium">Trilhas e Natureza</span>
                 </div>
               </div>
               <div className="flex justify-center">
@@ -162,49 +165,58 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Biodiversity Section */}
-      <section className="py-24 bg-gray-50">
+      {/* Biodiversity Stats Section */}
+      <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
-            {siteConfig?.home?.biodiversity?.stats?.map((stat, index) => (
-              <div key={index} className="text-center p-8 bg-white rounded-xl shadow-lg">
-                <div className="text-4xl font-bold text-primary mb-4">{stat.number}</div>
-                <div className="text-xl font-semibold text-gray-900 mb-3">{stat.title}</div>
-                <p className="text-gray-600">{stat.desc}</p>
+          <div className="max-w-4xl mx-auto mb-16">
+            <blockquote className="relative">
+              <div className="relative z-10">
+                <span className="text-5xl text-primary-dark/20 absolute -top-4 -left-6">"</span>
+                <p className="text-xl text-gray-700 leading-relaxed text-justify pl-8 pr-4">
+                  Um corredor ecológico formado por um ecótono, onde Cerrado e Amazônia se encontram, criando um verdadeiro refúgio para a biodiversidade, com:
+                </p>
+                <span className="text-5xl text-primary-dark/20 absolute -bottom-8 -right-4">"</span>
               </div>
-            ))}
+              <footer className="mt-8 text-right">
+                <cite className="text-gray-600 font-medium not-italic">— Raquel Zanchet</cite>
+              </footer>
+            </blockquote>
           </div>
-        </div>
-      </section>
 
-      {/* Recognition Section */}
-      <section className="py-24 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {siteConfig?.home?.recognition?.items?.map((item) => (
-              <div key={item.id} className="flex flex-col items-center p-8 bg-gray-50 rounded-xl hover:shadow-lg transition-shadow duration-300">
-                <Image 
-                  {...cloudinaryCommonProps}
-                  publicId={folderImageMapping.logos[item.id]}
-                  alt={`${item.title} Badge`}
-                  className="w-24 h-24 object-contain mb-6"
-                />
-                <div className="text-center">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-3">{item.title}</h3>
-                  <p className="text-gray-600">{item.desc}</p>
-                </div>
-              </div>
-            ))}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+            <div className="bg-white p-8 rounded-xl shadow-lg text-center">
+              <div className="text-4xl font-bold text-primary mb-4">580+</div>
+              <h3 className="text-xl font-medium text-gray-900 mb-2">Espécies de Aves</h3>
+              <p className="text-gray-600 text-sm">Catalogadas em nossa reserva</p>
+            </div>
+
+            <div className="bg-white p-8 rounded-xl shadow-lg text-center">
+              <div className="text-4xl font-bold text-primary mb-4">7</div>
+              <h3 className="text-xl font-medium text-gray-900 mb-2">Espécies de Primatas</h3>
+              <p className="text-gray-600 text-sm">Dos 29 reconhecidos em MT</p>
+            </div>
+
+            <div className="bg-white p-8 rounded-xl shadow-lg text-center">
+              <div className="text-4xl font-bold text-primary mb-4">30+</div>
+              <h3 className="text-xl font-medium text-gray-900 mb-2">Mamíferos</h3>
+              <p className="text-gray-600 text-sm">De médio e grande porte</p>
+            </div>
+
+            <div className="bg-white p-8 rounded-xl shadow-lg text-center">
+              <div className="text-4xl font-bold text-primary mb-4">∞</div>
+              <h3 className="text-xl font-medium text-gray-900 mb-2">Experiências</h3>
+              <p className="text-gray-600 text-sm">na natureza</p>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Experiences Section */}
-      <section className="py-24 bg-gray-50">
+      <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">{siteConfig?.home?.experiences?.title}</h2>
-            <p className="text-xl text-gray-600">{siteConfig?.home?.experiences?.subtitle}</p>
+            <h2 className="text-4xl font-bold mb-4">Experiências</h2>
+            <p className="text-xl text-gray-600">Explore, descubra e se encante com a vida selvagem em seu habitat natural.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {siteConfig?.home?.experiences?.items?.map((exp, index) => (
@@ -232,7 +244,7 @@ const Home = () => {
 
       {/* Testimonials Section */}
       {featureFlags?.enableTestimonials && (
-        <section className="py-24 bg-white">
+        <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold">{siteConfig?.home?.testimonials?.title}</h2>
@@ -277,7 +289,7 @@ const Home = () => {
       )}
 
       {/* CTA Section */}
-      <section className="py-24 bg-primary/5">
+      <section className="py-16 bg-primary/5">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl font-bold mb-6">{siteConfig?.home?.cta?.title}</h2>

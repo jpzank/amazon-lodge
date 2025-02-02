@@ -106,7 +106,7 @@ function Navbar() {
                   lg:opacity-0 lg:invisible lg:group-hover:opacity-100 lg:group-hover:visible
                   lg:translate-y-2 lg:group-hover:translate-y-0 lg:transition-all lg:duration-200`}>
                   <Link to={siteConfig.buttonLinks.accommodation} className="block px-8 lg:px-6 py-3 text-white/90 lg:text-white text-base lg:text-[0.9rem] font-primary tracking-wide lg:hover:bg-white/10 lg:hover:pl-8 transition-all duration-200" onClick={handleLinkClick}>Acomodações</Link>
-                  <Link to={siteConfig.buttonLinks.areasExternas} className="block px-8 lg:px-6 py-3 text-white/90 lg:text-white text-base lg:text-[0.9rem] font-primary tracking-wide lg:hover:bg-white/10 lg:hover:pl-8 transition-all duration-200" onClick={handleLinkClick}>Áreas Externas</Link>
+                  <Link to={siteConfig.buttonLinks.areasExternas} className="block px-8 lg:px-6 py-3 text-white/90 lg:text-white text-base lg:text-[0.9rem] font-primary tracking-wide lg:hover:bg-white/10 lg:hover:pl-8 transition-all duration-200" onClick={handleLinkClick}>O Lodge</Link>
                   <Link to={siteConfig.buttonLinks.gastronomy} className="block px-8 lg:px-6 py-3 text-white/90 lg:text-white text-base lg:text-[0.9rem] font-primary tracking-wide lg:hover:bg-white/10 lg:hover:pl-8 transition-all duration-200" onClick={handleLinkClick}>Gastronomia</Link>
                   <Link to={siteConfig.buttonLinks.eventosNatureza} className="block px-8 lg:px-6 py-3 text-white/90 lg:text-white text-base lg:text-[0.9rem] font-primary tracking-wide lg:hover:bg-white/10 lg:hover:pl-8 transition-all duration-200" onClick={handleLinkClick}>Eventos na Natureza</Link>
                 </div>

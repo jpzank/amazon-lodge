@@ -30,7 +30,7 @@ const AreasExternas = () => {
           text: 'Passarela pela floresta para acesso exclusivo'
         }
       ],
-      image: getFolderImage('area-externa', 'piscina'),
+      image: getFolderImage('area-externa', 'piscina2'),
       link: null
     },
     {
@@ -71,7 +71,7 @@ const AreasExternas = () => {
       >
         <div className="relative z-20 px-4">
           <h1 className="text-5xl md:text-6xl font-bold mb-6 tracking-wide text-shadow">
-            Áreas Externas
+            O Lodge
           </h1>
           <p className="text-lg md:text-xl max-w-3xl mx-auto tracking-wide text-shadow">
           Espaços que conectam.
@@ -82,16 +82,23 @@ const AreasExternas = () => {
       {/* Intro Section */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4 max-w-4xl">
-          <p className="text-xl text-gray-700 leading-relaxed text-center">
-          Nossas áreas externas foram projetadas para oferecer uma imersão na natureza, 
-          combinando conforto e preservação ambiental. Cada detalhe foi pensado para que você tenha 
-          uma experiência rodeado pela beleza e tranquilidade do nosso espaço. 
-          </p>
+          <blockquote className="relative">
+            <div className="relative z-10">
+              <span className="text-5xl text-primary-dark/20 absolute -top-4 -left-6">"</span>
+              <p className="text-xl text-gray-700 leading-relaxed text-justify pl-8 pr-4">
+                O trabalho pioneiro no Jardim da Amazônia resultou na preservação de uma grande área intocada de floresta amazônica primária. Devotos da natureza, a família Zanchet investiu na atividade de observação de aves no ano de 1997, tornando esse lugar um importante santuário ecológico.
+              </p>
+              <span className="text-5xl text-primary-dark/20 absolute -bottom-8 -right-4">"</span>
+            </div>
+            <footer className="mt-8 text-right">
+              <cite className="text-gray-600 font-medium not-italic">— Alex Robinson</cite>
+            </footer>
+          </blockquote>
         </div>
       </section>
 
       {/* Areas Grid Section */}
-      <section className="py-24 bg-gray-50">
+      <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="space-y-16">
             {areas.map((area) => (

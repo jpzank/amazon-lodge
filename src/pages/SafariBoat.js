@@ -46,7 +46,7 @@ const SafariBoat = () => {
         <div className="absolute inset-0 bg-black/60 z-10"></div>
         <div className="relative z-20 px-4">
           <h1 className="text-5xl md:text-6xl font-semibold mb-4 tracking-wide text-shadow">
-            Safari Boat
+            Boat Safari
           </h1>
           <p className="text-lg md:text-xl max-w-3xl mx-auto tracking-wide text-shadow">
             Aventuras pelos Rios da Amazônia

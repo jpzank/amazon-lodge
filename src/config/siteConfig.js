@@ -100,8 +100,7 @@ export const siteConfig = {
     },
 
     experiences: {
-      title: 'EXPERIÊNCIAS EXTRAORDINÁRIAS',
-      subtitle: 'Aventuras no Coração da Natureza',
+      title: 'EXPERIÊNCIAS',
       items: [
         {
           id: 'birdwatching',
@@ -112,7 +111,7 @@ export const siteConfig = {
         {
           id: 'primates',
           title: 'Primatas',
-          desc: 'Descubra e explore a fascinante Rota dos Primatas',
+          desc: 'Se encante com a fascinante Rota dos Primatas de MT',
           link: '/primatas'
         },
         {
@@ -165,7 +164,7 @@ export const siteConfig = {
 
     cta: {
       title: 'Sua Aventura Começa Aqui',
-      subtitle: 'Descubra experiências únicas no coração da Amazônia'
+      subtitle: 'Descubra experiências únicas no sul da Amazônia'
     }
   }
 };

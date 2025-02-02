@@ -62,14 +62,81 @@ export const folderImageMapping = {
     'hero': 'v1736092424/area-externa_ml9enj',
     'piscina': 'v1736085772/piscina_knlf8d',
     'lagoa': 'v1736085748/lagoa_uaetsf',
-    'trilha': 'v1736085696/trilha-lagoa_pafxet'
+    'trilha': 'v1736085696/trilha-lagoa_pafxet',
+    'piscina2': 'v1738425316/amazon-lodge/images/area-externa/xrlenerulep6ismgn8yx'
   },
+
+
   birdwatching: {
     'hero': 'v1736085800/birdwatching_yywf16',
     'gallery': 'v1736085772/birdwatching_roqgxe',
-    'tie-bicudo': 'v1736085691/tie-bicudo_wblb9s',
-    'anambe': 'v1736085691/anambe_hlzcsj',
-    'curica': 'v1736085702/curica_enlrcd',
+    'gallery-1': {
+      id: 'v1738450244/beija_flor_tesoura_verde_JHONATA_ARAUJO_2_xk7oou',
+      title: 'Beija-flor Tesoura Verde',
+      photographer: 'Jhonata Araújo'
+    },
+    'gallery-2': {
+      id: 'v1738450245/bico_de_prata_-_pipira_vermelha_HAROLDO_PALO_JR_2_aeio1z',
+      title: 'Pipira Vermelha',
+      photographer: 'Haroldo Palo Jr'
+    },
+    'gallery-3': {
+      id: 'v1738450280/choca_dagua_-_JHONATA_ARAUJO_7_q86nhg',
+      title: 'Choca d\'Água',
+      photographer: 'Jhonata Araújo'
+    },
+    'gallery-4': {
+      id: 'v1738450249/JHONATA_ARAUJO_-_PICA-PAU_ANAO_DOURADO_3_ecrgqf',
+      title: 'Pica-pau Anão Dourado',
+      photographer: 'Jhonata Araújo'
+    },
+    'gallery-5': {
+      id: 'v1738450252/JHONATA_ARAUJO_-_UDU_DE_COROA_AZUL_4_smatkv',
+      title: 'Udu de Coroa Azul',
+      photographer: 'Jhonata Araújo'
+    },
+    'gallery-6': {
+      id: 'v1738450667/MANOEL_RUEDI_111_dwyxeo',
+      title: 'Aves da Amazônia',
+      photographer: 'Manoel Ruedi'
+    },
+    'gallery-7': {
+      id: 'v1738450237/Sai_andorinha_VINCENT_KURT_5_nz36qm',
+      title: 'Saí Andorinha',
+      photographer: 'Vincent Kurt'
+    },
+    'gallery-8': {
+      id: 'v1738450239/saira_de_cabe%C3%A7a_azul_-Vincent_Kurt_lo_1_z5hik4',
+      title: 'Saíra de Cabeça Azul',
+      photographer: 'Vincent Kurt'
+    },
+    'gallery-9': {
+      id: 'v1738450277/MARACANA_DO_BURITI-_JHONATA_ARAUJO_10_ur2fgl',
+      title: 'Maracanã do Buriti',
+      photographer: 'Jhonata Araújo'
+    },
+    'gallery-10': {
+      id: 'v1738450236/martin_pescador_miudo_-_JHONATA_ARAUJO_-_6_gwslgv',
+      title: 'Martim Pescador Miúdo',
+      photographer: 'Jhonata Araújo'
+    },
+    'tie-bicudo': {
+      id: 'v1736085691/tie-bicudo_wblb9s',
+      photographer: 'Fred Crema'
+    },
+    'umbrella': {
+      id: 'v1738446086/umbrella_bird_goycom',
+      photographer: 'Manoel Ruedi'
+    },
+
+    'curica': {
+      id: 'v1736085702/curica_enlrcd',
+      photographer: 'Fred Crema'
+    },
+    'mutum': {
+      id: 'v1736085678/mutum_iwmptx',
+      photographer: 'Acervo Jardim da Amazônia'
+    },
   },
   eventos: {
     'reuniao-executiva': 'v1736085711/reuniao-executiva_ouxhas',

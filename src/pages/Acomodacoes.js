@@ -265,7 +265,7 @@ function Acomodacoes() {
       </div>
 
       {/* Room Introduction */}
-      <section className="py-24 bg-background-light">
+      <section className="py-16 bg-background-light">
         <div className="container mx-auto px-4 max-w-[900px]">
           <div className="flex flex-col items-center gap-6">
             <div className="flex items-center gap-4">
@@ -282,7 +282,7 @@ function Acomodacoes() {
       </section>
 
       {/* Room Types Section */}
-      <section className="py-24 bg-white">
+      <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-[1000px] mx-auto flex flex-col gap-16">
             {accommodations.map((accommodation) => (
@@ -328,8 +328,26 @@ function Acomodacoes() {
         </div>
       </section>
 
+      {/* Design Philosophy Quote */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4 max-w-4xl">
+          <blockquote className="relative">
+            <div className="relative z-10">
+              <span className="text-5xl text-primary-dark/20 absolute -top-4 -left-6">"</span>
+              <p className="text-xl text-gray-700 leading-relaxed text-justify pl-8 pr-4">
+                Aconchegantes instalações do Lodge que foram inspiradas nas <strong>casas de palafitas</strong> e de madeira da Amazônia dos anos 80, celebrando a <strong>harmonia entre o homem e a natureza</strong>. A Decoração adota <strong>tons terrosos e neutros</strong>, com uma paleta que evoca o ambiente natural: marrons, beges e verdes musgo, criam um estilo <strong>rústico chic</strong>, onde a simplicidade, traz uma atmosfera acolhedora perfeitamente integrada à paisagem amazônica.
+              </p>
+              <span className="text-5xl text-primary-dark/20 absolute -bottom-8 -right-4">"</span>
+            </div>
+            <footer className="mt-8 text-right">
+              <cite className="text-gray-600 font-medium not-italic">— Alê Ribeiro</cite>
+            </footer>
+          </blockquote>
+        </div>
+      </section>
+
       {/* Policies Section */}
-      <section className="py-24 bg-white">
+      <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl text-primary text-center font-bold mb-16">
             Informações Importantes
@@ -361,7 +379,7 @@ function Acomodacoes() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 bg-primary text-white text-center">
+      <section className="py-16 bg-primary text-white text-center">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             Pronto para Viver essa Experiência?

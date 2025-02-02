@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 /* Google Fonts Import */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Lato:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
 
 /* Core Styles */
 :root {
@@ -22,7 +22,7 @@
 }
 
 body {
-  font-family: 'Lato', sans-serif;
+  font-family: 'Poppins', sans-serif;
   color: var(--text-color);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
@@ -148,4 +148,9 @@ button {
 /* Additional global styles */
 body {
   @apply font-primary text-base text-gray-900 antialiased;
+}
+
+/* Add italic text utility class */
+.text-body {
+  @apply font-primary italic;
 }

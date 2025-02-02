@@ -20,9 +20,9 @@ function Footer() {
           <h3 className="text-white text-lg font-medium uppercase tracking-wider">Hospedagem</h3>
           <ul className="space-y-3">
             <li><Link to={siteConfig.buttonLinks.accommodation} className="text-white/80 hover:text-white transition-default text-[0.95rem]">Acomodações</Link></li>
-            <li><Link to={siteConfig.buttonLinks.areasExternas} className="text-white/80 hover:text-white transition-default text-[0.95rem]">Áreas Externas</Link></li>
+            <li><Link to={siteConfig.buttonLinks.areasExternas} className="text-white/80 hover:text-white transition-default text-[0.95rem]">O Lodge</Link></li>
             <li><Link to={siteConfig.buttonLinks.gastronomy} className="text-white/80 hover:text-white transition-default text-[0.95rem]">Gastronomia</Link></li>
-            <li><Link to={siteConfig.buttonLinks.eventosCorporativos} className="text-white/80 hover:text-white transition-default text-[0.95rem]">Eventos na Natureza</Link></li>
+            <li><Link to={siteConfig.buttonLinks.eventosNatureza} className="text-white/80 hover:text-white transition-default text-[0.95rem]">Eventos na Natureza</Link></li>
           </ul>
         </div>
 

@@ -37,8 +37,8 @@ module.exports = {
         fadeIn: 'fadeIn 0.3s ease-in-out',
       },
       fontFamily: {
-        primary: ['Montserrat', 'sans-serif'],
-        secondary: ['Lato', 'sans-serif'],
+        primary: ['Poppins', 'sans-serif'],
+        secondary: ['Poppins', 'sans-serif'],
         display: ['Playfair Display', 'serif'],
       },
       fontSize: {
