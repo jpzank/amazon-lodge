@@ -16,16 +16,25 @@ const Primatas = () => {
 
   return (
     <div className="min-h-screen bg-white">
-      <div className="relative min-h-[60vh] flex items-center justify-center" style={heroStyle}>
-        <div className="absolute inset-0 bg-black/60"></div>
-        <div className="relative z-10 text-center text-white px-4">
-          <h1 className="text-5xl md:text-6xl font-bold mb-4">Observação de Primatas</h1>
-          <p className="text-lg md:text-xl">Uma aventura em busca de importantes primatas da região sul da Amazônia</p>
+      {/* Hero Section */}
+      <div 
+        className="relative h-[70vh] flex items-center justify-center text-center text-white mb-16"
+        style={{ backgroundImage: `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(${getFolderImage('primatas', 'hero')})` }}
+      >
+        <div className="relative z-20 px-4">
+          <h1 className="text-5xl md:text-6xl font-bold mb-6 tracking-wide text-shadow">
+            Primatas
+          </h1>
+          <p className="text-lg md:text-xl max-w-3xl mx-auto tracking-wide text-shadow">
+            Conheça os primatas do Jardim da Amazônia
+          </p>
         </div>
       </div>
 
+      {/* Intro Section */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4 max-w-4xl">
+          <h2 className="text-3xl font-bold text-center mb-12">Nossos Primatas</h2>
           <div className="space-y-8">
             <p className="text-lg text-gray-700 leading-relaxed">
               O Jardim da Amazônia, situado no município de São José do Rio Claro, no Chapadão dos Parecis, 
@@ -40,8 +49,9 @@ const Primatas = () => {
         </div>
       </section>
 
+      {/* Species Grid Section */}
       <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4 max-w-6xl">
+        <div className="container mx-auto px-4 max-w-7xl">
           <h2 className="text-4xl font-semibold text-center mb-16">Espécies Emblemáticas</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-white rounded-xl shadow-lg overflow-hidden">
@@ -112,9 +122,10 @@ const Primatas = () => {
         </div>
       </div>
 
+      {/* Conservation Section */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4 max-w-4xl">
-          <h2 className="text-4xl font-semibold text-center mb-12">Nossos Roteiros Incluem</h2>
+          <h2 className="text-3xl font-bold text-center mb-12">Conservação</h2>
           <div className="bg-primary/5 rounded-2xl p-8">
             <ul className="space-y-4 text-gray-700">
               <li className="flex items-center">

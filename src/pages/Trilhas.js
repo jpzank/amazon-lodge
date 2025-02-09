@@ -85,19 +85,25 @@ const Trilhas = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <div className="relative min-h-[60vh] bg-cover bg-center flex items-center justify-center" 
-           style={{ backgroundImage: `url(${getFolderImage('trilhas', 'hero')})` }}>
-        <div className="absolute inset-0 bg-black/50"></div>
-        <div className="relative z-10 text-center text-white px-4">
-          <h1 className="text-5xl md:text-6xl font-semibold mb-4">Roteiros e Trilhas</h1>
-          <p className="text-lg md:text-xl">Explore a biodiversidade do Jardim da Amazônia</p>
+      <div 
+        className="relative h-[70vh] flex items-center justify-center text-center text-white mb-16"
+        style={{ backgroundImage: `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(${getFolderImage('trilhas', 'hero')})` }}
+      >
+        <div className="relative z-20 px-4">
+          <h1 className="text-5xl md:text-6xl font-bold mb-6 tracking-wide text-shadow">
+            Roteiros e Trilhas
+          </h1>
+          <p className="text-lg md:text-xl max-w-3xl mx-auto tracking-wide text-shadow">
+            Explore a biodiversidade do Jardim da Amazônia
+          </p>
         </div>
         <PhotoCredit photographer={getImagePhotographer('trilhas', 'hero')} />
       </div>
 
+      {/* Intro Section */}
       <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-semibold text-center mb-4">Nossas Trilhas</h2>
+        <div className="container mx-auto px-4 max-w-4xl">
+          <h2 className="text-3xl font-bold text-center mb-12">Nossas Trilhas</h2>
           <p className="text-lg text-gray-700 text-center max-w-3xl mx-auto mb-12">
             Descubra nossa rede de trilhas e roteiros para você explorar a Amazônia.
           </p>
@@ -383,11 +389,8 @@ const Trilhas = () => {
 
       {/* Roteiros Section */}
       <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-semibold text-center mb-12">
-            Roteiros Sugeridos
-            <div className="w-24 h-1 bg-primary mx-auto mt-4"></div>
-          </h2>
+        <div className="container mx-auto px-4 max-w-7xl">
+          <h2 className="text-3xl font-bold text-center mb-12">Roteiros Sugeridos</h2>
           <div className="max-w-4xl mx-auto space-y-6">
             {Object.entries(roteiros).map(([id, roteiro]) => (
               <div key={id} className="bg-white rounded-xl shadow-lg overflow-hidden">

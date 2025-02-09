@@ -239,16 +239,18 @@ function Acomodacoes() {
     setCurrentImageIndex(0);
   };
 
+  const heroStyle = {
+    backgroundImage: `url(${getFolderImage('acomodacoes', 'hero')})`,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+  };
+
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <div 
         className="relative h-[70vh] flex items-center justify-center text-center text-white mb-16"
-        style={{
-          backgroundImage: `url(${getFolderImage('acomodacoes', 'hero')})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-        }}
+        style={heroStyle}
       >
         {/* Overlay */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/40 to-black/70" />
@@ -271,25 +273,24 @@ function Acomodacoes() {
             <div className="flex items-center gap-4">
               <span className="text-4xl text-primary"><MdHotel /></span>
             </div>
-            <p className="text-xl leading-relaxed text-text font-light text-center">
+            <p className="text-xl leading-relaxed text-text font-light text-justify">
               Nossos bangalôs e apartamentos foram cuidadosamente projetados para proporcionar o máximo 
               conforto durante sua estadia, mantendo uma conexão harmoniosa com a natureza. Cada 
-              acomodação oferece uma experiência singular, alguns com vistas e todas com toda a infraestrutura 
-              necessária para o seu conforto.
+              acomodação oferece uma experiência singular para a sua experiência.
             </p>
           </div>
         </div>
       </section>
 
       {/* Room Types Section */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-[1000px] mx-auto flex flex-col gap-16">
-            {accommodations.map((accommodation) => (
-              <div key={accommodation.id} className="bg-white rounded-xl overflow-hidden shadow-lg
-                hover:-translate-y-1 hover:shadow-xl transition-all duration-300">
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4 max-w-7xl">
+          {accommodations.map((accommodation) => (
+            <div key={accommodation.id} className="bg-white rounded-xl overflow-hidden shadow-lg mb-8
+              hover:-translate-y-1 hover:shadow-xl transition-all duration-300">
+              <div className="flex flex-col md:flex-row">
                 {/* Room Image */}
-                <div className="relative h-[300px]">
+                <div className="md:w-1/2 relative h-[400px]">
                   <img 
                     src={accommodation.image} 
                     alt={accommodation.name}
@@ -298,33 +299,35 @@ function Acomodacoes() {
                 </div>
 
                 {/* Room Content */}
-                <div className="p-6">
-                  <h2 className="text-2xl text-primary mb-3">{accommodation.name}</h2>
-                  <p className="text-base text-text leading-relaxed mb-6">
-                    {accommodation.description}
-                  </p>
+                <div className="md:w-1/2 p-8 flex flex-col justify-between">
+                  <div>
+                    <h2 className="text-2xl text-primary mb-3">{accommodation.name}</h2>
+                    <p className="text-base text-text leading-relaxed mb-6">
+                      {accommodation.description}
+                    </p>
 
-                  {/* Features */}
-                  <div className="flex justify-start items-center gap-6 mb-6">
-                    {accommodation.features.map((feature, index) => (
-                      <div key={index} className="flex items-center gap-2 text-text">
-                        <span className="text-xl text-primary">{feature.icon}</span>
-                        <span className="text-sm font-medium">{feature.name}</span>
-                      </div>
-                    ))}
+                    {/* Features */}
+                    <div className="flex justify-start items-center gap-6 mb-6">
+                      {accommodation.features.map((feature, index) => (
+                        <div key={index} className="flex items-center gap-2 text-text">
+                          <span className="text-xl text-primary">{feature.icon}</span>
+                          <span className="text-sm font-medium">{feature.name}</span>
+                        </div>
+                      ))}
+                    </div>
                   </div>
 
                   {/* Action Button */}
                   <button
                     onClick={() => handleShowDetails(accommodation)}
-                    className="btn-primary w-full"
+                    className="btn-primary w-full mt-6"
                   >
                     Ver Detalhes
                   </button>
                 </div>
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
       </section>
 
@@ -347,12 +350,10 @@ function Acomodacoes() {
       </section>
 
       {/* Policies Section */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl text-primary text-center font-bold mb-16">
-            Informações Importantes
-          </h2>
-          <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4 max-w-7xl">
+          <h2 className="text-3xl font-bold text-center mb-12">Informações Importantes</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {policies.map((policy, index) => (
               <div
                 key={index}

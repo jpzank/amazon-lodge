@@ -13,7 +13,7 @@ const ComoChegar = () => {
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <div 
-        className="relative h-[70vh] flex items-center justify-center text-center text-white mb-8"
+        className="relative h-[70vh] flex items-center justify-center text-center text-white mb-16"
         style={heroStyle}
       >
         <div className="relative z-20 px-4">
@@ -27,8 +27,8 @@ const ComoChegar = () => {
       </div>
 
       {/* Location Section */}
-      <section className="py-12 bg-white">
-        <div className="container mx-auto px-4">
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4 max-w-4xl">
           <h2 className="text-4xl font-semibold text-center mb-12 relative">
             Nossa Localização
             <span className="absolute bottom-[-1rem] left-1/2 transform -translate-x-1/2 w-20 h-1 bg-primary"></span>
@@ -53,14 +53,10 @@ const ComoChegar = () => {
       </section>
 
       {/* Route Options Section */}
-      <section className="py-12 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-semibold text-center mb-12 relative">
-            Rotas de Acesso
-            <span className="absolute bottom-[-1rem] left-1/2 transform -translate-x-1/2 w-20 h-1 bg-primary"></span>
-          </h2>
-          
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4 max-w-7xl">
+          <h2 className="text-3xl font-bold text-center mb-12">Como Chegar</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="bg-white rounded-xl shadow-lg p-8 transition-transform duration-300 hover:-translate-y-2">
               <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6">
                 <FaCar className="w-8 h-8 text-primary" />
@@ -139,14 +135,10 @@ const ComoChegar = () => {
       </section>
 
       {/* Map Section */}
-      <section className="py-12 bg-white">
-        <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-semibold text-center mb-12 relative">
-            Localização no Mapa
-            <span className="absolute bottom-[-1rem] left-1/2 transform -translate-x-1/2 w-20 h-1 bg-primary"></span>
-          </h2>
-          
-          <div className="max-w-6xl mx-auto rounded-2xl overflow-hidden shadow-xl">
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4 max-w-7xl">
+          <h2 className="text-3xl font-bold text-center mb-12">Localização</h2>
+          <div className="aspect-w-16 aspect-h-9 rounded-xl overflow-hidden shadow-lg">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3878.9241309876206!2d-56.63488792350904!3d-13.540245537519661!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x93a19415152a9b05%3A0xd016e0d7d7b65c17!2sJardim%20da%20Amaz%C3%B4nia%20Lodge!5e0!3m2!1sen!2sbr!4v1735970088546!5m2!1sen!2sbr"
               width="100%"

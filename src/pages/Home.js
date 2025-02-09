@@ -104,12 +104,22 @@ const Home = () => {
             loading="lazy"
           ></iframe>
         </div>
+        {/* Logo Overlay */}
+        <div className="absolute inset-x-0 top-16 flex items-start justify-center">
+          <div className="bg-white/20 rounded-full p-6">
+            <img
+              src="/Logo_Jardim_Amazonia_COLORIDO.png"
+              alt="Jardim Amazônia Logo"
+              className="w-40 md:w-48 lg:w-56 drop-shadow-lg"
+            />
+          </div>
+        </div>
       </section>
 
       {/* About Section */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
+          <div className="text-center mb-8">
             <h2 className="text-4xl font-bold mb-4">
               <span className="block text-lg mb-2 font-normal">BEM VINDO!</span>
               <span className="block text-5xl">JARDIM DA AMAZÔNIA</span>
@@ -153,12 +163,12 @@ const Home = () => {
                 </Link>
               </div>
             </div>
-            <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+            <div className="relative rounded-2xl overflow-hidden shadow-2xl h-[480px]">
               <Image 
                 {...cloudinaryCommonProps}
-                publicId={folderImageMapping.home['vista-aerea-lodge']}
-                alt="Vista aérea do Lodge"
-                className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                publicId={folderImageMapping.home['about-image']}
+                alt="Vista do Jardim da Amazônia"
+                className="w-full h-full object-cover object-center transition-transform duration-500 hover:scale-105"
               />
             </div>
           </div>

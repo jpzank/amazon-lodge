@@ -168,7 +168,8 @@ export const folderImageMapping = {
   home: {
     'vista-aerea-lodge': 'v1736085794/vista-aerea-lodge_p33y1g',
     'familia-fogueira': 'v1736085753/familia-fogueira_xch5l3',
-    'convivencia': 'v1736085682/convivencia_p3tve7'
+    'convivencia': 'v1736085682/convivencia_p3tve7',
+    'about-image': 'v1739141251/Jardim_da_Amazônia-3848_bq6ium'
   },
   logos: {
     'save-brasil': 'v1736085796/save-brasil_htbmhn',

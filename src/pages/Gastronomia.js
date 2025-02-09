@@ -27,7 +27,7 @@ const Gastronomia = () => {
 
       {/* Intro Section */}
       <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-4 max-w-4xl">
           <div className="max-w-4xl mx-auto">
             <div className="flex flex-col items-center gap-6 mb-12">
               <span>
