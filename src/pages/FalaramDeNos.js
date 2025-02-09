@@ -107,49 +107,109 @@ Durante o programa, foram apresentadas as diferentes espécies que podem ser enc
 
   return (
     <div className="min-h-screen bg-white">
-      <div className="relative min-h-[60vh] bg-gray-900 flex items-center justify-center">
-        <div className="absolute inset-0 bg-black/60"></div>
-        <div className="relative z-10 text-center text-white px-4">
-          <h1 className="text-5xl md:text-6xl font-bold mb-4">Falaram de Nós</h1>
-          <p className="text-xl md:text-2xl">O que a mídia e nossos visitantes dizem sobre o Jardim da Amazônia</p>
+      {/* Hero Section */}
+      <div 
+        className="relative h-[70vh] flex items-center justify-center text-center text-white mb-16"
+        style={{ backgroundImage: `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(${getFolderImage('falaram-de-nos', 'hero')})` }}
+      >
+        <div className="relative z-20 px-4">
+          <h1 className="text-5xl md:text-6xl font-bold mb-6 tracking-wide text-shadow">
+            Falaram de Nós
+          </h1>
+          <p className="text-lg md:text-xl max-w-3xl mx-auto tracking-wide text-shadow">
+            O que dizem sobre o Jardim da Amazônia
+          </p>
         </div>
       </div>
-      
-      <div className="container mx-auto px-4 py-24 space-y-12">
-        {noticias.map((noticia) => (
-          <div key={noticia.id} className="bg-white rounded-2xl shadow-lg overflow-hidden">
-            <div className="flex flex-col md:flex-row">
-              <div className="md:w-1/3 relative">
-                {noticia.imagem ? (
-                  <img 
-                    src={noticia.imagem} 
-                    alt={noticia.titulo}
-                    className="w-full h-full object-cover"
-                  />
-                ) : (
-                  <div className="h-full min-h-[200px] bg-gray-100 flex items-center justify-center">
-                    <span className="text-xl font-semibold text-gray-600">{noticia.veiculo}</span>
-                  </div>
-                )}
-                {noticia.exclusivo && (
-                  <div className="absolute top-4 right-4 bg-primary text-white text-sm px-3 py-1 rounded-full">
-                    <span>Conteúdo Exclusivo para Assinantes do Globoplay</span>
-                  </div>
-                )}
-              </div>
-              <div className="flex-1 p-8">
-                <h3 className="text-2xl font-bold mb-4">{noticia.titulo}</h3>
-                <div className="flex items-center gap-4 mb-4 text-gray-600">
-                  <span className="font-semibold">{noticia.veiculo}</span>
-                  <span>{noticia.data}</span>
+
+      {/* Reviews Grid Section */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4 max-w-7xl">
+          {noticias.map((noticia) => (
+            <div key={noticia.id} className="bg-white rounded-2xl shadow-lg overflow-hidden mb-8">
+              <div className="flex flex-col md:flex-row">
+                <div className="md:w-1/3 relative">
+                  {noticia.imagem ? (
+                    <img 
+                      src={noticia.imagem} 
+                      alt={noticia.titulo}
+                      className="w-full h-full object-cover"
+                    />
+                  ) : (
+                    <div className="h-full min-h-[200px] bg-gray-100 flex items-center justify-center">
+                      <span className="text-xl font-semibold text-gray-600">{noticia.veiculo}</span>
+                    </div>
+                  )}
+                  {noticia.exclusivo && (
+                    <div className="absolute top-4 right-4 bg-primary text-white text-sm px-3 py-1 rounded-full">
+                      <span>Conteúdo Exclusivo para Assinantes do Globoplay</span>
+                    </div>
+                  )}
                 </div>
-                {(noticia.id === 1 || noticia.id === 3) ? (
+                <div className="flex-1 p-8">
+                  <h3 className="text-2xl font-bold mb-4">{noticia.titulo}</h3>
+                  <div className="flex items-center gap-4 mb-4 text-gray-600">
+                    <span className="font-semibold">{noticia.veiculo}</span>
+                    <span>{noticia.data}</span>
+                  </div>
+                  {(noticia.id === 1 || noticia.id === 3) ? (
+                    <div className="prose prose-lg max-w-none">
+                      {noticia.conteudoCompleto.split('\n\n').map((paragrafo, index) => (
+                        <p key={index} className="mb-4 text-gray-700 text-justify">{paragrafo}</p>
+                      ))}
+                      {noticia.imagens && (
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">
+                          {noticia.imagens.map((imagem, index) => (
+                            <div key={index} className="rounded-xl overflow-hidden shadow-md">
+                              <img 
+                                src={imagem} 
+                                alt={`${noticia.titulo} - Página ${index + 1}`}
+                                className="w-full h-full object-cover"
+                              />
+                            </div>
+                          ))}
+                        </div>
+                      )}
+                      <div className="mt-8 flex justify-end">
+                        {noticia.link !== "#" && (
+                          <a 
+                            href={noticia.link} 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-2 bg-primary text-white px-6 py-3 rounded-full hover:bg-primary/90 transition-colors"
+                          >
+                            Ver site original
+                            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                              <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
+                            </svg>
+                          </a>
+                        )}
+                      </div>
+                    </div>
+                  ) : (
+                    <>
+                      <p className="text-gray-700 mb-6 text-justify">{noticia.descricao}</p>
+                      <button 
+                        className={`flex items-center gap-2 text-primary hover:text-primary/80 transition-colors ${
+                          expandedId === noticia.id ? 'font-semibold' : ''
+                        }`}
+                        onClick={() => toggleExpanded(noticia.id)}
+                      >
+                        <span>{expandedId === noticia.id ? 'Mostrar menos' : 'Leia mais'}</span>
+                        <span className="text-xl">{expandedId === noticia.id ? '−' : '+'}</span>
+                      </button>
+                    </>
+                  )}
+                </div>
+              </div>
+              {expandedId === noticia.id && noticia.id !== 1 && noticia.id !== 3 && (
+                <div className="border-t border-gray-100 p-8">
                   <div className="prose prose-lg max-w-none">
                     {noticia.conteudoCompleto.split('\n\n').map((paragrafo, index) => (
-                      <p key={index} className="mb-4 text-gray-700">{paragrafo}</p>
+                      <p key={index} className="mb-4 text-gray-700 text-justify">{paragrafo}</p>
                     ))}
                     {noticia.imagens && (
-                      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
+                      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">
                         {noticia.imagens.map((imagem, index) => (
                           <div key={index} className="rounded-xl overflow-hidden shadow-md">
                             <img 
@@ -161,78 +221,28 @@ Durante o programa, foram apresentadas as diferentes espécies que podem ser enc
                         ))}
                       </div>
                     )}
-                    <div className="mt-8 flex justify-end">
-                      {noticia.link !== "#" && (
-                        <a 
-                          href={noticia.link} 
-                          target="_blank" 
-                          rel="noopener noreferrer"
-                          className="inline-flex items-center gap-2 bg-primary text-white px-6 py-3 rounded-full hover:bg-primary/90 transition-colors"
-                        >
-                          Ver site original
-                          <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                            <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
-                          </svg>
-                        </a>
-                      )}
-                    </div>
                   </div>
-                ) : (
-                  <>
-                    <p className="text-gray-700 mb-6">{noticia.descricao}</p>
-                    <button 
-                      className={`flex items-center gap-2 text-primary hover:text-primary/80 transition-colors ${
-                        expandedId === noticia.id ? 'font-semibold' : ''
-                      }`}
-                      onClick={() => toggleExpanded(noticia.id)}
-                    >
-                      <span>{expandedId === noticia.id ? 'Mostrar menos' : 'Leia mais'}</span>
-                      <span className="text-xl">{expandedId === noticia.id ? '−' : '+'}</span>
-                    </button>
-                  </>
-                )}
-              </div>
+                  <div className="mt-8 flex justify-end">
+                    {noticia.link !== "#" && (
+                      <a 
+                        href={noticia.link} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 bg-primary text-white px-6 py-3 rounded-full hover:bg-primary/90 transition-colors"
+                      >
+                        {noticia.exclusivo ? 'Assistir no Globoplay' : 'Ver site original'}
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                          <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
+                        </svg>
+                      </a>
+                    )}
+                  </div>
+                </div>
+              )}
             </div>
-            {expandedId === noticia.id && noticia.id !== 1 && noticia.id !== 3 && (
-              <div className="border-t border-gray-100 p-8">
-                <div className="prose prose-lg max-w-none">
-                  {noticia.conteudoCompleto.split('\n\n').map((paragrafo, index) => (
-                    <p key={index} className="mb-4 text-gray-700">{paragrafo}</p>
-                  ))}
-                  {noticia.imagens && (
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
-                      {noticia.imagens.map((imagem, index) => (
-                        <div key={index} className="rounded-xl overflow-hidden shadow-md">
-                          <img 
-                            src={imagem} 
-                            alt={`${noticia.titulo} - Página ${index + 1}`}
-                            className="w-full h-full object-cover"
-                          />
-                        </div>
-                      ))}
-                    </div>
-                  )}
-                </div>
-                <div className="mt-8 flex justify-end">
-                  {noticia.link !== "#" && (
-                    <a 
-                      href={noticia.link} 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 bg-primary text-white px-6 py-3 rounded-full hover:bg-primary/90 transition-colors"
-                    >
-                      {noticia.exclusivo ? 'Assistir no Globoplay' : 'Ver site original'}
-                      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                        <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
-                      </svg>
-                    </a>
-                  )}
-                </div>
-              </div>
-            )}
-          </div>
-        ))}
-      </div>
+          ))}
+        </div>
+      </section>
     </div>
   );
 }

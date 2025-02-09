@@ -97,7 +97,7 @@ const Birdwatching = () => {
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <div 
-        className="relative h-[70vh] flex items-center justify-center text-center text-white"
+        className="relative h-[70vh] flex items-center justify-center text-center text-white mb-16"
         style={heroStyle}
       >
         <div className="relative z-20 px-4">
@@ -113,7 +113,7 @@ const Birdwatching = () => {
       {/* Introduction Text */}
       <div className="bg-white py-16">
         <div className="container mx-auto px-4">
-          <p className="text-xl text-gray-700 leading-relaxed max-w-4xl mx-auto text-center text-justify">
+          <p className="text-xl text-gray-700 leading-relaxed max-w-4xl mx-auto text-justify">
             O Jardim da Amazônia é uma referência mundial na proteção de aves, pois é considerada uma IBA (Importante Bird Area), uma importante área para a Biodiversidade segundo o Birdlife International, E-bird, The Corrnell Lab e Wikiaves.
           </p>
         </div>
@@ -121,7 +121,7 @@ const Birdwatching = () => {
 
       {/* Hotspot Intro Section */}
       <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-4 max-w-4xl">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl font-semibold mb-12 relative">
               Reconhecimento Internacional
@@ -150,13 +150,9 @@ const Birdwatching = () => {
 
       {/* Featured Species Section */}
       <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-semibold text-center mb-12 relative">
-            Espécies Emblemáticas
-            <span className="absolute bottom-[-1rem] left-1/2 transform -translate-x-1/2 w-20 h-1 bg-primary"></span>
-          </h2>
-          
-          <div className="flex flex-col gap-8 max-w-5xl mx-auto">
+        <div className="container mx-auto px-4 max-w-7xl">
+          <h2 className="text-3xl font-bold text-center mb-12">Aves Registradas</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Criticamente em Perigo (CR) */}
             <div className="bg-white rounded-xl shadow-lg overflow-hidden transition-transform duration-300 hover:-translate-y-2">
               <div className="flex flex-col md:flex-row h-48">
@@ -225,7 +221,7 @@ const Birdwatching = () => {
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">Mutum-cavalo</h3>
                   <p className="text-sm text-primary italic mb-2">Pauxi tuberosa</p>
                   <p className="text-gray-600 text-sm leading-relaxed line-clamp-2 text-justify">
-                  Ave majestosa da família dos cracídeos, com capacete azul-turquesa. Habita florestas densas da Amazônia e é um importante indicador da qualidade ambiental.
+                    Ave majestosa da família dos cracídeos, com capacete azul-turquesa. Habita florestas densas da Amazônia e é um importante indicador da qualidade ambiental.
                   </p>
                 </div>
               </div>
@@ -249,7 +245,7 @@ const Birdwatching = () => {
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">Pássaro-guarda-chuva</h3>
                   <p className="text-sm text-primary italic mb-2">Cephalopterus ornatus</p>
                   <p className="text-gray-600 text-sm leading-relaxed line-clamp-2 text-justify">
-                  Ave impressionante com crista em forma de guarda-chuva e bolsa gular. O macho exibe sua bolsa inflada, emitindo sons graves e ressonantes.
+                    Ave impressionante com crista em forma de guarda-chuva e bolsa gular. O macho exibe sua bolsa inflada, emitindo sons graves e ressonantes.
                   </p>
                 </div>
               </div>
@@ -267,7 +263,7 @@ const Birdwatching = () => {
               <span className="absolute bottom-[-1rem] left-1/2 transform -translate-x-1/2 w-20 h-1 bg-primary"></span>
             </h2>
             
-            <p className="text-xl text-gray-700 leading-relaxed text-center text-justify mb-12">
+            <p className="text-xl text-gray-700 leading-relaxed text-justify mb-12">
               Em um cenário singular onde o Cerrado encontra a Amazônia, nosso lodge oferece a rara oportunidade de 
               vivenciar a interação de duas das mais ricas biodiversidades do planeta.
             </p>
@@ -535,12 +531,8 @@ const Birdwatching = () => {
 
       {/* Gallery Section */}
       <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-semibold text-center mb-12 relative">
-            Galeria
-            <span className="absolute bottom-[-1rem] left-1/2 transform -translate-x-1/2 w-20 h-1 bg-primary"></span>
-          </h2>
-
+        <div className="container mx-auto px-4 max-w-7xl">
+          <h2 className="text-3xl font-bold text-center mb-12">Galeria</h2>
           <div className="max-w-4xl mx-auto">
             <div className="relative h-[400px] overflow-hidden rounded-2xl cursor-pointer" onClick={() => setIsFullScreen(true)}>
               {galleryImages.map((image, index) => (
