@@ -4,9 +4,9 @@ import { motion } from 'framer-motion';
 
 const NossaHistoria = () => {
   const heroStyle = {
-    backgroundImage: `url('https://res.cloudinary.com/dxlhv2mji/image/upload/v1739834451/Jardim_da_Amazônia-4000_zyxwvu.jpg')`,
+    backgroundImage: `url('https://res.cloudinary.com/dxlhv2mji/image/upload/v1736085697/almor-carmelita_tx0knl.jpg')`,
     backgroundSize: 'cover',
-    backgroundPosition: 'center',
+    backgroundPosition: 'center 30%',
   };
 
   // Animation variants for the timeline dots
@@ -62,7 +62,7 @@ const NossaHistoria = () => {
         className="relative h-[70vh] flex items-center justify-center text-center text-white mb-16"
         style={heroStyle}
       >
-        <div className="absolute inset-0 bg-black/60 z-10"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-black/70 z-10"></div>
         <div className="relative z-20 px-4">
           <h1 className="text-5xl md:text-6xl font-bold mb-6 tracking-wide text-shadow">
             Nossa História

@@ -8,57 +8,42 @@ const Galeria = () => {
       title: "Acomodações",
       images: [
         {
-          url: "https://res.cloudinary.com/dxlhv2mji/image/upload/v1736121165/mata-6_jeycpm.jpg",
-          title: "Casa da Mata - Exterior",
+          url: "https://res.cloudinary.com/dxlhv2mji/image/upload/v1739842228/Jardim_da_Amazônia-3751_wmnb8x.jpg",
+          title: "Casa da Mata",
           photographer: "Marlon Erthal"
         },
         {
-          url: "https://res.cloudinary.com/dxlhv2mji/image/upload/v1739842228/Jardim_da_Amazônia-3751_wmnb8x.jpg",
+          url: "https://res.cloudinary.com/dxlhv2mji/image/upload/v1739922205/Jardim_da_Amazônia-3714_fhy2ki.jpg",
           title: "Casa da Mata - Interior",
           photographer: "Marlon Erthal"
         },
         {
-          url: "https://res.cloudinary.com/dxlhv2mji/image/upload/v1739842195/Jardim_da_Amazônia-3740_alyqg2.jpg",
-          title: "Casa da Mata - Detalhes",
-          photographer: "Marlon Erthal"
-        },
-        {
-          url: "https://res.cloudinary.com/dxlhv2mji/image/upload/v1739842147/Jardim_da_Amazônia-3731_qtmjco.jpg",
-          title: "Casa da Mata - Vista",
-          photographer: "Marlon Erthal"
-        },
-        {
-          url: "https://res.cloudinary.com/dxlhv2mji/image/upload/v1739922195/Jardim_da_Amazônia-3707_rt8aww.jpg",
+          url: "https://res.cloudinary.com/dxlhv2mji/image/upload/v1739922168/Jardim_da_Amazônia-3676_hn0sbn.jpg",
           title: "Casa da Mata - Ambiente",
           photographer: "Marlon Erthal"
         },
         {
-          url: "https://res.cloudinary.com/dxlhv2mji/image/upload/v1736119365/jardim-hero_wi8rlu.jpg",
-          title: "Bangalô Jardim - Vista Principal",
+          url: "https://res.cloudinary.com/dxlhv2mji/image/upload/v1736119362/jardim-1_m4axtr.jpg",
+          title: "Bangalô Jardim",
           photographer: "Marlon Erthal"
         },
         {
-          url: "https://res.cloudinary.com/dxlhv2mji/image/upload/v1739919813/Jardim_da_Amazônia-587_m1zqc2.jpg",
-          title: "Bangalô Jardim - Exterior",
+          url: "https://res.cloudinary.com/dxlhv2mji/image/upload/v1739919787/Jardim_da_Amazônia-465_wwnsh7.jpg",
+          title: "Bangalô Jardim - Interior",
           photographer: "Marlon Erthal"
         },
         {
-          url: "https://res.cloudinary.com/dxlhv2mji/image/upload/v1739919800/Jardim_da_Amazônia-476_hmn9lp.jpg",
-          title: "Bangalô Jardim - Detalhes",
-          photographer: "Marlon Erthal"
-        },
-        {
-          url: "https://res.cloudinary.com/dxlhv2mji/image/upload/v1736118852/familia-hero_tjgrgj.jpg",
-          title: "Bangalô Família - Vista Principal",
-          photographer: "Marlon Erthal"
-        },
-        {
-          url: "https://res.cloudinary.com/dxlhv2mji/image/upload/v1739921668/Jardim_da_Amazônia-1106_ws1fz1.jpg",
-          title: "Bangalô Família - Exterior",
+          url: "https://res.cloudinary.com/dxlhv2mji/image/upload/v1739842237/Jardim_da_Amazônia-3773_c2beq5.jpg",
+          title: "Bangalô Família",
           photographer: "Marlon Erthal"
         },
         {
           url: "https://res.cloudinary.com/dxlhv2mji/image/upload/v1739921551/Jardim_da_Amazônia-1085_rba1ha.jpg",
+          title: "Bangalô Família - Interior",
+          photographer: "Marlon Erthal"
+        },
+        {
+          url: "https://res.cloudinary.com/dxlhv2mji/image/upload/v1739921474/Jardim_da_Amazônia-948_cdpznn.jpg",
           title: "Bangalô Família - Ambiente",
           photographer: "Marlon Erthal"
         }
@@ -68,8 +53,13 @@ const Galeria = () => {
       title: "Áreas Externas",
       images: [
         {
+          url: "https://res.cloudinary.com/dxlhv2mji/image/upload/v1736085753/familia-fogueira_xch5l3.jpg",
+          title: "Espaço de Convivência - Fogueira",
+          photographer: "Caio Gimenez"
+        },
+        {
           url: "https://res.cloudinary.com/dxlhv2mji/image/upload/v1739842552/Jardim_da_Amazônia-3930_ehdgyr.jpg",
-          title: "Espaço de Convivência - Principal",
+          title: "Wi-Fi Starlink Disponível",
           photographer: "Marlon Erthal"
         },
         {
@@ -83,28 +73,23 @@ const Galeria = () => {
           photographer: "Marlon Erthal"
         },
         {
-          url: "https://res.cloudinary.com/dxlhv2mji/image/upload/v1739842036/Jardim_da_Amazônia-3602_sisbpp.jpg",
-          title: "Piscina Natural - Vista Principal",
+          url: "https://res.cloudinary.com/dxlhv2mji/image/upload/v1739841625/Jardim_da_Amazônia-3434_jsn8sr.jpg",
+          title: "Piscina Natural",
           photographer: "Marlon Erthal"
         },
         {
           url: "https://res.cloudinary.com/dxlhv2mji/image/upload/v1739842011/Jardim_da_Amazônia-3588_surdeb.jpg",
-          title: "Piscina Natural - Área de Banho",
-          photographer: "Marlon Erthal"
-        },
-        {
-          url: "https://res.cloudinary.com/dxlhv2mji/image/upload/v1739841939/Jardim_da_Amazônia-3538_kppv8a.jpg",
-          title: "Piscina Natural - Deck",
+          title: "Nascente - Área de Conservação",
           photographer: "Marlon Erthal"
         },
         {
           url: "https://res.cloudinary.com/dxlhv2mji/image/upload/v1739841682/Jardim_da_Amazônia-3495_em7syh.jpg",
-          title: "Piscina Natural - Entardecer",
+          title: "Piscina de Águas Cristalinas",
           photographer: "Marlon Erthal"
         },
         {
           url: "https://res.cloudinary.com/dxlhv2mji/image/upload/v1739842392/Jardim_da_Amazônia-3829_hauhip.jpg",
-          title: "Jardins e Lagoas - Vista Aérea",
+          title: "Jardins e Lagoas - Panorâmica",
           photographer: "Marlon Erthal"
         },
         {
@@ -114,17 +99,12 @@ const Galeria = () => {
         },
         {
           url: "https://res.cloudinary.com/dxlhv2mji/image/upload/v1739841326/Jardim_da_Amazônia-3216_yrohd0.jpg",
-          title: "Trilhas - Caminho Principal",
-          photographer: "Marlon Erthal"
-        },
-        {
-          url: "https://res.cloudinary.com/dxlhv2mji/image/upload/v1739841322/Jardim_da_Amazônia-3188_lceiu2.jpg",
-          title: "Trilhas - Mata",
+          title: "Birdwatching próximo à casa",
           photographer: "Marlon Erthal"
         },
         {
           url: "https://res.cloudinary.com/dxlhv2mji/image/upload/v1739841321/Jardim_da_Amazônia-3166_npmlu7.jpg",
-          title: "Trilhas - Floresta",
+          title: "Passarela por dentro da mata",
           photographer: "Marlon Erthal"
         }
       ]
@@ -175,17 +155,17 @@ const Galeria = () => {
         {
           url: "https://res.cloudinary.com/dxlhv2mji/image/upload/v1739857967/parauacu_tsk80b.jpg",
           title: "Parauacu",
-          photographer: "Marlon Erthal"
+          photographer: "Acervo Jardim da Amazônia"
         },
         {
           url: "https://res.cloudinary.com/dxlhv2mji/image/upload/v1739857952/zogue-zogue_1_o0mrje.jpg",
           title: "Zogue-zogue",
-          photographer: "Marlon Erthal"
+          photographer: "Acervo Jardim da Amazônia"
         },
         {
           url: "https://res.cloudinary.com/dxlhv2mji/image/upload/v1739857960/macaco-cara-preta_ilsz9z.jpg",
           title: "Macaco Cara Preta",
-          photographer: "Marlon Erthal"
+          photographer: "Acervo Jardim da Amazônia"
         }
       ]
     }

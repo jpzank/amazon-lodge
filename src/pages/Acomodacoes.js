@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 // eslint-disable-next-line no-unused-vars
 import PhotoCredit from '../components/PhotoCredit';
@@ -33,6 +33,8 @@ function Acomodacoes() {
   const [selectedRoom, setSelectedRoom] = useState(null);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [isFullScreen, setIsFullScreen] = useState(false);
+  const [isImageLoading, setIsImageLoading] = useState(true);
+  const [preloadedImages, setPreloadedImages] = useState({});
 
   const commonAmenities = [
     { icon: <FaBed />, name: "Cama King Size" },
@@ -92,14 +94,26 @@ function Acomodacoes() {
         { icon: <MdNaturePeople />, name: 'Vista para o Rio Claro' },
         { icon: <FaHeart />, name: 'Ideal para Famílias' }
       ],
-      image: 'https://res.cloudinary.com/dxlhv2mji/image/upload/v1739834451/Jardim_da_Amazônia-1085_rba1ha.jpg',
+      image: 'https://res.cloudinary.com/dxlhv2mji/image/upload/q_100,f_auto,c_limit,w_2000/v1739834451/Jardim_da_Amazônia-1085_rba1ha.jpg',
       gallery: [
-        'https://res.cloudinary.com/dxlhv2mji/image/upload/v1739921284/Jardim_da_Amazônia-675_ppk2tk.jpg',
-        'https://res.cloudinary.com/dxlhv2mji/image/upload/v1739921270/Jardim_da_Amazônia-665_xecad1.jpg',
-        'https://res.cloudinary.com/dxlhv2mji/image/upload/v1739921362/Jardim_da_Amazônia-756_qpla99.jpg',
-        'https://res.cloudinary.com/dxlhv2mji/image/upload/v1739921340/Jardim_da_Amazônia-751_svnptn.jpg',
-        'https://res.cloudinary.com/dxlhv2mji/image/upload/v1739921311/Jardim_da_Amazônia-726_frmxvo.jpg',
-        'https://res.cloudinary.com/dxlhv2mji/image/upload/v1739834451/Jardim_da_Amazônia-1144_oqujz8.jpg'
+        {
+          src: 'https://res.cloudinary.com/dxlhv2mji/image/upload/q_100,f_auto,c_limit,w_2000/v1739921284/Jardim_da_Amazônia-675_ppk2tk.jpg'
+        },
+        {
+          src: 'https://res.cloudinary.com/dxlhv2mji/image/upload/q_100,f_auto,c_limit,w_2000/v1739921270/Jardim_da_Amazônia-665_xecad1.jpg'
+        },
+        {
+          src: 'https://res.cloudinary.com/dxlhv2mji/image/upload/q_100,f_auto,c_limit,w_2000/v1739921362/Jardim_da_Amazônia-756_qpla99.jpg'
+        },
+        {
+          src: 'https://res.cloudinary.com/dxlhv2mji/image/upload/q_100,f_auto,c_limit,w_2000/v1739921340/Jardim_da_Amazônia-751_svnptn.jpg'
+        },
+        {
+          src: 'https://res.cloudinary.com/dxlhv2mji/image/upload/q_100,f_auto,c_limit,w_2000/v1739921311/Jardim_da_Amazônia-726_frmxvo.jpg'
+        },
+        {
+          src: 'https://res.cloudinary.com/dxlhv2mji/image/upload/q_100,f_auto,c_limit,w_2000/v1739834451/Jardim_da_Amazônia-1144_oqujz8.jpg'
+        }
       ]
     },
     {
@@ -113,14 +127,26 @@ function Acomodacoes() {
         { icon: <MdNaturePeople />, name: 'Vista para o Jardim' },
         { icon: <FaHeart />, name: 'Ideal para Casais' }
       ],
-      image: 'https://res.cloudinary.com/dxlhv2mji/image/upload/v1739833672/Jardim_da_Amazônia-131_trfay9.jpg',
+      image: 'https://res.cloudinary.com/dxlhv2mji/image/upload/q_100,f_auto,c_limit,w_2000/v1739833672/Jardim_da_Amazônia-131_trfay9.jpg',
       gallery: [
-        'https://res.cloudinary.com/dxlhv2mji/image/upload/v1739919654/Jardim_da_Amazônia-16_soj6ut.jpg',
-        'https://res.cloudinary.com/dxlhv2mji/image/upload/v1739919696/Jardim_da_Amazônia-88_jmrava.jpg',
-        'https://res.cloudinary.com/dxlhv2mji/image/upload/v1739919787/Jardim_da_Amazônia-465_wwnsh7.jpg',
-        'https://res.cloudinary.com/dxlhv2mji/image/upload/v1739833651/Jardim_da_Amazônia-70_catuwk.jpg',
-        'https://res.cloudinary.com/dxlhv2mji/image/upload/v1739833734/Jardim_da_Amazônia-323_vs32ru.jpg',
-        'https://res.cloudinary.com/dxlhv2mji/image/upload/v1736119362/jardim-2_ukfgpv.jpg'
+        {
+          src: 'https://res.cloudinary.com/dxlhv2mji/image/upload/q_100,f_auto,c_limit,w_2000/v1739919654/Jardim_da_Amazônia-16_soj6ut.jpg'
+        },
+        {
+          src: 'https://res.cloudinary.com/dxlhv2mji/image/upload/q_100,f_auto,c_limit,w_2000/v1739919696/Jardim_da_Amazônia-88_jmrava.jpg'
+        },
+        {
+          src: 'https://res.cloudinary.com/dxlhv2mji/image/upload/q_100,f_auto,c_limit,w_2000/v1739919787/Jardim_da_Amazônia-465_wwnsh7.jpg'
+        },
+        {
+          src: 'https://res.cloudinary.com/dxlhv2mji/image/upload/q_100,f_auto,c_limit,w_2000/v1739833651/Jardim_da_Amazônia-70_catuwk.jpg'
+        },
+        {
+          src: 'https://res.cloudinary.com/dxlhv2mji/image/upload/q_100,f_auto,c_limit,w_2000/v1739833734/Jardim_da_Amazônia-323_vs32ru.jpg'
+        },
+        {
+          src: 'https://res.cloudinary.com/dxlhv2mji/image/upload/q_100,f_auto,c_limit,w_2000/v1736119362/jardim-2_ukfgpv.jpg'
+        }
       ]
     },
     {
@@ -134,14 +160,56 @@ function Acomodacoes() {
         { icon: <MdNaturePeople />, name: 'Vista Panorâmica' },
         { icon: <FaHeart />, name: 'Experiência Histórica' }
       ],
-      image: 'https://res.cloudinary.com/dxlhv2mji/image/upload/v1739834451/Jardim_da_Amazônia-1707_o4s4u5.jpg',
+      image: 'https://res.cloudinary.com/dxlhv2mji/image/upload/q_auto:best,fl_progressive/v1739834451/Jardim_da_Amazônia-1707_o4s4u5.jpg',
       gallery: [
-        'https://res.cloudinary.com/dxlhv2mji/image/upload/v1739834451/Jardim_da_Amazônia-1754_njecru.jpg',
-        'https://res.cloudinary.com/dxlhv2mji/image/upload/v1739834451/Jardim_da_Amazônia-1748_gzhe8v.jpg',
-        'https://res.cloudinary.com/dxlhv2mji/image/upload/v1739834451/Jardim_da_Amazônia-1720_b3lxe8.jpg',
-        'https://res.cloudinary.com/dxlhv2mji/image/upload/v1739834451/Jardim_da_Amazônia-1830_nkccqw.jpg',
-        'https://res.cloudinary.com/dxlhv2mji/image/upload/v1739834451/Jardim_da_Amazônia-1723_q4wteu.jpg',
-        'https://res.cloudinary.com/dxlhv2mji/image/upload/v1739834451/Jardim_da_Amazônia-1674_djpiua.jpg'
+        // Apartamento 5
+        {
+          src: 'https://res.cloudinary.com/dxlhv2mji/image/upload/q_auto:best,fl_progressive/v1739834451/Jardim_da_Amazônia-1707_o4s4u5.jpg',
+          apt: '5',
+          lowProfile: true
+        },
+        {
+          src: 'https://res.cloudinary.com/dxlhv2mji/image/upload/q_auto:best,fl_progressive/v1739834451/Jardim_da_Amazônia-1677_cygtxz.jpg',
+          apt: '5',
+          lowProfile: true
+        },
+        {
+          src: 'https://res.cloudinary.com/dxlhv2mji/image/upload/q_auto:best,fl_progressive/v1739834451/Jardim_da_Amazônia-1720_b3lxe8.jpg',
+          apt: '5',
+          lowProfile: true
+        },
+        // Apartamento 6
+        {
+          src: 'https://res.cloudinary.com/dxlhv2mji/image/upload/q_auto:best,fl_progressive/v1739834451/Jardim_da_Amazônia-1217_x4vuyi.jpg',
+          apt: '6',
+          lowProfile: true
+        },
+        {
+          src: 'https://res.cloudinary.com/dxlhv2mji/image/upload/q_auto:best,fl_progressive/v1739834451/Jardim_da_Amazônia-1288_lzebaa.jpg',
+          apt: '6',
+          lowProfile: true
+        },
+        {
+          src: 'https://res.cloudinary.com/dxlhv2mji/image/upload/q_auto:best,fl_progressive/v1739834451/Jardim_da_Amazônia-1185_kyywqy.jpg',
+          apt: '6',
+          lowProfile: true
+        },
+        // Apartamento 7
+        {
+          src: 'https://res.cloudinary.com/dxlhv2mji/image/upload/q_auto:best,fl_progressive/v1739834451/Jardim_da_Amazônia-1748_gzhe8v.jpg',
+          apt: '7',
+          lowProfile: true
+        },
+        {
+          src: 'https://res.cloudinary.com/dxlhv2mji/image/upload/q_auto:best,fl_progressive/v1739834451/Jardim_da_Amazônia-1830_nkccqw.jpg',
+          apt: '7',
+          lowProfile: true
+        },
+        {
+          src: 'https://res.cloudinary.com/dxlhv2mji/image/upload/q_auto:best,fl_progressive/v1739834451/7fazenda-3_gnrzph.jpg',
+          apt: '7',
+          lowProfile: true
+        }
       ],
       subitems: [
         {
@@ -205,29 +273,100 @@ function Acomodacoes() {
         { icon: <MdNaturePeople />, name: 'Vista para a Mata' },
         { icon: <FaMountain />, name: 'Experiência Imersiva' }
       ],
-      image: 'https://res.cloudinary.com/dxlhv2mji/image/upload/v1739834451/Jardim_da_Amazônia-3676_hn0sbn.jpg',
+      image: 'https://res.cloudinary.com/dxlhv2mji/image/upload/q_auto:best,fl_progressive/v1739834451/Jardim_da_Amazônia-3676_hn0sbn.jpg',
       gallery: [
-        'https://res.cloudinary.com/dxlhv2mji/image/upload/v1739834451/Jardim_da_Amazônia-3635_pxeunv.jpg',
-        'https://res.cloudinary.com/dxlhv2mji/image/upload/v1739834451/Jardim_da_Amazônia-3626_lfykt4.jpg',
-        'https://res.cloudinary.com/dxlhv2mji/image/upload/v1739834451/Jardim_da_Amazônia-3652_dfxemv.jpg',
-        'https://res.cloudinary.com/dxlhv2mji/image/upload/v1739834451/Jardim_da_Amazônia-3690_ejddqg.jpg',
-        'https://res.cloudinary.com/dxlhv2mji/image/upload/v1739834451/Jardim_da_Amazônia-3731_qtmjco.jpg',
-        'https://res.cloudinary.com/dxlhv2mji/image/upload/v1739834451/Jardim_da_Amazônia-3751_wmnb8x.jpg'
+        {
+          src: 'https://res.cloudinary.com/dxlhv2mji/image/upload/q_auto:best,fl_progressive/v1739834451/Jardim_da_Amazônia-3635_pxeunv.jpg'
+        },
+        {
+          src: 'https://res.cloudinary.com/dxlhv2mji/image/upload/q_auto:best,fl_progressive/v1739834451/Jardim_da_Amazônia-3626_lfykt4.jpg'
+        },
+        {
+          src: 'https://res.cloudinary.com/dxlhv2mji/image/upload/q_auto:best,fl_progressive/v1739834451/Jardim_da_Amazônia-3652_dfxemv.jpg'
+        },
+        {
+          src: 'https://res.cloudinary.com/dxlhv2mji/image/upload/q_auto:best,fl_progressive/v1739834451/Jardim_da_Amazônia-3690_ejddqg.jpg'
+        },
+        {
+          src: 'https://res.cloudinary.com/dxlhv2mji/image/upload/q_auto:best,fl_progressive/v1739834451/Jardim_da_Amazônia-3731_qtmjco.jpg'
+        },
+        {
+          src: 'https://res.cloudinary.com/dxlhv2mji/image/upload/q_auto:best,fl_progressive/v1739834451/Jardim_da_Amazônia-3751_wmnb8x.jpg'
+        }
       ]
     }
   ];
 
+  // Preload images when a room is selected
+  useEffect(() => {
+    if (selectedRoom) {
+      setIsImageLoading(true);
+      const preloadImages = async () => {
+        const imagePromises = selectedRoom.gallery.map((image, index) => {
+          return new Promise((resolve, reject) => {
+            const img = new Image();
+            const optimizedSrc = image.src.replace('/upload/', '/upload/c_scale,w_1600,f_auto,q_auto/');
+            img.src = optimizedSrc;
+            img.onload = () => {
+              setPreloadedImages(prev => ({
+                ...prev,
+                [index]: optimizedSrc
+              }));
+              resolve();
+            };
+            img.onerror = reject;
+          });
+        });
+
+        try {
+          await Promise.all(imagePromises);
+          setIsImageLoading(false);
+        } catch (error) {
+          console.error('Error preloading images:', error);
+          setIsImageLoading(false);
+        }
+      };
+
+      preloadImages();
+    }
+  }, [selectedRoom]);
+
+  // Preload next and previous images when current index changes
+  useEffect(() => {
+    if (selectedRoom) {
+      const preloadAdjacentImages = () => {
+        const nextIndex = (currentImageIndex + 1) % selectedRoom.gallery.length;
+        const prevIndex = currentImageIndex === 0 ? selectedRoom.gallery.length - 1 : currentImageIndex - 1;
+        
+        [nextIndex, prevIndex].forEach(index => {
+          const img = new Image();
+          const src = selectedRoom.gallery[index].src;
+          const optimizedSrc = src.replace('/upload/', '/upload/c_scale,w_1600,f_auto,q_auto/');
+          img.src = optimizedSrc;
+          img.onload = () => {
+            setPreloadedImages(prev => ({
+              ...prev,
+              [index]: optimizedSrc
+            }));
+          };
+        });
+      };
+
+      preloadAdjacentImages();
+    }
+  }, [currentImageIndex, selectedRoom]);
+
   const handlePrevImage = (e) => {
     e.stopPropagation();
     setCurrentImageIndex((prev) => 
-      prev === 0 ? 5 : prev - 1
+      prev === 0 ? selectedRoom.gallery.length - 1 : prev - 1
     );
   };
 
   const handleNextImage = (e) => {
     e.stopPropagation();
     setCurrentImageIndex((prev) => 
-      prev === 5 ? 0 : prev + 1
+      prev === selectedRoom.gallery.length - 1 ? 0 : prev + 1
     );
   };
 
@@ -242,7 +381,7 @@ function Acomodacoes() {
   };
 
   const heroStyle = {
-    backgroundImage: `url('https://res.cloudinary.com/dxlhv2mji/image/upload/v1739921327/Jardim_da_Amazônia-744_solrly.jpg')`,
+    backgroundImage: `url('https://res.cloudinary.com/dxlhv2mji/image/upload/q_100,f_auto,c_limit,w_2000/v1739921327/Jardim_da_Amazônia-744_solrly.jpg')`,
     backgroundSize: 'cover',
     backgroundPosition: 'center',
   };
@@ -255,7 +394,7 @@ function Acomodacoes() {
         style={heroStyle}
       >
         {/* Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/40 to-black/70" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/30 to-black/50" />
 
         {/* Content */}
         <div className="relative z-10 max-w-[800px] px-8">
@@ -294,9 +433,10 @@ function Acomodacoes() {
                 {/* Room Image */}
                 <div className="md:w-1/2 relative h-[400px]">
                   <img 
-                    src={accommodation.image} 
+                    src={accommodation.image.replace('/upload/', '/upload/c_scale,w_800,f_auto,q_auto/')} 
                     alt={accommodation.name}
                     className="w-full h-full object-cover"
+                    loading="lazy"
                   />
                 </div>
 
@@ -412,7 +552,7 @@ function Acomodacoes() {
       {/* Room Details Modal */}
       {selectedRoom && (
         <div 
-          className="fixed inset-0 bg-black/80 z-50 flex items-center justify-center
+          className="fixed inset-0 bg-black/60 z-50 flex items-center justify-center
             transition-opacity duration-300"
           onClick={handleCloseDetails}
         >
@@ -422,37 +562,78 @@ function Acomodacoes() {
             onClick={e => e.stopPropagation()}
           >
             {/* Gallery */}
-            <div className="relative h-[50vh] overflow-hidden">
+            <div className="relative h-[50vh] overflow-hidden bg-gray-100">
+              <div className="absolute inset-0 flex items-center justify-center">
+                {isImageLoading && (
+                  <div className="w-10 h-10 border-4 border-primary border-t-transparent rounded-full animate-spin"></div>
+                )}
+              </div>
               <img
-                src={selectedRoom.gallery[currentImageIndex]}
+                src={preloadedImages[currentImageIndex] || selectedRoom.gallery[currentImageIndex].src.replace('/upload/', '/upload/c_scale,w_1600,f_auto,q_auto/')}
                 alt={selectedRoom.name}
-                className="w-full h-full object-cover cursor-pointer transition-opacity duration-500 ease-in-out"
+                className={`w-full h-full object-cover cursor-pointer transition-all duration-500
+                  ${isImageLoading ? 'opacity-0' : 'opacity-100'}`}
                 onClick={(e) => {
                   e.stopPropagation();
                   setIsFullScreen(true);
                 }}
+                onLoad={() => setIsImageLoading(false)}
               />
               
+              {/* Apartment Label */}
+              {selectedRoom.gallery[currentImageIndex].apt && (
+                <div className="absolute top-4 left-4 bg-black/70 text-white px-4 py-2 rounded-lg text-lg font-medium">
+                  Apartment {selectedRoom.gallery[currentImageIndex].apt}
+                </div>
+              )}
+
+              {/* Thumbnail Navigation with Loading States */}
+              <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/50 to-transparent">
+                <div className="flex justify-center gap-2 overflow-x-auto py-2">
+                  {selectedRoom.gallery.map((image, index) => (
+                    <button
+                      key={index}
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        setCurrentImageIndex(index);
+                        setIsImageLoading(true);
+                      }}
+                      className={`w-16 h-16 flex-shrink-0 rounded-lg overflow-hidden border-2 transition-all
+                        ${currentImageIndex === index ? 'border-white scale-110' : 'border-transparent opacity-70'}
+                        ${!preloadedImages[index] ? 'bg-gray-200 animate-pulse' : ''}`}
+                    >
+                      <img
+                        src={image.src.replace('/upload/', '/upload/c_scale,w_100,f_auto,q_auto/')}
+                        alt={`Thumbnail ${index + 1} - Apartamento ${image.apt}`}
+                        className={`w-full h-full object-cover transition-opacity duration-300
+                          ${preloadedImages[index] ? 'opacity-100' : 'opacity-0'}`}
+                        loading="lazy"
+                      />
+                    </button>
+                  ))}
+                </div>
+              </div>
+
               {/* Navigation Buttons */}
               <button
                 onClick={handlePrevImage}
                 className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full
-                  bg-black/50 text-white flex items-center justify-center
-                  hover:bg-black/70 transition-colors duration-300"
+                  bg-black/30 text-white flex items-center justify-center
+                  hover:bg-black/50 transition-colors duration-300"
               >
                 <FaChevronLeft />
               </button>
               <button
                 onClick={handleNextImage}
                 className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full
-                  bg-black/50 text-white flex items-center justify-center
-                  hover:bg-black/70 transition-colors duration-300"
+                  bg-black/30 text-white flex items-center justify-center
+                  hover:bg-black/50 transition-colors duration-300"
               >
                 <FaChevronRight />
               </button>
 
               {/* Image Counter */}
-              <div className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-black/50 text-white
+              <div className="absolute top-4 left-1/2 -translate-x-1/2 bg-black/30 text-white
                 px-4 py-2 rounded-full text-sm">
                 {currentImageIndex + 1} / {selectedRoom.gallery.length}
               </div>
@@ -460,35 +641,35 @@ function Acomodacoes() {
               {/* Close Button */}
               <button
                 onClick={handleCloseDetails}
-                className="absolute top-4 right-4 w-10 h-10 rounded-full bg-black/50 text-white
-                  flex items-center justify-center hover:bg-black/70 transition-colors duration-300"
+                className="absolute top-4 right-4 w-10 h-10 rounded-full bg-black/30 text-white
+                  flex items-center justify-center hover:bg-black/50 transition-colors duration-300"
               >
                 <FaTimes />
               </button>
             </div>
 
             {/* Content */}
-            <div className="p-8">
-              <h2 className="text-3xl text-primary font-bold mb-4">{selectedRoom.name}</h2>
-              <p className="text-lg text-text leading-relaxed mb-8">{selectedRoom.description}</p>
+            <div className="p-6">
+              <h2 className="text-2xl text-primary font-bold mb-2">{selectedRoom.name}</h2>
+              <p className="text-base text-text leading-relaxed mb-4">{selectedRoom.description}</p>
 
               {/* Features */}
-              <div className="grid grid-cols-2 md:grid-cols-3 gap-6 mb-8">
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-4">
                 {selectedRoom.features.map((feature, index) => (
-                  <div key={index} className="flex items-center gap-3">
-                    <span className="text-2xl text-primary">{feature.icon}</span>
-                    <span className="text-text">{feature.name}</span>
+                  <div key={index} className="flex items-center gap-2">
+                    <span className="text-xl text-primary">{feature.icon}</span>
+                    <span className="text-sm text-text">{feature.name}</span>
                   </div>
                 ))}
               </div>
 
               {/* Amenities */}
-              <h3 className="text-xl text-primary font-semibold mb-6">Comodidades</h3>
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8">
+              <h3 className="text-lg text-primary font-semibold mb-3">Comodidades</h3>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-4">
                 {commonAmenities.map((amenity, index) => (
-                  <div key={index} className="flex items-center gap-3">
-                    <span className="text-xl text-primary">{amenity.icon}</span>
-                    <span className="text-text">{amenity.name}</span>
+                  <div key={index} className="flex items-center gap-2">
+                    <span className="text-lg text-primary">{amenity.icon}</span>
+                    <span className="text-sm text-text">{amenity.name}</span>
                   </div>
                 ))}
               </div>
@@ -498,7 +679,7 @@ function Acomodacoes() {
                 href={siteConfig.buttonLinks.bookNow}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-primary"
+                className="btn-primary text-sm"
               >
                 Reserve Agora
               </a>
@@ -507,59 +688,91 @@ function Acomodacoes() {
         </div>
       )}
 
-      {/* Full Screen Image Modal */}
+      {/* Full Screen Image Modal with Loading States */}
       {isFullScreen && selectedRoom && (
         <div 
-          className="fixed inset-0 bg-black z-[60] flex items-center justify-center"
+          className="fixed inset-0 bg-black/90 z-[60] flex items-center justify-center"
           onClick={() => setIsFullScreen(false)}
         >
           <div className="relative w-full h-full flex items-center justify-center">
+            <div className="absolute inset-0 flex items-center justify-center">
+              {isImageLoading && (
+                <div className="w-12 h-12 border-4 border-white border-t-transparent rounded-full animate-spin"></div>
+              )}
+            </div>
             <img
               key={currentImageIndex}
-              src={selectedRoom.gallery[currentImageIndex]}
+              src={preloadedImages[currentImageIndex] || selectedRoom.gallery[currentImageIndex].src.replace('/upload/', '/upload/c_scale,w_2000,f_auto,q_auto/')}
               alt={selectedRoom.name}
-              className="max-h-screen max-w-full object-contain transition-opacity duration-500 ease-in-out"
+              className={`max-h-screen max-w-full object-contain transition-all duration-500
+                ${isImageLoading ? 'opacity-0 scale-95' : 'opacity-100 scale-100'}`}
+              onLoad={() => setIsImageLoading(false)}
             />
+            
+            {/* Apartment Label in Fullscreen */}
+            {selectedRoom.gallery[currentImageIndex].apt && (
+              <div className="absolute top-20 left-4 bg-black/70 text-white px-6 py-3 rounded-lg text-xl font-medium">
+                Apartment {selectedRoom.gallery[currentImageIndex].apt}
+              </div>
+            )}
           </div>
           
+          {/* Thumbnail Navigation */}
+          <div className="absolute bottom-0 left-0 right-0 p-4">
+            <div className="flex justify-center gap-2 overflow-x-auto py-2 max-w-4xl mx-auto">
+              {selectedRoom.gallery.map((image, index) => (
+                <button
+                  key={index}
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setCurrentImageIndex(index);
+                  }}
+                  className={`w-20 h-20 flex-shrink-0 rounded-lg overflow-hidden border-2 transition-all
+                    ${currentImageIndex === index ? 'border-white scale-110' : 'border-transparent opacity-70'}`}
+                >
+                  <img
+                    src={image.src.replace('/upload/', '/upload/c_scale,w_100,f_auto,q_auto/')}
+                    alt={`Thumbnail ${index + 1}`}
+                    className="w-full h-full object-cover"
+                    loading="lazy"
+                  />
+                </button>
+              ))}
+            </div>
+          </div>
+
           {/* Navigation Buttons */}
           <button
-            onClick={(e) => {
-              e.stopPropagation();
-              handlePrevImage(e);
-            }}
+            onClick={handlePrevImage}
             className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full
-              bg-black/50 text-white flex items-center justify-center
-              hover:bg-black/70 transition-colors duration-300"
+              bg-black/30 text-white flex items-center justify-center
+              hover:bg-black/50 transition-colors duration-300"
           >
             <FaChevronLeft />
           </button>
           <button
-            onClick={(e) => {
-              e.stopPropagation();
-              handleNextImage(e);
-            }}
+            onClick={handleNextImage}
             className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full
-              bg-black/50 text-white flex items-center justify-center
-              hover:bg-black/70 transition-colors duration-300"
+              bg-black/30 text-white flex items-center justify-center
+              hover:bg-black/50 transition-colors duration-300"
           >
             <FaChevronRight />
           </button>
 
-          {/* Close Button */}
-          <button
-            onClick={() => setIsFullScreen(false)}
-            className="absolute top-4 right-4 w-10 h-10 rounded-full bg-black/50 text-white
-              flex items-center justify-center hover:bg-black/70 transition-colors duration-300"
-          >
-            <FaTimes />
-          </button>
-
           {/* Image Counter */}
-          <div className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-black/50 text-white
+          <div className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-black/30 text-white
             px-4 py-2 rounded-full text-sm">
             {currentImageIndex + 1} / {selectedRoom.gallery.length}
           </div>
+
+          {/* Close Button */}
+          <button
+            onClick={() => setIsFullScreen(false)}
+            className="absolute top-4 right-4 w-10 h-10 rounded-full bg-black/30 text-white
+              flex items-center justify-center hover:bg-black/50 transition-colors duration-300"
+          >
+            <FaTimes />
+          </button>
         </div>
       )}
     </div>

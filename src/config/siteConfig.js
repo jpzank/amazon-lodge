@@ -129,27 +129,27 @@ export const siteConfig = {
         {
           quote: "Uma experiência maravilhosa que recomendo de coração! Tudo foi incrível: o local, os quartos, o atendimento – tudo impecável. A piscina de águas cristalinas e naturais foi inesquecível e me deixou uma eterna saudade.",
           author: "Aquila Neves - Tapurah, MT",
-          date: "February 2025"
+          date: "Fevereiro 2025"
         },
         {
-          quote: "The Perfect Combination: Northern Pantanal & Southern Amazon Forest! Who would have known that, in addition to traveling to the Pantanal from Cuiabá, just 300 km north of the capital of Mato Grosso, you can also reach the Amazon Forest? Well, it's true! I strongly recommend that anyone traveling to the Northern Pantanal consider combining their trip with a visit to the Gardens of the Amazon Lodge. This combination will be a once-in-a-lifetime experience!!!!",
-          author: "Z2652DKpaulob - Mato Grosso",
-          date: "February 2024"
+          quote: "Lugar tranquilo, de fácil acesso, longe do barulho, contato permanente com a natureza. Piscina natural de água cristalina, excelente recepção, feita pela família (Seo Almor é um Show de anfitrião). Pessoal nos atendeu maravilhosamente bem. Os bangalôs são nota 10, comida excelente.",
+          author: "Koczkoday - Mato Grosso",
+          date: "Novembro 2024"
         },
         {
           quote: "Absolutely lovely Amazon hotel. This hotel has so many garden features, bird feeders, and ponds. It is just fun to walk around. We went on hikes to look for birds and animals. The spring-fed pool was a very nice place to cool off after a walk. Our dietary needs were accommodated with pleasure.",
           author: "Julietravelsalot - Minnesota, USA",
-          date: "September 2023"
+          date: "Setembro 2023"
         },
         {
           quote: "Jardim da Amazônia – Uma incrível empresa familiar na linha de frente da conservação da Floresta Amazônica!",
           author: "M Carr - USA",
-          date: "April 2023"
+          date: "Abril 2023"
         },
         {
           quote: "Paradise for birdwatchers! The diversity of species and professional guidance made our stay unforgettable.",
           author: "John Miller - UK",
-          date: "May 2023"
+          date: "Maio 2023"
         }
       ]
     },

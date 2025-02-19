@@ -100,7 +100,7 @@ const Gastronomia = () => {
           <div className="flex flex-col lg:flex-row items-center gap-16 max-w-6xl mx-auto">
             <div className="lg:flex-shrink-0 w-full lg:w-[300px] h-[400px] rounded-2xl overflow-hidden shadow-xl">
               <img
-                src="https://res.cloudinary.com/dxlhv2mji/image/upload/v1739921997/Jardim_da_Amazônia-2305_vmwmgv.jpg"
+                src="https://res.cloudinary.com/dxlhv2mji/image/upload/v1739921997/Jardim_da_Amazônia-2322_ojurek.jpg"
                 alt="Nosso Chef"
                 className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
               />

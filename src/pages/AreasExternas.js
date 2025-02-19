@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import PhotoCredit from '../components/PhotoCredit';
 
 const AreasExternas = () => {
   const heroStyle = {
@@ -30,8 +29,7 @@ const AreasExternas = () => {
           text: 'Passarela pela floresta para acesso exclusivo'
         }
       ],
-      image: 'https://res.cloudinary.com/dxlhv2mji/image/upload/v1739841939/Jardim_da_Amazônia-3538_kppv8a.jpg',
-      photographer: 'Marlon Erthal'
+      image: 'https://res.cloudinary.com/dxlhv2mji/image/upload/v1739841939/Jardim_da_Amazônia-3434_jsn8sr.jpg'
     },
     {
       id: 'trilhas',
@@ -43,8 +41,7 @@ const AreasExternas = () => {
         'Pontos de observação',
         'Áreas de descanso'
       ],
-      image: 'https://res.cloudinary.com/dxlhv2mji/image/upload/v1739841326/Jardim_da_Amazônia-3216_yrohd0.jpg',
-      photographer: 'Marlon Erthal'
+      image: 'https://res.cloudinary.com/dxlhv2mji/image/upload/v1739841326/Jardim_da_Amazônia-3216_yrohd0.jpg'
     },
     {
       id: 'convivencia',
@@ -58,8 +55,7 @@ const AreasExternas = () => {
         'Casa de bonecas',
         'Mini-quadra de areia'
       ],
-      image: 'https://res.cloudinary.com/dxlhv2mji/image/upload/v1739842551/Jardim_da_Amazônia-3902_nimzuq.jpg',
-      photographer: 'Marlon Erthal'
+      image: 'https://res.cloudinary.com/dxlhv2mji/image/upload/v1739842551/Jardim_da_Amazônia-3902_nimzuq.jpg'
     }
   ];
 
@@ -78,7 +74,6 @@ const AreasExternas = () => {
             Espaços ao ar livre para sua conexão com a natureza
           </p>
         </div>
-        <PhotoCredit photographer="Marlon Erthal" />
       </div>
 
       {/* Intro Section */}
@@ -114,7 +109,6 @@ const AreasExternas = () => {
                       alt={area.title}
                       className="w-full h-full object-cover"
                     />
-                    <PhotoCredit photographer={area.photographer} />
                   </div>
                 </div>
                 <div className="lg:w-1/2 p-8 lg:p-12 flex flex-col justify-center">
