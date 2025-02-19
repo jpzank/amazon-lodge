@@ -1,11 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { getFolderImage } from '../config/cloudinaryConfig';
 import { motion } from 'framer-motion';
 
 const NossaHistoria = () => {
   const heroStyle = {
-    backgroundImage: `url(${getFolderImage('nossa-historia/hero')})`,
+    backgroundImage: `url('https://res.cloudinary.com/dxlhv2mji/image/upload/v1739834451/Jardim_da_Amazônia-4000_zyxwvu.jpg')`,
     backgroundSize: 'cover',
     backgroundPosition: 'center',
   };

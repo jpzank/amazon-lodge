@@ -1,7 +1,6 @@
 import React from 'react';
-import { getFolderImage } from '../config/cloudinaryConfig';
-import { Link } from 'react-router-dom';
 import { siteConfig } from '../config/siteConfig';
+import PhotoCredit from '../components/PhotoCredit';
 
 const NascenteNatural = () => {
   return (
@@ -10,7 +9,7 @@ const NascenteNatural = () => {
       <div 
         className="relative h-[70vh] flex items-center justify-center text-center text-white"
         style={{
-          backgroundImage: `url(${getFolderImage('area-externa', 'lagoa')})`,
+          backgroundImage: `linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://res.cloudinary.com/dxlhv2mji/image/upload/v1739842036/Jardim_da_Amazônia-3602_sisbpp.jpg')`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}
@@ -24,6 +23,7 @@ const NascenteNatural = () => {
             Coração de Nosso Santuário Ecológico
           </p>
         </div>
+        <PhotoCredit photographer="Marlon Erthal" />
       </div>
 
       {/* Introduction Section */}
@@ -64,10 +64,11 @@ const NascenteNatural = () => {
             </div>
             <div className="relative h-[280px] rounded-2xl overflow-hidden shadow-2xl lg:w-[90%] ml-auto">
               <img
-                src={getFolderImage('area-externa', 'piscina')}
+                src="https://res.cloudinary.com/dxlhv2mji/image/upload/v1739842011/Jardim_da_Amazônia-3588_surdeb.jpg"
                 alt="Piscina Natural"
                 className="w-full h-full object-cover"
               />
+              <PhotoCredit photographer="Marlon Erthal" />
             </div>
           </div>
         </div>

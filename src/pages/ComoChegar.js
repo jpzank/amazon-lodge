@@ -1,10 +1,10 @@
 import React from 'react';
 import { FaWhatsapp, FaEnvelope, FaMapMarkerAlt, FaCar } from 'react-icons/fa';
-import { getFolderImage } from '../config/cloudinaryConfig';
+import PhotoCredit from '../components/PhotoCredit';
 
 const ComoChegar = () => {
   const heroStyle = {
-    backgroundImage: `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(${getFolderImage('como-chegar/hero')})`,
+    backgroundImage: `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://res.cloudinary.com/dxlhv2mji/image/upload/v1739841321/Jardim_da_Amazônia-3166_npmlu7.jpg')`,
     backgroundSize: 'cover',
     backgroundPosition: 'center',
   };
@@ -24,6 +24,7 @@ const ComoChegar = () => {
             Sua jornada até o Jardim da Amazônia
           </p>
         </div>
+        <PhotoCredit photographer="Marlon Erthal" />
       </div>
 
       {/* Location Section */}

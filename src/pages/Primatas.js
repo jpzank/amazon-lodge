@@ -1,25 +1,18 @@
 import React from 'react';
-import { getFolderImage } from '../config/cloudinaryConfig';
+import { getFolderImage, getImagePhotographer } from '../config/cloudinaryConfig';
+import PhotoCredit from '../components/PhotoCredit';
 
 const Primatas = () => {
-  const heroStyle = {
-    backgroundImage: `url(${getFolderImage('primatas', 'hero')})`,
-    backgroundSize: 'cover',
-    backgroundPosition: 'center',
-  };
-
-  const zogueZogueStyle = {
-    backgroundImage: `url(${getFolderImage('primatas', 'zogue-zogue')})`,
-    backgroundSize: 'cover',
-    backgroundPosition: 'center',
-  };
-
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <div 
         className="relative h-[70vh] flex items-center justify-center text-center text-white mb-16"
-        style={{ backgroundImage: `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(${getFolderImage('primatas', 'hero')})` }}
+        style={{ 
+          backgroundImage: `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(${getFolderImage('primatas', 'primates-hero-lodpmk')})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center'
+        }}
       >
         <div className="relative z-20 px-4">
           <h1 className="text-5xl md:text-6xl font-bold mb-6 tracking-wide text-shadow">
@@ -29,6 +22,7 @@ const Primatas = () => {
             Conheça os primatas do Jardim da Amazônia
           </p>
         </div>
+        <PhotoCredit photographer={getImagePhotographer('primatas', 'primates-hero-lodpmk')} />
       </div>
 
       {/* Intro Section */}
@@ -55,8 +49,13 @@ const Primatas = () => {
           <h2 className="text-4xl font-semibold text-center mb-16">Espécies Emblemáticas</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-white rounded-xl shadow-lg overflow-hidden">
-              <div className="relative h-64" style={zogueZogueStyle}>
+              <div className="relative h-64" style={{ 
+                backgroundImage: `url(${getFolderImage('primatas', 'zogue-zogue-eqbdel')})`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'center'
+              }}>
                 <span className="absolute top-4 right-4 px-2 py-1 text-xs font-semibold text-white bg-red-500 rounded">CR</span>
+                <PhotoCredit photographer={getImagePhotographer('primatas', 'zogue-zogue-eqbdel')} />
               </div>
               <div className="p-6 space-y-4">
                 <h3 className="text-xl font-semibold">Zogue-zogue-do-mato-grosso</h3>
@@ -70,8 +69,13 @@ const Primatas = () => {
             </div>
 
             <div className="bg-white rounded-xl shadow-lg overflow-hidden">
-              <div className="relative h-64" style={{ backgroundImage: `url(${getFolderImage('primatas', 'parauacu')})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
+              <div className="relative h-64" style={{ 
+                backgroundImage: `url(${getFolderImage('primatas', 'parauacu-udmaqc')})`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'center'
+              }}>
                 <span className="absolute top-4 right-4 px-2 py-1 text-xs font-semibold text-white bg-yellow-500 rounded">VU</span>
+                <PhotoCredit photographer={getImagePhotographer('primatas', 'parauacu-udmaqc')} />
               </div>
               <div className="p-6 space-y-4">
                 <h3 className="text-xl font-semibold">Parauacu</h3>
@@ -85,8 +89,13 @@ const Primatas = () => {
             </div>
 
             <div className="bg-white rounded-xl shadow-lg overflow-hidden">
-              <div className="relative h-64" style={{ backgroundImage: `url(${getFolderImage('primatas', 'macaco-aranha')})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
+              <div className="relative h-64" style={{ 
+                backgroundImage: `url(${getFolderImage('primatas', 'macaco-aranha-b3z78a')})`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'center'
+              }}>
                 <span className="absolute top-4 right-4 px-2 py-1 text-xs font-semibold text-white bg-yellow-500 rounded">VU</span>
+                <PhotoCredit photographer={getImagePhotographer('primatas', 'macaco-aranha-b3z78a')} />
               </div>
               <div className="p-6 space-y-4">
                 <h3 className="text-xl font-semibold">Macaco-aranha-da-cara-preta</h3>

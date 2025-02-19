@@ -4,74 +4,74 @@ import { siteConfig } from '../config/siteConfig';
 import PhotoCredit from '../components/PhotoCredit';
 
 const Birdwatching = () => {
-  const heroImageUrl = getFolderImage('birdwatching', 'gallery');
+  const heroImageUrl = getFolderImage('birdwatching', 'hero');
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [isFullScreen, setIsFullScreen] = useState(false);
 
   const galleryImages = [
     {
-      url: getFolderImage('birdwatching', 'gallery-1'),
-      title: 'Beija-flor Tesoura Verde',
-      photographer: 'Jhonata Araújo'
+      url: "https://res.cloudinary.com/dxlhv2mji/image/upload/v1738450244/beija_flor_tesoura_verde_JHONATA_ARAUJO_2_xk7oou.jpg",
+      title: "Beija-flor Tesoura Verde",
+      photographer: "Jhonata Araujo"
     },
     {
-      url: getFolderImage('birdwatching', 'gallery-2'),
-      title: 'Pipira Vermelha',
-      photographer: 'Haroldo Palo Jr'
+      url: "https://res.cloudinary.com/dxlhv2mji/image/upload/v1738450245/bico_de_prata_-_pipira_vermelha_HAROLDO_PALO_JR_2_aeio1z.jpg",
+      title: "Pipira Vermelha",
+      photographer: "Haroldo Palo Jr."
     },
     {
-      url: getFolderImage('birdwatching', 'gallery-3'),
-      title: 'Choca d\'Água',
-      photographer: 'Jhonata Araújo'
+      url: "https://res.cloudinary.com/dxlhv2mji/image/upload/v1738450280/choca_dagua_-_JHONATA_ARAUJO_7_q86nhg.jpg",
+      title: "Choca d'Água",
+      photographer: "Jhonata Araujo"
     },
     {
-      url: getFolderImage('birdwatching', 'gallery-4'),
-      title: 'Pica-pau Anão Dourado',
-      photographer: 'Jhonata Araújo'
+      url: "https://res.cloudinary.com/dxlhv2mji/image/upload/v1738450249/JHONATA_ARAUJO_-_PICA-PAU_ANAO_DOURADO_3_ecrgqf.jpg",
+      title: "Pica-pau Anão Dourado",
+      photographer: "Jhonata Araujo"
     },
     {
-      url: getFolderImage('birdwatching', 'gallery-5'),
-      title: 'Udu de Coroa Azul',
-      photographer: 'Jhonata Araújo'
+      url: "https://res.cloudinary.com/dxlhv2mji/image/upload/v1738450252/JHONATA_ARAUJO_-_UDU_DE_COROA_AZUL_4_smatkv.jpg",
+      title: "Udu de Coroa Azul",
+      photographer: "Jhonata Araujo"
     },
     {
-      url: getFolderImage('birdwatching', 'gallery-6'),
-      title: 'Aves da Amazônia',
-      photographer: 'Manoel Ruedi'
+      url: "https://res.cloudinary.com/dxlhv2mji/image/upload/v1738450671/MANOEL_RUEDI_82_xor41e.jpg",
+      title: "Aves da Amazônia",
+      photographer: "Manoel Ruedi"
     },
     {
-      url: getFolderImage('birdwatching', 'gallery-7'),
-      title: 'Saí Andorinha',
-      photographer: 'Vincent Kurt'
+      url: "https://res.cloudinary.com/dxlhv2mji/image/upload/v1738450237/Sai_andorinha_VINCENT_KURT_5_nz36qm.jpg",
+      title: "Saí Andorinha",
+      photographer: "Vincent Kurt Lo"
     },
     {
-      url: getFolderImage('birdwatching', 'gallery-8'),
-      title: 'Saíra de Cabeça Azul',
-      photographer: 'Vincent Kurt'
+      url: "https://res.cloudinary.com/dxlhv2mji/image/upload/v1738450239/saira_de_cabeça_azul_-Vincent_Kurt_lo_1_z5hik4.jpg",
+      title: "Saíra de Cabeça Azul",
+      photographer: "Vincent Kurt Lo"
     },
     {
-      url: getFolderImage('birdwatching', 'gallery-9'),
-      title: 'Maracanã do Buriti',
-      photographer: 'Jhonata Araújo'
+      url: "https://res.cloudinary.com/dxlhv2mji/image/upload/v1738450277/MARACANA_DO_BURITI-_JHONATA_ARAUJO_10_ur2fgl.jpg",
+      title: "Maracanã do Buriti",
+      photographer: "Jhonata Araujo"
     },
     {
-      url: getFolderImage('birdwatching', 'gallery-10'),
-      title: 'Martim Pescador Miúdo',
-      photographer: 'Jhonata Araújo'
+      url: "https://res.cloudinary.com/dxlhv2mji/image/upload/v1738450236/martin_pescador_miudo_-_JHONATA_ARAUJO_-_6_gwslgv.jpg",
+      title: "Martim Pescador Miúdo",
+      photographer: "Jhonata Araujo"
     }
   ];
 
   useEffect(() => {
-    const timer = setInterval(() => {
-      if (!isFullScreen) {
+    if (!isFullScreen) {
+      const timer = setInterval(() => {
         setCurrentImageIndex((prevIndex) => 
           prevIndex === galleryImages.length - 1 ? 0 : prevIndex + 1
         );
-      }
-    }, 5000);
+      }, 5000);
 
-    return () => clearInterval(timer);
-  }, [isFullScreen]);
+      return () => clearInterval(timer);
+    }
+  }, [isFullScreen, galleryImages.length]);
 
   const nextImage = () => {
     setCurrentImageIndex((prevIndex) => 
@@ -87,18 +87,16 @@ const Birdwatching = () => {
 
   console.log('Hero image URL:', heroImageUrl); // For debugging
 
-  const heroStyle = {
-    backgroundImage: heroImageUrl ? `linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(${heroImageUrl})` : 'none',
-    backgroundSize: 'cover',
-    backgroundPosition: 'center'
-  };
-
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <div 
         className="relative h-[70vh] flex items-center justify-center text-center text-white mb-16"
-        style={heroStyle}
+        style={{
+          backgroundImage: `linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://res.cloudinary.com/dxlhv2mji/image/upload/v1736085772/birds_wtstwh.jpg')`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center'
+        }}
       >
         <div className="relative z-20 px-4">
           <h1 className="text-5xl md:text-6xl font-bold mb-6 tracking-wide text-shadow">
@@ -158,7 +156,7 @@ const Birdwatching = () => {
               <div className="flex flex-col md:flex-row h-48">
                 <div className="md:w-1/3 relative h-full">
                   <img 
-                    src={getFolderImage('birdwatching', 'tie-bicudo')}
+                    src="https://res.cloudinary.com/dxlhv2mji/image/upload/v1738450243/tie_bicudo_jh_hfnk4c.jpg"
                     alt="Tiê-bicudo"
                     className="w-full h-full object-cover"
                   />
@@ -183,7 +181,7 @@ const Birdwatching = () => {
               <div className="flex flex-col md:flex-row h-48">
                 <div className="md:w-1/3 relative h-full">
                   <img 
-                    src={getFolderImage('birdwatching', 'curica')}
+                    src="https://res.cloudinary.com/dxlhv2mji/image/upload/v1736085702/curica_enlrcd.jpg"
                     alt="Curica-de-bochecha-laranja"
                     className="w-full h-full object-cover"
                   />
@@ -208,7 +206,7 @@ const Birdwatching = () => {
               <div className="flex flex-col md:flex-row h-48">
                 <div className="md:w-1/3 relative h-full">
                   <img 
-                    src={getFolderImage('birdwatching', 'mutum')}
+                    src="https://res.cloudinary.com/dxlhv2mji/image/upload/v1738447044/mutum_iwmptx.png"
                     alt="Mutum-cavalo"
                     className="w-full h-full object-cover"
                   />
@@ -232,7 +230,7 @@ const Birdwatching = () => {
               <div className="flex flex-col md:flex-row h-48">
                 <div className="md:w-1/3 relative h-full">
                   <img 
-                    src={getFolderImage('birdwatching', 'umbrella')}
+                    src="https://res.cloudinary.com/dxlhv2mji/image/upload/v1738446086/umbrella_bird_goycom.jpg"
                     alt="Pássaro-guarda-chuva"
                     className="w-full h-full object-cover"
                   />

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { getFolderImage } from '../config/cloudinaryConfig';
+// eslint-disable-next-line no-unused-vars
+import PhotoCredit from '../components/PhotoCredit';
 import { siteConfig } from '../config/siteConfig';
 import { 
   FaWifi, 
@@ -91,14 +92,14 @@ function Acomodacoes() {
         { icon: <MdNaturePeople />, name: 'Vista para o Rio Claro' },
         { icon: <FaHeart />, name: 'Ideal para Famílias' }
       ],
-      image: getFolderImage('acomodacoes', 'bangalo-familia'),
+      image: 'https://res.cloudinary.com/dxlhv2mji/image/upload/v1739834451/Jardim_da_Amazônia-1085_rba1ha.jpg',
       gallery: [
-        getFolderImage('acomodacoes', 'bangalo-familia-1'),
-        getFolderImage('acomodacoes', 'bangalo-familia-2'),
-        getFolderImage('acomodacoes', 'bangalo-familia-3'),
-        getFolderImage('acomodacoes', 'bangalo-familia-4'),
-        getFolderImage('acomodacoes', 'bangalo-familia-5'),
-        getFolderImage('acomodacoes', 'bangalo-familia-6')
+        'https://res.cloudinary.com/dxlhv2mji/image/upload/v1739921284/Jardim_da_Amazônia-675_ppk2tk.jpg',
+        'https://res.cloudinary.com/dxlhv2mji/image/upload/v1739921270/Jardim_da_Amazônia-665_xecad1.jpg',
+        'https://res.cloudinary.com/dxlhv2mji/image/upload/v1739921362/Jardim_da_Amazônia-756_qpla99.jpg',
+        'https://res.cloudinary.com/dxlhv2mji/image/upload/v1739921340/Jardim_da_Amazônia-751_svnptn.jpg',
+        'https://res.cloudinary.com/dxlhv2mji/image/upload/v1739921311/Jardim_da_Amazônia-726_frmxvo.jpg',
+        'https://res.cloudinary.com/dxlhv2mji/image/upload/v1739834451/Jardim_da_Amazônia-1144_oqujz8.jpg'
       ]
     },
     {
@@ -112,14 +113,14 @@ function Acomodacoes() {
         { icon: <MdNaturePeople />, name: 'Vista para o Jardim' },
         { icon: <FaHeart />, name: 'Ideal para Casais' }
       ],
-      image: getFolderImage('acomodacoes', 'bangalo-jardim'),
+      image: 'https://res.cloudinary.com/dxlhv2mji/image/upload/v1739833672/Jardim_da_Amazônia-131_trfay9.jpg',
       gallery: [
-        getFolderImage('acomodacoes', 'bangalo-jardim-1'),
-        getFolderImage('acomodacoes', 'bangalo-jardim-2'),
-        getFolderImage('acomodacoes', 'bangalo-jardim-3'),
-        getFolderImage('acomodacoes', 'bangalo-jardim-4'),
-        getFolderImage('acomodacoes', 'bangalo-jardim-5'),
-        getFolderImage('acomodacoes', 'bangalo-jardim-6')
+        'https://res.cloudinary.com/dxlhv2mji/image/upload/v1739919654/Jardim_da_Amazônia-16_soj6ut.jpg',
+        'https://res.cloudinary.com/dxlhv2mji/image/upload/v1739919696/Jardim_da_Amazônia-88_jmrava.jpg',
+        'https://res.cloudinary.com/dxlhv2mji/image/upload/v1739919787/Jardim_da_Amazônia-465_wwnsh7.jpg',
+        'https://res.cloudinary.com/dxlhv2mji/image/upload/v1739833651/Jardim_da_Amazônia-70_catuwk.jpg',
+        'https://res.cloudinary.com/dxlhv2mji/image/upload/v1739833734/Jardim_da_Amazônia-323_vs32ru.jpg',
+        'https://res.cloudinary.com/dxlhv2mji/image/upload/v1736119362/jardim-2_ukfgpv.jpg'
       ]
     },
     {
@@ -133,12 +134,14 @@ function Acomodacoes() {
         { icon: <MdNaturePeople />, name: 'Vista Panorâmica' },
         { icon: <FaHeart />, name: 'Experiência Histórica' }
       ],
-      image: getFolderImage('acomodacoes', 'casa-fazenda'),
+      image: 'https://res.cloudinary.com/dxlhv2mji/image/upload/v1739834451/Jardim_da_Amazônia-1707_o4s4u5.jpg',
       gallery: [
-        getFolderImage('acomodacoes', 'casa-fazenda-1'),
-        getFolderImage('acomodacoes', 'casa-fazenda-2'),
-        getFolderImage('acomodacoes', 'casa-fazenda-3'),
-        getFolderImage('acomodacoes', 'casa-fazenda-4')
+        'https://res.cloudinary.com/dxlhv2mji/image/upload/v1739834451/Jardim_da_Amazônia-1754_njecru.jpg',
+        'https://res.cloudinary.com/dxlhv2mji/image/upload/v1739834451/Jardim_da_Amazônia-1748_gzhe8v.jpg',
+        'https://res.cloudinary.com/dxlhv2mji/image/upload/v1739834451/Jardim_da_Amazônia-1720_b3lxe8.jpg',
+        'https://res.cloudinary.com/dxlhv2mji/image/upload/v1739834451/Jardim_da_Amazônia-1830_nkccqw.jpg',
+        'https://res.cloudinary.com/dxlhv2mji/image/upload/v1739834451/Jardim_da_Amazônia-1723_q4wteu.jpg',
+        'https://res.cloudinary.com/dxlhv2mji/image/upload/v1739834451/Jardim_da_Amazônia-1674_djpiua.jpg'
       ],
       subitems: [
         {
@@ -151,11 +154,10 @@ function Acomodacoes() {
             { icon: <MdNaturePeople />, name: 'Vista Panorâmica' }
           ],
           gallery: [
-            getFolderImage('acomodacoes', 'apto-5-1'),
-            getFolderImage('acomodacoes', 'apto-5-2'),
-            getFolderImage('acomodacoes', 'apto-5-3'),
-            getFolderImage('acomodacoes', 'apto-5-4'),
-            getFolderImage('acomodacoes', 'apto-5-5')
+            'https://res.cloudinary.com/dxlhv2mji/image/upload/v1739858240/casa_fazenda_s1n8vm.jpg',
+            'https://res.cloudinary.com/dxlhv2mji/image/upload/v1739858240/casa_fazenda_s1n8vm.jpg',
+            'https://res.cloudinary.com/dxlhv2mji/image/upload/v1739858240/casa_fazenda_s1n8vm.jpg',
+            'https://res.cloudinary.com/dxlhv2mji/image/upload/v1739858240/casa_fazenda_s1n8vm.jpg'
           ]
         },
         {
@@ -168,10 +170,10 @@ function Acomodacoes() {
             { icon: <MdFamilyRestroom />, name: 'Ideal para Famílias' }
           ],
           gallery: [
-            getFolderImage('acomodacoes', 'apto-6-1'),
-            getFolderImage('acomodacoes', 'apto-6-3'),
-            getFolderImage('acomodacoes', 'apto-6-4'),
-            getFolderImage('acomodacoes', 'apto-6-5')
+            'https://res.cloudinary.com/dxlhv2mji/image/upload/v1739858240/casa_fazenda_s1n8vm.jpg',
+            'https://res.cloudinary.com/dxlhv2mji/image/upload/v1739858240/casa_fazenda_s1n8vm.jpg',
+            'https://res.cloudinary.com/dxlhv2mji/image/upload/v1739858240/casa_fazenda_s1n8vm.jpg',
+            'https://res.cloudinary.com/dxlhv2mji/image/upload/v1739858240/casa_fazenda_s1n8vm.jpg'
           ]
         },
         {
@@ -184,10 +186,10 @@ function Acomodacoes() {
             { icon: <FaHeart />, name: 'Ideal para Casais' }
           ],
           gallery: [
-            getFolderImage('acomodacoes', 'casa-fazenda-1'),
-            getFolderImage('acomodacoes', 'casa-fazenda-2'),
-            getFolderImage('acomodacoes', 'casa-fazenda-3'),
-            getFolderImage('acomodacoes', 'casa-fazenda-4')
+            'https://res.cloudinary.com/dxlhv2mji/image/upload/v1739858240/casa_fazenda_s1n8vm.jpg',
+            'https://res.cloudinary.com/dxlhv2mji/image/upload/v1739858240/casa_fazenda_s1n8vm.jpg',
+            'https://res.cloudinary.com/dxlhv2mji/image/upload/v1739858240/casa_fazenda_s1n8vm.jpg',
+            'https://res.cloudinary.com/dxlhv2mji/image/upload/v1739858240/casa_fazenda_s1n8vm.jpg'
           ]
         }
       ]
@@ -203,14 +205,14 @@ function Acomodacoes() {
         { icon: <MdNaturePeople />, name: 'Vista para a Mata' },
         { icon: <FaMountain />, name: 'Experiência Imersiva' }
       ],
-      image: getFolderImage('acomodacoes', 'bangalo-mata'),
+      image: 'https://res.cloudinary.com/dxlhv2mji/image/upload/v1739834451/Jardim_da_Amazônia-3676_hn0sbn.jpg',
       gallery: [
-        getFolderImage('acomodacoes', 'bangalo-mata-1'),
-        getFolderImage('acomodacoes', 'bangalo-mata-2'),
-        getFolderImage('acomodacoes', 'bangalo-mata-3'),
-        getFolderImage('acomodacoes', 'bangalo-mata-4'),
-        getFolderImage('acomodacoes', 'bangalo-mata-5'),
-        getFolderImage('acomodacoes', 'bangalo-mata-6')
+        'https://res.cloudinary.com/dxlhv2mji/image/upload/v1739834451/Jardim_da_Amazônia-3635_pxeunv.jpg',
+        'https://res.cloudinary.com/dxlhv2mji/image/upload/v1739834451/Jardim_da_Amazônia-3626_lfykt4.jpg',
+        'https://res.cloudinary.com/dxlhv2mji/image/upload/v1739834451/Jardim_da_Amazônia-3652_dfxemv.jpg',
+        'https://res.cloudinary.com/dxlhv2mji/image/upload/v1739834451/Jardim_da_Amazônia-3690_ejddqg.jpg',
+        'https://res.cloudinary.com/dxlhv2mji/image/upload/v1739834451/Jardim_da_Amazônia-3731_qtmjco.jpg',
+        'https://res.cloudinary.com/dxlhv2mji/image/upload/v1739834451/Jardim_da_Amazônia-3751_wmnb8x.jpg'
       ]
     }
   ];
@@ -240,7 +242,7 @@ function Acomodacoes() {
   };
 
   const heroStyle = {
-    backgroundImage: `url(${getFolderImage('acomodacoes', 'hero')})`,
+    backgroundImage: `url('https://res.cloudinary.com/dxlhv2mji/image/upload/v1739921327/Jardim_da_Amazônia-744_solrly.jpg')`,
     backgroundSize: 'cover',
     backgroundPosition: 'center',
   };
@@ -420,11 +422,11 @@ function Acomodacoes() {
             onClick={e => e.stopPropagation()}
           >
             {/* Gallery */}
-            <div className="relative h-[50vh]">
+            <div className="relative h-[50vh] overflow-hidden">
               <img
                 src={selectedRoom.gallery[currentImageIndex]}
                 alt={selectedRoom.name}
-                className="w-full h-full object-cover cursor-pointer"
+                className="w-full h-full object-cover cursor-pointer transition-opacity duration-500 ease-in-out"
                 onClick={(e) => {
                   e.stopPropagation();
                   setIsFullScreen(true);
@@ -516,7 +518,7 @@ function Acomodacoes() {
               key={currentImageIndex}
               src={selectedRoom.gallery[currentImageIndex]}
               alt={selectedRoom.name}
-              className="max-h-screen max-w-full object-contain animate-fadeIn"
+              className="max-h-screen max-w-full object-contain transition-opacity duration-500 ease-in-out"
             />
           </div>
           

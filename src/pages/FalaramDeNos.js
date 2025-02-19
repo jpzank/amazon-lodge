@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { getFolderImage } from '../config/cloudinaryConfig';
+// eslint-disable-next-line no-unused-vars
+import PhotoCredit from '../components/PhotoCredit';
 
 const FalaramDeNos = () => {
   const [expandedId, setExpandedId] = useState(null);
@@ -16,11 +17,11 @@ const FalaramDeNos = () => {
       data: "2024",
       link: "https://www.revistacamalote.com.br/",
       descricao: "O lodge é reconhecido como um dos principais pontos da Rota dos Primatas do Mato Grosso, destacando-se na conservação e pesquisa científica.",
-      imagem: getFolderImage('falaram-de-nos', 'camalote-capa'),
+      imagem: 'https://res.cloudinary.com/dxlhv2mji/image/upload/v1736085712/camalote-capa_xaeyct.jpg',
       imagens: [
-        getFolderImage('falaram-de-nos', 'camalote-pagina1'),
-        getFolderImage('falaram-de-nos', 'camalote-pagina2'),
-        getFolderImage('falaram-de-nos', 'camalote-pagina3')
+        'https://res.cloudinary.com/dxlhv2mji/image/upload/v1736085720/camalote-pagina1_dz0ek4.jpg',
+        'https://res.cloudinary.com/dxlhv2mji/image/upload/v1736085725/camalote-pagina2_ep900h.jpg',
+        'https://res.cloudinary.com/dxlhv2mji/image/upload/v1736085740/camalote-pagina3_af3v7z.jpg'
       ],
       conteudoCompleto: `O Jardim da Amazônia foi destaque novamente em publicações recentes, reforçando seu papel como um dos destinos mais fascinantes do Mato Grosso para o turismo científico e ecológico.
 
@@ -39,10 +40,10 @@ Esses reconhecimentos reforçam o compromisso do Jardim da Amazônia com a suste
       data: "2024",
       link: "https://glamurama.uol.com.br/modo-de-vida/amazonia-o-novo-refugio-para-amantes-da-natureza-e-da-biodiversidade-rara/",
       descricao: "Reconhecido internacionalmente como um dos três melhores destinos para observação de aves e espécies raras, o lodge oferece uma experiência única para os amantes da biodiversidade.",
-      imagem: getFolderImage('falaram-de-nos', 'glamurama'),
+      imagem: 'https://res.cloudinary.com/dxlhv2mji/image/upload/v1736085727/wonderlust_alvd9p.jpg',
       imagens: [
-        getFolderImage('falaram-de-nos', 'glamurama-1'),
-        getFolderImage('falaram-de-nos', 'glamurama-2')
+        'https://res.cloudinary.com/dxlhv2mji/image/upload/v1736085722/wonderlust-1_cnm4vl.jpg',
+        'https://res.cloudinary.com/dxlhv2mji/image/upload/v1736085728/wonderlust-2_wn6zao.jpg'
       ],
       conteudoCompleto: `Nos últimos anos, o turismo ecológico tem ganhado força no Brasil, com a Amazônia se destacando como um dos destinos mais procurados por viajantes em busca de conexão com a natureza. O Jardim da Amazônia Lodge, localizado no coração da floresta tropical, é reconhecido internacionalmente como um dos três melhores destinos para observação de aves e espécies raras. Com uma estrutura sustentável e práticas voltadas à preservação ambiental, o lodge oferece uma experiência única, permitindo que os visitantes conheçam de perto espécies ameaçadas de extinção, como a arara-azul-grande, o mutum-de-penacho e o gavião-real.  
 
@@ -55,10 +56,10 @@ Para Raquel Zanchet, diretora do Jardim da Amazônia Lodge, o turismo ecológico
       data: "2024",
       link: "https://www.wanderlustmagazine.com/",
       descricao: "Na edição de dezembro/janeiro, o Jardim da Amazônia é destacado como uma experiência imperdível no coração do Brasil, onde o Pantanal encontra a Amazônia.",
-      imagem: getFolderImage('falaram-de-nos', 'wonderlust'),
+      imagem: 'https://res.cloudinary.com/dxlhv2mji/image/upload/v1736085720/camalote-pagina1_dz0ek4.jpg',
       imagens: [
-        getFolderImage('falaram-de-nos', 'wonderlust-1'),
-        getFolderImage('falaram-de-nos', 'wonderlust-2')
+        'https://res.cloudinary.com/dxlhv2mji/image/upload/v1736085722/wonderlust-1_cnm4vl.jpg',
+        'https://res.cloudinary.com/dxlhv2mji/image/upload/v1736085728/wonderlust-2_wn6zao.jpg'
       ],
       conteudoCompleto: `Na edição de dezembro/janeiro da revista Wanderlust, o Jardim da Amazônia foi destacado como uma experiência imperdível no coração do Brasil. Descrito como um lugar onde "o Pantanal encontra a Amazônia", o artigo ressaltou a singularidade da nossa localização e a abundância de vida selvagem ao redor. Eles recomendaram o Jardim da Amazônia como uma base ideal para explorar a rica biodiversidade e paisagens deslumbrantes da região, especialmente durante a temporada seca, quando os animais são mais facilmente avistados.
 
@@ -110,7 +111,7 @@ Durante o programa, foram apresentadas as diferentes espécies que podem ser enc
       {/* Hero Section */}
       <div 
         className="relative h-[70vh] flex items-center justify-center text-center text-white mb-16"
-        style={{ backgroundImage: `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(${getFolderImage('falaram-de-nos', 'hero')})` }}
+        style={{ backgroundImage: `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://res.cloudinary.com/dxlhv2mji/image/upload/v1736085720/camalote-pagina1_dz0ek4.jpg')` }}
       >
         <div className="relative z-20 px-4">
           <h1 className="text-5xl md:text-6xl font-bold mb-6 tracking-wide text-shadow">

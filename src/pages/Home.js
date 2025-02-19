@@ -1,8 +1,9 @@
 import React, { useEffect, useState, useCallback, useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import { Image } from 'cloudinary-react';
-import { getFolderImage, folderImageMapping } from '../config/cloudinaryConfig';
+import { getFolderImage, folderImageMapping, getImagePhotographer } from '../config/cloudinaryConfig';
 import { siteConfig, featureFlags } from '../config';
+import PhotoCredit from '../components/PhotoCredit';
 
 const Home = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -12,15 +13,18 @@ const Home = () => {
   // Move all hooks to the top level
   const testimonials = useMemo(() => siteConfig?.home?.testimonials?.items || [], []);
   
-  const experienceStyles = useMemo(() => ({
+  const experienceImages = useMemo(() => ({
     birdwatching: {
-      backgroundImage: `url(${getFolderImage('birdwatching', 'hero')})`
+      image: getFolderImage('birdwatching', 'manoel-ruedi-122-liksbm'),
+      photographer: getImagePhotographer('birdwatching', 'manoel-ruedi-122-liksbm')
     },
     primates: {
-      backgroundImage: `url(${getFolderImage('primatas', 'hero')})`
+      image: getFolderImage('primatas', 'primates-hero-lodpmk'),
+      photographer: getImagePhotographer('primatas', 'primates-hero-lodpmk')
     },
     safari: {
-      backgroundImage: `url(${getFolderImage('safari-boat', 'hero')})`
+      image: getFolderImage('safari-boat', 'safari-boat-rvnwku'),
+      photographer: getImagePhotographer('safari-boat', 'safari-boat-rvnwku')
     }
   }), []);
 
@@ -28,10 +32,15 @@ const Home = () => {
     cloudName: "dxlhv2mji",
     width: "auto",
     crop: "scale",
-    loading: "lazy",
     quality: "auto:best",
     fetchFormat: "auto"
   }), []);
+
+  const criticalImageProps = useMemo(() => ({
+    ...cloudinaryCommonProps,
+    loading: "eager",
+    fetchPriority: "high"
+  }), [cloudinaryCommonProps]);
 
   const handleScroll = useCallback(() => {
     const scrollPosition = window.scrollY;
@@ -101,18 +110,19 @@ const Home = () => {
             allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
             className="w-full h-full object-cover"
             title={siteConfig?.site?.name}
-            loading="lazy"
+            loading="eager"
+            fetchpriority="high"
           ></iframe>
         </div>
         {/* Logo Overlay */}
         <div className="absolute inset-x-0 top-16 flex items-start justify-center">
-          <div className="bg-white/20 rounded-full p-6">
-            <img
-              src="/Logo_Jardim_Amazonia_COLORIDO.png"
-              alt="Jardim Amazônia Logo"
-              className="w-40 md:w-48 lg:w-56 drop-shadow-lg"
-            />
-          </div>
+          <img
+            src="/Logo_Jardim_Amazonia_COLORIDO.png"
+            alt="Jardim Amazônia Logo"
+            className="w-48 md:w-64 lg:w-72 drop-shadow-lg"
+            loading="eager"
+            fetchpriority="high"
+          />
         </div>
       </section>
 
@@ -163,13 +173,14 @@ const Home = () => {
                 </Link>
               </div>
             </div>
-            <div className="relative rounded-2xl overflow-hidden shadow-2xl h-[480px]">
+            <div className="relative rounded-2xl overflow-hidden shadow-2xl h-[480px] after:absolute after:inset-0 after:bg-gradient-to-b after:from-white/20 after:via-transparent after:to-white/20 after:pointer-events-none">
               <Image 
-                {...cloudinaryCommonProps}
-                publicId={folderImageMapping.home['about-image']}
+                {...criticalImageProps}
+                publicId={folderImageMapping['trilhas']['jardim-da-amazônia-3234-h1mjwq'].id}
                 alt="Vista do Jardim da Amazônia"
                 className="w-full h-full object-cover object-center transition-transform duration-500 hover:scale-105"
               />
+              <PhotoCredit photographer={folderImageMapping['trilhas']['jardim-da-amazônia-3234-h1mjwq'].photographer} />
             </div>
           </div>
         </div>
@@ -231,23 +242,107 @@ const Home = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {siteConfig?.home?.experiences?.items?.map((exp, index) => (
               <div key={index} className="group relative h-[400px] rounded-xl overflow-hidden shadow-lg">
-                <div 
-                  className="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110" 
-                  style={experienceStyles[exp.id]}
-                ></div>
-                <div className="absolute inset-0 bg-gradient-to-t from-black/90 to-black/20"></div>
-                <div className="absolute inset-0 p-8 flex flex-col justify-end text-white">
-                  <h3 className="text-2xl font-semibold mb-3">{exp.title}</h3>
-                  <p className="text-white/90 mb-6">{exp.desc}</p>
+                <div className="absolute inset-0">
+                  <Image 
+                    {...criticalImageProps}
+                    publicId={experienceImages[exp.id].image}
+                    alt={exp.title}
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  />
+                  <PhotoCredit photographer={experienceImages[exp.id].photographer} />
+                </div>
+                {/* Initial overlay with just title */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent transition-opacity duration-500 group-hover:opacity-0"></div>
+                <div className="absolute inset-x-0 bottom-0 p-8 transition-transform duration-500 translate-y-0 group-hover:translate-y-full">
+                  <h3 className="text-3xl font-semibold text-white text-shadow">{exp.title}</h3>
+                </div>
+                {/* Hover overlay with full content */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 to-black/20 opacity-0 transition-opacity duration-500 group-hover:opacity-100"></div>
+                <div className="absolute inset-0 p-8 flex flex-col justify-end translate-y-full transition-transform duration-500 group-hover:translate-y-0">
+                  <h3 className="text-2xl font-semibold mb-3 text-white text-shadow">{exp.title}</h3>
+                  <p className="text-white/90 mb-6 text-shadow">{exp.desc}</p>
                   <Link 
                     to={exp.link} 
-                    className="btn-dark"
+                    className="btn-dark w-fit"
                   >
                     Explorar
                   </Link>
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Where to Find Us Section */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+              <div className="space-y-6">
+                <h2 className="text-4xl font-bold text-gray-900">Onde Estamos</h2>
+                <p className="text-lg text-gray-700 leading-relaxed">
+                  O Jardim da Amazônia está localizado no município de São José do Rio Claro, Mato Grosso, em uma área de transição ecológica entre a Floresta Amazônica e o Cerrado brasileiro.
+                </p>
+                <div className="space-y-6 mt-8">
+                  <div className="flex items-start gap-3">
+                    <span className="text-primary">
+                      <svg className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zM7 9c0-2.76 2.24-5 5-5s5 2.24 5 5c0 2.88-2.88 7.19-5 9.88C9.92 16.21 7 11.85 7 9z"/>
+                        <circle cx="12" cy="9" r="2.5"/>
+                      </svg>
+                    </span>
+                    <div>
+                      <h3 className="font-medium text-gray-900 mb-1">Endereço</h3>
+                      <p className="text-gray-600">São José do Rio Claro - MT</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <span className="text-primary">
+                      <svg className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.85 7h10.29l1.08 3.11H5.77L6.85 7zM19 17H5v-5h14v5z"/>
+                        <circle cx="7.5" cy="14.5" r="1.5"/>
+                        <circle cx="16.5" cy="14.5" r="1.5"/>
+                      </svg>
+                    </span>
+                    <div>
+                      <h3 className="font-medium text-gray-900 mb-1">Distâncias</h3>
+                      <p className="text-gray-600">330 km de Cuiabá</p>
+                      <p className="text-gray-600">180 km de Sinop</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <span className="text-primary">
+                      <svg className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/>
+                      </svg>
+                    </span>
+                    <div>
+                      <h3 className="font-medium text-gray-900 mb-1">Aeroportos Próximos</h3>
+                      <p className="text-gray-600">Aeroporto de Cuiabá (CGB)</p>
+                      <p className="text-gray-600">Aeroporto de Sinop (OPS)</p>
+                    </div>
+                  </div>
+                </div>
+                <Link 
+                  to="/como-chegar" 
+                  className="inline-flex items-center text-primary hover:text-primary-dark transition-colors duration-300 mt-8 group"
+                >
+                  <span className="font-medium">Como Chegar</span>
+                  <svg className="w-5 h-5 ml-2 transform transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                  </svg>
+                </Link>
+              </div>
+              <div className="relative h-[480px] lg:h-[580px] lg:ml-auto">
+                <Image 
+                  {...criticalImageProps}
+                  publicId="Jd_Amazonia_map_d1k1zb"
+                  alt="Mapa de Localização do Jardim da Amazônia"
+                  className="w-full h-full object-contain"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </section>

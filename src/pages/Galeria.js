@@ -1,73 +1,229 @@
-import React, { useState } from 'react';
-import { folderImageMapping, getFolderImage } from '../config/cloudinaryConfig';
-import { IoClose } from 'react-icons/io5';
+import React, { useState, useEffect, useMemo, useCallback } from 'react';
 import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io';
+import PhotoCredit from '../components/PhotoCredit';
 
 const Galeria = () => {
-  const [selectedImage, setSelectedImage] = useState(null);
-  const [selectedCategory, setSelectedCategory] = useState(null);
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const sections = useMemo(() => ({
+    acomodacoes: {
+      title: "Acomodações",
+      images: [
+        {
+          url: "https://res.cloudinary.com/dxlhv2mji/image/upload/v1736121165/mata-6_jeycpm.jpg",
+          title: "Casa da Mata - Exterior",
+          photographer: "Marlon Erthal"
+        },
+        {
+          url: "https://res.cloudinary.com/dxlhv2mji/image/upload/v1739842228/Jardim_da_Amazônia-3751_wmnb8x.jpg",
+          title: "Casa da Mata - Interior",
+          photographer: "Marlon Erthal"
+        },
+        {
+          url: "https://res.cloudinary.com/dxlhv2mji/image/upload/v1739842195/Jardim_da_Amazônia-3740_alyqg2.jpg",
+          title: "Casa da Mata - Detalhes",
+          photographer: "Marlon Erthal"
+        },
+        {
+          url: "https://res.cloudinary.com/dxlhv2mji/image/upload/v1739842147/Jardim_da_Amazônia-3731_qtmjco.jpg",
+          title: "Casa da Mata - Vista",
+          photographer: "Marlon Erthal"
+        },
+        {
+          url: "https://res.cloudinary.com/dxlhv2mji/image/upload/v1739922195/Jardim_da_Amazônia-3707_rt8aww.jpg",
+          title: "Casa da Mata - Ambiente",
+          photographer: "Marlon Erthal"
+        },
+        {
+          url: "https://res.cloudinary.com/dxlhv2mji/image/upload/v1736119365/jardim-hero_wi8rlu.jpg",
+          title: "Bangalô Jardim - Vista Principal",
+          photographer: "Marlon Erthal"
+        },
+        {
+          url: "https://res.cloudinary.com/dxlhv2mji/image/upload/v1739919813/Jardim_da_Amazônia-587_m1zqc2.jpg",
+          title: "Bangalô Jardim - Exterior",
+          photographer: "Marlon Erthal"
+        },
+        {
+          url: "https://res.cloudinary.com/dxlhv2mji/image/upload/v1739919800/Jardim_da_Amazônia-476_hmn9lp.jpg",
+          title: "Bangalô Jardim - Detalhes",
+          photographer: "Marlon Erthal"
+        },
+        {
+          url: "https://res.cloudinary.com/dxlhv2mji/image/upload/v1736118852/familia-hero_tjgrgj.jpg",
+          title: "Bangalô Família - Vista Principal",
+          photographer: "Marlon Erthal"
+        },
+        {
+          url: "https://res.cloudinary.com/dxlhv2mji/image/upload/v1739921668/Jardim_da_Amazônia-1106_ws1fz1.jpg",
+          title: "Bangalô Família - Exterior",
+          photographer: "Marlon Erthal"
+        },
+        {
+          url: "https://res.cloudinary.com/dxlhv2mji/image/upload/v1739921551/Jardim_da_Amazônia-1085_rba1ha.jpg",
+          title: "Bangalô Família - Ambiente",
+          photographer: "Marlon Erthal"
+        }
+      ]
+    },
+    areasExternas: {
+      title: "Áreas Externas",
+      images: [
+        {
+          url: "https://res.cloudinary.com/dxlhv2mji/image/upload/v1739842552/Jardim_da_Amazônia-3930_ehdgyr.jpg",
+          title: "Espaço de Convivência - Principal",
+          photographer: "Marlon Erthal"
+        },
+        {
+          url: "https://res.cloudinary.com/dxlhv2mji/image/upload/v1739842551/Jardim_da_Amazônia-3902_nimzuq.jpg",
+          title: "Espaço de Convivência - Área de Descanso",
+          photographer: "Marlon Erthal"
+        },
+        {
+          url: "https://res.cloudinary.com/dxlhv2mji/image/upload/v1739835876/Jardim_da_Amazônia-3031_xq0nne.jpg",
+          title: "Espaço de Convivência - Lounge",
+          photographer: "Marlon Erthal"
+        },
+        {
+          url: "https://res.cloudinary.com/dxlhv2mji/image/upload/v1739842036/Jardim_da_Amazônia-3602_sisbpp.jpg",
+          title: "Piscina Natural - Vista Principal",
+          photographer: "Marlon Erthal"
+        },
+        {
+          url: "https://res.cloudinary.com/dxlhv2mji/image/upload/v1739842011/Jardim_da_Amazônia-3588_surdeb.jpg",
+          title: "Piscina Natural - Área de Banho",
+          photographer: "Marlon Erthal"
+        },
+        {
+          url: "https://res.cloudinary.com/dxlhv2mji/image/upload/v1739841939/Jardim_da_Amazônia-3538_kppv8a.jpg",
+          title: "Piscina Natural - Deck",
+          photographer: "Marlon Erthal"
+        },
+        {
+          url: "https://res.cloudinary.com/dxlhv2mji/image/upload/v1739841682/Jardim_da_Amazônia-3495_em7syh.jpg",
+          title: "Piscina Natural - Entardecer",
+          photographer: "Marlon Erthal"
+        },
+        {
+          url: "https://res.cloudinary.com/dxlhv2mji/image/upload/v1739842392/Jardim_da_Amazônia-3829_hauhip.jpg",
+          title: "Jardins e Lagoas - Vista Aérea",
+          photographer: "Marlon Erthal"
+        },
+        {
+          url: "https://res.cloudinary.com/dxlhv2mji/image/upload/v1739842391/Jardim_da_Amazônia-3833_wmmlqx.jpg",
+          title: "Jardins e Lagoas - Paisagem",
+          photographer: "Marlon Erthal"
+        },
+        {
+          url: "https://res.cloudinary.com/dxlhv2mji/image/upload/v1739841326/Jardim_da_Amazônia-3216_yrohd0.jpg",
+          title: "Trilhas - Caminho Principal",
+          photographer: "Marlon Erthal"
+        },
+        {
+          url: "https://res.cloudinary.com/dxlhv2mji/image/upload/v1739841322/Jardim_da_Amazônia-3188_lceiu2.jpg",
+          title: "Trilhas - Mata",
+          photographer: "Marlon Erthal"
+        },
+        {
+          url: "https://res.cloudinary.com/dxlhv2mji/image/upload/v1739841321/Jardim_da_Amazônia-3166_npmlu7.jpg",
+          title: "Trilhas - Floresta",
+          photographer: "Marlon Erthal"
+        }
+      ]
+    },
+    fauna: {
+      title: "Fauna",
+      images: [
+        {
+          url: "https://res.cloudinary.com/dxlhv2mji/image/upload/v1738450244/beija_flor_tesoura_verde_JHONATA_ARAUJO_2_xk7oou.jpg",
+          title: "Beija-flor Tesoura Verde",
+          photographer: "Jhonata Araujo"
+        },
+        {
+          url: "https://res.cloudinary.com/dxlhv2mji/image/upload/v1738450243/tie_bicudo_jh_hfnk4c.jpg",
+          title: "Tiê-bicudo",
+          photographer: "Jhonata Araujo"
+        },
+        {
+          url: "https://res.cloudinary.com/dxlhv2mji/image/upload/v1738450280/choca_dagua_-_JHONATA_ARAUJO_7_q86nhg.jpg",
+          title: "Choca d'Água",
+          photographer: "Jhonata Araujo"
+        },
+        {
+          url: "https://res.cloudinary.com/dxlhv2mji/image/upload/v1738450277/MARACANA_DO_BURITI-_JHONATA_ARAUJO_10_ur2fgl.jpg",
+          title: "Maracanã do Buriti",
+          photographer: "Jhonata Araujo"
+        },
+        {
+          url: "https://res.cloudinary.com/dxlhv2mji/image/upload/v1738450671/MANOEL_RUEDI_82_xor41e.jpg",
+          title: "Aves da Amazônia",
+          photographer: "Manoel Ruedi"
+        },
+        {
+          url: "https://res.cloudinary.com/dxlhv2mji/image/upload/v1738450675/MANOEL_RUEDI_117_whajew.jpg",
+          title: "Aves em Voo",
+          photographer: "Manoel Ruedi"
+        },
+        {
+          url: "https://res.cloudinary.com/dxlhv2mji/image/upload/v1738450237/Sai_andorinha_VINCENT_KURT_5_nz36qm.jpg",
+          title: "Saí Andorinha",
+          photographer: "Vincent Kurt Lo"
+        },
+        {
+          url: "https://res.cloudinary.com/dxlhv2mji/image/upload/v1738450239/saira_de_cabeça_azul_-Vincent_Kurt_lo_1_z5hik4.jpg",
+          title: "Saíra de Cabeça Azul",
+          photographer: "Vincent Kurt Lo"
+        },
+        {
+          url: "https://res.cloudinary.com/dxlhv2mji/image/upload/v1739857967/parauacu_tsk80b.jpg",
+          title: "Parauacu",
+          photographer: "Marlon Erthal"
+        },
+        {
+          url: "https://res.cloudinary.com/dxlhv2mji/image/upload/v1739857952/zogue-zogue_1_o0mrje.jpg",
+          title: "Zogue-zogue",
+          photographer: "Marlon Erthal"
+        },
+        {
+          url: "https://res.cloudinary.com/dxlhv2mji/image/upload/v1739857960/macaco-cara-preta_ilsz9z.jpg",
+          title: "Macaco Cara Preta",
+          photographer: "Marlon Erthal"
+        }
+      ]
+    }
+  }), []);
 
-  // Function to get all images from a category
-  const getCategoryImages = (category) => {
-    return Object.entries(folderImageMapping[category] || {}).map(([key, value]) => ({
-      id: value,
-      name: key,
-      category: category,
-      url: getFolderImage(category, key)
+  const [currentIndices, setCurrentIndices] = useState({
+    acomodacoes: 0,
+    areasExternas: 0,
+    fauna: 0
+  });
+
+  const handlePrevImage = useCallback((section) => {
+    setCurrentIndices(prev => ({
+      ...prev,
+      [section]: prev[section] === 0 ? sections[section].images.length - 1 : prev[section] - 1
     }));
-  };
+  }, [sections]);
 
-  // Get all categories and their images
-  const categories = Object.keys(folderImageMapping);
+  const handleNextImage = useCallback((section) => {
+    setCurrentIndices(prev => ({
+      ...prev,
+      [section]: prev[section] === sections[section].images.length - 1 ? 0 : prev[section] + 1
+    }));
+  }, [sections]);
 
-  // Handle image click
-  const handleImageClick = (image, category, index) => {
-    setSelectedImage(image);
-    setSelectedCategory(category);
-    setCurrentIndex(index);
-    document.body.style.overflow = 'hidden';
-  };
-
-  // Handle modal close
-  const handleCloseModal = () => {
-    setSelectedImage(null);
-    setSelectedCategory(null);
-    document.body.style.overflow = 'unset';
-  };
-
-  // Handle navigation
-  const handlePrevImage = () => {
-    const images = getCategoryImages(selectedCategory);
-    setCurrentIndex((prevIndex) => {
-      const newIndex = prevIndex === 0 ? images.length - 1 : prevIndex - 1;
-      setSelectedImage(images[newIndex]);
-      return newIndex;
+  useEffect(() => {
+    const intervals = {};
+    
+    Object.keys(sections).forEach(section => {
+      intervals[section] = setInterval(() => {
+        handleNextImage(section);
+      }, 5000);
     });
-  };
 
-  const handleNextImage = () => {
-    const images = getCategoryImages(selectedCategory);
-    setCurrentIndex((prevIndex) => {
-      const newIndex = prevIndex === images.length - 1 ? 0 : prevIndex + 1;
-      setSelectedImage(images[newIndex]);
-      return newIndex;
-    });
-  };
-
-  // Handle keyboard navigation
-  React.useEffect(() => {
-    const handleKeyPress = (e) => {
-      if (!selectedImage) return;
-      
-      if (e.key === 'Escape') handleCloseModal();
-      if (e.key === 'ArrowLeft') handlePrevImage();
-      if (e.key === 'ArrowRight') handleNextImage();
+    return () => {
+      Object.values(intervals).forEach(interval => clearInterval(interval));
     };
-
-    window.addEventListener('keydown', handleKeyPress);
-    return () => window.removeEventListener('keydown', handleKeyPress);
-  }, [selectedImage, selectedCategory, currentIndex]);
+  }, [sections, handleNextImage]);
   
   return (
     <div className="min-h-screen bg-white">
@@ -76,7 +232,7 @@ const Galeria = () => {
         <div 
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: `url(${getFolderImage('home', 'vista-aerea-lodge')})`,
+            backgroundImage: `linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://res.cloudinary.com/dxlhv2mji/image/upload/v1739842391/Jardim_da_Amazônia-3833_wmmlqx.jpg')`,
           }}
         >
           <div className="absolute inset-0 bg-black/60"></div>
@@ -87,80 +243,62 @@ const Galeria = () => {
             Explore nossa coleção de imagens do Jardim da Amazônia
           </p>
         </div>
+        <PhotoCredit photographer="Marlon Erthal" />
       </div>
 
-      {/* Gallery Section */}
+      {/* Gallery Sections */}
       <div className="container mx-auto px-4 py-16">
-        {categories.map((category) => {
-          const images = getCategoryImages(category);
-          if (images.length === 0) return null;
-
-          return (
-            <div key={category} className="mb-16">
-              <h2 className="text-3xl font-semibold mb-8 capitalize">
-                {category.replace(/-/g, ' ')}
+        {Object.entries(sections).map(([sectionKey, section]) => (
+          <div key={sectionKey} className="mb-24">
+            <h2 className="text-3xl font-semibold mb-8 text-center">
+              {section.title}
               </h2>
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-                {images.map((image, index) => (
-                  <div
-                    key={image.id}
-                    className="relative group overflow-hidden rounded-lg shadow-lg aspect-square cursor-pointer"
-                    onClick={() => handleImageClick(image, category, index)}
-                  >
-                    <img
-                      src={image.url}
-                      alt={image.name.replace(/-/g, ' ')}
-                      className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
-                    />
-                    <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-                      <p className="text-white text-sm capitalize">
-                        {image.name.replace(/-/g, ' ')}
-                      </p>
-                    </div>
+            <div className="relative max-w-4xl mx-auto">
+              <div className="aspect-[16/9] rounded-xl overflow-hidden shadow-xl">
+                <div className="relative h-full">
+                  <img
+                    src={section.images[currentIndices[sectionKey]].url}
+                    alt={section.images[currentIndices[sectionKey]].title}
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                  <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
+                    <h3 className="text-xl font-semibold mb-2">
+                      {section.images[currentIndices[sectionKey]].title}
+                    </h3>
+                    <PhotoCredit photographer={section.images[currentIndices[sectionKey]].photographer} />
                   </div>
+                </div>
+              </div>
+
+          <button
+                onClick={() => handlePrevImage(sectionKey)}
+                className="absolute left-4 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-3 rounded-full transition-colors"
+          >
+                <IoIosArrowBack size={24} />
+          </button>
+
+          <button
+                onClick={() => handleNextImage(sectionKey)}
+                className="absolute right-4 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-3 rounded-full transition-colors"
+          >
+                <IoIosArrowForward size={24} />
+          </button>
+
+              <div className="flex justify-center mt-4 gap-2">
+                {section.images.map((_, index) => (
+                  <div
+                    key={index}
+                    className={`w-2 h-2 rounded-full transition-colors ${
+                      index === currentIndices[sectionKey] ? 'bg-primary' : 'bg-gray-300'
+                    }`}
+                  />
                 ))}
               </div>
             </div>
-          );
-        })}
-      </div>
-
-      {/* Modal */}
-      {selectedImage && (
-        <div className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center">
-          <button
-            onClick={handleCloseModal}
-            className="absolute top-4 right-4 text-white hover:text-accent transition-colors duration-300"
-          >
-            <IoClose size={32} />
-          </button>
-
-          <button
-            onClick={handlePrevImage}
-            className="absolute left-4 text-white hover:text-accent transition-colors duration-300"
-          >
-            <IoIosArrowBack size={32} />
-          </button>
-
-          <button
-            onClick={handleNextImage}
-            className="absolute right-4 text-white hover:text-accent transition-colors duration-300"
-          >
-            <IoIosArrowForward size={32} />
-          </button>
-
-          <div className="w-full max-w-6xl px-16">
-            <img
-              src={selectedImage.url}
-              alt={selectedImage.name.replace(/-/g, ' ')}
-              className="w-full h-[85vh] object-contain"
-            />
-            <p className="text-white text-center mt-4 text-lg capitalize">
-              {selectedImage.name.replace(/-/g, ' ')}
-            </p>
           </div>
+        ))}
         </div>
-      )}
     </div>
   );
 };

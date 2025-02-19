@@ -1,10 +1,10 @@
 import React from 'react';
-import { getFolderImage } from '../config/cloudinaryConfig';
+// eslint-disable-next-line no-unused-vars
+import PhotoCredit from '../components/PhotoCredit';
 import { 
   MdLaptop,
   MdPhotoCamera,
   MdFavorite,
-  MdCelebration,
   MdPalette,
   MdGroups,
   MdOutlineChurch,
@@ -14,7 +14,7 @@ import { BsCheckCircle } from 'react-icons/bs';
 
 const EventosNatureza = () => {
   const heroStyle = {
-    backgroundImage: `url(${getFolderImage('eventos', 'fogo-no-rio')})`,
+    backgroundImage: `linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://res.cloudinary.com/dxlhv2mji/image/upload/v1739842552/Jardim_da_Amazônia-3930_ehdgyr.jpg')`,
     backgroundSize: 'cover',
     backgroundPosition: 'center',
   };
@@ -48,7 +48,7 @@ const EventosNatureza = () => {
               <div className="flex flex-col md:flex-row md:h-48">
                 <div className="md:w-1/4">
                   <img 
-                    src={getFolderImage('eventos', 'eventos-especiais')} 
+                    src="https://res.cloudinary.com/dxlhv2mji/image/upload/v1739842551/Jardim_da_Amazônia-3902_nimzuq.jpg"
                     alt="Ensaios Fotográficos" 
                     className="w-full h-full object-cover"
                   />
@@ -88,7 +88,7 @@ const EventosNatureza = () => {
               <div className="flex flex-col md:flex-row md:h-48">
                 <div className="md:w-1/4">
                   <img 
-                    src={getFolderImage('eventos', 'eventos-especiais')} 
+                    src="https://res.cloudinary.com/dxlhv2mji/image/upload/v1739842499/Jardim_da_Amazônia-3868_wajqd7.jpg"
                     alt="Noite de Núpcias" 
                     className="w-full h-full object-cover"
                   />
@@ -128,7 +128,7 @@ const EventosNatureza = () => {
               <div className="flex flex-col md:flex-row md:h-48">
                 <div className="md:w-1/4">
                   <img 
-                    src={getFolderImage('eventos', 'eventos-especiais')} 
+                    src="https://res.cloudinary.com/dxlhv2mji/image/upload/v1736085709/eventos-especiais_wkym1o.jpg"
                     alt="Confraternizações" 
                     className="w-full h-full object-cover"
                   />
@@ -168,7 +168,7 @@ const EventosNatureza = () => {
               <div className="flex flex-col md:flex-row md:h-48">
                 <div className="md:w-1/4">
                   <img 
-                    src={getFolderImage('eventos', 'eventos-especiais')} 
+                    src="https://res.cloudinary.com/dxlhv2mji/image/upload/v1739842497/Jardim_da_Amazônia-3857_zmcnxe.jpg"
                     alt="Residências Artísticas" 
                     className="w-full h-full object-cover"
                   />
@@ -208,7 +208,7 @@ const EventosNatureza = () => {
               <div className="flex flex-col md:flex-row md:h-48">
                 <div className="md:w-1/4">
                   <img 
-                    src={getFolderImage('eventos', 'eventos-especiais')} 
+                    src="https://res.cloudinary.com/dxlhv2mji/image/upload/v1739842498/Jardim_da_Amazônia-3866_fynvrf.jpg"
                     alt="Mini-Weddings" 
                     className="w-full h-full object-cover"
                   />
@@ -248,7 +248,7 @@ const EventosNatureza = () => {
               <div className="flex flex-col md:flex-row md:h-48">
                 <div className="md:w-1/4">
                   <img 
-                    src={getFolderImage('eventos', 'reuniao-executiva')} 
+                    src="https://res.cloudinary.com/dxlhv2mji/image/upload/v1736085711/reuniao-executiva_ouxhas.png"
                     alt="Nômade Digital" 
                     className="w-full h-full object-cover"
                   />
@@ -288,7 +288,7 @@ const EventosNatureza = () => {
               <div className="flex flex-col md:flex-row md:h-48">
                 <div className="md:w-1/4">
                   <img 
-                    src={getFolderImage('eventos', 'ocasioes-especiais')} 
+                    src="https://res.cloudinary.com/dxlhv2mji/image/upload/v1736085716/team-building_ucasc2.png"
                     alt="Retiros Corporativos" 
                     className="w-full h-full object-cover"
                   />

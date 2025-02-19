@@ -5,7 +5,6 @@ import {
   FaFan, 
   FaLeaf, 
   FaMountain, 
-  FaHeart,
   FaChevronRight
 } from 'react-icons/fa';
 import { getFolderImage } from '../config/cloudinaryConfig';

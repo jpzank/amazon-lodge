@@ -1,5 +1,5 @@
 import React from 'react';
-import { getFolderImage } from '../config/cloudinaryConfig';
+import PhotoCredit from '../components/PhotoCredit';
 import { GiCookingPot } from 'react-icons/gi';
 
 const Gastronomia = () => {
@@ -9,7 +9,7 @@ const Gastronomia = () => {
       <div 
         className="relative h-[70vh] flex items-center justify-center text-center text-white mb-16"
         style={{
-          backgroundImage: `url(${getFolderImage('gastronomia', 'hero')})`,
+          backgroundImage: `linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://res.cloudinary.com/dxlhv2mji/image/upload/v1736085785/gatronomia-hero_kqnp26.jpg')`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}
@@ -23,6 +23,7 @@ const Gastronomia = () => {
             Tradição familiar e criatividade contemporânea
           </p>
         </div>
+        <PhotoCredit photographer="Marlon Erthal" />
       </div>
 
       {/* Intro Section */}
@@ -52,31 +53,33 @@ const Gastronomia = () => {
               {/* Gallery Items */}
               <div className="relative overflow-hidden rounded-xl shadow-lg aspect-square cursor-pointer group">
                 <img
-                  src="/images/food1.jpg"
-                  alt="Prato Amazônico"
+                  src="https://res.cloudinary.com/dxlhv2mji/image/upload/v1739842557/Jardim_da_Amazônia-3979_eupwqn.jpg"
+                  alt="Pratos tradicionais"
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/85 to-transparent p-6 flex flex-col justify-end">
                   <h3 className="text-xl font-semibold text-white mb-2 text-shadow">Pratos tradicionais</h3>
                   <p className="text-sm text-white text-shadow">Sabores autênticos e deliciosos</p>
                 </div>
+                <PhotoCredit photographer="Marlon Erthal" />
               </div>
 
               <div className="relative overflow-hidden rounded-xl shadow-lg aspect-square cursor-pointer group">
                 <img
-                  src="/images/food2.jpg"
-                  alt="Sobremesa Especial"
+                  src="https://res.cloudinary.com/dxlhv2mji/image/upload/v1739922069/Jardim_da_Amazônia-2702_geb69g.jpg"
+                  alt="Sobremesas Especiais"
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/85 to-transparent p-6 flex flex-col justify-end">
                   <h3 className="text-xl font-semibold text-white mb-2 text-shadow">Sobremesas Deliciosas</h3>
                   <p className="text-sm text-white text-shadow">Doces clássicos que encantam o paladar e os olhos</p>
                 </div>
+                <PhotoCredit photographer="Marlon Erthal" />
               </div>
 
               <div className="relative overflow-hidden rounded-xl shadow-lg aspect-square cursor-pointer group">
                 <img
-                  src="/images/food3.jpg"
+                  src="https://res.cloudinary.com/dxlhv2mji/image/upload/v1739922087/Jardim_da_Amazônia-2795_cq11f5.jpg"
                   alt="Café da Manhã"
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
@@ -84,6 +87,7 @@ const Gastronomia = () => {
                   <h3 className="text-xl font-semibold text-white mb-2 text-shadow">Café da Manhã</h3>
                   <p className="text-sm text-white text-shadow">Um café da manhã acolhedor</p>
                 </div>
+                <PhotoCredit photographer="Marlon Erthal" />
               </div>
             </div>
           </div>
@@ -96,7 +100,7 @@ const Gastronomia = () => {
           <div className="flex flex-col lg:flex-row items-center gap-16 max-w-6xl mx-auto">
             <div className="lg:flex-shrink-0 w-full lg:w-[300px] h-[400px] rounded-2xl overflow-hidden shadow-xl">
               <img
-                src="/images/chef.jpg"
+                src="https://res.cloudinary.com/dxlhv2mji/image/upload/v1739921997/Jardim_da_Amazônia-2305_vmwmgv.jpg"
                 alt="Nosso Chef"
                 className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
               />
@@ -139,7 +143,7 @@ const Gastronomia = () => {
 
               <div className="relative overflow-hidden rounded-xl shadow-lg aspect-square cursor-pointer group">
                 <img
-                  src="/images/food6.jpg"
+                  src="https://res.cloudinary.com/dxlhv2mji/image/upload/v1736085776/pratos-tipicos_f4meuw.png"
                   alt="Pratos Típicos"
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
@@ -147,11 +151,12 @@ const Gastronomia = () => {
                   <h3 className="text-xl font-semibold text-white mb-2 text-shadow">Pratos Típicos</h3>
                   <p className="text-sm text-white text-shadow">Sabores da região</p>
                 </div>
+                <PhotoCredit photographer="Marlon Erthal" />
               </div>
 
               <div className="relative overflow-hidden rounded-xl shadow-lg aspect-square cursor-pointer group">
                 <img
-                  src="/images/food7.jpg"
+                  src="https://res.cloudinary.com/dxlhv2mji/image/upload/v1736085770/sobremesas-especiais_osgafx.png"
                   alt="Sobremesas Especiais"
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
@@ -159,30 +164,33 @@ const Gastronomia = () => {
                   <h3 className="text-xl font-semibold text-white mb-2 text-shadow">Sobremesas Especiais</h3>
                   <p className="text-sm text-white text-shadow">Doces que encantam</p>
                 </div>
+                <PhotoCredit photographer="Marlon Erthal" />
               </div>
 
               <div className="relative overflow-hidden rounded-xl shadow-lg aspect-square cursor-pointer group">
                 <img
-                  src="/images/food8.jpg"
-                  alt="Pratos Vegetarianos"
+                  src="https://res.cloudinary.com/dxlhv2mji/image/upload/v1736085763/prato-especial-do-chef_w8ep8h.png"
+                  alt="Pratos do Chef"
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/85 to-transparent p-6 flex flex-col justify-end">
-                  <h3 className="text-xl font-semibold text-white mb-2 text-shadow">Opções Vegetarianas</h3>
-                  <p className="text-sm text-white text-shadow">Legumes e grãos selecionados</p>
+                  <h3 className="text-xl font-semibold text-white mb-2 text-shadow">Pratos do Chef</h3>
+                  <p className="text-sm text-white text-shadow">Criações especiais</p>
                 </div>
+                <PhotoCredit photographer="Marlon Erthal" />
               </div>
 
               <div className="relative overflow-hidden rounded-xl shadow-lg aspect-square cursor-pointer group">
                 <img
-                  src="/images/food9.jpg"
-                  alt="Bebidas Especiais"
+                  src="https://res.cloudinary.com/dxlhv2mji/image/upload/v1736085756/cafe-da-manha_frcj7z.png"
+                  alt="Café da Manhã"
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/85 to-transparent p-6 flex flex-col justify-end">
-                  <h3 className="text-xl font-semibold text-white mb-2 text-shadow">Bebidas Especiais</h3>
-                  <p className="text-sm text-white text-shadow">Refrescantes e saborosas</p>
+                  <h3 className="text-xl font-semibold text-white mb-2 text-shadow">Café da Manhã</h3>
+                  <p className="text-sm text-white text-shadow">Início do dia perfeito</p>
                 </div>
+                <PhotoCredit photographer="Marlon Erthal" />
               </div>
             </div>
           </div>

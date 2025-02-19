@@ -1,10 +1,8 @@
 import React, { useState } from 'react';
-import { getFolderImage } from '../config/cloudinaryConfig';
-import { siteConfig } from '../config/siteConfig';
 
 const GuiasCampo = () => {
   const heroStyle = {
-    backgroundImage: `url(${getFolderImage('eventos', 'fogo-no-rio')})`,
+    backgroundImage: `linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://res.cloudinary.com/dxlhv2mji/image/upload/v1739842391/Jardim_da_Amazônia-3833_wmmlqx.jpg')`,
     backgroundSize: 'cover',
     backgroundPosition: 'center',
   };

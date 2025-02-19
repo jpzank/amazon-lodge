@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import { getFolderImage } from '../config/cloudinaryConfig';
+import PhotoCredit from '../components/PhotoCredit';
 
 const FAQ = () => {
   const [expandedItems, setExpandedItems] = useState({});
 
   const heroStyle = {
-    backgroundImage: `url(${getFolderImage('hero/faq-hero')})`,
+    backgroundImage: `linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://res.cloudinary.com/dxlhv2mji/image/upload/v1739842419/Jardim_da_Amazônia-3851_hpelww.jpg')`,
     backgroundSize: 'cover',
     backgroundPosition: 'center',
   };
@@ -33,6 +33,7 @@ const FAQ = () => {
             Tudo que você precisa saber sobre sua estadia
           </p>
         </div>
+        <PhotoCredit photographer="Marlon Erthal" />
       </div>
 
       {/* FAQ Content */}

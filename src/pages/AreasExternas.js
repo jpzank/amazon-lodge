@@ -1,17 +1,17 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { getFolderImage } from '../config/cloudinaryConfig';
+import PhotoCredit from '../components/PhotoCredit';
 
 const AreasExternas = () => {
   const heroStyle = {
-    backgroundImage: `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(${getFolderImage('area-externa', 'hero')})`
+    backgroundImage: `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://res.cloudinary.com/dxlhv2mji/image/upload/v1739842392/Jardim_da_Amazônia-3829_hauhip.jpg')`
   };
 
   const areas = [
     {
       id: 'piscina',
       title: 'Piscina Natural',
-      description: 'Nossa piscina natural é um verdadeiro oásis em meio à floresta. Com águas cristalinas e refrescantes, proporciona momentos de relaxamento em total harmonia com a natureza.',
+      description: 'Nossa piscina natural é alimentada por uma nascente de água cristalina, proporcionando um refrescante mergulho em meio à natureza. Com deck de madeira e espreguiçadeiras, é o lugar perfeito para relaxar.',
       features: [
         {
           icon: 'droplet',
@@ -30,26 +30,26 @@ const AreasExternas = () => {
           text: 'Passarela pela floresta para acesso exclusivo'
         }
       ],
-      image: getFolderImage('area-externa', 'piscina2'),
-      link: null
+      image: 'https://res.cloudinary.com/dxlhv2mji/image/upload/v1739841939/Jardim_da_Amazônia-3538_kppv8a.jpg',
+      photographer: 'Marlon Erthal'
     },
     {
       id: 'trilhas',
-      title: 'Trilhas e Lagoas',
-      description: 'Explore nossa extensa rede de trilhas que serpenteiam pela propriedade, passando por lagoas exuberantes e pontos de observação estratégicos.',
+      title: 'Trilhas',
+      description: 'Explore nossas trilhas ecológicas, cuidadosamente mantidas para proporcionar uma experiência segura e enriquecedora em meio à floresta amazônica.',
       features: [
         'Trilhas guiadas',
         'Lagoas exuberantes',
         'Pontos de observação',
         'Áreas de descanso'
       ],
-      image: getFolderImage('area-externa', 'trilha'),
-      link: '/trilhas'
+      image: 'https://res.cloudinary.com/dxlhv2mji/image/upload/v1739841326/Jardim_da_Amazônia-3216_yrohd0.jpg',
+      photographer: 'Marlon Erthal'
     },
     {
       id: 'convivencia',
-      title: 'Espaços de Convivência',
-      description: 'Áreas comuns aconchegantes projetadas para proporcionar interação social e momentos de descontração em meio à natureza.',
+      title: 'Área de Convivência',
+      description: 'Espaço aconchegante para momentos de descontração, leitura ou simplesmente apreciar a natureza. Equipado com redes, sofás e mesas, é ideal para socialização.',
       features: [
         'Lounge ao ar livre',
         'Área de leitura',
@@ -58,7 +58,8 @@ const AreasExternas = () => {
         'Casa de bonecas',
         'Mini-quadra de areia'
       ],
-      image: getFolderImage('shared', 'convivencia')
+      image: 'https://res.cloudinary.com/dxlhv2mji/image/upload/v1739842551/Jardim_da_Amazônia-3902_nimzuq.jpg',
+      photographer: 'Marlon Erthal'
     }
   ];
 
@@ -71,12 +72,13 @@ const AreasExternas = () => {
       >
         <div className="relative z-20 px-4">
           <h1 className="text-5xl md:text-6xl font-bold mb-6 tracking-wide text-shadow">
-            O Lodge
+            Áreas Externas
           </h1>
           <p className="text-lg md:text-xl max-w-3xl mx-auto tracking-wide text-shadow">
-          Espaços que conectam.
+            Espaços ao ar livre para sua conexão com a natureza
           </p>
         </div>
+        <PhotoCredit photographer="Marlon Erthal" />
       </div>
 
       {/* Intro Section */}
@@ -106,8 +108,14 @@ const AreasExternas = () => {
                 <div className="lg:w-1/2 h-[400px] lg:h-auto relative overflow-hidden">
                   <div 
                     className="absolute inset-0 bg-cover bg-center transform transition-transform duration-500 hover:scale-105"
-                    style={{backgroundImage: `url(${area.image})`}}
-                  />
+                  >
+                    <img 
+                      src={area.image}
+                      alt={area.title}
+                      className="w-full h-full object-cover"
+                    />
+                    <PhotoCredit photographer={area.photographer} />
+                  </div>
                 </div>
                 <div className="lg:w-1/2 p-8 lg:p-12 flex flex-col justify-center">
                   <h2 className="text-3xl font-semibold text-gray-900 mb-6">{area.title}</h2>
@@ -125,9 +133,9 @@ const AreasExternas = () => {
                       ))}
                     </ul>
                   </div>
-                  {area.link && (
+                  {area.id === 'trilhas' && (
                     <Link 
-                      to={area.link}
+                      to="/trilhas"
                       className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-primary hover:bg-primary-dark transition-colors duration-300 mt-auto"
                     >
                       Saiba mais
