@@ -1,175 +1,178 @@
 import React, { useState, useEffect, useMemo, useCallback } from 'react';
 import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io';
 import PhotoCredit from '../components/PhotoCredit';
+import { useTranslation } from 'react-i18next';
 
 const Galeria = () => {
+  const { t } = useTranslation();
+  
   const sections = useMemo(() => ({
     acomodacoes: {
-      title: "Acomodações",
+      title: t('gallery.sections.accommodations.title'),
       images: [
         {
           url: "https://res.cloudinary.com/dxlhv2mji/image/upload/v1739842228/Jardim_da_Amazônia-3751_wmnb8x.jpg",
-          title: "Casa da Mata",
+          title: t('gallery.sections.accommodations.images.forestHouse'),
           photographer: "Marlon Erthal"
         },
         {
           url: "https://res.cloudinary.com/dxlhv2mji/image/upload/v1739922205/Jardim_da_Amazônia-3714_fhy2ki.jpg",
-          title: "Casa da Mata - Interior",
+          title: t('gallery.sections.accommodations.images.forestHouseInterior'),
           photographer: "Marlon Erthal"
         },
         {
           url: "https://res.cloudinary.com/dxlhv2mji/image/upload/v1739922168/Jardim_da_Amazônia-3676_hn0sbn.jpg",
-          title: "Casa da Mata - Ambiente",
+          title: t('gallery.sections.accommodations.images.forestHouseAmbience'),
           photographer: "Marlon Erthal"
         },
         {
           url: "https://res.cloudinary.com/dxlhv2mji/image/upload/v1736119362/jardim-1_m4axtr.jpg",
-          title: "Bangalô Jardim",
+          title: t('gallery.sections.accommodations.images.gardenBungalow'),
           photographer: "Marlon Erthal"
         },
         {
           url: "https://res.cloudinary.com/dxlhv2mji/image/upload/v1739919787/Jardim_da_Amazônia-465_wwnsh7.jpg",
-          title: "Bangalô Jardim - Interior",
+          title: t('gallery.sections.accommodations.images.gardenBungalowInterior'),
           photographer: "Marlon Erthal"
         },
         {
           url: "https://res.cloudinary.com/dxlhv2mji/image/upload/v1739842237/Jardim_da_Amazônia-3773_c2beq5.jpg",
-          title: "Bangalô Família",
+          title: t('gallery.sections.accommodations.images.familyBungalow'),
           photographer: "Marlon Erthal"
         },
         {
           url: "https://res.cloudinary.com/dxlhv2mji/image/upload/v1739921551/Jardim_da_Amazônia-1085_rba1ha.jpg",
-          title: "Bangalô Família - Interior",
+          title: t('gallery.sections.accommodations.images.familyBungalowInterior'),
           photographer: "Marlon Erthal"
         },
         {
           url: "https://res.cloudinary.com/dxlhv2mji/image/upload/v1739921474/Jardim_da_Amazônia-948_cdpznn.jpg",
-          title: "Bangalô Família - Ambiente",
+          title: t('gallery.sections.accommodations.images.familyBungalowAmbience'),
           photographer: "Marlon Erthal"
         }
       ]
     },
     areasExternas: {
-      title: "Áreas Externas",
+      title: t('gallery.sections.externalAreas.title'),
       images: [
         {
           url: "https://res.cloudinary.com/dxlhv2mji/image/upload/v1736085753/familia-fogueira_xch5l3.jpg",
-          title: "Espaço de Convivência - Fogueira",
+          title: t('gallery.sections.externalAreas.images.socialSpaceBonfire'),
           photographer: "Caio Gimenez"
         },
         {
           url: "https://res.cloudinary.com/dxlhv2mji/image/upload/v1739842552/Jardim_da_Amazônia-3930_ehdgyr.jpg",
-          title: "Wi-Fi Starlink Disponível",
+          title: t('gallery.sections.externalAreas.images.starlink'),
           photographer: "Marlon Erthal"
         },
         {
           url: "https://res.cloudinary.com/dxlhv2mji/image/upload/v1739842551/Jardim_da_Amazônia-3902_nimzuq.jpg",
-          title: "Espaço de Convivência - Área de Descanso",
+          title: t('gallery.sections.externalAreas.images.socialSpaceRest'),
           photographer: "Marlon Erthal"
         },
         {
           url: "https://res.cloudinary.com/dxlhv2mji/image/upload/v1739835876/Jardim_da_Amazônia-3031_xq0nne.jpg",
-          title: "Espaço de Convivência - Lounge",
+          title: t('gallery.sections.externalAreas.images.socialSpaceLounge'),
           photographer: "Marlon Erthal"
         },
         {
           url: "https://res.cloudinary.com/dxlhv2mji/image/upload/v1739841625/Jardim_da_Amazônia-3434_jsn8sr.jpg",
-          title: "Piscina Natural",
+          title: t('gallery.sections.externalAreas.images.naturalPool'),
           photographer: "Marlon Erthal"
         },
         {
           url: "https://res.cloudinary.com/dxlhv2mji/image/upload/v1739842011/Jardim_da_Amazônia-3588_surdeb.jpg",
-          title: "Nascente - Área de Conservação",
+          title: t('gallery.sections.externalAreas.images.spring'),
           photographer: "Marlon Erthal"
         },
         {
           url: "https://res.cloudinary.com/dxlhv2mji/image/upload/v1739841682/Jardim_da_Amazônia-3495_em7syh.jpg",
-          title: "Piscina de Águas Cristalinas",
+          title: t('gallery.sections.externalAreas.images.crystalPool'),
           photographer: "Marlon Erthal"
         },
         {
           url: "https://res.cloudinary.com/dxlhv2mji/image/upload/v1739842392/Jardim_da_Amazônia-3829_hauhip.jpg",
-          title: "Jardins e Lagoas - Panorâmica",
+          title: t('gallery.sections.externalAreas.images.gardensLakesPanoramic'),
           photographer: "Marlon Erthal"
         },
         {
           url: "https://res.cloudinary.com/dxlhv2mji/image/upload/v1739842391/Jardim_da_Amazônia-3833_wmmlqx.jpg",
-          title: "Jardins e Lagoas - Paisagem",
+          title: t('gallery.sections.externalAreas.images.gardensLakesLandscape'),
           photographer: "Marlon Erthal"
         },
         {
           url: "https://res.cloudinary.com/dxlhv2mji/image/upload/v1739841326/Jardim_da_Amazônia-3216_yrohd0.jpg",
-          title: "Birdwatching próximo à casa",
+          title: t('gallery.sections.externalAreas.images.birdwatchingNearHouse'),
           photographer: "Marlon Erthal"
         },
         {
           url: "https://res.cloudinary.com/dxlhv2mji/image/upload/v1739841321/Jardim_da_Amazônia-3166_npmlu7.jpg",
-          title: "Passarela por dentro da mata",
+          title: t('gallery.sections.externalAreas.images.forestWalkway'),
           photographer: "Marlon Erthal"
         }
       ]
     },
     fauna: {
-      title: "Fauna",
+      title: t('gallery.sections.fauna.title'),
       images: [
         {
           url: "https://res.cloudinary.com/dxlhv2mji/image/upload/v1738450244/beija_flor_tesoura_verde_JHONATA_ARAUJO_2_xk7oou.jpg",
-          title: "Beija-flor Tesoura Verde",
+          title: t('gallery.sections.fauna.images.greenTailedHummingbird'),
           photographer: "Jhonata Araujo"
         },
         {
           url: "https://res.cloudinary.com/dxlhv2mji/image/upload/v1738450243/tie_bicudo_jh_hfnk4c.jpg",
-          title: "Tiê-bicudo",
+          title: t('gallery.sections.fauna.images.coneBilledTanager'),
           photographer: "Jhonata Araujo"
         },
         {
           url: "https://res.cloudinary.com/dxlhv2mji/image/upload/v1738450280/choca_dagua_-_JHONATA_ARAUJO_7_q86nhg.jpg",
-          title: "Choca d'Água",
+          title: t('gallery.sections.fauna.images.bandTailedAntbird'),
           photographer: "Jhonata Araujo"
         },
         {
           url: "https://res.cloudinary.com/dxlhv2mji/image/upload/v1738450277/MARACANA_DO_BURITI-_JHONATA_ARAUJO_10_ur2fgl.jpg",
-          title: "Maracanã do Buriti",
+          title: t('gallery.sections.fauna.images.buritiMacaw'),
           photographer: "Jhonata Araujo"
         },
         {
           url: "https://res.cloudinary.com/dxlhv2mji/image/upload/v1738450671/MANOEL_RUEDI_82_xor41e.jpg",
-          title: "Aves da Amazônia",
+          title: t('gallery.sections.fauna.images.amazonianBirds'),
           photographer: "Manoel Ruedi"
         },
         {
           url: "https://res.cloudinary.com/dxlhv2mji/image/upload/v1738450675/MANOEL_RUEDI_117_whajew.jpg",
-          title: "Aves em Voo",
+          title: t('gallery.sections.fauna.images.birdsInFlight'),
           photographer: "Manoel Ruedi"
         },
         {
           url: "https://res.cloudinary.com/dxlhv2mji/image/upload/v1738450237/Sai_andorinha_VINCENT_KURT_5_nz36qm.jpg",
-          title: "Saí Andorinha",
+          title: t('gallery.sections.fauna.images.swallowTanager'),
           photographer: "Vincent Kurt Lo"
         },
         {
           url: "https://res.cloudinary.com/dxlhv2mji/image/upload/v1738450239/saira_de_cabeça_azul_-Vincent_Kurt_lo_1_z5hik4.jpg",
-          title: "Saíra de Cabeça Azul",
+          title: t('gallery.sections.fauna.images.blueCrownedTanager'),
           photographer: "Vincent Kurt Lo"
         },
         {
           url: "https://res.cloudinary.com/dxlhv2mji/image/upload/v1739857967/parauacu_tsk80b.jpg",
-          title: "Parauacu",
+          title: t('gallery.sections.fauna.images.sakiMonkey'),
           photographer: "Acervo Jardim da Amazônia"
         },
         {
           url: "https://res.cloudinary.com/dxlhv2mji/image/upload/v1739857952/zogue-zogue_1_o0mrje.jpg",
-          title: "Zogue-zogue",
+          title: t('gallery.sections.fauna.images.titiMonkey'),
           photographer: "Acervo Jardim da Amazônia"
         },
         {
           url: "https://res.cloudinary.com/dxlhv2mji/image/upload/v1739857960/macaco-cara-preta_ilsz9z.jpg",
-          title: "Macaco Cara Preta",
+          title: t('gallery.sections.fauna.images.spiderMonkey'),
           photographer: "Acervo Jardim da Amazônia"
         }
       ]
     }
-  }), []);
+  }), [t]);
 
   const [currentIndices, setCurrentIndices] = useState({
     acomodacoes: 0,
@@ -218,9 +221,9 @@ const Galeria = () => {
           <div className="absolute inset-0 bg-black/60"></div>
         </div>
         <div className="relative z-10 px-4">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">Galeria de Fotos</h1>
+          <h1 className="text-5xl md:text-6xl font-bold mb-6">{t('gallery.hero.title')}</h1>
           <p className="text-lg md:text-xl max-w-3xl mx-auto">
-            Explore nossa coleção de imagens do Jardim da Amazônia
+            {t('gallery.hero.subtitle')}
           </p>
         </div>
         <PhotoCredit photographer="Marlon Erthal" />

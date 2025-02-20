@@ -1,92 +1,94 @@
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import PhotoCredit from '../components/PhotoCredit';
+import { useTranslation } from 'react-i18next';
 import { 
   faChevronDown,
   faChevronUp
 } from '@fortawesome/free-solid-svg-icons';
 
 const Trilhas = () => {
+  const { t } = useTranslation();
   const [expandedRoteiro, setExpandedRoteiro] = useState(null);
 
   const trilhas = [
     {
       id: 'jatoba',
-      title: 'Trilha do Jatobá',
-      description: 'Trilha que leva a uma árvore centenária de Jatobá, com mais de 40 metros de altura.',
-      imagem: 'https://res.cloudinary.com/dxlhv2mji/image/upload/v1739841326/Jardim_da_Amazônia-3216_yrohd0.jpg',
-      photographer: 'Marlon Erthal',
-      duracao: '1h30min',
-      distancia: '2.5km',
-      dificuldade: 'Fácil'
+      title: t('trails.trails.jatoba.title'),
+      description: t('trails.trails.jatoba.description'),
+      imagem: 'https://res.cloudinary.com/dxlhv2mji/image/upload/v1738450241/hypoedaleus%20guttatus_ilemhy.jpg',
+      photographer: 'Vincent Kurt Lo',
+      duracao: t('trails.trails.jatoba.duration'),
+      distancia: t('trails.trails.jatoba.distance'),
+      dificuldade: t('trails.trails.jatoba.difficulty')
     },
     {
       id: 'lagoa',
-      title: 'Lagoa das Araras',
-      description: 'Caminhada até uma lagoa natural onde é possível observar araras e outras aves.',
-      imagem: 'https://res.cloudinary.com/dxlhv2mji/image/upload/v1739841322/Jardim_da_Amazônia-3188_lceiu2.jpg',
-      photographer: 'Marlon Erthal',
-      duracao: '2h',
-      distancia: '3km',
-      dificuldade: 'Moderada'
+      title: t('trails.trails.lagoa.title'),
+      description: t('trails.trails.lagoa.description'),
+      imagem: 'https://res.cloudinary.com/dxlhv2mji/image/upload/v1736085800/birdwatching_yywf16.jpg',
+      photographer: 'Kiko Silva',
+      duracao: t('trails.trails.lagoa.duration'),
+      distancia: t('trails.trails.lagoa.distance'),
+      dificuldade: t('trails.trails.lagoa.difficulty')
     },
     {
       id: 'laboratorio',
-      title: 'Trilha do Laboratório',
-      description: 'Percurso que passa por pontos de pesquisa científica e observação da fauna.',
-      imagem: 'https://res.cloudinary.com/dxlhv2mji/image/upload/v1739841321/Jardim_da_Amazônia-3166_npmlu7.jpg',
-      photographer: 'Marlon Erthal',
-      duracao: '1h',
-      distancia: '1.8km',
-      dificuldade: 'Fácil'
+      title: t('trails.trails.laboratorio.title'),
+      description: t('trails.trails.laboratorio.description'),
+      imagem: 'https://res.cloudinary.com/dxlhv2mji/image/upload/v1738450239/saira_de_cabeça_azul_-Vincent_Kurt_lo_1_z5hik4.jpg',
+      photographer: 'Vincent Kurt Lo',
+      duracao: t('trails.trails.laboratorio.duration'),
+      distancia: t('trails.trails.laboratorio.distance'),
+      dificuldade: t('trails.trails.laboratorio.difficulty')
     },
     {
       id: 'arinos',
-      title: 'Rio Arinos',
-      description: 'Trilha que margeia o Rio Arinos, ideal para observação de aves e primatas.',
-      imagem: 'https://res.cloudinary.com/dxlhv2mji/image/upload/v1739841319/Jardim_da_Amazônia-3179_xym08p.jpg',
-      photographer: 'Marlon Erthal',
-      duracao: '2h30min',
-      distancia: '4km',
-      dificuldade: 'Moderada'
+      title: t('trails.trails.arinos.title'),
+      description: t('trails.trails.arinos.description'),
+      imagem: 'https://res.cloudinary.com/dxlhv2mji/image/upload/v1740003077/arinos_cytj5q.jpg',
+      photographer: 'Acervo Jardim Amazônia',
+      duracao: t('trails.trails.arinos.duration'),
+      distancia: t('trails.trails.arinos.distance'),
+      dificuldade: t('trails.trails.arinos.difficulty')
     },
     {
       id: 'piquia',
-      title: 'Trilha do Pequiá',
-      description: 'Caminhada por área de transição entre Cerrado e Amazônia.',
-      imagem: 'https://res.cloudinary.com/dxlhv2mji/image/upload/v1739841319/Jardim_da_Amazônia-3266_mbiwmz.jpg',
-      photographer: 'Marlon Erthal',
-      duracao: '1h45min',
-      distancia: '2.8km',
-      dificuldade: 'Fácil'
+      title: t('trails.trails.piquia.title'),
+      description: t('trails.trails.piquia.description'),
+      imagem: 'https://res.cloudinary.com/dxlhv2mji/image/upload/v1740003791/WhatsApp_Image_2025-02-19_at_14.21.25_pxi1lh.jpg',
+      photographer: 'Acervo Jardim Amazônia',
+      duracao: t('trails.trails.piquia.duration'),
+      distancia: t('trails.trails.piquia.distance'),
+      dificuldade: t('trails.trails.piquia.difficulty')
     },
     {
       id: 'angelim',
-      title: 'Trilha do Angelim',
-      description: 'Percurso que leva a uma majestosa árvore de Angelim, típica da região.',
-      imagem: 'https://res.cloudinary.com/dxlhv2mji/image/upload/v1739841318/Jardim_da_Amazônia-3256_h9yfjv.jpg',
-      photographer: 'Marlon Erthal',
-      duracao: '2h15min',
-      distancia: '3.5km',
-      dificuldade: 'Moderada'
+      title: t('trails.trails.angelim.title'),
+      description: t('trails.trails.angelim.description'),
+      imagem: 'https://res.cloudinary.com/dxlhv2mji/image/upload/v1740003668/PHOTO-2025-02-19-14-07-39_ese2ez.jpg',
+      photographer: 'Acervo Jardim Amazônia',
+      duracao: t('trails.trails.angelim.duration'),
+      distancia: t('trails.trails.angelim.distance'),
+      dificuldade: t('trails.trails.angelim.difficulty')
     }
   ];
 
   const roteiros = {
     '3dias': {
-      titulo: '3 Dias / 2 Noites',
-      manha: ['Trilha do Jatobá'],
-      tarde: ['Lagoa das Araras']
+      titulo: t('trails.itineraries.3days.title'),
+      manha: t('trails.itineraries.3days.morning', { returnObjects: true }),
+      tarde: t('trails.itineraries.3days.afternoon', { returnObjects: true })
     },
     '4dias': {
-      titulo: '4 Dias / 3 Noites',
-      manha: ['Trilha do Laboratório', 'Visita ao Rio Arinos'],
-      tarde: ['Trilha do Jatobá', 'Lagoa das Araras', 'Trilha do Piquiá']
+      titulo: t('trails.itineraries.4days.title'),
+      manha: t('trails.itineraries.4days.morning', { returnObjects: true }),
+      tarde: t('trails.itineraries.4days.afternoon', { returnObjects: true })
     },
     '5dias': {
-      titulo: '5 Dias / 4 Noites',
-      manha: ['Trilha do Laboratório', 'Visita ao Rio Arinos', 'Visita a agriculturas locais'],
-      tarde: ['Trilha do Jatobá', 'Lagoa das Araras', 'Trilha do Piquiá', 'Trilha do Angelim']
+      titulo: t('trails.itineraries.5days.title'),
+      manha: t('trails.itineraries.5days.morning', { returnObjects: true }),
+      tarde: t('trails.itineraries.5days.afternoon', { returnObjects: true })
     }
   };
 
@@ -117,10 +119,10 @@ const Trilhas = () => {
       >
         <div className="relative z-20 px-4">
           <h1 className="text-5xl md:text-6xl font-bold mb-6 tracking-wide text-shadow">
-            Trilhas Ecológicas
+            {t('trails.hero.title')}
           </h1>
           <p className="text-lg md:text-xl max-w-3xl mx-auto tracking-wide text-shadow">
-            Explore a biodiversidade da Amazônia
+            {t('trails.hero.subtitle')}
           </p>
         </div>
         <PhotoCredit photographer="Joao Marcos Rosa" />
@@ -137,6 +139,12 @@ const Trilhas = () => {
                     src={trilha.imagem}
                     alt={trilha.title}
                     className="w-full h-full object-cover"
+                    style={
+                      trilha.id === 'lagoa' ? { objectPosition: 'top' } :
+                      trilha.id === 'arinos' ? { objectPosition: 'bottom' } :
+                      trilha.id === 'angelim' ? { objectPosition: 'bottom' } :
+                      undefined
+                    }
                   />
                   <PhotoCredit photographer={trilha.photographer} />
                 </div>
@@ -148,19 +156,19 @@ const Trilhas = () => {
                       <svg className="w-5 h-5 text-primary mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                       </svg>
-                      Duração: {trilha.duracao}
+                      {t('trails.details.duration')}: {trilha.duracao}
                     </div>
                     <div className="flex items-center">
                       <svg className="w-5 h-5 text-primary mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
                       </svg>
-                      Distância: {trilha.distancia}
+                      {t('trails.details.distance')}: {trilha.distancia}
                     </div>
                     <div className="flex items-center">
                       <svg className="w-5 h-5 text-primary mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
                       </svg>
-                      Dificuldade: {trilha.dificuldade}
+                      {t('trails.details.difficulty')}: {trilha.dificuldade}
                     </div>
                   </div>
                 </div>
@@ -173,64 +181,32 @@ const Trilhas = () => {
       {/* Additional Info */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4 max-w-4xl">
-          <h2 className="text-3xl font-bold text-center mb-12">Informações Importantes</h2>
+          <h2 className="text-3xl font-bold text-center mb-12">{t('trails.info.title')}</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="bg-white p-8 rounded-xl shadow-lg">
-              <h3 className="text-xl font-semibold mb-4">O que levar</h3>
+              <h3 className="text-xl font-semibold mb-4">{t('trails.info.whatToBring.title')}</h3>
               <ul className="space-y-3 text-gray-600">
-                <li className="flex items-center">
-                  <svg className="w-5 h-5 text-primary mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
-                  </svg>
-                  Calçados apropriados
-                </li>
-                <li className="flex items-center">
-                  <svg className="w-5 h-5 text-primary mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
-                  </svg>
-                  Protetor solar
-                </li>
-                <li className="flex items-center">
-                  <svg className="w-5 h-5 text-primary mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
-                  </svg>
-                  Repelente
-                </li>
-                <li className="flex items-center">
-                  <svg className="w-5 h-5 text-primary mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
-                  </svg>
-                  Água
-                </li>
+                {t('trails.info.whatToBring.items', { returnObjects: true }).map((item, index) => (
+                  <li key={index} className="flex items-center">
+                    <svg className="w-5 h-5 text-primary mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
+                    </svg>
+                    {item}
+                  </li>
+                ))}
               </ul>
             </div>
             <div className="bg-white p-8 rounded-xl shadow-lg">
-              <h3 className="text-xl font-semibold mb-4">Recomendações</h3>
+              <h3 className="text-xl font-semibold mb-4">{t('trails.info.recommendations.title')}</h3>
               <ul className="space-y-3 text-gray-600">
-                <li className="flex items-center">
-                  <svg className="w-5 h-5 text-primary mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
-                  </svg>
-                  Acompanhamento de guia
-                </li>
-                <li className="flex items-center">
-                  <svg className="w-5 h-5 text-primary mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
-                  </svg>
-                  Horários mais frescos
-                </li>
-                <li className="flex items-center">
-                  <svg className="w-5 h-5 text-primary mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
-                  </svg>
-                  Roupas leves e confortáveis
-                </li>
-                <li className="flex items-center">
-                  <svg className="w-5 h-5 text-primary mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
-                  </svg>
-                  Respeito à natureza
-                </li>
+                {t('trails.info.recommendations.items', { returnObjects: true }).map((item, index) => (
+                  <li key={index} className="flex items-center">
+                    <svg className="w-5 h-5 text-primary mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
+                    </svg>
+                    {item}
+                  </li>
+                ))}
               </ul>
             </div>
           </div>
@@ -240,34 +216,37 @@ const Trilhas = () => {
       {/* Roteiros Section */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4 max-w-7xl">
-          <h2 className="text-3xl font-bold text-center mb-12">Roteiros Sugeridos</h2>
+          <h2 className="text-3xl font-bold text-center mb-12">{t('trails.itineraries.title')}</h2>
           <div className="max-w-4xl mx-auto space-y-6">
-            {Object.entries(roteiros).map(([id, roteiro]) => (
-              <div key={id} className="bg-white rounded-xl shadow-lg overflow-hidden">
-                <button 
-                  className={`w-full px-8 py-6 flex items-center justify-between hover:bg-gray-50 transition-colors duration-200
-                    ${expandedRoteiro === id ? 'bg-gray-50' : ''}`}
-                  onClick={() => toggleRoteiro(id)}
+            {Object.entries(roteiros).map(([key, roteiro]) => (
+              <div key={key} className="bg-white rounded-xl shadow-lg overflow-hidden">
+                <button
+                  className="w-full px-6 py-4 flex justify-between items-center text-left"
+                  onClick={() => toggleRoteiro(key)}
                 >
                   <h3 className="text-xl font-semibold">{roteiro.titulo}</h3>
-                  <FontAwesomeIcon 
-                    icon={expandedRoteiro === id ? faChevronUp : faChevronDown} 
-                    className="text-lg text-gray-500" 
+                  <FontAwesomeIcon
+                    icon={expandedRoteiro === key ? faChevronUp : faChevronDown}
+                    className="text-gray-500"
                   />
                 </button>
-                {expandedRoteiro === id && (
-                  <div className="px-8 pb-8">
-                    <div className="space-y-8">
+                {expandedRoteiro === key && (
+                  <div className="px-6 pb-6">
+                    <div className="space-y-4">
                       <div>
-                        <h4 className="text-lg font-semibold mb-4 text-primary">Manhã</h4>
-                        <div className="space-y-4">
-                          {roteiro.manha.map((atividade) => renderAtividade(atividade))}
+                        <h4 className="font-medium text-gray-900 mb-2">Manhã:</h4>
+                        <div className="space-y-2">
+                          {roteiro.manha.map((atividade, index) => (
+                            <div key={index}>{renderAtividade(atividade)}</div>
+                          ))}
                         </div>
                       </div>
                       <div>
-                        <h4 className="text-lg font-semibold mb-4 text-primary">Tarde</h4>
-                        <div className="space-y-4">
-                          {roteiro.tarde.map((atividade) => renderAtividade(atividade))}
+                        <h4 className="font-medium text-gray-900 mb-2">Tarde:</h4>
+                        <div className="space-y-2">
+                          {roteiro.tarde.map((atividade, index) => (
+                            <div key={index}>{renderAtividade(atividade)}</div>
+                          ))}
                         </div>
                       </div>
                     </div>

@@ -1,7 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 const AreasExternas = () => {
+  const { t } = useTranslation();
+  
   const heroStyle = {
     backgroundImage: `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://res.cloudinary.com/dxlhv2mji/image/upload/v1739842392/Jardim_da_Amazônia-3829_hauhip.jpg')`
   };
@@ -9,52 +12,40 @@ const AreasExternas = () => {
   const areas = [
     {
       id: 'piscina',
-      title: 'Piscina Natural',
-      description: 'Nossa piscina natural é alimentada por uma nascente de água cristalina, proporcionando um refrescante mergulho em meio à natureza. Com deck de madeira e espreguiçadeiras, é o lugar perfeito para relaxar.',
+      title: t('externalAreas.areas.naturalPool.title'),
+      description: t('externalAreas.areas.naturalPool.description'),
       features: [
         {
           icon: 'droplet',
-          text: 'Água potável de nascente'
+          text: t('externalAreas.areas.naturalPool.features.water')
         },
         {
           icon: 'sun',
-          text: 'Deck para banho de sol'
+          text: t('externalAreas.areas.naturalPool.features.deck')
         },
         {
           icon: 'leaf',
-          text: 'Imersão total na natureza'
+          text: t('externalAreas.areas.naturalPool.features.immersion')
         },
         {
           icon: 'path',
-          text: 'Passarela pela floresta para acesso exclusivo'
+          text: t('externalAreas.areas.naturalPool.features.path')
         }
       ],
       image: 'https://res.cloudinary.com/dxlhv2mji/image/upload/v1739841939/Jardim_da_Amazônia-3434_jsn8sr.jpg'
     },
     {
       id: 'trilhas',
-      title: 'Trilhas',
-      description: 'Explore nossas trilhas ecológicas, cuidadosamente mantidas para proporcionar uma experiência segura e enriquecedora em meio à floresta amazônica.',
-      features: [
-        'Trilhas guiadas',
-        'Lagoas exuberantes',
-        'Pontos de observação',
-        'Áreas de descanso'
-      ],
+      title: t('externalAreas.areas.trails.title'),
+      description: t('externalAreas.areas.trails.description'),
+      features: t('externalAreas.areas.trails.features', { returnObjects: true }),
       image: 'https://res.cloudinary.com/dxlhv2mji/image/upload/v1739841326/Jardim_da_Amazônia-3216_yrohd0.jpg'
     },
     {
       id: 'convivencia',
-      title: 'Área de Convivência',
-      description: 'Espaço aconchegante para momentos de descontração, leitura ou simplesmente apreciar a natureza. Equipado com redes, sofás e mesas, é ideal para socialização.',
-      features: [
-        'Lounge ao ar livre',
-        'Área de leitura',
-        'Wi-Fi disponível',
-        'Iluminação ambiente',
-        'Casa de bonecas',
-        'Mini-quadra de areia'
-      ],
+      title: t('externalAreas.areas.communalArea.title'),
+      description: t('externalAreas.areas.communalArea.description'),
+      features: t('externalAreas.areas.communalArea.features', { returnObjects: true }),
       image: 'https://res.cloudinary.com/dxlhv2mji/image/upload/v1739842551/Jardim_da_Amazônia-3902_nimzuq.jpg'
     }
   ];
@@ -68,10 +59,10 @@ const AreasExternas = () => {
       >
         <div className="relative z-20 px-4">
           <h1 className="text-5xl md:text-6xl font-bold mb-6 tracking-wide text-shadow">
-            Áreas Externas
+            {t('externalAreas.hero.title')}
           </h1>
           <p className="text-lg md:text-xl max-w-3xl mx-auto tracking-wide text-shadow">
-            Espaços ao ar livre para sua conexão com a natureza
+            {t('externalAreas.hero.subtitle')}
           </p>
         </div>
       </div>
@@ -83,12 +74,12 @@ const AreasExternas = () => {
             <div className="relative z-10">
               <span className="text-5xl text-primary-dark/20 absolute -top-4 -left-6">"</span>
               <p className="text-xl text-gray-700 leading-relaxed text-justify pl-8 pr-4">
-                O trabalho pioneiro no Jardim da Amazônia resultou na preservação de uma grande área intocada de floresta amazônica primária. Devotos da natureza, a família Zanchet investiu na atividade de observação de aves no ano de 1997, tornando esse lugar um importante santuário ecológico.
+                {t('externalAreas.intro.quote')}
               </p>
               <span className="text-5xl text-primary-dark/20 absolute -bottom-8 -right-4">"</span>
             </div>
             <footer className="mt-8 text-right">
-              <cite className="text-gray-600 font-medium not-italic">— Alex Robinson</cite>
+              <cite className="text-gray-600 font-medium not-italic">— {t('externalAreas.intro.author')}</cite>
             </footer>
           </blockquote>
         </div>
@@ -149,7 +140,7 @@ const AreasExternas = () => {
       <section className="py-24 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-semibold text-center mb-16 relative">
-            Atividades Disponíveis
+            {t('externalAreas.activities.title')}
             <span className="absolute bottom-[-1rem] left-1/2 transform -translate-x-1/2 w-20 h-1 bg-primary"></span>
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
@@ -157,9 +148,11 @@ const AreasExternas = () => {
               <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6 mx-auto">
                 <span className="text-3xl">🌿</span>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4 text-center">Observação de Aves</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4 text-center">
+                {t('externalAreas.activities.items.birdwatching.title')}
+              </h3>
               <p className="text-gray-600 text-center">
-                Explore a rica diversidade de aves amazônicas nos arredores da nossa propriedade
+                {t('externalAreas.activities.items.birdwatching.description')}
               </p>
             </div>
 
@@ -167,9 +160,11 @@ const AreasExternas = () => {
               <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6 mx-auto">
                 <span className="text-3xl">⚽</span>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4 text-center">Área de Lazer</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4 text-center">
+                {t('externalAreas.activities.items.recreation.title')}
+              </h3>
               <p className="text-gray-600 text-center">
-                As crianças têm seu espaço garantido para a diversão na nossa mini-quadra de areia e na encantadora casa de bonecas
+                {t('externalAreas.activities.items.recreation.description')}
               </p>
             </div>
 
@@ -177,9 +172,11 @@ const AreasExternas = () => {
               <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6 mx-auto">
                 <span className="text-3xl">📸</span>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4 text-center">Fotografia</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4 text-center">
+                {t('externalAreas.activities.items.photography.title')}
+              </h3>
               <p className="text-gray-600 text-center">
-                Capture momentos especiais em cenários deslumbrantes da natureza
+                {t('externalAreas.activities.items.photography.description')}
               </p>
             </div>
 
@@ -187,10 +184,13 @@ const AreasExternas = () => {
               <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6 mx-auto">
                 <span className="text-3xl">🧘</span>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4 text-center">Meditação</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4 text-center">
+                {t('externalAreas.activities.items.meditation.title')}
+              </h3>
               <p className="text-gray-600 text-center">
-              Encontre paz e tranquilidade em cada canto do nosso espaço. 
-              <span className="text-sm italic">Traga seu tapetinho!</span>
+                {t('externalAreas.activities.items.meditation.description')}
+                <br />
+                <span className="text-sm italic">{t('externalAreas.activities.items.meditation.note')}</span>
               </p>
             </div>
           </div>
@@ -201,41 +201,23 @@ const AreasExternas = () => {
       <section className="py-24 bg-gray-50">
         <div className="container mx-auto px-4 max-w-4xl">
           <h2 className="text-4xl font-semibold text-center mb-16 relative">
-            Sustentabilidade
+            {t('externalAreas.sustainability.title')}
             <span className="absolute bottom-[-1rem] left-1/2 transform -translate-x-1/2 w-20 h-1 bg-primary"></span>
           </h2>
           <div className="bg-white rounded-2xl shadow-xl p-8 md:p-12">
             <div className="text-gray-700 leading-relaxed mb-8">
               <p className="mb-6">
-                Nossas áreas externas foram desenvolvidas utilizando materiais locais e técnicas 
-                que minimizam o impacto ambiental, garantindo a preservação do 
-                ecossistema natural.
+                {t('externalAreas.sustainability.description')}
               </p>
               <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8">
-                <li className="flex items-center text-gray-600">
-                  <svg className="w-5 h-5 text-primary mr-3" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                  Iluminação de baixo impacto via energia solar
-                </li>
-                <li className="flex items-center text-gray-600">
-                  <svg className="w-5 h-5 text-primary mr-3" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                  Móveis feitos de madeira recuperada
-                </li>
-                <li className="flex items-center text-gray-600">
-                  <svg className="w-5 h-5 text-primary mr-3" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                  Projetos de monitoramento de fauna
-                </li>
-                <li className="flex items-center text-gray-600">
-                  <svg className="w-5 h-5 text-primary mr-3" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                  Preservação da vegetação nativa
-                </li>
+                {t('externalAreas.sustainability.features', { returnObjects: true }).map((feature, index) => (
+                  <li key={index} className="flex items-center text-gray-600">
+                    <svg className="w-5 h-5 text-primary mr-3" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                    {feature}
+                  </li>
+                ))}
               </ul>
             </div>
           </div>
@@ -245,15 +227,15 @@ const AreasExternas = () => {
       {/* CTA Section */}
       <section className="py-24 bg-primary/5">
         <div className="container mx-auto px-4 max-w-4xl text-center">
-          <h2 className="text-4xl font-semibold mb-6">Venha Conhecer Nossos Espaços</h2>
+          <h2 className="text-4xl font-semibold mb-6">{t('externalAreas.cta.title')}</h2>
           <p className="text-lg text-gray-600 leading-relaxed mb-10 max-w-2xl mx-auto">
-            Reserve sua estadia e desfrute de todas essas experiências únicas
+            {t('externalAreas.cta.description')}
           </p>
           <button 
             onClick={() => window.open('https://book.omnibees.com/hotel/19972?lang=pt-BR&currencyId=16&version=4', '_blank')}
             className="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-primary hover:bg-primary-dark transition-colors duration-300 shadow-lg hover:shadow-xl"
           >
-            Reserve Agora
+            {t('externalAreas.cta.button')}
             <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
             </svg>

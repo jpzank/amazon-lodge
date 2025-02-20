@@ -1,8 +1,11 @@
 import React from 'react';
 import PhotoCredit from '../components/PhotoCredit';
 import { GiCookingPot } from 'react-icons/gi';
+import { useTranslation } from 'react-i18next';
 
 const Gastronomia = () => {
+  const { t } = useTranslation();
+
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
@@ -17,10 +20,10 @@ const Gastronomia = () => {
         <div className="absolute inset-0 bg-black/60 z-10"></div>
         <div className="relative z-20 px-4">
           <h1 className="text-5xl md:text-6xl font-bold mb-6 tracking-wide text-shadow">
-            Gastronomia
+            {t('gastronomy.hero.title')}
           </h1>
           <p className="text-lg md:text-xl max-w-3xl mx-auto tracking-wide text-shadow">
-            Tradição familiar e criatividade contemporânea
+            {t('gastronomy.hero.subtitle')}
           </p>
         </div>
         <PhotoCredit photographer="Marlon Erthal" />
@@ -36,10 +39,10 @@ const Gastronomia = () => {
               </span>
             </div>
             <p className="text-xl text-gray-700 leading-relaxed text-justify mb-8">
-              As receitas de família, tradicionalmente preparadas por <span className="font-semibold text-primary">Carmelita</span>, ganharam uma nova roupagem com a chegada do chef <span className="font-semibold text-primary">José Sérgio</span>. Pratos à base de peixes da região, como matrinxã e pintado, se unem à clássica abóbora cabotiá, legumes grelhados e farofa de banana-da-terra.
+              {t('gastronomy.intro.description1')}
             </p>
             <p className="text-xl text-gray-700 leading-relaxed text-justify">
-              A polenta frita e o sagu na sobremesa trazem à mesa as raízes italianas da família Zanchet, em uma combinação de <span className="italic">tradição e criatividade</span>. No café da manhã, o aroma do café com leite se mistura ao aconchego dos ovos mexidos, bolos caseiros e outras delícias que confortam o paladar e o coração.
+              {t('gastronomy.intro.description2')}
             </p>
           </div>
         </div>
@@ -54,12 +57,12 @@ const Gastronomia = () => {
               <div className="relative overflow-hidden rounded-xl shadow-lg aspect-square cursor-pointer group">
                 <img
                   src="https://res.cloudinary.com/dxlhv2mji/image/upload/v1739842557/Jardim_da_Amazônia-3979_eupwqn.jpg"
-                  alt="Pratos tradicionais"
+                  alt={t('gastronomy.gallery.traditionalDishes.title')}
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/85 to-transparent p-6 flex flex-col justify-end">
-                  <h3 className="text-xl font-semibold text-white mb-2 text-shadow">Pratos tradicionais</h3>
-                  <p className="text-sm text-white text-shadow">Sabores autênticos e deliciosos</p>
+                  <h3 className="text-xl font-semibold text-white mb-2 text-shadow">{t('gastronomy.gallery.traditionalDishes.title')}</h3>
+                  <p className="text-sm text-white text-shadow">{t('gastronomy.gallery.traditionalDishes.subtitle')}</p>
                 </div>
                 <PhotoCredit photographer="Marlon Erthal" />
               </div>
@@ -67,12 +70,12 @@ const Gastronomia = () => {
               <div className="relative overflow-hidden rounded-xl shadow-lg aspect-square cursor-pointer group">
                 <img
                   src="https://res.cloudinary.com/dxlhv2mji/image/upload/v1739922069/Jardim_da_Amazônia-2702_geb69g.jpg"
-                  alt="Sobremesas Especiais"
+                  alt={t('gastronomy.gallery.desserts.title')}
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/85 to-transparent p-6 flex flex-col justify-end">
-                  <h3 className="text-xl font-semibold text-white mb-2 text-shadow">Sobremesas Deliciosas</h3>
-                  <p className="text-sm text-white text-shadow">Doces clássicos que encantam o paladar e os olhos</p>
+                  <h3 className="text-xl font-semibold text-white mb-2 text-shadow">{t('gastronomy.gallery.desserts.title')}</h3>
+                  <p className="text-sm text-white text-shadow">{t('gastronomy.gallery.desserts.subtitle')}</p>
                 </div>
                 <PhotoCredit photographer="Marlon Erthal" />
               </div>
@@ -80,12 +83,12 @@ const Gastronomia = () => {
               <div className="relative overflow-hidden rounded-xl shadow-lg aspect-square cursor-pointer group">
                 <img
                   src="https://res.cloudinary.com/dxlhv2mji/image/upload/v1739922087/Jardim_da_Amazônia-2795_cq11f5.jpg"
-                  alt="Café da Manhã"
+                  alt={t('gastronomy.gallery.breakfast.title')}
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/85 to-transparent p-6 flex flex-col justify-end">
-                  <h3 className="text-xl font-semibold text-white mb-2 text-shadow">Café da Manhã</h3>
-                  <p className="text-sm text-white text-shadow">Um café da manhã acolhedor</p>
+                  <h3 className="text-xl font-semibold text-white mb-2 text-shadow">{t('gastronomy.gallery.breakfast.title')}</h3>
+                  <p className="text-sm text-white text-shadow">{t('gastronomy.gallery.breakfast.subtitle')}</p>
                 </div>
                 <PhotoCredit photographer="Marlon Erthal" />
               </div>
@@ -101,21 +104,21 @@ const Gastronomia = () => {
             <div className="lg:flex-shrink-0 w-full lg:w-[300px] h-[400px] rounded-2xl overflow-hidden shadow-xl">
               <img
                 src="https://res.cloudinary.com/dxlhv2mji/image/upload/v1739921997/Jardim_da_Amazônia-2322_ojurek.jpg"
-                alt="Nosso Chef"
+                alt="Chef José Sérgio"
                 className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
               />
             </div>
             <div className="flex-1">
-              <h2 className="text-4xl font-semibold text-primary mb-8">Do Produtor à Mesa</h2>
+              <h2 className="text-4xl font-semibold text-primary mb-8">{t('gastronomy.chefStatement.title')}</h2>
               <blockquote className="text-lg leading-relaxed text-gray-700 italic pl-8 border-l-4 border-primary">
                 <p className="mb-6">
-                  "A gastronomia sempre teve como objetivo unir pessoas, seja através da cocção dos alimentos ou do alimento in natura. O verdadeiro propósito é alimentar a 'alma' antes de alimentar o corpo. Essa busca pelo prazer de alimentar e proporcionar momentos significativos é uma constante desde a nossa ancestralidade. Nos dias de hoje, essa busca continua, com uma infinidade de produtos e produtores. Assim nasceu o conceito 'FARM TO TABLE', que significa trazer o que é da terra para a mesa. Essa jornada me levou a uma imersão no Ecótono, entre a Amazônia e o Cerrado, onde encontrei um lugar incrível chamado Jardim da Amazônia, com uma cozinha caseira comandada por uma senhora chamada CARMELITA ZANCHET."
+                  {t('gastronomy.chefStatement.quote1')}
                 </p>
                 <p className="mb-6">
-                  "Nessa jornada, descobri que o simples é essencial para os olhos e a alma. Frutos, sementes, hortaliças, peixes, vegetais e outras iguarias que encontrei nessa fusão Amazônia/Cerrado são indiscutivelmente a busca pelo meu projeto de vida como cozinheiro. Encontrei um porto seguro, ou 'cozinha segura'. Para onde essa jornada me levará? Ainda estou descobrindo, sem pressa de chegar ao fim! Cozinhar é, acima de tudo, um grande ato de AMOR."
+                  {t('gastronomy.chefStatement.quote2')}
                 </p>
                 <footer className="font-semibold text-primary mt-8 not-italic">
-                  Chef José Sérgio
+                  {t('gastronomy.chefStatement.author')}
                 </footer>
               </blockquote>
             </div>
@@ -137,19 +140,19 @@ const Gastronomia = () => {
                     </svg>
                   </div>
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4 text-center">Ingredientes Locais</h3>
-                <p className="text-gray-600 text-justify">Valorizamos os produtores locais, garantindo ingredientes frescos e contribuindo para o fortalecimento da economia da região.</p>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4 text-center">{t('gastronomy.localIngredients.title')}</h3>
+                <p className="text-gray-600 text-justify">{t('gastronomy.localIngredients.description')}</p>
               </div>
 
               <div className="relative overflow-hidden rounded-xl shadow-lg aspect-square cursor-pointer group">
                 <img
                   src="https://res.cloudinary.com/dxlhv2mji/image/upload/v1736085776/pratos-tipicos_f4meuw.png"
-                  alt="Pratos Típicos"
+                  alt={t('gastronomy.additionalGallery.typicalDishes.title')}
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/85 to-transparent p-6 flex flex-col justify-end">
-                  <h3 className="text-xl font-semibold text-white mb-2 text-shadow">Pratos Típicos</h3>
-                  <p className="text-sm text-white text-shadow">Sabores da região</p>
+                  <h3 className="text-xl font-semibold text-white mb-2 text-shadow">{t('gastronomy.additionalGallery.typicalDishes.title')}</h3>
+                  <p className="text-sm text-white text-shadow">{t('gastronomy.additionalGallery.typicalDishes.subtitle')}</p>
                 </div>
                 <PhotoCredit photographer="Marlon Erthal" />
               </div>
@@ -157,12 +160,12 @@ const Gastronomia = () => {
               <div className="relative overflow-hidden rounded-xl shadow-lg aspect-square cursor-pointer group">
                 <img
                   src="https://res.cloudinary.com/dxlhv2mji/image/upload/v1736085770/sobremesas-especiais_osgafx.png"
-                  alt="Sobremesas Especiais"
+                  alt={t('gastronomy.additionalGallery.specialDesserts.title')}
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/85 to-transparent p-6 flex flex-col justify-end">
-                  <h3 className="text-xl font-semibold text-white mb-2 text-shadow">Sobremesas Especiais</h3>
-                  <p className="text-sm text-white text-shadow">Doces que encantam</p>
+                  <h3 className="text-xl font-semibold text-white mb-2 text-shadow">{t('gastronomy.additionalGallery.specialDesserts.title')}</h3>
+                  <p className="text-sm text-white text-shadow">{t('gastronomy.additionalGallery.specialDesserts.subtitle')}</p>
                 </div>
                 <PhotoCredit photographer="Marlon Erthal" />
               </div>
@@ -170,12 +173,12 @@ const Gastronomia = () => {
               <div className="relative overflow-hidden rounded-xl shadow-lg aspect-square cursor-pointer group">
                 <img
                   src="https://res.cloudinary.com/dxlhv2mji/image/upload/v1736085763/prato-especial-do-chef_w8ep8h.png"
-                  alt="Pratos do Chef"
+                  alt={t('gastronomy.additionalGallery.chefDishes.title')}
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/85 to-transparent p-6 flex flex-col justify-end">
-                  <h3 className="text-xl font-semibold text-white mb-2 text-shadow">Pratos do Chef</h3>
-                  <p className="text-sm text-white text-shadow">Criações especiais</p>
+                  <h3 className="text-xl font-semibold text-white mb-2 text-shadow">{t('gastronomy.additionalGallery.chefDishes.title')}</h3>
+                  <p className="text-sm text-white text-shadow">{t('gastronomy.additionalGallery.chefDishes.subtitle')}</p>
                 </div>
                 <PhotoCredit photographer="Marlon Erthal" />
               </div>
@@ -183,12 +186,12 @@ const Gastronomia = () => {
               <div className="relative overflow-hidden rounded-xl shadow-lg aspect-square cursor-pointer group">
                 <img
                   src="https://res.cloudinary.com/dxlhv2mji/image/upload/v1736085756/cafe-da-manha_frcj7z.png"
-                  alt="Café da Manhã"
+                  alt={t('gastronomy.additionalGallery.breakfast.title')}
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/85 to-transparent p-6 flex flex-col justify-end">
-                  <h3 className="text-xl font-semibold text-white mb-2 text-shadow">Café da Manhã</h3>
-                  <p className="text-sm text-white text-shadow">Início do dia perfeito</p>
+                  <h3 className="text-xl font-semibold text-white mb-2 text-shadow">{t('gastronomy.additionalGallery.breakfast.title')}</h3>
+                  <p className="text-sm text-white text-shadow">{t('gastronomy.additionalGallery.breakfast.subtitle')}</p>
                 </div>
                 <PhotoCredit photographer="Marlon Erthal" />
               </div>

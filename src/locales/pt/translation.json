@@ -1,0 +1,1383 @@
+{
+  "navigation": {
+    "home": "Início",
+    "about": "Sobre",
+    "contact": "Contato",
+    "howToGet": "Como Chegar",
+    "accommodation": "Acomodações",
+    "activities": "Atividades",
+    "lodge": "O Lodge",
+    "gastronomy": "Gastronomia",
+    "natureEvents": "Eventos na Natureza",
+    "experiences": "Experiências",
+    "birdwatching": "Birdwatching",
+    "primatesObservation": "Observação de Primatas",
+    "safariBoat": "Safari Boat",
+    "trails": "Trilhas",
+    "fieldGuides": "Guias de Campo",
+    "conservation": "Conservação",
+    "researchStation": "Estação de Pesquisa",
+    "nascentNatural": "Nascente Natural",
+    "theySpokeAboutUs": "Falaram de Nós",
+    "photoGallery": "Galeria de Fotos",
+    "prepareYourTrip": "Prepare sua Viagem",
+    "frequentlyAskedQuestions": "Perguntas Frequentes",
+    "bookNow": "Reservar"
+  },
+  "common": {
+    "readMore": "Leia mais",
+    "book": "Reserve agora",
+    "contact": "Entre em contato"
+  },
+  "home": {
+    "welcome": {
+      "greeting": "BEM VINDO!",
+      "title": "JARDIM DA AMAZÔNIA",
+      "subtitle": "UM OÁSIS DE ÁGUAS CRISTALINAS AO SUL DA AMAZÔNIA"
+    },
+    "about": {
+      "description": "Situado às margens do Rio Claro, o Jardim da Amazônia é um refúgio que une a Floresta Amazônica e o Cerrado, oferecendo um dos ecossistemas mais ricos e diversificados do Brasil. Nosso objetivo é proporcionar uma experiência autêntica de conexão com a natureza, em um ambiente tranquilo e preservado, enquanto cuidamos do legado natural para as gerações futuras.",
+      "features": {
+        "naturalPool": "Piscina Natural",
+        "accommodation": "Acomodações Aconchegantes",
+        "trails": "Trilhas e Natureza"
+      },
+      "cta": "Conheça Nossa História"
+    },
+    "biodiversity": {
+      "quote": "Um corredor ecológico formado por um ecótono, onde Cerrado e Amazônia se encontram, criando um verdadeiro refúgio para a biodiversidade, com:",
+      "author": "Raquel Zanchet",
+      "stats": {
+        "birds": {
+          "count": "590+",
+          "title": "Espécies de Aves",
+          "subtitle": "Catalogadas em nossa reserva"
+        },
+        "primates": {
+          "count": "7",
+          "title": "Espécies de Primatas",
+          "subtitle": "Dos 29 reconhecidos em MT"
+        },
+        "mammals": {
+          "count": "30+",
+          "title": "Mamíferos",
+          "subtitle": "De médio e grande porte"
+        },
+        "experiences": {
+          "count": "∞",
+          "title": "Experiências",
+          "subtitle": "na natureza"
+        }
+      }
+    },
+    "experiences": {
+      "title": "Experiências",
+      "subtitle": "Explore, descubra e se encante com a vida selvagem em seu habitat natural.",
+      "cta": "Explorar",
+      "items": {
+        "birdwatching": {
+          "title": "Observação de Aves",
+          "description": "Descubra mais de 590 espécies de aves catalogadas em nossa reserva, incluindo espécies raras e endêmicas."
+        },
+        "primates": {
+          "title": "Observação de Primatas",
+          "description": "Encontre 7 das 29 espécies de primatas reconhecidas em Mato Grosso em seu habitat natural."
+        },
+        "safari": {
+          "title": "Safari Boat",
+          "description": "Navegue pelo Rio Claro e observe a vida selvagem em um passeio inesquecível."
+        }
+      }
+    },
+    "location": {
+      "title": "Onde Estamos",
+      "description": "O Jardim da Amazônia está localizado no município de São José do Rio Claro, Mato Grosso, em uma área de transição ecológica entre a Floresta Amazônica e o Cerrado brasileiro.",
+      "address": {
+        "title": "Endereço",
+        "text": "São José do Rio Claro - MT"
+      },
+      "distances": {
+        "title": "Distâncias",
+        "cuiaba": "330 km de Cuiabá",
+        "sinop": "180 km de Sinop"
+      },
+      "airports": {
+        "title": "Aeroportos Próximos",
+        "cuiaba": "Aeroporto de Cuiabá (CGB)",
+        "sinop": "Aeroporto de Sinop (OPS)"
+      },
+      "howToGet": "Como Chegar"
+    },
+    "testimonials": {
+      "title": "Avaliações",
+      "platformsTitle": "Veja mais avaliações em nossas redes:",
+      "items": [
+        {
+          "quote": "Uma experiência única e inesquecível. A natureza em seu estado mais puro, com acomodações confortáveis e uma equipe extremamente atenciosa.",
+          "author": "Maria Silva",
+          "date": "Março 2024"
+        },
+        {
+          "quote": "Lugar incrível para observação de aves! Conseguimos registrar mais de 100 espécies em apenas 3 dias.",
+          "author": "João Santos",
+          "date": "Fevereiro 2024"
+        },
+        {
+          "quote": "As trilhas são muito bem mantidas e os guias são extremamente conhecedores. Uma verdadeira imersão na natureza.",
+          "author": "Ana Costa",
+          "date": "Janeiro 2024"
+        }
+      ]
+    },
+    "map": {
+      "alt": "Mapa de Localização do Jardim da Amazônia"
+    },
+    "cta": {
+      "title": "Venha Viver Esta Experiência",
+      "subtitle": "Reserve sua estadia e prepare-se para momentos inesquecíveis em meio à natureza.",
+      "bookNow": "Reserve Agora",
+      "howToGet": "Como Chegar"
+    }
+  },
+  "footer": {
+    "sections": {
+      "about": {
+        "title": "Sobre Nós",
+        "home": "Home",
+        "history": "História",
+        "gallery": "Galeria de Imagens"
+      },
+      "accommodation": {
+        "title": "Hospedagem",
+        "rooms": "Acomodações",
+        "lodge": "O Lodge",
+        "gastronomy": "Gastronomia",
+        "natureEvents": "Eventos na Natureza"
+      },
+      "experiences": {
+        "title": "Experiências",
+        "birdwatching": "Birdwatching",
+        "primates": "Observação de Primatas",
+        "safariBoat": "Safari Boat",
+        "trails": "Trilhas",
+        "fieldGuides": "Guias de Campo"
+      },
+      "information": {
+        "title": "Informações",
+        "faq": "Perguntas Frequentes",
+        "howToGet": "Como Chegar"
+      },
+      "contact": {
+        "title": "Contato",
+        "email": "E-mail:",
+        "whatsapp": "WhatsApp:"
+      }
+    },
+    "copyright": "© 2025 Jardim da Amazônia / CNPJ: 02.025.529/0001-95"
+  },
+  "accommodations": {
+    "hero": {
+      "title": "Acomodações",
+      "subtitle": "Conforto e natureza em perfeita harmonia"
+    },
+    "intro": {
+      "description": "Nossos bangalôs e apartamentos foram cuidadosamente projetados para proporcionar o máximo conforto durante sua estadia, mantendo uma conexão harmoniosa com a natureza. Cada acomodação oferece uma experiência singular para a sua experiência."
+    },
+    "amenities": {
+      "kingBed": "Cama King Size",
+      "wifi": "Wi-Fi",
+      "ac": "Ar Condicionado",
+      "fan": "Ventilador de Teto",
+      "balcony": "Varanda",
+      "bathAmenities": "Amenidades de Banho",
+      "hairDryer": "Secador de Cabelo",
+      "umbrellas": "Guarda-chuvas"
+    },
+    "schedule": {
+      "title": "Horários",
+      "checkIn": "Check-in: 16:00",
+      "checkOut": "Check-out: 14:00",
+      "breakfast": "Café da Manhã: 7:30 às 9:30",
+      "lunch": "Almoço: 12:30",
+      "dinner": "Jantar: 19:30"
+    },
+    "included": {
+      "title": "Incluído na Hospedagem",
+      "items": [
+        "Café da manhã completo",
+        "Almoço e jantar completo",
+        "Wi-Fi nas áreas comuns",
+        "Acesso à Piscina Natural"
+      ]
+    },
+    "importantInfo": {
+      "title": "Informações Importantes",
+      "items": [
+        "Não são permitidos animais de estimação",
+        "Proibido fumar nas acomodações",
+        "Aceitamos cartões de crédito",
+        "Necessária reserva antecipada"
+      ]
+    },
+    "rooms": {
+      "familyBungalow": {
+        "type": "Bangalô",
+        "name": "Bangalô Família",
+        "description": "Desfrute da vista do Rio Claro e lagoas nos confortáveis bangalôs, com cama king size, camas de solteiro para até 4 pessoas, lençóis de algodão, amenidades ecológicas e redes na varanda para relaxar após aventuras na selva.",
+        "features": {
+          "guests": "1-4 Hóspedes",
+          "view": "Vista para o Rio Claro",
+          "ideal": "Ideal para Famílias"
+        }
+      },
+      "gardenBungalow": {
+        "type": "Bangalô",
+        "name": "Bangalô Jardim",
+        "description": "Charmoso bangalô para até 2 pessoas, perfeito para casais. Relaxe na varanda privativa com redes, cercado pela tranquilidade da natureza.",
+        "features": {
+          "guests": "1-2 Hóspedes",
+          "view": "Vista para o Jardim",
+          "ideal": "Ideal para Casais"
+        }
+      },
+      "farmhouse": {
+        "type": "Casa da Fazenda",
+        "name": "Casa da Fazenda",
+        "description": "A histórica Casa da Fazenda, construída em 1986, oferece apartamentos que combinam o charme do mobiliário de época com conforto moderno.",
+        "features": {
+          "furniture": "Mobília de Época",
+          "view": "Vista Panorâmica",
+          "experience": "Experiência Histórica"
+        }
+      },
+      "forestHouse": {
+        "type": "Casa da Mata",
+        "name": "Casa da Mata",
+        "description": "Retrofit de uma casa próxima à floresta, onde beija-flores podem ser avistados. Esta casa especial oferece uma experiência imersiva entre as árvores, conectando você à biodiversidade local com todo o conforto.",
+        "features": {
+          "guests": "1-2 Hóspedes",
+          "view": "Vista para a Mata",
+          "experience": "Experiência Imersiva"
+        }
+      }
+    },
+    "designQuote": {
+      "text": "Aconchegantes instalações do Lodge que foram inspiradas nas casas de palafitas e de madeira da Amazônia dos anos 80, celebrando a harmonia entre o homem e a natureza. A Decoração adota tons terrosos e neutros, com uma paleta que evoca o ambiente natural: marrons, beges e verdes musgo, criam um estilo rústico chic, onde a simplicidade, traz uma atmosfera acolhedora perfeitamente integrada à paisagem amazônica.",
+      "author": "Alê Ribeiro"
+    },
+    "cta": {
+      "title": "Pronto para Viver essa Experiência?",
+      "subtitle": "Reserve agora sua estadia e prepare-se para momentos inesquecíveis em meio à natureza",
+      "bookNow": "Reserve Agora",
+      "contact": "Entre em Contato"
+    },
+    "details": {
+      "viewDetails": "Ver Detalhes",
+      "amenities": "Comodidades"
+    }
+  },
+  "externalAreas": {
+    "hero": {
+      "title": "Áreas Externas",
+      "subtitle": "Espaços ao ar livre para sua conexão com a natureza"
+    },
+    "intro": {
+      "quote": "O trabalho pioneiro no Jardim da Amazônia resultou na preservação de uma grande área intocada de floresta amazônica primária. Devotos da natureza, a família Zanchet investiu na atividade de observação de aves no ano de 1997, tornando esse lugar um importante santuário ecológico.",
+      "author": "Alex Robinson"
+    },
+    "areas": {
+      "naturalPool": {
+        "title": "Piscina Natural",
+        "description": "Nossa piscina natural é alimentada por uma nascente de água cristalina, proporcionando um refrescante mergulho em meio à natureza. Com deck de madeira e espreguiçadeiras, é o lugar perfeito para relaxar.",
+        "features": {
+          "water": "Água potável de nascente",
+          "deck": "Deck para banho de sol",
+          "immersion": "Imersão total na natureza",
+          "path": "Passarela pela floresta para acesso exclusivo"
+        }
+      },
+      "trails": {
+        "title": "Trilhas",
+        "description": "Explore nossas trilhas ecológicas, cuidadosamente mantidas para proporcionar uma experiência segura e enriquecedora em meio à floresta amazônica.",
+        "features": [
+          "Trilhas guiadas",
+          "Lagoas exuberantes",
+          "Pontos de observação",
+          "Áreas de descanso"
+        ]
+      },
+      "communalArea": {
+        "title": "Área de Convivência",
+        "description": "Espaço aconchegante para momentos de descontração, leitura ou simplesmente apreciar a natureza. Equipado com redes, sofás e mesas, é ideal para socialização.",
+        "features": [
+          "Lounge ao ar livre",
+          "Área de leitura",
+          "Wi-Fi disponível",
+          "Iluminação ambiente",
+          "Casa de bonecas",
+          "Mini-quadra de areia"
+        ]
+      }
+    },
+    "activities": {
+      "title": "Atividades Disponíveis",
+      "items": {
+        "birdwatching": {
+          "title": "Observação de Aves",
+          "description": "Explore a rica diversidade de aves amazônicas nos arredores da nossa propriedade"
+        },
+        "recreation": {
+          "title": "Área de Lazer",
+          "description": "As crianças têm seu espaço garantido para a diversão na nossa mini-quadra de areia e na encantadora casa de bonecas"
+        },
+        "photography": {
+          "title": "Fotografia",
+          "description": "Capture momentos especiais em cenários deslumbrantes da natureza"
+        },
+        "meditation": {
+          "title": "Meditação",
+          "description": "Encontre paz e tranquilidade em cada canto do nosso espaço.",
+          "note": "Traga seu tapetinho!"
+        }
+      }
+    },
+    "sustainability": {
+      "title": "Sustentabilidade",
+      "description": "Nossas áreas externas foram desenvolvidas utilizando materiais locais e técnicas que minimizam o impacto ambiental, garantindo a preservação do ecossistema natural.",
+      "features": [
+        "Iluminação de baixo impacto via energia solar",
+        "Móveis feitos de madeira recuperada",
+        "Projetos de monitoramento de fauna",
+        "Preservação da vegetação nativa"
+      ]
+    },
+    "cta": {
+      "title": "Venha Conhecer Nossos Espaços",
+      "description": "Reserve sua estadia e desfrute de todas essas experiências únicas",
+      "button": "Reserve Agora"
+    }
+  },
+  "gastronomy": {
+    "hero": {
+      "title": "Gastronomia",
+      "subtitle": "Tradição familiar e criatividade contemporânea"
+    },
+    "intro": {
+      "description1": "As receitas de família, tradicionalmente preparadas por Carmelita, ganharam uma nova roupagem com a chegada do chef José Sérgio. Pratos à base de peixes da região, como matrinxã e pintado, se unem à clássica abóbora cabotiá, legumes grelhados e farofa de banana-da-terra.",
+      "description2": "A polenta frita e o sagu na sobremesa trazem à mesa as raízes italianas da família Zanchet, em uma combinação de tradição e criatividade. No café da manhã, o aroma do café com leite se mistura ao aconchego dos ovos mexidos, bolos caseiros e outras delícias que confortam o paladar e o coração."
+    },
+    "gallery": {
+      "traditionalDishes": {
+        "title": "Pratos tradicionais",
+        "subtitle": "Sabores autênticos e deliciosos"
+      },
+      "desserts": {
+        "title": "Sobremesas Deliciosas",
+        "subtitle": "Doces clássicos que encantam o paladar e os olhos"
+      },
+      "breakfast": {
+        "title": "Café da Manhã",
+        "subtitle": "Um café da manhã acolhedor"
+      }
+    },
+    "chefStatement": {
+      "title": "Do Produtor à Mesa",
+      "quote1": "A gastronomia sempre teve como objetivo unir pessoas, seja através da cocção dos alimentos ou do alimento in natura. O verdadeiro propósito é alimentar a 'alma' antes de alimentar o corpo. Essa busca pelo prazer de alimentar e proporcionar momentos significativos é uma constante desde a nossa ancestralidade. Nos dias de hoje, essa busca continua, com uma infinidade de produtos e produtores. Assim nasceu o conceito 'FARM TO TABLE', que significa trazer o que é da terra para a mesa. Essa jornada me levou a uma imersão no Ecótono, entre a Amazônia e o Cerrado, onde encontrei um lugar incrível chamado Jardim da Amazônia, com uma cozinha caseira comandada por uma senhora chamada CARMELITA ZANCHET.",
+      "quote2": "Nessa jornada, descobri que o simples é essencial para os olhos e a alma. Frutos, sementes, hortaliças, peixes, vegetais e outras iguarias que encontrei nessa fusão Amazônia/Cerrado são indiscutivelmente a busca pelo meu projeto de vida como cozinheiro. Encontrei um porto seguro, ou 'cozinha segura'. Para onde essa jornada me levará? Ainda estou descobrindo, sem pressa de chegar ao fim! Cozinhar é, acima de tudo, um grande ato de AMOR.",
+      "author": "Chef José Sérgio"
+    },
+    "localIngredients": {
+      "title": "Ingredientes Locais",
+      "description": "Valorizamos os produtores locais, garantindo ingredientes frescos e contribuindo para o fortalecimento da economia da região."
+    },
+    "additionalGallery": {
+      "typicalDishes": {
+        "title": "Pratos Típicos",
+        "subtitle": "Sabores da região"
+      },
+      "specialDesserts": {
+        "title": "Sobremesas Especiais",
+        "subtitle": "Doces que encantam"
+      },
+      "chefDishes": {
+        "title": "Pratos do Chef",
+        "subtitle": "Criações especiais"
+      },
+      "breakfast": {
+        "title": "Café da Manhã",
+        "subtitle": "Início do dia perfeito"
+      }
+    }
+  },
+  "birdwatching": {
+    "hero": {
+      "title": "Birdwatching",
+      "subtitle": "Top Hotspot para Observação de Aves no Brasil"
+    },
+    "intro": {
+      "description": "O Jardim da Amazônia é uma referência mundial na proteção de aves, pois é considerada uma IBA (Importante Bird Area), uma importante área para a Biodiversidade segundo o Birdlife International, E-bird, The Cornell Lab e Wikiaves."
+    },
+    "recognition": {
+      "title": "Reconhecimento Internacional",
+      "stats": {
+        "brazil": {
+          "number": "Top 3",
+          "label": "Hotspot Brasil"
+        },
+        "matoGrosso": {
+          "number": "Top 2",
+          "label": "Mato Grosso"
+        },
+        "species": {
+          "number": "590+",
+          "label": "Espécies Catalogadas"
+        }
+      }
+    },
+    "registeredBirds": {
+      "title": "Aves Registradas",
+      "species": {
+        "tieBicudo": {
+          "name": "Tiê-bicudo",
+          "scientificName": "Conothraupis mesoleuca",
+          "description": "Ave endêmica do Brasil, descrita em 1939 durante a expedição de Claude Levi Strauss. O Rio Claro representa a quarta área conhecida de ocorrência desta espécie rara."
+        },
+        "curica": {
+          "name": "Curica-de-bochecha-laranja",
+          "scientificName": "Pyrilia barrabandi",
+          "description": "Papagaio com cabeça preta, mancha branca nos olhos e bochechas laranjas. Espetaculares manchas coloridas nas asas contrastam com o corpo verde."
+        },
+        "umbrellaBird": {
+          "name": "Pássaro-guarda-chuva",
+          "scientificName": "Cephalopterus ornatus",
+          "description": "Ave impressionante com crista em forma de guarda-chuva e bolsa gular. O macho exibe sua bolsa inflada, emitindo sons graves e ressonantes."
+        }
+      }
+    },
+    "biodiversity": {
+      "title": "Biodiversidade",
+      "description": "Em um cenário singular onde o Cerrado encontra a Amazônia, nosso lodge oferece a rara oportunidade de vivenciar a interação de duas das mais ricas biodiversidades do planeta.",
+      "amazonianSpecies": {
+        "title": "Espécies Amazônicas",
+        "species": {
+          "capitaoDeCinta": {
+            "name": "Capitão-de-cinta",
+            "scientificName": "Capito dayi"
+          },
+          "coroaDeFogo": {
+            "name": "Coroa-de-fogo",
+            "scientificName": "Heterocercus linteatus"
+          },
+          "cambaxirraCinzenta": {
+            "name": "Cambaxirra-cinzenta",
+            "scientificName": "Odontorchilus cinereus"
+          },
+          "tucanoDePopoBranco": {
+            "name": "Tucano-de-papo-branco",
+            "scientificName": "Ramphastos tucanus"
+          }
+        }
+      },
+      "highlightedBirds": {
+        "title": "Aves de Destaques",
+        "species": {
+          "uiracu": {
+            "name": "Uiraçu",
+            "scientificName": "Morphnus guianensis"
+          },
+          "urubuRei": {
+            "name": "Urubu-rei",
+            "scientificName": "Sarcoramphus papa"
+          },
+          "limpaFolhaDoBuriti": {
+            "name": "Limpa-folha-do-buriti",
+            "scientificName": "Berlepschia rikeri"
+          },
+          "topetinhoDoBrasilCentral": {
+            "name": "Topetinho-do-brasil-central",
+            "scientificName": "Lophornis gouldii"
+          }
+        }
+      }
+    },
+    "gallery": {
+      "title": "Galeria",
+      "images": {
+        "hummingbird": "Beija-flor Tesoura Verde",
+        "waterThrush": "Choca d'água",
+        "buritiMacaw": "Maracanã do Buriti",
+        "blueTanager": "Saíra de Cabeça Azul"
+      }
+    },
+    "conservationStatus": {
+      "cr": "CR - Criticamente em Perigo",
+      "en": "EN - Em Perigo",
+      "vu": "VU - Vulnerável",
+      "nt": "NT - Quase Ameaçada",
+      "lc": "LC - Pouco Preocupante"
+    },
+    "specialTour": {
+      "title": "Tour Especial de Birdwatching",
+      "schedule": {
+        "title": "Horário",
+        "departure": "Saída às 5:30h da manhã"
+      },
+      "itinerary": {
+        "title": "Roteiro",
+        "items": [
+          "Safari de barco até a 'Lagoa do Tiê-bicudo'",
+          "Observação de aves no Rio Claro e Lagos",
+          "Parada na 'Trilha da Cabana' para espécies florestais",
+          "Possibilidade de observar o Macaco-aranha-de-cara-preta",
+          "Retorno para almoço no lodge"
+        ]
+      }
+    },
+    "observationSpots": {
+      "title": "Pontos de Observação",
+      "spots": {
+        "rioClaroRiparian": {
+          "title": "Matas Ciliares do Rio Claro",
+          "description": "Habitat do raro Tiê-bicudo e diversas espécies amazônicas. A vegetação aberta ao longo dos lagos oferece condições essenciais para observação."
+        },
+        "jatoba": {
+          "title": "Trilha do Jatobá",
+          "description": "Local privilegiado para observação do Capitão-de-cinta e outras espécies florestais."
+        },
+        "tieBicudoLagoon": {
+          "title": "Lagoa do Tiê-bicudo",
+          "description": "Tour especial de barco para observação do Tiê-bicudo e outras espécies aquáticas."
+        }
+      }
+    },
+    "references": {
+      "title": "Referências Internacionais",
+      "description": "Fique por dentro das novidades de birdwatching do Jardim da Amazônia dentro dos principais sites de birdwatching:",
+      "links": {
+        "ebird": "E-bird",
+        "wikiaves": "WikiAves"
+      }
+    }
+  },
+  "primatas": {
+    "hero": {
+      "title": "Primatas",
+      "subtitle": "Conheça os primatas do Jardim da Amazônia"
+    },
+    "intro": {
+      "title": "Nossos Primatas",
+      "description1": "O Jardim da Amazônia, situado no município de São José do Rio Claro, no Chapadão dos Parecis, é um ponto de convergência entre o Cerrado e a Floresta Amazônica, destacando-se como berço de numerosas nascentes e de uma biodiversidade excepcional.",
+      "description2": "Este ambiente abriga mais de 30 espécies de mamíferos de médio e grande porte, incluindo 07 espécies de primatas, sendo alguns criticamente em perigo de extinção e endêmicos do norte de MT."
+    },
+    "species": {
+      "title": "Espécies Emblemáticas",
+      "zoguezogue": {
+        "name": "Zogue-zogue-do-mato-grosso",
+        "scientificName": "Plecturocebus grovesi",
+        "englishName": "Mato Grosso Titi Monkey",
+        "description": "Primata criticamente ameaçado, endêmico do norte de Mato Grosso, encontrado entre os rios Teles Pires e Arinos. Uma das 25 espécies de primatas mais ameaçadas do planeta.",
+        "status": "CR"
+      },
+      "parauacu": {
+        "name": "Parauacu",
+        "scientificName": "Pithecia mittermeieri",
+        "englishName": "Tapajo's Saki Monkey",
+        "description": "Espécie vulnerável que atua como jardineiro da floresta, dispersando sementes de vários tamanhos e durezas. Atualmente é objeto de estudo de doutorado focado em sua distribuição e conservação.",
+        "status": "VU"
+      },
+      "macacoaranha": {
+        "name": "Macaco-aranha-da-cara-preta",
+        "scientificName": "Ateles chamek",
+        "englishName": "Black-faced Spider Monkey",
+        "description": "O maior primata frugívoro da região, classificado como Vulnerável no Brasil e Em Perigo globalmente. Habita florestas altas, chuvosas, inundáveis ou em terra firme.",
+        "status": "VU"
+      }
+    },
+    "conservationStatus": {
+      "CR": "Criticamente em Perigo",
+      "VU": "Vulnerável",
+      "LC": "Pouco Preocupante"
+    },
+    "gallery": {
+      "title": "Galeria"
+    },
+    "recommendations": {
+      "title": "Recomendações",
+      "whatToBring": {
+        "title": "O que Levar",
+        "items": [
+          "Roupas leves e confortáveis (manga comprida)",
+          "Calçados fechados para caminhada",
+          "Proteção (chapéu, repelente, protetor solar)",
+          "Equipamentos (binóculos, lanterna, garrafa d'água)"
+        ]
+      },
+      "bestTime": {
+        "title": "Melhor Época",
+        "description": "O Sul da Amazônia possui clima quente e úmido.",
+        "seasons": {
+          "rainy": {
+            "period": "Janeiro a Abril",
+            "description": "Período de chuvas com rios cheios"
+          },
+          "ideal": {
+            "period": "Período Ideal: Junho a Setembro",
+            "description": "Estação seca com águas transparentes e praias de areia branca"
+          }
+        }
+      }
+    },
+    "macaquear": {
+      "title": "Macaquear no Mato Grosso",
+      "description1": "O Brasil é o país com maior diversidade de primatas no mundo. Mato Grosso abriga 29 espécies distribuídas entre Pantanal, Cerrado e Amazônia, tornando-o equivalente ao 13º país em diversidade de primatas.",
+      "description2": "'Macaquear' é uma iniciativa do Instituto Ecótono em parceria com a Sociedade Brasileira de Primatologia, que incentiva a observação responsável de primatas como ferramenta de conservação e desenvolvimento local."
+    },
+    "route": {
+      "title": "Rota de Primatas do Mato Grosso",
+      "intro": "O Brasil é o país com maior número de espécies de primatas do mundo, e Mato Grosso, se fosse um país, estaria entre os dez primeiros. Esta riqueza deve-se à variedade de biomas e aos grandes rios que atuam como barreiras geográficas.",
+      "about": {
+        "title": "Sobre a Rota",
+        "description": "Desde 2023, o Instituto Ecótono em parceria com as pousadas Jardim da Amazônia e Cristalino Lodge desenvolvem uma rota que permite observar 14 espécies em sete locais, em um roteiro de 15 dias.",
+        "destinations": {
+          "title": "Destinos",
+          "places": "São José do Rio Claro • Sinop • Alta Floresta"
+        },
+        "benefits": {
+          "title": "Benefícios",
+          "items": "Ciência cidadã • Pesquisa acadêmica • Turismo sustentável • Renda local"
+        }
+      },
+      "note": "Todos os envolvidos seguem as boas práticas de observação de vida silvestre, contribuindo para a conservação das florestas."
+    },
+    "references": {
+      "title": "Referências e Clipping",
+      "links": {
+        "congress": "Congresso de Primatologia",
+        "terra": "G1 - Terra da Gente",
+        "eco": "O Eco"
+      }
+    }
+  },
+  "safariBoat": {
+    "hero": {
+      "title": "Safari Boat",
+      "subtitle": "Explore a vida selvagem dos rios amazônicos"
+    },
+    "intro": {
+      "description1": "O Safari Boat é uma experiência única que permite explorar a rica biodiversidade dos rios amazônicos. Durante o passeio, você terá a oportunidade de observar diversas espécies de peixes, aves e répteis em seu habitat natural.",
+      "description2": "Nossos guias especializados compartilham seu conhecimento sobre a fauna local, proporcionando uma experiência educativa e emocionante."
+    },
+    "species": {
+      "title": "Espécies que você pode encontrar",
+      "items": {
+        "kingfisher": {
+          "title": "Martim Pescador",
+          "description": "Ave pescadora que encanta com suas cores vibrantes e técnica de pesca precisa."
+        },
+        "caiman": {
+          "title": "Jacaré Anão",
+          "description": "Espécie de jacaré típica da Amazônia Sul, menor que seus parentes. Pode ser avistado nas margens dos rios e em áreas alagadas durante o safari."
+        },
+        "tapir": {
+          "title": "Anta",
+          "description": "O maior mamífero terrestre da América do Sul, frequentemente avistada nas margens dos rios durante o Safari Boat. Importante dispersora de sementes, contribui para a regeneração da floresta."
+        }
+      }
+    },
+    "checklist": {
+      "title": "Checklist para o Safari",
+      "protection": {
+        "title": "Proteção",
+        "items": [
+          "Protetor solar",
+          "Repelente",
+          "Chapéu ou boné",
+          "Óculos de sol"
+        ]
+      },
+      "equipment": {
+        "title": "Equipamentos",
+        "items": [
+          "Câmera fotográfica",
+          "Garrafa de água",
+          "Binóculos",
+          "Roupas leves"
+        ]
+      }
+    }
+  },
+  "fieldGuides": {
+    "hero": {
+      "title": "Guias de Campo",
+      "subtitle": "Conheça a biodiversidade do Jardim da Amazônia"
+    },
+    "speciesList": {
+      "title": "Listas de Espécies",
+      "description": "Nossa região abriga uma extraordinária biodiversidade, documentada através de anos de pesquisa científica. Aqui você encontra guias e publicações sobre nossa fauna e flora."
+    },
+    "categories": {
+      "mammals": "Mamíferos",
+      "birds": "Aves"
+    },
+    "publications": {
+      "birds": {
+        "title": "Aves do Jardim da Amazônia",
+        "authors": "Equipe de Pesquisa do Jardim da Amazônia",
+        "year": "-",
+        "description": "Catálogo das espécies de aves observadas na região. Conteúdo em desenvolvimento.",
+        "status": "Em desenvolvimento"
+      },
+      "mammals": {
+        "title": "Mamíferos do Jardim da Amazônia",
+        "authors": "Colaboração entre:",
+        "description": "Lista dos mamíferos registrados na área do Jardim da Amazônia.",
+        "year": "2023"
+      }
+    },
+    "research": {
+      "title": "Apoio à Pesquisa",
+      "description": "O Jardim da Amazônia apoia ativamente a pesquisa científica em nossa região. Se você é pesquisador e tem interesse em desenvolver estudos em nossa área, entre em contato conosco.",
+      "email": "Enviar E-mail",
+      "learnMore": "Saiba Mais"
+    },
+    "climate": {
+      "title": "Clima",
+      "description": "Nossa região apresenta um clima típico amazônico, com estações bem definidas. O conhecimento das condições climáticas é essencial para o planejamento de atividades de observação da fauna e flora.",
+      "rainy": {
+        "title": "Estação Chuvosa",
+        "period": "Novembro a Abril"
+      },
+      "dry": {
+        "title": "Estação Seca",
+        "period": "Maio a Outubro"
+      }
+    }
+  },
+  "trails": {
+    "hero": {
+      "title": "Trilhas Ecológicas",
+      "subtitle": "Explore a biodiversidade da Amazônia"
+    },
+    "trails": {
+      "jatoba": {
+        "title": "Trilha do Jatobá",
+        "description": "Trilha que leva a uma árvore centenária de Jatobá (Hymenaea courbaril), com mais de 40 metros de altura.",
+        "duration": "1h30min",
+        "distance": "2.5km",
+        "difficulty": "Fácil"
+      },
+      "lagoa": {
+        "title": "Lagoa das Araras",
+        "description": "Caminhada até uma lagoa natural onde é possível observar araras e outras aves.",
+        "duration": "2h",
+        "distance": "3km",
+        "difficulty": "Moderada"
+      },
+      "laboratorio": {
+        "title": "Trilha do Laboratório",
+        "description": "Percurso que passa por pontos de pesquisa científica e observação da fauna.",
+        "duration": "1h",
+        "distance": "1.8km",
+        "difficulty": "Fácil"
+      },
+      "arinos": {
+        "title": "Rio Arinos",
+        "description": "Trilha que margeia o Rio Arinos, ideal para observação de aves e primatas.",
+        "duration": "2h30min",
+        "distance": "4km",
+        "difficulty": "Moderada"
+      },
+      "piquia": {
+        "title": "Trilha do Pequiá",
+        "description": "Caminhada por área de transição entre Cerrado e Amazônia.",
+        "duration": "1h45min",
+        "distance": "2.8km",
+        "difficulty": "Fácil"
+      },
+      "angelim": {
+        "title": "Trilha do Angelim",
+        "description": "Percurso que leva a uma majestosa árvore de Angelim, típica da região.",
+        "duration": "2h15min",
+        "distance": "3.5km",
+        "difficulty": "Moderada"
+      }
+    },
+    "info": {
+      "title": "Informações Importantes",
+      "whatToBring": {
+        "title": "O que levar",
+        "items": [
+          "Calçados apropriados",
+          "Protetor solar",
+          "Repelente",
+          "Água"
+        ]
+      },
+      "recommendations": {
+        "title": "Recomendações",
+        "items": [
+          "Acompanhamento de guia",
+          "Horários mais frescos",
+          "Roupas leves e confortáveis",
+          "Respeito à natureza"
+        ]
+      }
+    },
+    "itineraries": {
+      "title": "Roteiros Sugeridos",
+      "3days": {
+        "title": "3 Dias / 2 Noites",
+        "morning": ["Trilha do Jatobá"],
+        "afternoon": ["Lagoa das Araras"]
+      },
+      "4days": {
+        "title": "4 Dias / 3 Noites",
+        "morning": ["Trilha do Laboratório", "Visita ao Rio Arinos"],
+        "afternoon": ["Trilha do Jatobá", "Lagoa das Araras", "Trilha do Piquiá"]
+      },
+      "5days": {
+        "title": "5 Dias / 4 Noites",
+        "morning": ["Trilha do Laboratório", "Visita ao Rio Arinos", "Visita a agriculturas locais"],
+        "afternoon": ["Trilha do Jatobá", "Lagoa das Araras", "Trilha do Piquiá", "Trilha do Angelim"]
+      }
+    },
+    "details": {
+      "duration": "Duração",
+      "distance": "Distância",
+      "difficulty": "Dificuldade"
+    }
+  },
+  "researchStation": {
+    "hero": {
+      "title": "Estação de Pesquisa Jardim da Amazônia",
+      "subtitle": "Centro de Excelência em Pesquisa e Conservação na Transição Amazônia-Cerrado"
+    },
+    "intro": {
+      "description": "Somos um espaço dedicado a ampliar o conhecimento científico global sobre a biodiversidade na transição Amazônia-Cerrado. Nossa missão é proporcionar a infraestrutura e suporte necessários para que pesquisadores de todo o mundo possam estudar e documentar a rica biodiversidade dessa região, afim para que contribuam para o entendimento e preservação da vida em nosso planeta."
+    },
+    "support": {
+      "title": "Como Apoiamos a Pesquisa",
+      "infrastructure": {
+        "title": "Infraestrutura e Logística",
+        "description": "Oferecemos hospedagem confortável, alimentação de qualidade e guias experientes que conhecem profundamente a região. Nossa estrutura inclui trilhas bem mantidas e pontos de observação estratégicos, permitindo que pesquisadores de diferentes nacionalidades possam realizar seus estudos com segurança e eficiência."
+      },
+      "database": {
+        "title": "Banco de Dados Colaborativo",
+        "description": "Mantemos um acervo digital com registros de avistamentos, fotografias e dados coletados por pesquisadores que visitam nossa estação. Este banco de dados visa contribuir para o avanço do conhecimento científico e a compreensão dos ecossistemas tropicais."
+      }
+    },
+    "species": {
+      "title": "Espécies de Interesse",
+      "description": "Nossa região abriga espécies únicas que são fundamentais para o entendimento da biodiversidade global. Através dos anos, pesquisadores de diversos países têm documentado e estudado estas espécies, contribuindo para o conhecimento científico mundial e para estratégias de conservação que beneficiam todo o planeta.",
+      "fauna": {
+        "title": "Fauna",
+        "items": {
+          "spiderMonkey": {
+            "name": "Macaco-aranha-da-cara-preta",
+            "scientificName": "Ateles chamek",
+            "description": "Espécie ameaçada que atua como dispersora de sementes"
+          },
+          "sakiMonkey": {
+            "name": "Parauacu",
+            "scientificName": "Pithecia mittermeieri",
+            "description": "Espécie endêmica da região com população reduzida"
+          },
+          "umbrellabird": {
+            "name": "Anambé-preto",
+            "scientificName": "Cephalopterus ornatus",
+            "description": "Ave indicadora da qualidade do habitat"
+          }
+        }
+      },
+      "flora": {
+        "title": "Flora",
+        "items": {
+          "angelim": {
+            "name": "Angelim-saia",
+            "scientificName": "Parkia pendula",
+            "description": "Árvore emergente vital para fauna local"
+          },
+          "buriti": {
+            "name": "Buriti",
+            "scientificName": "Mauritia flexuosa",
+            "description": "Palmeira indicadora de áreas úmidas"
+          },
+          "jatoba": {
+            "name": "Jatobá",
+            "scientificName": "Hymenaea courbaril",
+            "description": "Espécie-chave para manutenção da fauna"
+          }
+        }
+      }
+    },
+    "contact": {
+      "title": "Venha Pesquisar Conosco",
+      "description": "Se você é pesquisador e tem interesse em desenvolver estudos em nossa área, entre em contato conosco. Estamos prontos para apoiar sua pesquisa e contribuir para o avanço do conhecimento científico global.",
+      "button": "Entre em Contato"
+    }
+  },
+  "faq": {
+    "hero": {
+      "title": "Perguntas Frequentes",
+      "subtitle": "Tudo que você precisa saber sobre sua estadia"
+    },
+    "sections": {
+      "accommodation": {
+        "title": "Acomodações",
+        "questions": {
+          "roomTypes": {
+            "question": "Quais tipos de quartos estão disponíveis?",
+            "answer": "Oferecemos as seguintes opções de acomodação:\n- Bangalô\n- Quarto Triplo\n- Quarto Duplo"
+          },
+          "roomAmenities": {
+            "question": "O que tem no quarto?",
+            "answer": "Nossos quartos são equipados com itens essenciais para o seu conforto, incluindo cama King-size confortável, banheiro privativo, ar-condicionado, e Wi-Fi."
+          }
+        }
+      },
+      "guides": {
+        "title": "Guias",
+        "questions": {
+          "languages": {
+            "question": "Vocês têm guias que falam outros idiomas?",
+            "answer": "Sim, temos guias que falam português, inglês e espanhol. Por favor, solicite no momento da reserva."
+          },
+          "specializedGuides": {
+            "question": "Há guias especializados para observação de aves?",
+            "answer": "Sim, temos guias especializados para atividades de observação de aves e primatas. São profissionais altamente capacitados com vasta experiência na região."
+          }
+        }
+      },
+      "whatToBring": {
+        "title": "O que Levar",
+        "questions": {
+          "clothing": {
+            "question": "Que tipo de roupa devo levar?",
+            "answer": "Recomendamos:\n- Roupas leves e confortáveis\n- Calças compridas e camisas de manga longa para trilhas\n- Calçados confortáveis para caminhada\n- Roupa de banho\n- Chapéu ou boné\n- Capa de chuva (durante a estação chuvosa)"
+          },
+          "equipment": {
+            "question": "Quais equipamentos devo levar?",
+            "answer": "Itens essenciais:\n- Repelente de insetos\n- Protetor solar\n- Binóculos (para observação de fauna)\n- Câmera fotográfica\n- Garrafa de água"
+          }
+        }
+      },
+      "birdwatching": {
+        "title": "Observação de Aves",
+        "questions": {
+          "bestTime": {
+            "question": "Qual o melhor horário para observação de aves?",
+            "answer": "Os melhores horários são início da manhã (5:30-9:00) e final da tarde (15:30-18:00). Diferentes espécies podem ser observadas em diferentes estações."
+          },
+          "species": {
+            "question": "Quantas espécies de aves podem ser vistas?",
+            "answer": "Mais de 590 espécies foram catalogadas em nossa área. O número de espécies que você pode observar varia dependendo da estação e duração da estadia."
+          }
+        }
+      },
+      "tours": {
+        "title": "Passeios",
+        "questions": {
+          "types": {
+            "question": "Quais tipos de passeios vocês oferecem?",
+            "answer": "Oferecemos diversos passeios:\n- Observação de aves\n- Observação de primatas\n- Trilhas na natureza\n- Safari boat\n- Caminhadas noturnas\n- Tours fotográficos"
+          },
+          "duration": {
+            "question": "Qual a duração dos passeios?",
+            "answer": "A duração dos passeios varia de 2 a 6 horas, dependendo da atividade. Podemos personalizar o cronograma de acordo com seus interesses e condição física."
+          }
+        }
+      },
+      "petPolicy": {
+        "title": "Política de Animais de Estimação",
+        "questions": {
+          "allowed": {
+            "question": "São permitidos animais de estimação?",
+            "answer": "Para a segurança da nossa fauna local e o conforto de todos os hóspedes, não permitimos animais de estimação em nossas instalações."
+          }
+        }
+      },
+      "reservations": {
+        "title": "Reservas",
+        "questions": {
+          "howTo": {
+            "question": "Como posso fazer uma reserva?",
+            "answer": "Você pode fazer reservas através de:\n- Nosso site\n- E-mail: reservas@jardimamazonia.com\n- WhatsApp: +55 65 4042-0595"
+          },
+          "cancellation": {
+            "question": "Qual a política de cancelamento?",
+            "answer": "Cancelamentos devem ser feitos com pelo menos 30 dias de antecedência do check-in para reembolso total. Entre em contato para termos detalhados de cancelamento."
+          }
+        }
+      },
+      "location": {
+        "title": "Localização",
+        "questions": {
+          "access": {
+            "question": "Como chegar?",
+            "answer": "Estamos localizados em São José do Rio Claro, MT. Você pode chegar:\n- De carro partindo de Cuiabá (4 horas de viagem)\n- Serviço de transfer dos aeroportos de Cuiabá ou Sinop"
+          },
+          "distance": {
+            "question": "Qual a distância das principais cidades?",
+            "answer": "Distâncias:\n- 330 km de Cuiabá\n- 180 km de Sinop"
+          }
+        }
+      },
+      "facilitiesAndLeisure": {
+        "title": "Estrutura e Lazer",
+        "questions": {
+          "internet": {
+            "question": "Tem acesso à internet?",
+            "answer": "Sim, oferecemos internet de alta velocidade via Starlink nas áreas comuns e acomodações."
+          },
+          "activities": {
+            "question": "Quais atividades de lazer estão disponíveis?",
+            "answer": "Oferecemos:\n- Piscina natural\n- Trilhas na natureza\n- Observação de aves e fauna\n- Áreas de leitura\n- Espaços de relaxamento\n- Áreas sociais ao ar livre"
+          }
+        }
+      },
+      "foodAndBeverage": {
+        "title": "Alimentos e Bebidas (A&B)",
+        "questions": {
+          "meals": {
+            "question": "Há opções de almoço e jantar no local?",
+            "answer": "Sim, oferecemos refeições em nosso restaurante. Horários:\n- Almoço: 12:30\n- Jantar: 19:30"
+          },
+          "drinks": {
+            "question": "Posso levar minha própria bebida?",
+            "answer": "Não é permitido trazer bebidas.\nSolicite nossa Carta de vinhos."
+          }
+        }
+      },
+      "checkInOut": {
+        "title": "Check-in e Check-out",
+        "questions": {
+          "times": {
+            "question": "Quais são os horários de check-in e check-out?",
+            "answer": "- Check-in: a partir das 16:00\n- Check-out: até 14:00"
+          },
+          "earlyArrival": {
+            "question": "Posso chegar antes do horário do check-in?",
+            "answer": "Sim, você pode chegar e aproveitar nosso ambiente. Caso deseje consumir refeições antes do horário da sua reserva, será cobrada uma taxa de R$200 por pessoa para acesso ao buffet à vontade."
+          }
+        }
+      },
+      "dayUse": {
+        "title": "Day Use",
+        "questions": {
+          "availability": {
+            "question": "Vocês oferecem Day Use?",
+            "answer": "Sim, atendemos com reserva antecipada conforme disponibilidade.\nConsulte com nossa equipe de vendas ou pelo WhatsApp."
+          }
+        }
+      },
+      "payment": {
+        "title": "Formas de Pagamento",
+        "questions": {
+          "methods": {
+            "question": "Quais formas de pagamento vocês aceitam?",
+            "answer": "Aceitamos cartões de crédito, débito e transferências bancárias."
+          },
+          "international": {
+            "question": "Aceitam cartão internacional?",
+            "answer": "Sim, aceitamos cartões internacionais."
+          }
+        }
+      },
+      "photoAndEvents": {
+        "title": "Fotografia e Eventos",
+        "questions": {
+          "wedding": {
+            "question": "É possível fazer fotos de casamento no local?",
+            "answer": "Sim, oferecemos pacotes específicos para ensaios fotográficos. Entre em contato para mais detalhes."
+          }
+        }
+      }
+    }
+  },
+  "howToGet": {
+    "hero": {
+      "title": "Como Chegar",
+      "subtitle": "Descubra o caminho para seu refúgio na natureza"
+    },
+    "intro": {
+      "description": "O Jardim da Amazônia está localizado em São José do Rio Claro, Mato Grosso, a 320 km de Cuiabá. Nossa localização privilegiada nos coloca no coração da transição entre a Amazônia e o Cerrado, oferecendo uma experiência única de biodiversidade."
+    },
+    "map": {
+      "title": "Localização"
+    },
+    "access": {
+      "title": "Opções de Acesso",
+      "options": {
+        "cuiaba": {
+          "title": "Via Cuiabá / Aeroporto CGB",
+          "distance": "Distância: 290 KM do Aeroporto Internacional de Cuiabá",
+          "instructions": {
+            "title": "Instruções",
+            "steps": [
+              "Siga pela Rodovia Helder Cândia (MT-010), conhecida como 'Estrada a Guia'",
+              "Continue até o viaduto de Rosário Oeste",
+              "Vire à direita na BR 163 (duplicada)",
+              "Siga até o posto do Gil no alto da Serra",
+              "Entre à direita antes do viaduto sentido Diamantino",
+              "Prossiga por novo Diamantino sentido São José do Rio Claro"
+            ]
+          }
+        },
+        "sinop": {
+          "title": "Via Sinop - Nova Mutum / Aeroporto NOP",
+          "distance": "Distância: 90 KM de Nova Mutum",
+          "instructions": {
+            "title": "Instruções",
+            "steps": [
+              "Na BR 163, em Nova Mutum, localize o Posto Águia Branca",
+              "Vire à direita na rodovia MT235 sentido São José do Rio Claro",
+              "Percorra 48 km até o trevo que liga a MT 010 (Fazenda Libra)",
+              "Vire à direita para São José do Rio Claro",
+              "Antes da Ponte do Rio Claro, entre à esquerda",
+              "Siga por 4 km de estrada de terra"
+            ]
+          }
+        }
+      },
+      "importantNote": {
+        "title": "Observação Importante",
+        "text": "Para a rota alternativa no km 644 (próximo a duas antenas grandes na altura do posto São Genaro) a São José do Rio Claro, por favor, solicite informações detalhadas."
+      }
+    },
+    "contact": {
+      "title": "Entre em Contato",
+      "description": "Precisa de ajuda para chegar? Nossa equipe está pronta para auxiliar você."
+    },
+    "recommendations": {
+      "title": "Recomendações",
+      "items": [
+        "Faça o trajeto durante o dia para melhor visualização da estrada",
+        "Mantenha seu tanque de combustível sempre acima de meio",
+        "Baixe o mapa offline do Google Maps da região. Até breve!"
+      ]
+    }
+  },
+  "ourHistory": {
+    "hero": {
+      "title": "Nossa História",
+      "subtitle": "Uma jornada de preservação e amor pela natureza"
+    },
+    "intro": {
+      "description": "O Jardim da Amazônia é mais do que uma pousada - é a história de uma família que dedicou sua vida à preservação da natureza e ao desenvolvimento sustentável do ecoturismo no Brasil."
+    },
+    "timeline": {
+      "1980s": {
+        "year": "Anos 1980",
+        "title": "O Início da Jornada",
+        "description": "A história começa com a chegada da família Zanchet, vindos do Rio Grande do Sul para Mato Grosso."
+      },
+      "1986": {
+        "year": "1986",
+        "title": "Construção da Casa Original",
+        "description": "A fundação desta casa foi construída do zero, marcando o início físico da nossa presença neste pedaço da Amazônia."
+      },
+      "1997": {
+        "year": "1997",
+        "title": "Nascimento da Pousada",
+        "description": "Por sugestão de um amigo, a ideia de construir uma pousada ganhou vida. Raquel Zanchet e Carmelita Zanchet dão início à Pousada Jardim da Amazônia, com a visão de desenvolver o ecoturismo brasileiro. No mesmo ano, Almor e Carmelita Zanchet investem no laboratório de piscicultura e iniciam as atividades de observação de aves, marcando o começo de uma nova era para o turismo ecológico na região."
+      },
+      "2000": {
+        "year": "2000",
+        "title": "Início do Birdwatching",
+        "description": "Começamos a receber os primeiros grupos dedicados à observação de aves, estabelecendo as bases para nos tornarmos um destino reconhecido para birdwatching na Amazônia."
+      },
+      "2008": {
+        "year": "2008",
+        "title": "Descoberta do Tiê-Bicudo",
+        "description": "Um marco importante para a região com o registro do Tiê-Bicudo (Conothraupis mesoleuca), uma espécie criticamente em extinção. Esta descoberta ressalta a importância da nossa área para a conservação de espécies raras."
+      }
+    }
+  },
+  "gallery": {
+    "hero": {
+      "title": "Galeria de Fotos",
+      "subtitle": "Explore nossa coleção de imagens do Jardim da Amazônia"
+    },
+    "sections": {
+      "accommodations": {
+        "title": "Acomodações",
+        "images": {
+          "forestHouse": "Casa da Floresta",
+          "forestHouseInterior": "Interior da Casa da Floresta",
+          "forestHouseAmbience": "Ambiente da Casa da Floresta",
+          "gardenBungalow": "Bangalô do Jardim",
+          "gardenBungalowInterior": "Interior do Bangalô do Jardim",
+          "familyBungalow": "Bangalô Família",
+          "familyBungalowInterior": "Interior do Bangalô Família",
+          "familyBungalowAmbience": "Ambiente do Bangalô Família"
+        }
+      },
+      "externalAreas": {
+        "title": "Áreas Externas",
+        "images": {
+          "socialSpaceBonfire": "Espaço Social com Fogueira",
+          "starlink": "Área de Internet Starlink",
+          "socialSpaceRest": "Área de Descanso",
+          "socialSpaceLounge": "Lounge Social",
+          "naturalPool": "Piscina Natural",
+          "spring": "Nascente",
+          "crystalPool": "Piscina Cristalina",
+          "gardensLakesPanoramic": "Vista Panorâmica dos Lagos e Jardins",
+          "gardensLakesLandscape": "Paisagem dos Lagos e Jardins",
+          "birdwatchingNearHouse": "Observação de Aves Próximo à Casa",
+          "forestWalkway": "Passarela na Floresta"
+        }
+      },
+      "fauna": {
+        "title": "Fauna",
+        "images": {
+          "greenTailedHummingbird": "Beija-flor Tesoura Verde",
+          "coneBilledTanager": "Tiê-bicudo",
+          "bandTailedAntbird": "Choca-d'água",
+          "buritiMacaw": "Maracanã-do-buriti",
+          "amazonianBirds": "Aves da Amazônia",
+          "birdsInFlight": "Aves em Voo",
+          "swallowTanager": "Saí-andorinha",
+          "blueCrownedTanager": "Saíra-de-cabeça-azul",
+          "sakiMonkey": "Parauacu",
+          "titiMonkey": "Zogue-zogue",
+          "spiderMonkey": "Macaco-aranha"
+        }
+      }
+    }
+  },
+  "theySpokeAboutUs": {
+    "hero": {
+      "title": "Falaram de Nós",
+      "subtitle": "O que dizem sobre o Jardim da Amazônia"
+    },
+    "news": [
+      {
+        "id": 1,
+        "title": "Jardim da Amazônia: Destaque em Turismo Científico e Ecológico",
+        "source": "Revista Camalote",
+        "date": "2024",
+        "description": "A pousada é reconhecida como um dos principais pontos da Rota dos Primatas de Mato Grosso, destacando-se em conservação e pesquisa científica.",
+        "fullContent": "O Jardim da Amazônia foi destaque novamente em publicações recentes, reforçando seu papel como um dos destinos mais fascinantes de Mato Grosso para o turismo científico e ecológico.\n\nRota dos Primatas de Mato Grosso: O Jardim da Amazônia foi mencionado como um dos sete principais locais desta iniciativa de conservação, liderada pelo Instituto Ecótono em parceria com universidades e centros de pesquisa. Localizado a cerca de quatro horas de Cuiabá, o Jardim da Amazônia se destaca por sua rica biodiversidade, incluindo espécies como o macaco-aranha-de-cara-preta e o parauacu. Os visitantes têm a oportunidade única de observar pelo menos 14 espécies de primatas ao longo da rota.\n\nConservação do Parauacu: Com estudos de doutorado em andamento, o Jardim da Amazônia reforça sua missão de proteger a fauna local, desempenhando um papel crucial na dispersão de sementes e preservação ecológica.\n\nFeiras de Turismo e Divulgação Científica: O Jardim também participou de eventos importantes, como WTM Latin America e ITB Berlin, promovendo o turismo sustentável e educativo.\n\nEstes reconhecimentos reforçam o compromisso do Jardim da Amazônia com a sustentabilidade, pesquisa e turismo de impacto positivo."
+      },
+      {
+        "id": 2,
+        "title": "Amazônia: O novo refúgio para amantes da natureza e biodiversidade rara",
+        "source": "Glamurama",
+        "date": "2024",
+        "description": "Reconhecido internacionalmente como um dos três melhores destinos para observação de aves e espécies raras, a pousada oferece uma experiência única para entusiastas da biodiversidade.",
+        "fullContent": "Nos últimos anos, o turismo ecológico ganhou força no Brasil, com a Amazônia se destacando como um dos destinos mais procurados por viajantes que buscam conexão com a natureza. O Jardim da Amazônia Lodge, localizado no coração da floresta, é reconhecido internacionalmente como um dos três melhores destinos para observação de aves e espécies raras. Com uma estrutura sustentável e práticas voltadas à preservação ambiental, a pousada oferece uma experiência única, permitindo que os visitantes observem de perto espécies ameaçadas como a arara-azul, o mutum-de-penacho e a harpia.\n\nPara Raquel Zanchet, diretora do Jardim da Amazônia Lodge, o turismo ecológico é mais que uma tendência: é uma ferramenta essencial para a conscientização ambiental e conservação. 'Nosso objetivo é proporcionar uma experiência transformadora para os visitantes enquanto contribuímos ativamente para a preservação da biodiversidade amazônica', afirma. Os passeios guiados por especialistas permitem explorar a rica biodiversidade da região, promovendo uma compreensão mais profunda dos desafios e da importância de proteger este ecossistema vital."
+      },
+      {
+        "id": 3,
+        "title": "Revista Wanderlust destaca o Jardim da Amazônia",
+        "source": "Wanderlust Magazine",
+        "date": "2024",
+        "description": "Na edição de dezembro/janeiro, o Jardim da Amazônia é destacado como uma experiência imperdível no coração do Brasil, onde o Pantanal encontra a Amazônia.",
+        "fullContent": "Na edição de dezembro/janeiro da revista Wanderlust, o Jardim da Amazônia foi destacado como uma experiência imperdível no coração do Brasil. Descrito como um lugar onde 'o Pantanal encontra a Amazônia', o artigo enfatizou a singularidade de nossa localização e a abundância de vida selvagem ao redor. Eles recomendaram o Jardim da Amazônia como uma base ideal para explorar a rica biodiversidade e paisagens deslumbrantes da região, especialmente durante a estação seca, quando os animais são mais facilmente avistados.\n\nO artigo também enfatizou o charme de nossa hospitalidade e a oportunidade de conexão profunda com a natureza, proporcionando uma experiência autêntica e memorável para aqueles que buscam se aventurar na beleza selvagem do Pantanal."
+      },
+      {
+        "id": 4,
+        "title": "Primatas Brasileiros: Piauí, Maranhão, Pará e Mato Grosso",
+        "source": "Mammalwatching.com",
+        "date": "2024",
+        "description": "Pousada é destacada como ponto estratégico para observação de primatas na região amazônica.",
+        "fullContent": "O Jardim da Amazônia brilhou novamente em uma reportagem sobre a 'Rota de Observação de Primatas do Mato Grosso', uma iniciativa inovadora criada por especialistas como Russ Mittermeier e Gustavo Canale. O projeto foca na conservação e observação de 16 espécies de primatas na região, das quais 10 estão ameaçadas. Durante sua visita ao Jardim, os viajantes se encantaram com a rica diversidade de espécies avistadas, como parauacus, macacos-aranha-de-cara-preta e macacos-prego-de-azara, além de outros animais como capivaras e tamanduás.\n\nA infraestrutura da pousada, liderada pela família Zanchet, foi destacada pela hospitalidade impecável, gastronomia refinada e compromisso com a preservação ambiental, incluindo a criação de corredores arbóreos para a fauna local. Um dos destaques da reportagem foi a área de floresta alagada próxima à piscina natural, onde famílias de parauacus costumam se alimentar, proporcionando encontros fascinantes para os visitantes. Este projeto reafirma o Jardim da Amazônia como destino essencial para quem busca turismo sustentável e experiências científicas únicas."
+      },
+      {
+        "id": 5,
+        "title": "Macaquear: prática de observação de primatas tem potencial de crescimento no Brasil",
+        "source": "G1 - Terra da Gente",
+        "date": "2023",
+        "description": "Jardim da Amazônia é citado como referência em programas de observação de primatas em Mato Grosso.",
+        "fullContent": "'Macaquear é o ato de observar primatas, ou seja, macacos, saguis, micos, em seu habitat natural. O grande valor do macaquear é observar macacos livres na natureza, realizando comportamentos naturais, com mínima intervenção humana', explica Gustavo Canale, vice-presidente da Sociedade Brasileira de Primatologia.\n\nSegundo Canale, o nome 'macaquear' foi inspirado em outra prática comum mundialmente, o bird watching. 'No Brasil, o bird watching tem oferecido uma ótima oportunidade de observar macacos também, porque muitos observadores de aves, ao apontar seus binóculos para as copas das árvores, acabam avistando macacos-prego, bugios, macacos-aranha, saguis. Por exemplo, alguns dos melhores lugares para observar aves na Amazônia de Mato Grosso, Jardim da Amazônia e Cristalino Lodge, já começaram a organizar programas de macaquear em seus roteiros turísticos', conta."
+      },
+      {
+        "id": 6,
+        "title": "Ecótono Cerrado-Amazônia no + Natureza",
+        "source": "Globoplay",
+        "date": "2023",
+        "description": "O programa + Natureza destaca o Jardim da Amazônia em episódio especial sobre o encontro do Cerrado com a Amazônia.",
+        "fullContent": "O programa + Natureza, exibido em 21 de outubro de 2023, dedicou um episódio especial à região do Ecótono Cerrado-Amazônia, onde está localizado o Jardim da Amazônia Lodge. Com duração de 26 minutos, o programa explorou as características únicas desta zona de transição entre dois dos biomas mais importantes do Brasil.\n\nO episódio está disponível exclusivamente para assinantes do Globoplay e apresenta a riqueza da biodiversidade local, destacando como o encontro desses dois biomas cria um ambiente único para observação de fauna e flora.\n\nDurante o programa, foram apresentadas diferentes espécies que podem ser encontradas na região, bem como o trabalho de conservação e pesquisa realizado na pousada, reforçando seu papel como importante ponto de apoio para estudos científicos e turismo de observação.",
+        "exclusive": true
+      }
+    ],
+    "buttons": {
+      "readMore": "Ler mais",
+      "showLess": "Mostrar menos",
+      "viewOriginalSite": "Ver site original",
+      "watchOnGloboplay": "Assistir no Globoplay"
+    },
+    "exclusiveContent": "Conteúdo exclusivo para assinantes"
+  },
+  "natureEvents": {
+    "hero": {
+      "title": "Eventos na Natureza",
+      "subtitle": "Descubra diferentes formas de aproveitar nosso espaço, seja para trabalho, conexão ou celebração, sempre em harmonia com a natureza"
+    },
+    "intro": {
+      "title": "Como Aproveitar Nosso Espaço"
+    },
+    "events": {
+      "photoSessions": {
+        "title": "Ensaios Fotográficos",
+        "features": [
+          "Sessões para gestantes, noivos e celebrações",
+          "Meio período incluso para a sessão",
+          "Garrafa de vinho da casa cortesia"
+        ],
+        "quote": "Eternize seus momentos especiais em cenários únicos, com todo conforto e acolhimento"
+      },
+      "weddingNight": {
+        "title": "Noite de Núpcias",
+        "features": [
+          "Roupão e espumante de boas-vindas",
+          "Enxoval especial para o casal",
+          "Decoração romântica especial"
+        ],
+        "quote": "Inicie sua história de amor em um cenário mágico e acolhedor"
+      },
+      "gatherings": {
+        "title": "Encontros",
+        "features": [
+          "Eventos familiares e corporativos",
+          "Gastronomia personalizada",
+          "Atividades recreativas"
+        ],
+        "quote": "Momentos de alegria e descontração em um ambiente acolhedor"
+      },
+      "artisticResidencies": {
+        "title": "Residências Artísticas",
+        "features": [
+          "Espaços para criação artística",
+          "Inspiração na natureza",
+          "Ambiente contemplativo"
+        ],
+        "quote": "Um refúgio para artistas encontrarem inspiração e desenvolverem seus projetos"
+      },
+      "miniWeddings": {
+        "title": "Mini-Casamentos",
+        "features": [
+          "Cerimônias íntimas até 40 pessoas",
+          "Cenário natural deslumbrante",
+          "Hospedagem para convidados"
+        ],
+        "quote": "Celebre o amor rodeado pela natureza"
+      },
+      "digitalNomad": {
+        "title": "Nômade Digital",
+        "features": [
+          "Internet de alta velocidade",
+          "Espaços de trabalho inspiradores",
+          "Ambiente tranquilo e produtivo"
+        ],
+        "quote": "Trabalhe com tranquilidade em meio à natureza"
+      }
+    },
+    "cta": {
+      "title": "Realize Seu Sonho Conosco",
+      "description": "Nossa equipe está pronta para ajudar você a criar experiências memoráveis",
+      "contact": "Falar pelo WhatsApp"
+    }
+  }
+} 

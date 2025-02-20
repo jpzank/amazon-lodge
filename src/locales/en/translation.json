@@ -1,0 +1,1420 @@
+{
+  "navigation": {
+    "home": "Home",
+    "about": "About",
+    "contact": "Contact",
+    "howToGet": "How to Get Here",
+    "accommodation": "Accommodation",
+    "activities": "Activities",
+    "lodge": "The Lodge",
+    "gastronomy": "Gastronomy",
+    "natureEvents": "Events in Nature",
+    "experiences": "Experiences",
+    "birdwatching": "Birdwatching",
+    "primatesObservation": "Primate Observation",
+    "safariBoat": "Safari Boat",
+    "trails": "Trails",
+    "fieldGuides": "Field Guides",
+    "conservation": "Conservation",
+    "researchStation": "Research Station",
+    "nascentNatural": "Natural Spring",
+    "theySpokeAboutUs": "They Spoke About Us",
+    "photoGallery": "Photo Gallery",
+    "prepareYourTrip": "Prepare Your Trip",
+    "frequentlyAskedQuestions": "Frequently Asked Questions",
+    "bookNow": "Book Now"
+  },
+  "common": {
+    "readMore": "Read more",
+    "book": "Book now",
+    "contact": "Contact us"
+  },
+  "home": {
+    "welcome": {
+      "greeting": "WELCOME!",
+      "title": "JARDIM DA AMAZÔNIA",
+      "subtitle": "A CRYSTAL WATER OASIS IN THE SOUTHERN AMAZON"
+    },
+    "about": {
+      "description": "Located on the banks of the Rio Claro, Jardim da Amazônia is a refuge that unites the Amazon Rainforest and the Cerrado, offering one of Brazil's richest and most diverse ecosystems. Our goal is to provide an authentic experience of connection with nature, in a peaceful and preserved environment, while caring for the natural legacy for future generations.",
+      "features": {
+        "naturalPool": "Natural Pool",
+        "accommodation": "Cozy Accommodations",
+        "trails": "Trails and Nature"
+      },
+      "cta": "Learn Our History"
+    },
+    "biodiversity": {
+      "quote": "An ecological corridor formed by an ecotone, where Cerrado and Amazon meet, creating a true refuge for biodiversity, with:",
+      "author": "Raquel Zanchet",
+      "stats": {
+        "birds": {
+          "count": "590+",
+          "title": "Bird Species",
+          "subtitle": "Cataloged in our reserve"
+        },
+        "primates": {
+          "count": "7",
+          "title": "Primate Species",
+          "subtitle": "Out of 29 recognized in MT"
+        },
+        "mammals": {
+          "count": "30+",
+          "title": "Mammals",
+          "subtitle": "Medium and large-sized"
+        },
+        "experiences": {
+          "count": "∞",
+          "title": "Experiences",
+          "subtitle": "in nature"
+        }
+      }
+    },
+    "experiences": {
+      "title": "Experiences",
+      "subtitle": "Explore, discover, and be enchanted by wildlife in its natural habitat.",
+      "cta": "Explore",
+      "items": {
+        "birdwatching": {
+          "title": "Birdwatching",
+          "description": "Discover over 590 bird species cataloged in our reserve, including rare and endemic species."
+        },
+        "primates": {
+          "title": "Primate Observation",
+          "description": "Find 7 of the 29 primate species recognized in Mato Grosso in their natural habitat."
+        },
+        "safari": {
+          "title": "Safari Boat",
+          "description": "Navigate the Rio Claro and observe wildlife in an unforgettable journey."
+        }
+      }
+    },
+    "location": {
+      "title": "Where We Are",
+      "description": "Jardim da Amazônia is located in São José do Rio Claro, Mato Grosso, in an ecological transition area between the Amazon Rainforest and the Brazilian Cerrado.",
+      "address": {
+        "title": "Address",
+        "text": "São José do Rio Claro - MT"
+      },
+      "distances": {
+        "title": "Distances",
+        "cuiaba": "330 km from Cuiabá",
+        "sinop": "180 km from Sinop"
+      },
+      "airports": {
+        "title": "Nearby Airports",
+        "cuiaba": "Cuiabá Airport (CGB)",
+        "sinop": "Sinop Airport (OPS)"
+      },
+      "howToGet": "How to Get Here"
+    },
+    "testimonials": {
+      "title": "Reviews",
+      "platformsTitle": "See more reviews on our networks:",
+      "items": [
+        {
+          "quote": "A unique and unforgettable experience. Nature in its purest state, with comfortable accommodations and an extremely attentive staff.",
+          "author": "Maria Silva",
+          "date": "March 2024"
+        },
+        {
+          "quote": "Amazing place for birdwatching! We managed to record over 100 species in just 3 days.",
+          "author": "João Santos",
+          "date": "February 2024"
+        },
+        {
+          "quote": "The trails are very well maintained and the guides are extremely knowledgeable. A true immersion in nature.",
+          "author": "Ana Costa",
+          "date": "January 2024"
+        }
+      ]
+    },
+    "cta": {
+      "title": "Come Live This Experience",
+      "subtitle": "Book your stay and prepare for unforgettable moments in nature.",
+      "bookNow": "Book Now",
+      "howToGet": "How to Get Here"
+    },
+    "map": {
+      "alt": "Jardim da Amazônia Location Map"
+    }
+  },
+  "footer": {
+    "sections": {
+      "about": {
+        "title": "About Us",
+        "home": "Home",
+        "history": "History",
+        "gallery": "Photo Gallery"
+      },
+      "accommodation": {
+        "title": "Accommodation",
+        "rooms": "Rooms",
+        "lodge": "The Lodge",
+        "gastronomy": "Gastronomy",
+        "natureEvents": "Events in Nature"
+      },
+      "experiences": {
+        "title": "Experiences",
+        "birdwatching": "Birdwatching",
+        "primates": "Primate Observation",
+        "safariBoat": "Safari Boat",
+        "trails": "Trails",
+        "fieldGuides": "Field Guides"
+      },
+      "information": {
+        "title": "Information",
+        "faq": "Frequently Asked Questions",
+        "howToGet": "How to Get Here"
+      },
+      "contact": {
+        "title": "Contact",
+        "email": "Email:",
+        "whatsapp": "WhatsApp:"
+      }
+    },
+    "copyright": "© 2025 Jardim da Amazônia / CNPJ: 02.025.529/0001-95"
+  },
+  "accommodations": {
+    "hero": {
+      "title": "Accommodations",
+      "subtitle": "Comfort and nature in perfect harmony"
+    },
+    "intro": {
+      "description": "Our bungalows and apartments have been carefully designed to provide maximum comfort during your stay while maintaining a harmonious connection with nature. Each accommodation offers a unique experience for your stay."
+    },
+    "amenities": {
+      "kingBed": "King Size Bed",
+      "wifi": "Wi-Fi",
+      "ac": "Air Conditioning",
+      "fan": "Ceiling Fan",
+      "balcony": "Balcony",
+      "bathAmenities": "Bath Amenities",
+      "hairDryer": "Hair Dryer",
+      "umbrellas": "Umbrellas"
+    },
+    "schedule": {
+      "title": "Schedule",
+      "checkIn": "Check-in: 4:00 PM",
+      "checkOut": "Check-out: 2:00 PM",
+      "breakfast": "Breakfast: 7:30 AM to 9:30 AM",
+      "lunch": "Lunch: 12:30 PM",
+      "dinner": "Dinner: 7:30 PM"
+    },
+    "included": {
+      "title": "Included in Your Stay",
+      "items": [
+        "Full breakfast",
+        "Full lunch and dinner",
+        "Wi-Fi in common areas",
+        "Access to Natural Pool"
+      ]
+    },
+    "importantInfo": {
+      "title": "Important Information",
+      "items": [
+        "No pets allowed",
+        "No smoking in accommodations",
+        "Credit cards accepted",
+        "Advance reservation required"
+      ]
+    },
+    "rooms": {
+      "familyBungalow": {
+        "type": "Bungalow",
+        "name": "Family Bungalow",
+        "description": "Enjoy the view of Rio Claro and lagoons in comfortable bungalows, featuring a king-size bed, single beds for up to 4 people, cotton sheets, eco-friendly amenities, and hammocks on the veranda to relax after jungle adventures.",
+        "features": {
+          "guests": "1-4 Guests",
+          "view": "Rio Claro View",
+          "ideal": "Perfect for Families"
+        }
+      },
+      "gardenBungalow": {
+        "type": "Bungalow",
+        "name": "Garden Bungalow",
+        "description": "Charming bungalow for up to 2 people, perfect for couples. Relax on the private veranda with hammocks, surrounded by the tranquility of nature.",
+        "features": {
+          "guests": "1-2 Guests",
+          "view": "Garden View",
+          "ideal": "Perfect for Couples"
+        }
+      },
+      "farmhouse": {
+        "type": "Farmhouse",
+        "name": "Farmhouse",
+        "description": "The historic Farmhouse, built in 1986, offers apartments that combine the charm of period furniture with modern comfort.",
+        "features": {
+          "furniture": "Period Furniture",
+          "view": "Panoramic View",
+          "experience": "Historic Experience"
+        }
+      },
+      "forestHouse": {
+        "type": "Forest House",
+        "name": "Forest House",
+        "description": "A retrofitted house near the forest where hummingbirds can be spotted. This special house offers an immersive experience among the trees, connecting you to local biodiversity with all comfort.",
+        "features": {
+          "guests": "1-2 Guests",
+          "view": "Forest View",
+          "experience": "Immersive Experience"
+        }
+      }
+    },
+    "designQuote": {
+      "text": "Cozy Lodge facilities inspired by the stilt houses and wooden structures of the 1980s Amazon, celebrating the harmony between man and nature. The decor adopts earthy and neutral tones, with a palette that evokes the natural environment: browns, beiges, and moss greens create a rustic-chic style where simplicity brings a welcoming atmosphere perfectly integrated into the Amazonian landscape.",
+      "author": "Alê Ribeiro"
+    },
+    "cta": {
+      "title": "Ready to Live this Experience?",
+      "subtitle": "Book your stay now and prepare for unforgettable moments in nature",
+      "bookNow": "Book Now",
+      "contact": "Contact Us"
+    },
+    "details": {
+      "viewDetails": "View Details",
+      "amenities": "Amenities"
+    }
+  },
+  "externalAreas": {
+    "hero": {
+      "title": "External Areas",
+      "subtitle": "Outdoor spaces for your connection with nature"
+    },
+    "intro": {
+      "quote": "The pioneering work at Jardim da Amazônia resulted in the preservation of a large untouched area of primary Amazon rainforest. Nature devotees, the Zanchet family invested in birdwatching activities in 1997, making this place an important ecological sanctuary.",
+      "author": "Alex Robinson"
+    },
+    "areas": {
+      "naturalPool": {
+        "title": "Natural Pool",
+        "description": "Our natural pool is fed by a crystal-clear spring, providing a refreshing dip in nature. With a wooden deck and loungers, it's the perfect place to relax.",
+        "features": {
+          "water": "Potable spring water",
+          "deck": "Sunbathing deck",
+          "immersion": "Total immersion in nature",
+          "path": "Exclusive forest pathway access"
+        }
+      },
+      "trails": {
+        "title": "Trails",
+        "description": "Explore our ecological trails, carefully maintained to provide a safe and enriching experience in the Amazon rainforest.",
+        "features": [
+          "Guided trails",
+          "Lush lagoons",
+          "Observation points",
+          "Rest areas"
+        ]
+      },
+      "communalArea": {
+        "title": "Communal Area",
+        "description": "Cozy space for moments of relaxation, reading, or simply appreciating nature. Equipped with hammocks, sofas, and tables, it's ideal for socializing.",
+        "features": [
+          "Outdoor lounge",
+          "Reading area",
+          "Wi-Fi available",
+          "Ambient lighting",
+          "Doll house",
+          "Mini sand court"
+        ]
+      }
+    },
+    "activities": {
+      "title": "Available Activities",
+      "items": {
+        "birdwatching": {
+          "title": "Birdwatching",
+          "description": "Explore the rich diversity of Amazonian birds around our property"
+        },
+        "recreation": {
+          "title": "Recreation Area",
+          "description": "Children have their guaranteed space for fun in our mini sand court and charming doll house"
+        },
+        "photography": {
+          "title": "Photography",
+          "description": "Capture special moments in stunning natural settings"
+        },
+        "meditation": {
+          "title": "Meditation",
+          "description": "Find peace and tranquility in every corner of our space.",
+          "note": "Bring your mat!"
+        }
+      }
+    },
+    "sustainability": {
+      "title": "Sustainability",
+      "description": "Our external areas were developed using local materials and techniques that minimize environmental impact, ensuring the preservation of the natural ecosystem.",
+      "features": [
+        "Low-impact solar-powered lighting",
+        "Furniture made from reclaimed wood",
+        "Wildlife monitoring projects",
+        "Native vegetation preservation"
+      ]
+    },
+    "cta": {
+      "title": "Come Visit Our Spaces",
+      "description": "Book your stay and enjoy all these unique experiences",
+      "button": "Book Now"
+    }
+  },
+  "gastronomy": {
+    "hero": {
+      "title": "Gastronomy",
+      "subtitle": "Family tradition and contemporary creativity"
+    },
+    "intro": {
+      "description1": "Family recipes, traditionally prepared by Carmelita, have been given a new twist with the arrival of Chef José Sérgio. Dishes based on local fish, such as matrinxã and pintado, are combined with classic kabocha squash, grilled vegetables, and plantain farofa.",
+      "description2": "Fried polenta and sago dessert bring the Zanchet family's Italian roots to the table, in a combination of tradition and creativity. At breakfast, the aroma of café au lait mingles with the comfort of scrambled eggs, homemade cakes, and other delights that comfort both palate and heart."
+    },
+    "gallery": {
+      "traditionalDishes": {
+        "title": "Traditional Dishes",
+        "subtitle": "Authentic and delicious flavors"
+      },
+      "desserts": {
+        "title": "Delicious Desserts",
+        "subtitle": "Classic sweets that delight both palate and eyes"
+      },
+      "breakfast": {
+        "title": "Breakfast",
+        "subtitle": "A cozy breakfast experience"
+      }
+    },
+    "chefStatement": {
+      "title": "From Farm to Table",
+      "quote1": "Gastronomy has always aimed to unite people, whether through cooking or raw ingredients. The true purpose is to feed the 'soul' before feeding the body. This quest for the pleasure of nourishing and providing meaningful moments has been constant since our ancestry. Today, this quest continues with countless products and producers. Thus was born the 'FARM TO TABLE' concept, which means bringing what comes from the earth to the table. This journey led me to an immersion in the Ecotone, between the Amazon and Cerrado, where I found an incredible place called Jardim da Amazônia, with a home kitchen led by a lady named CARMELITA ZANCHET.",
+      "quote2": "On this journey, I discovered that simplicity is essential for the eyes and soul. Fruits, seeds, vegetables, fish, and other delicacies I found in this Amazon/Cerrado fusion are undoubtedly the pursuit of my life project as a cook. I found a safe harbor, or 'safe kitchen'. Where will this journey take me? I'm still discovering, in no hurry to reach the end! Cooking is, above all, a great act of LOVE.",
+      "author": "Chef José Sérgio"
+    },
+    "localIngredients": {
+      "title": "Local Ingredients",
+      "description": "We value local producers, ensuring fresh ingredients and contributing to strengthening the region's economy."
+    },
+    "additionalGallery": {
+      "typicalDishes": {
+        "title": "Typical Dishes",
+        "subtitle": "Regional flavors"
+      },
+      "specialDesserts": {
+        "title": "Special Desserts",
+        "subtitle": "Enchanting sweets"
+      },
+      "chefDishes": {
+        "title": "Chef's Dishes",
+        "subtitle": "Special creations"
+      },
+      "breakfast": {
+        "title": "Breakfast",
+        "subtitle": "Perfect start to the day"
+      }
+    }
+  },
+  "birdwatching": {
+    "hero": {
+      "title": "Birdwatching",
+      "subtitle": "Top Hotspot for Bird Observation in Brazil"
+    },
+    "intro": {
+      "description": "Jardim da Amazônia is a world reference in bird protection, as it is considered an IBA (Important Bird Area), an important area for Biodiversity according to Birdlife International, E-bird, The Cornell Lab, and Wikiaves."
+    },
+    "recognition": {
+      "title": "International Recognition",
+      "stats": {
+        "brazil": {
+          "number": "Top 3",
+          "label": "Brazil Hotspot"
+        },
+        "matoGrosso": {
+          "number": "Top 2",
+          "label": "Mato Grosso"
+        },
+        "species": {
+          "number": "590+",
+          "label": "Cataloged Species"
+        }
+      }
+    },
+    "registeredBirds": {
+      "title": "Registered Birds",
+      "species": {
+        "tieBicudo": {
+          "name": "Cone-billed Tanager",
+          "scientificName": "Conothraupis mesoleuca",
+          "description": "A bird endemic to Brazil, described in 1939 during Claude Levi Strauss's expedition. Rio Claro represents the fourth known area of occurrence for this rare species."
+        },
+        "curica": {
+          "name": "Orange-cheeked Parrot",
+          "scientificName": "Pyrilia barrabandi",
+          "description": "Parrot with black head, white eye patch, and orange cheeks. Spectacular colorful wing patches contrast with the green body."
+        },
+        "umbrellaBird": {
+          "name": "Amazonian Umbrellabird",
+          "scientificName": "Cephalopterus ornatus",
+          "description": "Impressive bird with an umbrella-shaped crest and gular sac. The male displays its inflated sac, emitting deep, resonant sounds."
+        }
+      }
+    },
+    "biodiversity": {
+      "title": "Biodiversity",
+      "description": "In a unique setting where the Cerrado meets the Amazon, our lodge offers the rare opportunity to experience the interaction of two of the planet's richest biodiversities.",
+      "amazonianSpecies": {
+        "title": "Amazonian Species",
+        "species": {
+          "capitaoDeCinta": {
+            "name": "Gould's Toucanet",
+            "scientificName": "Capito dayi"
+          },
+          "coroaDeFogo": {
+            "name": "Flame-crowned Manakin",
+            "scientificName": "Heterocercus linteatus"
+          },
+          "cambaxirraCinzenta": {
+            "name": "Gray Wren",
+            "scientificName": "Odontorchilus cinereus"
+          },
+          "tucanoDePopoBranco": {
+            "name": "White-throated Toucan",
+            "scientificName": "Ramphastos tucanus"
+          }
+        }
+      },
+      "highlightedBirds": {
+        "title": "Highlighted Birds",
+        "species": {
+          "uiracu": {
+            "name": "Crested Eagle",
+            "scientificName": "Morphnus guianensis"
+          },
+          "urubuRei": {
+            "name": "King Vulture",
+            "scientificName": "Sarcoramphus papa"
+          },
+          "limpaFolhaDoBuriti": {
+            "name": "Point-tailed Palmcreeper",
+            "scientificName": "Berlepschia rikeri"
+          },
+          "topetinhoDoBrasilCentral": {
+            "name": "Dot-eared Coquette",
+            "scientificName": "Lophornis gouldii"
+          }
+        }
+      }
+    },
+    "gallery": {
+      "title": "Gallery",
+      "images": {
+        "hummingbird": "Green-tailed Hummingbird",
+        "waterThrush": "Band-tailed Antbird",
+        "buritiMacaw": "Buriti Macaw",
+        "blueTanager": "Blue-headed Tanager"
+      }
+    },
+    "conservationStatus": {
+      "cr": "CR - Critically Endangered",
+      "en": "EN - Endangered",
+      "vu": "VU - Vulnerable",
+      "nt": "NT - Near Threatened",
+      "lc": "LC - Least Concern"
+    },
+    "specialTour": {
+      "title": "Special Birdwatching Tour",
+      "schedule": {
+        "title": "Schedule",
+        "departure": "Departure at 5:30 AM"
+      },
+      "itinerary": {
+        "title": "Itinerary",
+        "items": [
+          "Boat safari to 'Cone-billed Tanager Lagoon'",
+          "Bird observation at Rio Claro and Lakes",
+          "Stop at 'Cabin Trail' for forest species",
+          "Possibility to observe the Black-faced Spider Monkey",
+          "Return for lunch at the lodge"
+        ]
+      }
+    },
+    "observationSpots": {
+      "title": "Observation Spots",
+      "spots": {
+        "rioClaroRiparian": {
+          "title": "Rio Claro Riparian Forest",
+          "description": "Habitat of the rare Cone-billed Tanager and various Amazonian species. The open vegetation along the lakes provides essential conditions for observation."
+        },
+        "jatoba": {
+          "title": "Jatoba Trail",
+          "description": "Privileged location for observing the Gould's Toucanet and other forest species."
+        },
+        "tieBicudoLagoon": {
+          "title": "Cone-billed Tanager Lagoon",
+          "description": "Special boat tour for observing the Cone-billed Tanager and other aquatic species."
+        }
+      }
+    },
+    "references": {
+      "title": "International References",
+      "description": "Stay up to date with Jardim da Amazônia's birdwatching news on the main birdwatching websites:",
+      "links": {
+        "ebird": "E-bird",
+        "wikiaves": "WikiAves"
+      }
+    }
+  },
+  "primatas": {
+    "hero": {
+      "title": "Primates",
+      "subtitle": "Meet the primates of Jardim da Amazônia"
+    },
+    "intro": {
+      "title": "Our Primates",
+      "description1": "Jardim da Amazônia, located in São José do Rio Claro, in the Chapadão dos Parecis, is a convergence point between the Cerrado and the Amazon Forest, standing out as the birthplace of numerous springs and exceptional biodiversity.",
+      "description2": "This environment is home to more than 30 species of medium and large mammals, including 07 primate species, some of which are critically endangered and endemic to northern MT."
+    },
+    "species": {
+      "title": "Emblematic Species",
+      "zoguezogue": {
+        "name": "Mato Grosso Titi Monkey",
+        "scientificName": "Plecturocebus grovesi",
+        "englishName": "Mato Grosso Titi Monkey",
+        "description": "Critically endangered primate, endemic to northern Mato Grosso, found between the Teles Pires and Arinos rivers. One of the 25 most endangered primate species on the planet.",
+        "status": "CR"
+      },
+      "parauacu": {
+        "name": "Tapajo's Saki Monkey",
+        "scientificName": "Pithecia mittermeieri",
+        "englishName": "Tapajo's Saki Monkey",
+        "description": "Vulnerable species that acts as a forest gardener, dispersing seeds of various sizes and hardness. Currently the subject of doctoral research focused on its distribution and conservation.",
+        "status": "VU"
+      },
+      "macacoaranha": {
+        "name": "Black-faced Spider Monkey",
+        "scientificName": "Ateles chamek",
+        "englishName": "Black-faced Spider Monkey",
+        "description": "The largest frugivorous primate in the region, classified as Vulnerable in Brazil and Endangered globally. Inhabits tall, rainy forests, both flooded and terra firme.",
+        "status": "VU"
+      }
+    },
+    "conservationStatus": {
+      "CR": "Critically Endangered",
+      "VU": "Vulnerable",
+      "LC": "Least Concern"
+    },
+    "gallery": {
+      "title": "Gallery"
+    },
+    "recommendations": {
+      "title": "Recommendations",
+      "whatToBring": {
+        "title": "What to Bring",
+        "items": [
+          "Light and comfortable clothing (long sleeves)",
+          "Closed walking shoes",
+          "Protection (hat, insect repellent, sunscreen)",
+          "Equipment (binoculars, flashlight, water bottle)"
+        ]
+      },
+      "bestTime": {
+        "title": "Best Time",
+        "description": "Southern Amazon has a hot and humid climate.",
+        "seasons": {
+          "rainy": {
+            "period": "January to April",
+            "description": "Rainy season with full rivers"
+          },
+          "ideal": {
+            "period": "Ideal Period: June to September",
+            "description": "Dry season with transparent waters and white sand beaches"
+          }
+        }
+      }
+    },
+    "macaquear": {
+      "title": "Macaquear in Mato Grosso",
+      "description1": "Brazil is the country with the highest primate diversity in the world. Mato Grosso is home to 29 species distributed among Pantanal, Cerrado, and Amazon, making it equivalent to the 13th country in primate diversity.",
+      "description2": "'Macaquear' is an initiative by Instituto Ecótono in partnership with the Brazilian Primatology Society, which encourages responsible primate observation as a tool for conservation and local development."
+    },
+    "route": {
+      "title": "Mato Grosso Primate Route",
+      "intro": "Brazil is the country with the highest number of primate species in the world, and if Mato Grosso were a country, it would be among the top ten. This richness is due to the variety of biomes and large rivers that act as geographical barriers.",
+      "about": {
+        "title": "About the Route",
+        "description": "Since 2023, Instituto Ecótono in partnership with Jardim da Amazônia and Cristalino Lodge have developed a route that allows observing 14 species in seven locations, in a 15-day itinerary.",
+        "destinations": {
+          "title": "Destinations",
+          "places": "São José do Rio Claro • Sinop • Alta Floresta"
+        },
+        "benefits": {
+          "title": "Benefits",
+          "items": "Citizen science • Academic research • Sustainable tourism • Local income"
+        }
+      },
+      "note": "All involved follow wildlife observation best practices, contributing to forest conservation."
+    },
+    "references": {
+      "title": "References and Clipping",
+      "links": {
+        "congress": "Primatology Congress",
+        "terra": "G1 - Terra da Gente",
+        "eco": "O Eco"
+      }
+    }
+  },
+  "safariBoat": {
+    "hero": {
+      "title": "Safari Boat",
+      "subtitle": "Explore the wildlife of the Amazonian rivers"
+    },
+    "intro": {
+      "description1": "The Safari Boat is a unique experience that allows you to explore the rich biodiversity of the Amazonian rivers. During the tour, you'll have the opportunity to observe various species of fish, birds, and reptiles in their natural habitat.",
+      "description2": "Our specialized guides share their knowledge about the local fauna, providing an educational and exciting experience."
+    },
+    "species": {
+      "title": "Species you might encounter",
+      "items": {
+        "kingfisher": {
+          "title": "Kingfisher",
+          "description": "A fishing bird that enchants with its vibrant colors and precise fishing technique."
+        },
+        "caiman": {
+          "title": "Dwarf Caiman",
+          "description": "A caiman species typical of the Southern Amazon, smaller than its relatives. Can be spotted on riverbanks and in flooded areas during the safari."
+        },
+        "tapir": {
+          "title": "Tapir",
+          "description": "The largest land mammal in South America, frequently spotted on riverbanks during the Safari Boat. An important seed disperser, contributing to forest regeneration."
+        }
+      }
+    },
+    "checklist": {
+      "title": "Safari Checklist",
+      "protection": {
+        "title": "Protection",
+        "items": [
+          "Sunscreen",
+          "Insect repellent",
+          "Hat or cap",
+          "Sunglasses"
+        ]
+      },
+      "equipment": {
+        "title": "Equipment",
+        "items": [
+          "Camera",
+          "Water bottle",
+          "Binoculars",
+          "Light clothing"
+        ]
+      }
+    }
+  },
+  "fieldGuides": {
+    "hero": {
+      "title": "Field Guides",
+      "subtitle": "Discover the biodiversity of Jardim da Amazônia"
+    },
+    "speciesList": {
+      "title": "Species Lists",
+      "description": "Our region is home to extraordinary biodiversity, documented through years of scientific research. Here you'll find guides and publications about our fauna and flora."
+    },
+    "categories": {
+      "mammals": "Mammals",
+      "birds": "Birds"
+    },
+    "publications": {
+      "birds": {
+        "title": "Birds of Jardim da Amazônia",
+        "authors": "Jardim da Amazônia Research Team",
+        "year": "-",
+        "description": "Catalog of bird species observed in the region. Content under development.",
+        "status": "Under development"
+      },
+      "mammals": {
+        "title": "Mammals of Jardim da Amazônia",
+        "authors": "Collaboration between:",
+        "description": "List of mammals recorded in the Jardim da Amazônia area.",
+        "year": "2023"
+      }
+    },
+    "research": {
+      "title": "Research Support",
+      "description": "Jardim da Amazônia actively supports scientific research in our region. If you are a researcher interested in developing studies in our area, please contact us.",
+      "email": "Send Email",
+      "learnMore": "Learn More"
+    },
+    "climate": {
+      "title": "Climate",
+      "description": "Our region has a typical Amazonian climate with well-defined seasons. Understanding climate conditions is essential for planning wildlife and flora observation activities.",
+      "rainy": {
+        "title": "Rainy Season",
+        "period": "November to April"
+      },
+      "dry": {
+        "title": "Dry Season",
+        "period": "May to October"
+      }
+    }
+  },
+  "trails": {
+    "hero": {
+      "title": "Ecological Trails",
+      "subtitle": "Explore the biodiversity of the Amazon"
+    },
+    "trails": {
+      "jatoba": {
+        "title": "Jatoba Trail",
+        "description": "Trail that leads to a century-old Jatoba tree (Hymenaea courbaril), over 40 meters tall.",
+        "duration": "1h30min",
+        "distance": "2.5km",
+        "difficulty": "Easy"
+      },
+      "lagoa": {
+        "title": "Macaw Lagoon",
+        "description": "Walk to a natural lagoon where you can observe macaws and other birds.",
+        "duration": "2h",
+        "distance": "3km",
+        "difficulty": "Moderate"
+      },
+      "laboratorio": {
+        "title": "Laboratory Trail",
+        "description": "Route that passes through scientific research points and wildlife observation areas.",
+        "duration": "1h",
+        "distance": "1.8km",
+        "difficulty": "Easy"
+      },
+      "arinos": {
+        "title": "Arinos River",
+        "description": "Trail that follows the Arinos River, ideal for bird and primate observation.",
+        "duration": "2h30min",
+        "distance": "4km",
+        "difficulty": "Moderate"
+      },
+      "piquia": {
+        "title": "Pequiá Trail",
+        "description": "Walk through a transition area between Cerrado and Amazon.",
+        "duration": "1h45min",
+        "distance": "2.8km",
+        "difficulty": "Easy"
+      },
+      "angelim": {
+        "title": "Angelim Trail",
+        "description": "Route that leads to a majestic Angelim tree, typical of the region.",
+        "duration": "2h15min",
+        "distance": "3.5km",
+        "difficulty": "Moderate"
+      }
+    },
+    "info": {
+      "title": "Important Information",
+      "whatToBring": {
+        "title": "What to Bring",
+        "items": [
+          "Appropriate footwear",
+          "Sunscreen",
+          "Insect repellent",
+          "Water"
+        ]
+      },
+      "recommendations": {
+        "title": "Recommendations",
+        "items": [
+          "Guide accompaniment",
+          "Cooler hours",
+          "Light and comfortable clothing",
+          "Respect for nature"
+        ]
+      }
+    },
+    "itineraries": {
+      "title": "Suggested Itineraries",
+      "3days": {
+        "title": "3 Days / 2 Nights",
+        "morning": ["Jatoba Trail"],
+        "afternoon": ["Macaw Lagoon"]
+      },
+      "4days": {
+        "title": "4 Days / 3 Nights",
+        "morning": ["Laboratory Trail", "Arinos River Visit"],
+        "afternoon": ["Jatoba Trail", "Macaw Lagoon", "Pequiá Trail"]
+      },
+      "5days": {
+        "title": "5 Days / 4 Nights",
+        "morning": ["Laboratory Trail", "Arinos River Visit", "Visit to local agriculture"],
+        "afternoon": ["Jatoba Trail", "Macaw Lagoon", "Pequiá Trail", "Angelim Trail"]
+      }
+    },
+    "details": {
+      "duration": "Duration",
+      "distance": "Distance",
+      "difficulty": "Difficulty"
+    }
+  },
+  "researchStation": {
+    "hero": {
+      "title": "Jardim da Amazônia Research Station",
+      "subtitle": "Center of Excellence in Research and Conservation in the Amazon-Cerrado Transition"
+    },
+    "intro": {
+      "description": "We are a space dedicated to expanding global scientific knowledge about biodiversity in the Amazon-Cerrado transition. Our mission is to provide the necessary infrastructure and support for researchers from around the world to study and document the rich biodiversity of this region, so they can contribute to the understanding and preservation of life on our planet."
+    },
+    "support": {
+      "title": "How We Support Research",
+      "infrastructure": {
+        "title": "Infrastructure and Logistics",
+        "description": "We offer comfortable accommodation, quality meals, and experienced guides who deeply know the region. Our structure includes well-maintained trails and strategic observation points, allowing researchers from different nationalities to conduct their studies safely and efficiently."
+      },
+      "database": {
+        "title": "Collaborative Database",
+        "description": "We maintain a digital collection with sighting records, photographs, and data collected by researchers who visit our station. This database aims to contribute to the advancement of scientific knowledge and understanding of tropical ecosystems."
+      }
+    },
+    "species": {
+      "title": "Species of Interest",
+      "description": "Our region is home to unique species that are fundamental to understanding global biodiversity. Over the years, researchers from various countries have documented and studied these species, contributing to worldwide scientific knowledge and conservation strategies that benefit the entire planet.",
+      "fauna": {
+        "title": "Fauna",
+        "items": {
+          "spiderMonkey": {
+            "name": "Black-faced Spider Monkey",
+            "scientificName": "Ateles chamek",
+            "description": "Endangered species that acts as a seed disperser"
+          },
+          "sakiMonkey": {
+            "name": "Tapajós Saki",
+            "scientificName": "Pithecia mittermeieri",
+            "description": "Endemic species to the region with reduced population"
+          },
+          "umbrellabird": {
+            "name": "Amazonian Umbrellabird",
+            "scientificName": "Cephalopterus ornatus",
+            "description": "Bird indicator of habitat quality"
+          }
+        }
+      },
+      "flora": {
+        "title": "Flora",
+        "items": {
+          "angelim": {
+            "name": "Angelim Tree",
+            "scientificName": "Parkia pendula",
+            "description": "Emergent tree vital for local fauna"
+          },
+          "buriti": {
+            "name": "Buriti Palm",
+            "scientificName": "Mauritia flexuosa",
+            "description": "Palm tree indicator of wetland areas"
+          },
+          "jatoba": {
+            "name": "Jatoba Tree",
+            "scientificName": "Hymenaea courbaril",
+            "description": "Key species for fauna maintenance"
+          }
+        }
+      }
+    },
+    "contact": {
+      "title": "Come Research With Us",
+      "description": "If you are a researcher interested in developing studies in our area, please contact us. We are ready to support your research and contribute to the advancement of global scientific knowledge.",
+      "button": "Contact Us"
+    }
+  },
+  "faq": {
+    "hero": {
+      "title": "Frequently Asked Questions",
+      "subtitle": "Everything you need to know about your stay"
+    },
+    "sections": {
+      "accommodation": {
+        "title": "Accommodations",
+        "questions": {
+          "roomTypes": {
+            "question": "What types of rooms are available?",
+            "answer": "We offer the following accommodation options:\n- Bungalow\n- Triple Room\n- Double Room"
+          },
+          "roomAmenities": {
+            "question": "What's included in the room?",
+            "answer": "Our rooms are equipped with essential items for your comfort, including comfortable King-size bed, private bathroom, air conditioning, and Wi-Fi."
+          }
+        }
+      },
+      "guides": {
+        "title": "Guides",
+        "questions": {
+          "languages": {
+            "question": "Do you have guides who speak other languages?",
+            "answer": "Yes, we have guides who speak Portuguese, English, and Spanish. Please request when booking."
+          },
+          "specializedGuides": {
+            "question": "Are there specialized guides for birdwatching?",
+            "answer": "Yes, we have specialized guides for birdwatching and primate observation activities. They are highly trained professionals with extensive experience in the region."
+          }
+        }
+      },
+      "whatToBring": {
+        "title": "What to Bring",
+        "questions": {
+          "clothing": {
+            "question": "What type of clothing should I bring?",
+            "answer": "We recommend:\n- Light, comfortable clothing\n- Long pants and long-sleeve shirts for trails\n- Comfortable walking shoes\n- Swimming attire\n- Hat or cap\n- Rain jacket (during rainy season)"
+          },
+          "equipment": {
+            "question": "What equipment should I bring?",
+            "answer": "Essential items:\n- Insect repellent\n- Sunscreen\n- Binoculars (for wildlife observation)\n- Camera\n- Water bottle"
+          }
+        }
+      },
+      "birdwatching": {
+        "title": "Birdwatching",
+        "questions": {
+          "bestTime": {
+            "question": "What is the best time for birdwatching?",
+            "answer": "The best times are early morning (5:30-9:00) and late afternoon (15:30-18:00). Different species can be observed during different seasons."
+          },
+          "species": {
+            "question": "How many bird species can be seen?",
+            "answer": "Over 590 species have been cataloged in our area. The number of species you can observe varies depending on the season and length of stay."
+          }
+        }
+      },
+      "tours": {
+        "title": "Tours",
+        "questions": {
+          "types": {
+            "question": "What types of tours do you offer?",
+            "answer": "We offer various tours:\n- Birdwatching\n- Primate observation\n- Nature trails\n- Safari boat\n- Night walks\n- Photography tours"
+          },
+          "duration": {
+            "question": "How long are the tours?",
+            "answer": "Tour duration varies from 2 to 6 hours, depending on the activity. We can customize the schedule according to your interests and physical condition."
+          }
+        }
+      },
+      "petPolicy": {
+        "title": "Pet Policy",
+        "questions": {
+          "allowed": {
+            "question": "Are pets allowed?",
+            "answer": "For the safety of our local wildlife and the comfort of all guests, we do not allow pets in our facilities."
+          }
+        }
+      },
+      "reservations": {
+        "title": "Reservations",
+        "questions": {
+          "howTo": {
+            "question": "How can I make a reservation?",
+            "answer": "You can make reservations through:\n- Our website\n- Email: reservas@jardimamazonia.com\n- WhatsApp: +55 65 4042-0595"
+          },
+          "cancellation": {
+            "question": "What is your cancellation policy?",
+            "answer": "Cancellations must be made at least 30 days before check-in for full refund. Please contact us for detailed cancellation terms."
+          }
+        }
+      },
+      "location": {
+        "title": "Location",
+        "questions": {
+          "access": {
+            "question": "How do I get there?",
+            "answer": "We are located in São José do Rio Claro, MT. You can reach us by:\n- Car from Cuiabá (4-hour drive)\n- Transfer service from Cuiabá or Sinop airports"
+          },
+          "distance": {
+            "question": "How far is it from major cities?",
+            "answer": "Distances:\n- 330 km from Cuiabá\n- 180 km from Sinop"
+          }
+        }
+      },
+      "facilitiesAndLeisure": {
+        "title": "Facilities and Leisure",
+        "questions": {
+          "internet": {
+            "question": "Is there internet access?",
+            "answer": "Yes, we offer high-speed internet via Starlink in common areas and accommodations."
+          },
+          "activities": {
+            "question": "What leisure activities are available?",
+            "answer": "We offer:\n- Natural pool\n- Nature trails\n- Bird and wildlife observation\n- Reading areas\n- Relaxation spaces\n- Outdoor social areas"
+          }
+        }
+      },
+      "foodAndBeverage": {
+        "title": "Food and Beverage (F&B)",
+        "questions": {
+          "meals": {
+            "question": "Are lunch and dinner options available on site?",
+            "answer": "Yes, we offer meals in our restaurant. Schedule:\n- Lunch: 12:30\n- Dinner: 19:30"
+          },
+          "drinks": {
+            "question": "Can I bring my own drinks?",
+            "answer": "Outside beverages are not permitted.\nPlease request our Wine List."
+          }
+        }
+      },
+      "checkInOut": {
+        "title": "Check-in and Check-out",
+        "questions": {
+          "times": {
+            "question": "What are the check-in and check-out times?",
+            "answer": "- Check-in: from 16:00\n- Check-out: until 14:00"
+          },
+          "earlyArrival": {
+            "question": "Can I arrive before check-in time?",
+            "answer": "Yes, you can arrive and enjoy our environment. If you wish to have meals before your reservation time, there will be a fee of R$200 per person for all-you-can-eat buffet access."
+          }
+        }
+      },
+      "dayUse": {
+        "title": "Day Use",
+        "questions": {
+          "availability": {
+            "question": "Do you offer Day Use?",
+            "answer": "Yes, we accept advance reservations subject to availability.\nPlease consult with our sales team or via WhatsApp."
+          }
+        }
+      },
+      "payment": {
+        "title": "Payment Methods",
+        "questions": {
+          "methods": {
+            "question": "What payment methods do you accept?",
+            "answer": "We accept credit cards, debit cards, and bank transfers."
+          },
+          "international": {
+            "question": "Do you accept international cards?",
+            "answer": "Yes, we accept international cards."
+          }
+        }
+      },
+      "photoAndEvents": {
+        "title": "Photography and Events",
+        "questions": {
+          "wedding": {
+            "question": "Is it possible to take wedding photos at the location?",
+            "answer": "Yes, we offer specific packages for photo sessions. Contact us for more details."
+          }
+        }
+      }
+    }
+  },
+  "howToGet": {
+    "hero": {
+      "title": "How to Get Here",
+      "subtitle": "Discover the path to your nature retreat"
+    },
+    "intro": {
+      "description": "Jardim da Amazônia is located in São José do Rio Claro, Mato Grosso, 320 km from Cuiabá. Our privileged location places us at the heart of the transition between the Amazon and Cerrado, offering a unique biodiversity experience."
+    },
+    "map": {
+      "title": "Location"
+    },
+    "access": {
+      "title": "Access Options",
+      "options": {
+        "cuiaba": {
+          "title": "Via Cuiabá / CGB Airport",
+          "distance": "Distance: 290 KM from Cuiabá International Airport",
+          "instructions": {
+            "title": "Instructions",
+            "steps": [
+              "Follow Helder Cândia Highway (MT-010), known as 'Estrada a Guia'",
+              "Continue until Rosário Oeste overpass",
+              "Turn right onto BR 163 (dual carriageway)",
+              "Continue until Gil gas station at the top of the Serra",
+              "Turn right before the overpass towards Diamantino",
+              "Continue through new Diamantino towards São José do Rio Claro"
+            ]
+          }
+        },
+        "sinop": {
+          "title": "Via Sinop - Nova Mutum / NOP Airport",
+          "distance": "Distance: 90 KM from Nova Mutum",
+          "instructions": {
+            "title": "Instructions",
+            "steps": [
+              "On BR 163, in Nova Mutum, locate Águia Branca gas station",
+              "Turn right onto MT235 highway towards São José do Rio Claro",
+              "Drive 48 km until the junction with MT 010 (Fazenda Libra)",
+              "Turn right towards São José do Rio Claro",
+              "Before Rio Claro Bridge, turn left",
+              "Continue for 4 km on dirt road"
+            ]
+          }
+        }
+      },
+      "importantNote": {
+        "title": "Important Note",
+        "text": "For the alternative route at km 644 (near two large antennas at São Genaro gas station) to São José do Rio Claro, please request detailed information."
+      }
+    },
+    "contact": {
+      "title": "Contact Us",
+      "description": "Need help getting here? Our team is ready to assist you."
+    },
+    "recommendations": {
+      "title": "Recommendations",
+      "items": [
+        "Make the journey during daylight hours for better road visibility",
+        "Keep your fuel tank above half full",
+        "Download the offline Google Maps for the region. See you soon!"
+      ]
+    }
+  },
+  "natureEvents": {
+    "hero": {
+      "title": "Nature Events",
+      "subtitle": "Discover different ways to enjoy our space, whether for work, connection, or celebration, always in harmony with nature"
+    },
+    "intro": {
+      "title": "How to Enjoy Our Space"
+    },
+    "events": {
+      "photoSessions": {
+        "title": "Photo Sessions",
+        "features": [
+          "Sessions for expectant mothers, engaged couples, and celebrations",
+          "Half-day included for the session",
+          "Complimentary bottle of house-selected wine"
+        ],
+        "quote": "Eternalize your special moments in unique settings, with all comfort and warmth"
+      },
+      "weddingNight": {
+        "title": "Wedding Night",
+        "features": [
+          "Welcome robe and sparkling wine",
+          "Special bedding for the couple",
+          "Special romantic decoration"
+        ],
+        "quote": "Begin your love story in a magical and welcoming setting"
+      },
+      "gatherings": {
+        "title": "Gatherings",
+        "features": [
+          "Family and corporate events",
+          "Personalized gastronomy",
+          "Recreational activities"
+        ],
+        "quote": "Moments of joy and relaxation in a welcoming environment"
+      },
+      "artisticResidencies": {
+        "title": "Artistic Residencies",
+        "features": [
+          "Spaces for artistic creation",
+          "Nature-inspired",
+          "Contemplative environment"
+        ],
+        "quote": "A refuge for artists to find inspiration and develop their projects"
+      },
+      "miniWeddings": {
+        "title": "Mini-Weddings",
+        "features": [
+          "Intimate ceremonies up to 40 people",
+          "Stunning natural setting",
+          "Accommodation for guests"
+        ],
+        "quote": "Celebrate love surrounded by nature"
+      },
+      "digitalNomad": {
+        "title": "Digital Nomad",
+        "features": [
+          "High-speed internet",
+          "Inspiring workspaces",
+          "Quiet and productive environment"
+        ],
+        "quote": "Work peacefully amidst nature"
+      }
+    },
+    "cta": {
+      "title": "Make Your Dream Come True With Us",
+      "description": "Our team is ready to help you create memorable experiences",
+      "contact": "Talk via WhatsApp"
+    }
+  },
+  "theySpokeAboutUs": {
+    "hero": {
+      "title": "They Spoke About Us",
+      "subtitle": "What they say about Jardim da Amazônia"
+    },
+    "news": [
+      {
+        "id": 1,
+        "title": "Jardim da Amazônia: Highlight in Scientific and Ecological Tourism",
+        "source": "Revista Camalote",
+        "date": "2024",
+        "description": "The lodge is recognized as one of the main points of the Mato Grosso Primate Route, standing out in conservation and scientific research.",
+        "fullContent": "Jardim da Amazônia was featured again in recent publications, reinforcing its role as one of Mato Grosso's most fascinating destinations for scientific and ecological tourism.\n\nMato Grosso Primate Route: Jardim da Amazônia was mentioned as one of the seven main locations of this conservation initiative, led by Instituto Ecótono in partnership with universities and research centers. Located about four hours from Cuiabá, Jardim da Amazônia stands out for its rich biodiversity, including species such as the black-faced spider monkey and the saki monkey. Visitors have the unique opportunity to observe at least 14 primate species along the route.\n\nSaki Monkey Conservation: With ongoing doctoral studies, Jardim da Amazônia reinforces its mission to protect local fauna, playing a crucial role in seed dispersal and ecological preservation.\n\nTourism Fairs and Scientific Outreach: The Garden also participated in important events, such as WTM Latin America and ITB Berlin, promoting sustainable and educational tourism.\n\nThese recognitions reinforce Jardim da Amazônia's commitment to sustainability, research, and positive impact tourism."
+      },
+      {
+        "id": 2,
+        "title": "Amazon: The new refuge for nature lovers and rare biodiversity",
+        "source": "Glamurama",
+        "date": "2024",
+        "description": "Internationally recognized as one of the three best destinations for bird and rare species observation, the lodge offers a unique experience for biodiversity enthusiasts.",
+        "fullContent": "In recent years, ecological tourism has gained momentum in Brazil, with the Amazon standing out as one of the most sought-after destinations for travelers seeking connection with nature. Jardim da Amazônia Lodge, located in the heart of the rainforest, is internationally recognized as one of the three best destinations for bird and rare species observation. With a sustainable structure and practices focused on environmental preservation, the lodge offers a unique experience, allowing visitors to closely observe endangered species such as the hyacinth macaw, the bare-faced curassow, and the harpy eagle.\n\nFor Raquel Zanchet, director of Jardim da Amazônia Lodge, ecological tourism is more than a trend: it's an essential tool for environmental awareness and conservation. 'Our goal is to provide a transformative experience for visitors while actively contributing to the preservation of Amazonian biodiversity,' she states. Guided tours by specialists allow exploring the region's rich biodiversity, promoting a deeper understanding of the challenges and importance of protecting this vital ecosystem."
+      },
+      {
+        "id": 3,
+        "title": "Wanderlust Magazine highlights Jardim da Amazônia",
+        "source": "Wanderlust Magazine",
+        "date": "2024",
+        "description": "In the December/January edition, Jardim da Amazônia is highlighted as a must-visit experience in the heart of Brazil, where the Pantanal meets the Amazon.",
+        "fullContent": "In the December/January issue of Wanderlust magazine, Jardim da Amazônia was highlighted as a must-visit experience in the heart of Brazil. Described as a place where 'the Pantanal meets the Amazon,' the article emphasized the uniqueness of our location and the abundance of wildlife around. They recommended Jardim da Amazônia as an ideal base for exploring the region's rich biodiversity and stunning landscapes, especially during the dry season when animals are more easily spotted.\n\nThe article also emphasized the charm of our hospitality and the opportunity for deep connection with nature, providing an authentic and memorable experience for those seeking to venture into the wild beauty of the Pantanal."
+      },
+      {
+        "id": 4,
+        "title": "Brazilian Primates: Piauí, Maranhão, Pará and Matto Grosso",
+        "source": "Mammalwatching.com",
+        "date": "2024",
+        "description": "Lodge is highlighted as a strategic point for primate observation in the Amazon region.",
+        "fullContent": "Jardim da Amazônia shone again in a report about the 'Mato Grosso Primate Observation Route,' an innovative initiative created by experts like Russ Mittermeier and Gustavo Canale. The project focuses on the conservation and observation of 16 primate species in the region, of which 10 are endangered. During their visit to the Garden, travelers were enchanted by the rich diversity of species spotted, such as Mittermeier's white-faced sakis, black spider monkeys, and Azara's capuchin monkeys, as well as other animals like capybaras and anteaters.\n\nThe lodge's infrastructure, led by the Zanchet family, was highlighted for its impeccable hospitality, refined gastronomy, and commitment to environmental preservation, including the creation of tree corridors for local fauna. One of the highlights of the report was the flooded forest area near the natural pool, where saki families often feed, providing fascinating encounters for visitors. This project reaffirms Jardim da Amazônia as an essential destination for those seeking sustainable tourism and unique scientific experiences."
+      },
+      {
+        "id": 5,
+        "title": "Monkey watching: primate observation practice has growth potential in Brazil",
+        "source": "G1 - Terra da Gente",
+        "date": "2023",
+        "description": "Jardim da Amazônia is cited as a reference in primate observation programs in Mato Grosso.",
+        "fullContent": "'Monkey watching is the act of observing primates, that is, monkeys, marmosets, tamarins, in their natural habitat. The great value of monkey watching is observing free monkeys in nature, performing natural behaviors, with minimal human intervention,' explains Gustavo Canale, vice-president of the Brazilian Primatology Society.\n\nAccording to Canale, the name 'monkey watching' was inspired by another common practice worldwide, bird watching. 'In Brazil, bird watching has offered a great opportunity to observe monkeys too, because many bird watchers, when aiming their binoculars at the treetops, end up spotting capuchin monkeys, howler monkeys, spider monkeys, marmosets. For example, some of the best places to observe birds in the Amazon of Mato Grosso, Jardim da Amazônia and Cristalino Lodge, have already started organizing monkey watching programs in their tourist itineraries,' he says."
+      },
+      {
+        "id": 6,
+        "title": "Cerrado-Amazon Ecotone on + Natureza",
+        "source": "Globoplay",
+        "date": "2023",
+        "description": "The + Natureza program highlights Jardim da Amazônia in a special episode about the meeting of Cerrado and Amazon.",
+        "fullContent": "The + Natureza program, aired on October 21, 2023, dedicated a special episode to the Cerrado-Amazon Ecotone region, where Jardim da Amazônia Lodge is located. With a duration of 26 minutes, the program explored the unique characteristics of this transition zone between two of Brazil's most important biomes.\n\nThe episode is available exclusively for Globoplay subscribers and presents the richness of local biodiversity, highlighting how the meeting of these two biomes creates a unique environment for observing fauna and flora.\n\nDuring the program, different species that can be found in the region were presented, as well as the conservation and research work carried out at the lodge, reinforcing its role as an important support point for scientific studies and observation tourism.",
+        "exclusive": true
+      }
+    ],
+    "buttons": {
+      "readMore": "Read more",
+      "showLess": "Show less",
+      "viewOriginalSite": "View original site",
+      "watchOnGloboplay": "Watch on Globoplay"
+    },
+    "exclusiveContent": "Exclusive Content for Globoplay Subscribers"
+  },
+  "gallery": {
+    "hero": {
+      "title": "Photo Gallery",
+      "subtitle": "Explore our collection of images from Jardim da Amazônia"
+    },
+    "sections": {
+      "accommodations": {
+        "title": "Accommodations",
+        "images": {
+          "forestHouse": "Forest House",
+          "forestHouseInterior": "Forest House - Interior",
+          "forestHouseAmbience": "Forest House - Ambience",
+          "gardenBungalow": "Garden Bungalow",
+          "gardenBungalowInterior": "Garden Bungalow - Interior",
+          "familyBungalow": "Family Bungalow",
+          "familyBungalowInterior": "Family Bungalow - Interior",
+          "familyBungalowAmbience": "Family Bungalow - Ambience"
+        }
+      },
+      "externalAreas": {
+        "title": "External Areas",
+        "images": {
+          "socialSpaceBonfire": "Social Space - Bonfire",
+          "starlink": "Starlink Wi-Fi Available",
+          "socialSpaceRest": "Social Space - Rest Area",
+          "socialSpaceLounge": "Social Space - Lounge",
+          "naturalPool": "Natural Pool",
+          "spring": "Spring - Conservation Area",
+          "crystalPool": "Crystal Clear Pool",
+          "gardensLakesPanoramic": "Gardens and Lakes - Panoramic",
+          "gardensLakesLandscape": "Gardens and Lakes - Landscape",
+          "birdwatchingNearHouse": "Birdwatching near the house",
+          "forestWalkway": "Walkway through the forest"
+        }
+      },
+      "fauna": {
+        "title": "Fauna",
+        "images": {
+          "greenTailedHummingbird": "Green-tailed Hummingbird",
+          "coneBilledTanager": "Cone-billed Tanager",
+          "bandTailedAntbird": "Band-tailed Antbird",
+          "buritiMacaw": "Buriti Macaw",
+          "amazonianBirds": "Amazonian Birds",
+          "birdsInFlight": "Birds in Flight",
+          "swallowTanager": "Swallow Tanager",
+          "blueCrownedTanager": "Blue-crowned Tanager",
+          "sakiMonkey": "Saki Monkey",
+          "titiMonkey": "Titi Monkey",
+          "spiderMonkey": "Black-faced Spider Monkey"
+        }
+      }
+    },
+    "photoCredit": "Photo by"
+  },
+  "naturalSpring": {
+    "hero": {
+      "title": "The Natural Spring",
+      "subtitle": "Heart of Our Ecological Sanctuary"
+    },
+    "intro": {
+      "title": "Discover the Purity of Our Spring",
+      "description": "At the heart of Jardim da Amazonia, we find a natural spring that plays a fundamental role in preserving our ecosystem and enhancing our guests' experience. This spring, a source of conservation, ensures the continuity of life on our property, feeding the pool with crystal clear, potable water."
+    },
+    "pool": {
+      "title": "The Spring-Fed Pool",
+      "description1": "The Lodge's pool is a true reflection of the natural beauty that surrounds us. Fed directly by the spring, the water remains clean and potable, offering our guests a safe and refreshing space to relax.",
+      "description2": "The natural features of the pool, such as aquariums and lagoons, provide complete immersion in nature, allowing you to enjoy a swim surrounded by the serenity of the forest."
+    },
+    "guidelines": {
+      "title": "Preservation Guidelines",
+      "quietEnvironment": {
+        "title": "Quiet Environment",
+        "description": "No sound systems allowed in common areas"
+      },
+      "waterCare": {
+        "title": "Water Care",
+        "description": "If using cosmetics, sunscreen, or insect repellent, please use the outdoor shower before entering the water"
+      },
+      "childSupervision": {
+        "title": "Child Supervision",
+        "description": "Children must be accompanied by parents or guardians"
+      }
+    },
+    "cta": {
+      "title": "Where Nature Meets Comfort",
+      "subtitle": "Ready to discover our natural spring?",
+      "bookNow": "Book Now",
+      "contact": "Contact Us"
+    }
+  },
+  "ourHistory": {
+    "hero": {
+      "title": "Our History",
+      "subtitle": "A journey of preservation and love for nature"
+    },
+    "intro": {
+      "description": "Jardim da Amazônia is more than a lodge - it's the story of a family that dedicated their lives to nature preservation and sustainable ecotourism development in Brazil."
+    },
+    "timeline": {
+      "1980s": {
+        "year": "1980s",
+        "title": "The Journey Begins",
+        "description": "The story begins with the arrival of the Zanchet family, who came from Rio Grande do Sul to Mato Grosso."
+      },
+      "1986": {
+        "year": "1986",
+        "title": "Original House Construction",
+        "description": "The foundation of this house was built from scratch, marking the physical beginning of our presence in this part of the Amazon."
+      },
+      "1997": {
+        "year": "1997",
+        "title": "Birth of the Lodge",
+        "description": "At a friend's suggestion, the idea of building a lodge came to life. Raquel Zanchet and Carmelita Zanchet started Jardim da Amazônia Lodge, with the vision of developing Brazilian ecotourism. In the same year, Almor and Carmelita Zanchet invested in a fish farming laboratory and began bird watching activities, marking the beginning of a new era for ecological tourism in the region."
+      },
+      "2000": {
+        "year": "2000",
+        "title": "Beginning of Birdwatching",
+        "description": "We started receiving the first groups dedicated to bird watching, establishing the foundations to become a recognized destination for birdwatching in the Amazon."
+      },
+      "2008": {
+        "year": "2008",
+        "title": "Discovery of the Cone-billed Tanager",
+        "description": "An important milestone for the region with the recording of the Cone-billed Tanager (Conothraupis mesoleuca), a critically endangered species. This discovery highlights the importance of our area for the conservation of rare species."
+      }
+    }
+  }
+} 

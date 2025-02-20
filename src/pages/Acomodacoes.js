@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 // eslint-disable-next-line no-unused-vars
 import PhotoCredit from '../components/PhotoCredit';
 import { siteConfig } from '../config/siteConfig';
@@ -30,6 +31,7 @@ import {
 import { GiPalmTree, GiForestCamp } from 'react-icons/gi';
 
 function Acomodacoes() {
+  const { t } = useTranslation();
   const [selectedRoom, setSelectedRoom] = useState(null);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [isFullScreen, setIsFullScreen] = useState(false);
@@ -37,62 +39,52 @@ function Acomodacoes() {
   const [preloadedImages, setPreloadedImages] = useState({});
 
   const commonAmenities = [
-    { icon: <FaBed />, name: "Cama King Size" },
-    { icon: <FaWifi />, name: "Wi-Fi" },
-    { icon: <FaSnowflake />, name: "Ar Condicionado" },
-    { icon: <FaFan />, name: "Ventilador de Teto" },
-    { icon: <MdBalcony />, name: "Varanda" },
-    { icon: <FaShower />, name: "Amenidades de Banho" },
-    { icon: <FaWind />, name: "Secador de Cabelo" },
-    { icon: <FaUmbrellaBeach />, name: "Guarda-chuvas" }
+    { icon: <FaBed />, name: t('accommodations.amenities.kingBed') },
+    { icon: <FaWifi />, name: t('accommodations.amenities.wifi') },
+    { icon: <FaSnowflake />, name: t('accommodations.amenities.ac') },
+    { icon: <FaFan />, name: t('accommodations.amenities.fan') },
+    { icon: <MdBalcony />, name: t('accommodations.amenities.balcony') },
+    { icon: <FaShower />, name: t('accommodations.amenities.bathAmenities') },
+    { icon: <FaWind />, name: t('accommodations.amenities.hairDryer') },
+    { icon: <FaUmbrellaBeach />, name: t('accommodations.amenities.umbrellas') }
   ];
 
   const policies = [
     {
-      title: "Horários",
+      title: t('accommodations.schedule.title'),
       icon: <FaRegClock />,
       items: [
-        "Check-in: 16:00",
-        "Check-out: 14:00",
+        t('accommodations.schedule.checkIn'),
+        t('accommodations.schedule.checkOut'),
         "",
-        "Café da Manhã: 7:30 às 9:30",
-        "Almoço: 12:30",
-        "Jantar: 19:30"
+        t('accommodations.schedule.breakfast'),
+        t('accommodations.schedule.lunch'),
+        t('accommodations.schedule.dinner')
       ]
     },
     {
-      title: "Incluído na Hospedagem",
+      title: t('accommodations.included.title'),
       icon: <FaCheckCircle />,
-      items: [
-        "Café da manhã completo",
-        "Almoço e jantar completo",
-        "Wi-Fi nas áreas comuns",
-        "Acesso à Piscina Natural"
-      ]
+      items: t('accommodations.included.items', { returnObjects: true })
     },
     {
-      title: "Informações Importantes",
+      title: t('accommodations.importantInfo.title'),
       icon: <FaInfoCircle />,
-      items: [
-        "Não são permitidos animais de estimação",
-        "Proibido fumar nas acomodações",
-        "Aceitamos cartões de crédito",
-        "Necessária reserva antecipada"
-      ]
+      items: t('accommodations.importantInfo.items', { returnObjects: true })
     }
   ];
 
   const accommodations = [
     {
       id: 'bangalo-familia',
-      type: 'Bangalô',
-      name: 'Bangalô Família',
+      type: t('accommodations.rooms.familyBungalow.type'),
+      name: t('accommodations.rooms.familyBungalow.name'),
       icon: <MdFamilyRestroom />,
-      description: 'Desfrute da vista do Rio Claro e lagoas nos confortáveis bangalôs, com cama king size, camas de solteiro para até 4 pessoas, lençóis de algodão, amenidades ecológicas e redes na varanda para relaxar após aventuras na selva.',
+      description: t('accommodations.rooms.familyBungalow.description'),
       features: [
-        { icon: <FaBed />, name: '1-4 Hóspedes' },
-        { icon: <MdNaturePeople />, name: 'Vista para o Rio Claro' },
-        { icon: <FaHeart />, name: 'Ideal para Famílias' }
+        { icon: <FaBed />, name: t('accommodations.rooms.familyBungalow.features.guests') },
+        { icon: <MdNaturePeople />, name: t('accommodations.rooms.familyBungalow.features.view') },
+        { icon: <FaHeart />, name: t('accommodations.rooms.familyBungalow.features.ideal') }
       ],
       image: 'https://res.cloudinary.com/dxlhv2mji/image/upload/q_100,f_auto,c_limit,w_2000/v1739834451/Jardim_da_Amazônia-1085_rba1ha.jpg',
       gallery: [
@@ -118,14 +110,14 @@ function Acomodacoes() {
     },
     {
       id: 'bangalo-jardim',
-      type: 'Bangalô',
-      name: 'Bangalô Jardim',
+      type: t('accommodations.rooms.gardenBungalow.type'),
+      name: t('accommodations.rooms.gardenBungalow.name'),
       icon: <GiPalmTree />,
-      description: 'Charmoso bangalô para até 2 pessoas, perfeito para casais. Relaxe na varanda privativa com redes, cercado pela tranquilidade da natureza.',
+      description: t('accommodations.rooms.gardenBungalow.description'),
       features: [
-        { icon: <FaBed />, name: '1-2 Hóspedes' },
-        { icon: <MdNaturePeople />, name: 'Vista para o Jardim' },
-        { icon: <FaHeart />, name: 'Ideal para Casais' }
+        { icon: <FaBed />, name: t('accommodations.rooms.gardenBungalow.features.guests') },
+        { icon: <MdNaturePeople />, name: t('accommodations.rooms.gardenBungalow.features.view') },
+        { icon: <FaHeart />, name: t('accommodations.rooms.gardenBungalow.features.ideal') }
       ],
       image: 'https://res.cloudinary.com/dxlhv2mji/image/upload/q_100,f_auto,c_limit,w_2000/v1739833672/Jardim_da_Amazônia-131_trfay9.jpg',
       gallery: [
@@ -151,14 +143,14 @@ function Acomodacoes() {
     },
     {
       id: 'casa-fazenda',
-      type: 'Casa da Fazenda',
-      name: 'Casa da Fazenda',
+      type: t('accommodations.rooms.farmhouse.type'),
+      name: t('accommodations.rooms.farmhouse.name'),
       icon: <FaHistory />,
-      description: 'A histórica Casa da Fazenda, construída em 1986, oferece apartamentos que combinam o charme do mobiliário de época com conforto moderno.',
+      description: t('accommodations.rooms.farmhouse.description'),
       features: [
-        { icon: <MdHotel />, name: 'Mobília de Época' },
-        { icon: <MdNaturePeople />, name: 'Vista Panorâmica' },
-        { icon: <FaHeart />, name: 'Experiência Histórica' }
+        { icon: <MdHotel />, name: t('accommodations.rooms.farmhouse.features.furniture') },
+        { icon: <MdNaturePeople />, name: t('accommodations.rooms.farmhouse.features.view') },
+        { icon: <FaHeart />, name: t('accommodations.rooms.farmhouse.features.experience') }
       ],
       image: 'https://res.cloudinary.com/dxlhv2mji/image/upload/q_auto:best,fl_progressive/v1739834451/Jardim_da_Amazônia-1707_o4s4u5.jpg',
       gallery: [
@@ -264,14 +256,14 @@ function Acomodacoes() {
     },
     {
       id: 'casa-mata',
-      type: 'Casa da Mata',
-      name: 'Casa da Mata',
+      type: t('accommodations.rooms.forestHouse.type'),
+      name: t('accommodations.rooms.forestHouse.name'),
       icon: <GiForestCamp />,
-      description: 'Retrofit de uma casa próxima à floresta, onde beija-flores podem ser avistados. Esta casa especial oferece uma experiência imersiva entre as árvores, conectando você à biodiversidade local com todo o conforto.',
+      description: t('accommodations.rooms.forestHouse.description'),
       features: [
-        { icon: <FaBed />, name: '1-2 Hóspedes' },
-        { icon: <MdNaturePeople />, name: 'Vista para a Mata' },
-        { icon: <FaMountain />, name: 'Experiência Imersiva' }
+        { icon: <FaBed />, name: t('accommodations.rooms.forestHouse.features.guests') },
+        { icon: <MdNaturePeople />, name: t('accommodations.rooms.forestHouse.features.view') },
+        { icon: <FaMountain />, name: t('accommodations.rooms.forestHouse.features.experience') }
       ],
       image: 'https://res.cloudinary.com/dxlhv2mji/image/upload/q_auto:best,fl_progressive/v1739834451/Jardim_da_Amazônia-3676_hn0sbn.jpg',
       gallery: [
@@ -399,25 +391,23 @@ function Acomodacoes() {
         {/* Content */}
         <div className="relative z-10 max-w-[800px] px-8">
           <h1 className="text-4xl md:text-6xl font-bold mb-4 tracking-wider drop-shadow-lg">
-            Acomodações
+            {t('accommodations.hero.title')}
           </h1>
           <p className="text-lg md:text-2xl mb-8 drop-shadow-md">
-            Conforto e natureza em perfeita harmonia
+            {t('accommodations.hero.subtitle')}
           </p>
         </div>
       </div>
 
       {/* Room Introduction */}
       <section className="py-16 bg-background-light">
-        <div className="container mx-auto px-4 max-w-[900px]">
+        <div className="container mx-auto px-4 max-w-4xl">
           <div className="flex flex-col items-center gap-6">
             <div className="flex items-center gap-4">
               <span className="text-4xl text-primary"><MdHotel /></span>
             </div>
             <p className="text-xl leading-relaxed text-text font-light text-justify">
-              Nossos bangalôs e apartamentos foram cuidadosamente projetados para proporcionar o máximo 
-              conforto durante sua estadia, mantendo uma conexão harmoniosa com a natureza. Cada 
-              acomodação oferece uma experiência singular para a sua experiência.
+              {t('accommodations.intro.description')}
             </p>
           </div>
         </div>
@@ -464,7 +454,7 @@ function Acomodacoes() {
                     onClick={() => handleShowDetails(accommodation)}
                     className="btn-primary w-full mt-6"
                   >
-                    Ver Detalhes
+                    {t('accommodations.details.viewDetails')}
                   </button>
                 </div>
               </div>
@@ -480,12 +470,12 @@ function Acomodacoes() {
             <div className="relative z-10">
               <span className="text-5xl text-primary-dark/20 absolute -top-4 -left-6">"</span>
               <p className="text-xl text-gray-700 leading-relaxed text-justify pl-8 pr-4">
-                Aconchegantes instalações do Lodge que foram inspiradas nas <strong>casas de palafitas</strong> e de madeira da Amazônia dos anos 80, celebrando a <strong>harmonia entre o homem e a natureza</strong>. A Decoração adota <strong>tons terrosos e neutros</strong>, com uma paleta que evoca o ambiente natural: marrons, beges e verdes musgo, criam um estilo <strong>rústico chic</strong>, onde a simplicidade, traz uma atmosfera acolhedora perfeitamente integrada à paisagem amazônica.
+                {t('accommodations.designQuote.text')}
               </p>
               <span className="text-5xl text-primary-dark/20 absolute -bottom-8 -right-4">"</span>
             </div>
             <footer className="mt-8 text-right">
-              <cite className="text-gray-600 font-medium not-italic">— Alê Ribeiro</cite>
+              <cite className="text-gray-600 font-medium not-italic">— {t('accommodations.designQuote.author')}</cite>
             </footer>
           </blockquote>
         </div>
@@ -494,7 +484,7 @@ function Acomodacoes() {
       {/* Policies Section */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4 max-w-7xl">
-          <h2 className="text-3xl font-bold text-center mb-12">Informações Importantes</h2>
+          <h2 className="text-3xl font-bold text-center mb-12">{t('accommodations.importantInfo.title')}</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {policies.map((policy, index) => (
               <div
@@ -525,10 +515,10 @@ function Acomodacoes() {
       <section className="py-16 bg-primary text-white text-center">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Pronto para Viver essa Experiência?
+            {t('accommodations.cta.title')}
           </h2>
           <p className="text-xl md:text-2xl text-white/90 mb-12 max-w-2xl mx-auto">
-            Reserve agora sua estadia e prepare-se para momentos inesquecíveis em meio à natureza
+            {t('accommodations.cta.subtitle')}
           </p>
           <div className="flex flex-col md:flex-row gap-6 justify-center">
             <a
@@ -537,13 +527,13 @@ function Acomodacoes() {
               rel="noopener noreferrer"
               className="btn-primary"
             >
-              Reserve Agora
+              {t('accommodations.cta.bookNow')}
             </a>
             <Link
               to={siteConfig.buttonLinks.contato}
               className="btn-secondary"
             >
-              Entre em Contato
+              {t('accommodations.cta.contact')}
             </Link>
           </div>
         </div>
@@ -579,40 +569,6 @@ function Acomodacoes() {
                 }}
                 onLoad={() => setIsImageLoading(false)}
               />
-              
-              {/* Apartment Label */}
-              {selectedRoom.gallery[currentImageIndex].apt && (
-                <div className="absolute top-4 left-4 bg-black/70 text-white px-4 py-2 rounded-lg text-lg font-medium">
-                  Apartment {selectedRoom.gallery[currentImageIndex].apt}
-                </div>
-              )}
-
-              {/* Thumbnail Navigation with Loading States */}
-              <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/50 to-transparent">
-                <div className="flex justify-center gap-2 overflow-x-auto py-2">
-                  {selectedRoom.gallery.map((image, index) => (
-                    <button
-                      key={index}
-                      onClick={(e) => {
-                        e.stopPropagation();
-                        setCurrentImageIndex(index);
-                        setIsImageLoading(true);
-                      }}
-                      className={`w-16 h-16 flex-shrink-0 rounded-lg overflow-hidden border-2 transition-all
-                        ${currentImageIndex === index ? 'border-white scale-110' : 'border-transparent opacity-70'}
-                        ${!preloadedImages[index] ? 'bg-gray-200 animate-pulse' : ''}`}
-                    >
-                      <img
-                        src={image.src.replace('/upload/', '/upload/c_scale,w_100,f_auto,q_auto/')}
-                        alt={`Thumbnail ${index + 1} - Apartamento ${image.apt}`}
-                        className={`w-full h-full object-cover transition-opacity duration-300
-                          ${preloadedImages[index] ? 'opacity-100' : 'opacity-0'}`}
-                        loading="lazy"
-                      />
-                    </button>
-                  ))}
-                </div>
-              </div>
 
               {/* Navigation Buttons */}
               <button
@@ -664,7 +620,7 @@ function Acomodacoes() {
               </div>
 
               {/* Amenities */}
-              <h3 className="text-lg text-primary font-semibold mb-3">Comodidades</h3>
+              <h3 className="text-lg text-primary font-semibold mb-3">{t('accommodations.details.amenities')}</h3>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-4">
                 {commonAmenities.map((amenity, index) => (
                   <div key={index} className="flex items-center gap-2">
@@ -673,16 +629,6 @@ function Acomodacoes() {
                   </div>
                 ))}
               </div>
-
-              {/* CTA Button */}
-              <a
-                href={siteConfig.buttonLinks.bookNow}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-primary text-sm"
-              >
-                Reserve Agora
-              </a>
             </div>
           </div>
         </div>

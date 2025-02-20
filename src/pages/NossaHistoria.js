@@ -1,8 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 
 const NossaHistoria = () => {
+  const { t } = useTranslation();
+  
   const heroStyle = {
     backgroundImage: `url('https://res.cloudinary.com/dxlhv2mji/image/upload/v1736085697/almor-carmelita_tx0knl.jpg')`,
     backgroundSize: 'cover',
@@ -65,10 +68,10 @@ const NossaHistoria = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-black/70 z-10"></div>
         <div className="relative z-20 px-4">
           <h1 className="text-5xl md:text-6xl font-bold mb-6 tracking-wide text-shadow">
-            Nossa História
+            {t('ourHistory.hero.title')}
           </h1>
           <p className="text-lg md:text-xl max-w-3xl mx-auto tracking-wide text-shadow">
-            Uma jornada de preservação e amor pela natureza
+            {t('ourHistory.hero.subtitle')}
           </p>
         </div>
       </div>
@@ -77,9 +80,7 @@ const NossaHistoria = () => {
       <section className="py-24 bg-white">
         <div className="container mx-auto px-4">
           <p className="text-xl md:text-2xl text-gray-700 text-center max-w-4xl mx-auto leading-relaxed">
-            O Jardim da Amazônia é mais do que uma pousada - é a história de uma família que 
-            dedicou sua vida à preservação da natureza e ao desenvolvimento sustentável do 
-            ecoturismo no Brasil.
+            {t('ourHistory.intro.description')}
           </p>
         </div>
       </section>
@@ -131,11 +132,10 @@ const NossaHistoria = () => {
                 className="bg-white rounded-xl shadow-lg p-8 transition-transform duration-300 hover:-translate-y-2"
                 variants={cardVariants}
               >
-                <h3 className="text-2xl font-semibold text-primary mb-2">Anos 1980</h3>
-                <h4 className="text-xl font-medium text-gray-900 mb-4">O Início da Jornada</h4>
+                <h3 className="text-2xl font-semibold text-primary mb-2">{t('ourHistory.timeline.1980s.year')}</h3>
+                <h4 className="text-xl font-medium text-gray-900 mb-4">{t('ourHistory.timeline.1980s.title')}</h4>
                 <p className="text-gray-600 leading-relaxed">
-                  A história começa com a chegada da família Zanchet, vindos do Rio Grande do Sul 
-                  para Mato Grosso.
+                  {t('ourHistory.timeline.1980s.description')}
                 </p>
               </motion.div>
             </motion.div>
@@ -154,11 +154,10 @@ const NossaHistoria = () => {
                 className="bg-white rounded-xl shadow-lg p-8 transition-transform duration-300 hover:-translate-y-2"
                 variants={cardVariants}
               >
-                <h3 className="text-2xl font-semibold text-primary mb-2">1986</h3>
-                <h4 className="text-xl font-medium text-gray-900 mb-4">Construção da Casa Original</h4>
+                <h3 className="text-2xl font-semibold text-primary mb-2">{t('ourHistory.timeline.1986.year')}</h3>
+                <h4 className="text-xl font-medium text-gray-900 mb-4">{t('ourHistory.timeline.1986.title')}</h4>
                 <p className="text-gray-600 leading-relaxed">
-                  A fundação desta casa foi construída do zero, marcando o início físico 
-                  da nossa presença neste pedaço da Amazônia.
+                  {t('ourHistory.timeline.1986.description')}
                 </p>
               </motion.div>
             </motion.div>
@@ -177,15 +176,10 @@ const NossaHistoria = () => {
                 className="bg-white rounded-xl shadow-lg p-8 transition-transform duration-300 hover:-translate-y-2"
                 variants={cardVariants}
               >
-                <h3 className="text-2xl font-semibold text-primary mb-2">1997</h3>
-                <h4 className="text-xl font-medium text-gray-900 mb-4">Nascimento da Pousada</h4>
+                <h3 className="text-2xl font-semibold text-primary mb-2">{t('ourHistory.timeline.1997.year')}</h3>
+                <h4 className="text-xl font-medium text-gray-900 mb-4">{t('ourHistory.timeline.1997.title')}</h4>
                 <p className="text-gray-600 leading-relaxed">
-                  Por sugestão de um amigo, a ideia de construir uma pousada ganhou vida. 
-                  Raquel Zanchet e Carmelita Zanchet dão início à Pousada Jardim da Amazônia, 
-                  com a visão de desenvolver o ecoturismo brasileiro. No mesmo ano, Almor e 
-                  Carmelita Zanchet investem no laboratório de piscicultura e iniciam as 
-                  atividades de observação de aves, marcando o começo de uma nova era para 
-                  o turismo ecológico na região.
+                  {t('ourHistory.timeline.1997.description')}
                 </p>
               </motion.div>
             </motion.div>
@@ -204,12 +198,10 @@ const NossaHistoria = () => {
                 className="bg-white rounded-xl shadow-lg p-8 transition-transform duration-300 hover:-translate-y-2"
                 variants={cardVariants}
               >
-                <h3 className="text-2xl font-semibold text-primary mb-2">2000</h3>
-                <h4 className="text-xl font-medium text-gray-900 mb-4">Início do Birdwatching</h4>
+                <h3 className="text-2xl font-semibold text-primary mb-2">{t('ourHistory.timeline.2000.year')}</h3>
+                <h4 className="text-xl font-medium text-gray-900 mb-4">{t('ourHistory.timeline.2000.title')}</h4>
                 <p className="text-gray-600 leading-relaxed">
-                  Começamos a receber os primeiros grupos dedicados à observação de aves, 
-                  estabelecendo as bases para nos tornarmos um destino reconhecido para 
-                  birdwatching na Amazônia.
+                  {t('ourHistory.timeline.2000.description')}
                 </p>
               </motion.div>
             </motion.div>
@@ -228,12 +220,10 @@ const NossaHistoria = () => {
                 className="bg-white rounded-xl shadow-lg p-8 transition-transform duration-300 hover:-translate-y-2"
                 variants={cardVariants}
               >
-                <h3 className="text-2xl font-semibold text-primary mb-2">2008</h3>
-                <h4 className="text-xl font-medium text-gray-900 mb-4">Descoberta do Tiê-Bicudo</h4>
+                <h3 className="text-2xl font-semibold text-primary mb-2">{t('ourHistory.timeline.2008.year')}</h3>
+                <h4 className="text-xl font-medium text-gray-900 mb-4">{t('ourHistory.timeline.2008.title')}</h4>
                 <p className="text-gray-600 leading-relaxed">
-                  Um marco importante para a região com o registro do Tiê-Bicudo (Conothraupis mesoleuca), 
-                  uma espécie criticamente em extinção. Esta descoberta ressalta a importância da nossa 
-                  área para a conservação de espécies raras.
+                  {t('ourHistory.timeline.2008.description')}
                 </p>
               </motion.div>
             </motion.div>

@@ -72,7 +72,7 @@ export const siteConfig = {
 
     biodiversity: {
       stats: [
-        { number: '580+', title: 'Espécies de Aves', desc: 'Catalogadas em nossa reserva' },
+        { number: '590+', title: 'Espécies de Aves', desc: 'Catalogadas em nossa reserva' },
         { number: '7', title: 'Espécies de Primatas', desc: 'Dos 29 reconhecidos em MT' },
         { number: '30+', title: 'Mamíferos', desc: 'De médio e grande porte' },
         { number: '∞', title: 'Experiências', desc: 'na natureza' }

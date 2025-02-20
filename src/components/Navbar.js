@@ -1,14 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { siteConfig } from '../config/siteConfig';
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const [language, setLanguage] = useState('PT');
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
   const location = useLocation();
   const isHome = location.pathname === '/';
+  const { t, i18n } = useTranslation();
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -33,7 +34,8 @@ function Navbar() {
   };
 
   const toggleLanguage = () => {
-    setLanguage(language === 'PT' ? 'EN' : 'PT');
+    const newLang = i18n.language === 'pt' ? 'en' : 'pt';
+    i18n.changeLanguage(newLang);
   };
 
   useEffect(() => {
@@ -89,7 +91,7 @@ function Navbar() {
                             flex justify-between lg:block items-center"
                           aria-expanded={activeDropdown === 0}
                         >
-                          <span>Hospedagem</span>
+                          <span>{t('navigation.accommodation')}</span>
                           <span className="text-2xl lg:hidden">{activeDropdown === 0 ? '−' : '+'}</span>
                         </button>
                         <div className={`${activeDropdown === 0 ? 'block mt-2' : 'hidden'} lg:hidden lg:group-hover:block
@@ -97,10 +99,10 @@ function Navbar() {
                           lg:bg-primary-dark/95 lg:rounded-lg lg:py-2 lg:border lg:border-white/10 lg:shadow-lg
                           lg:opacity-0 lg:invisible lg:group-hover:opacity-100 lg:group-hover:visible
                           lg:translate-y-2 lg:group-hover:translate-y-0 lg:transition-all lg:duration-200`}>
-                          <Link to={siteConfig.buttonLinks.accommodation} className="block px-8 lg:px-6 py-3 text-white/90 lg:text-white text-base lg:text-[0.9rem] font-primary tracking-wide lg:hover:bg-white/10 lg:hover:pl-8 transition-all duration-200" onClick={handleLinkClick}>Acomodações</Link>
-                          <Link to={siteConfig.buttonLinks.areasExternas} className="block px-8 lg:px-6 py-3 text-white/90 lg:text-white text-base lg:text-[0.9rem] font-primary tracking-wide lg:hover:bg-white/10 lg:hover:pl-8 transition-all duration-200" onClick={handleLinkClick}>O Lodge</Link>
-                          <Link to={siteConfig.buttonLinks.gastronomy} className="block px-8 lg:px-6 py-3 text-white/90 lg:text-white text-base lg:text-[0.9rem] font-primary tracking-wide lg:hover:bg-white/10 lg:hover:pl-8 transition-all duration-200" onClick={handleLinkClick}>Gastronomia</Link>
-                          <Link to={siteConfig.buttonLinks.eventosNatureza} className="block px-8 lg:px-6 py-3 text-white/90 lg:text-white text-base lg:text-[0.9rem] font-primary tracking-wide lg:hover:bg-white/10 lg:hover:pl-8 transition-all duration-200" onClick={handleLinkClick}>Eventos na Natureza</Link>
+                          <Link to={siteConfig.buttonLinks.accommodation} className="block px-8 lg:px-6 py-3 text-white/90 lg:text-white text-base lg:text-[0.9rem] font-primary tracking-wide lg:hover:bg-white/10 lg:hover:pl-8 transition-all duration-200" onClick={handleLinkClick}>{t('navigation.accommodation')}</Link>
+                          <Link to={siteConfig.buttonLinks.areasExternas} className="block px-8 lg:px-6 py-3 text-white/90 lg:text-white text-base lg:text-[0.9rem] font-primary tracking-wide lg:hover:bg-white/10 lg:hover:pl-8 transition-all duration-200" onClick={handleLinkClick}>{t('navigation.lodge')}</Link>
+                          <Link to={siteConfig.buttonLinks.gastronomy} className="block px-8 lg:px-6 py-3 text-white/90 lg:text-white text-base lg:text-[0.9rem] font-primary tracking-wide lg:hover:bg-white/10 lg:hover:pl-8 transition-all duration-200" onClick={handleLinkClick}>{t('navigation.gastronomy')}</Link>
+                          <Link to={siteConfig.buttonLinks.eventosNatureza} className="block px-8 lg:px-6 py-3 text-white/90 lg:text-white text-base lg:text-[0.9rem] font-primary tracking-wide lg:hover:bg-white/10 lg:hover:pl-8 transition-all duration-200" onClick={handleLinkClick}>{t('navigation.natureEvents')}</Link>
                         </div>
                       </li>
 
@@ -113,7 +115,7 @@ function Navbar() {
                             flex justify-between lg:block items-center"
                           aria-expanded={activeDropdown === 1}
                         >
-                          <span>Experiências</span>
+                          <span>{t('navigation.experiences')}</span>
                           <span className="text-2xl lg:hidden">{activeDropdown === 1 ? '−' : '+'}</span>
                         </button>
                         <div className={`${activeDropdown === 1 ? 'block mt-2' : 'hidden'} lg:hidden lg:group-hover:block
@@ -121,11 +123,11 @@ function Navbar() {
                           lg:bg-primary-dark/95 lg:rounded-lg lg:py-2 lg:border lg:border-white/10 lg:shadow-lg
                           lg:opacity-0 lg:invisible lg:group-hover:opacity-100 lg:group-hover:visible
                           lg:translate-y-2 lg:group-hover:translate-y-0 lg:transition-all lg:duration-200`}>
-                          <Link to={siteConfig.buttonLinks.birdwatching} className="block px-8 lg:px-6 py-3 text-white/90 lg:text-white text-base lg:text-[0.9rem] font-primary tracking-wide lg:hover:bg-white/10 lg:hover:pl-8 transition-all duration-200" onClick={handleLinkClick}>Birdwatching</Link>
-                          <Link to={siteConfig.buttonLinks.primates} className="block px-8 lg:px-6 py-3 text-white/90 lg:text-white text-base lg:text-[0.9rem] font-primary tracking-wide lg:hover:bg-white/10 lg:hover:pl-8 transition-all duration-200" onClick={handleLinkClick}>Observação de Primatas</Link>
-                          <Link to={siteConfig.buttonLinks.safariBoat} className="block px-8 lg:px-6 py-3 text-white/90 lg:text-white text-base lg:text-[0.9rem] font-primary tracking-wide lg:hover:bg-white/10 lg:hover:pl-8 transition-all duration-200" onClick={handleLinkClick}>Safari Boat</Link>
-                          <Link to={siteConfig.buttonLinks.trilhas} className="block px-8 lg:px-6 py-3 text-white/90 lg:text-white text-base lg:text-[0.9rem] font-primary tracking-wide lg:hover:bg-white/10 lg:hover:pl-8 transition-all duration-200" onClick={handleLinkClick}>Trilhas</Link>
-                          <Link to={siteConfig.buttonLinks.guiasCampo} className="block px-8 lg:px-6 py-3 text-white/90 lg:text-white text-base lg:text-[0.9rem] font-primary tracking-wide lg:hover:bg-white/10 lg:hover:pl-8 transition-all duration-200" onClick={handleLinkClick}>Guias de Campo</Link>
+                          <Link to={siteConfig.buttonLinks.birdwatching} className="block px-8 lg:px-6 py-3 text-white/90 lg:text-white text-base lg:text-[0.9rem] font-primary tracking-wide lg:hover:bg-white/10 lg:hover:pl-8 transition-all duration-200" onClick={handleLinkClick}>{t('navigation.birdwatching')}</Link>
+                          <Link to={siteConfig.buttonLinks.primates} className="block px-8 lg:px-6 py-3 text-white/90 lg:text-white text-base lg:text-[0.9rem] font-primary tracking-wide lg:hover:bg-white/10 lg:hover:pl-8 transition-all duration-200" onClick={handleLinkClick}>{t('navigation.primatesObservation')}</Link>
+                          <Link to={siteConfig.buttonLinks.safariBoat} className="block px-8 lg:px-6 py-3 text-white/90 lg:text-white text-base lg:text-[0.9rem] font-primary tracking-wide lg:hover:bg-white/10 lg:hover:pl-8 transition-all duration-200" onClick={handleLinkClick}>{t('navigation.safariBoat')}</Link>
+                          <Link to={siteConfig.buttonLinks.trilhas} className="block px-8 lg:px-6 py-3 text-white/90 lg:text-white text-base lg:text-[0.9rem] font-primary tracking-wide lg:hover:bg-white/10 lg:hover:pl-8 transition-all duration-200" onClick={handleLinkClick}>{t('navigation.trails')}</Link>
+                          <Link to={siteConfig.buttonLinks.guiasCampo} className="block px-8 lg:px-6 py-3 text-white/90 lg:text-white text-base lg:text-[0.9rem] font-primary tracking-wide lg:hover:bg-white/10 lg:hover:pl-8 transition-all duration-200" onClick={handleLinkClick}>{t('navigation.fieldGuides')}</Link>
                         </div>
                       </li>
 
@@ -138,7 +140,7 @@ function Navbar() {
                             flex justify-between lg:block items-center"
                           aria-expanded={activeDropdown === 2}
                         >
-                          <span>Conservação</span>
+                          <span>{t('navigation.conservation')}</span>
                           <span className="text-2xl lg:hidden">{activeDropdown === 2 ? '−' : '+'}</span>
                         </button>
                         <div className={`${activeDropdown === 2 ? 'block mt-2' : 'hidden'} lg:hidden lg:group-hover:block
@@ -146,10 +148,10 @@ function Navbar() {
                           lg:bg-primary-dark/95 lg:rounded-lg lg:py-2 lg:border lg:border-white/10 lg:shadow-lg
                           lg:opacity-0 lg:invisible lg:group-hover:opacity-100 lg:group-hover:visible
                           lg:translate-y-2 lg:group-hover:translate-y-0 lg:transition-all lg:duration-200`}>
-                          <Link to={siteConfig.buttonLinks.estacaoPesquisa} className="block px-8 lg:px-6 py-3 text-white/90 lg:text-white text-base lg:text-[0.9rem] font-primary tracking-wide lg:hover:bg-white/10 lg:hover:pl-8 transition-all duration-200" onClick={handleLinkClick}>Estação de Pesquisa</Link>
-                          <Link to={siteConfig.buttonLinks.nascenteNatural} className="block px-8 lg:px-6 py-3 text-white/90 lg:text-white text-base lg:text-[0.9rem] font-primary tracking-wide lg:hover:bg-white/10 lg:hover:pl-8 transition-all duration-200" onClick={handleLinkClick}>Nascente Natural</Link>
-                          <Link to={siteConfig.buttonLinks.falaramDeNos} className="block px-8 lg:px-6 py-3 text-white/90 lg:text-white text-base lg:text-[0.9rem] font-primary tracking-wide lg:hover:bg-white/10 lg:hover:pl-8 transition-all duration-200" onClick={handleLinkClick}>Falaram de Nós</Link>
-                          <Link to={siteConfig.buttonLinks.galeria} className="block px-8 lg:px-6 py-3 text-white/90 lg:text-white text-base lg:text-[0.9rem] font-primary tracking-wide lg:hover:bg-white/10 lg:hover:pl-8 transition-all duration-200" onClick={handleLinkClick}>Galeria de Fotos</Link>
+                          <Link to={siteConfig.buttonLinks.estacaoPesquisa} className="block px-8 lg:px-6 py-3 text-white/90 lg:text-white text-base lg:text-[0.9rem] font-primary tracking-wide lg:hover:bg-white/10 lg:hover:pl-8 transition-all duration-200" onClick={handleLinkClick}>{t('navigation.researchStation')}</Link>
+                          <Link to={siteConfig.buttonLinks.nascenteNatural} className="block px-8 lg:px-6 py-3 text-white/90 lg:text-white text-base lg:text-[0.9rem] font-primary tracking-wide lg:hover:bg-white/10 lg:hover:pl-8 transition-all duration-200" onClick={handleLinkClick}>{t('navigation.nascentNatural')}</Link>
+                          <Link to={siteConfig.buttonLinks.falaramDeNos} className="block px-8 lg:px-6 py-3 text-white/90 lg:text-white text-base lg:text-[0.9rem] font-primary tracking-wide lg:hover:bg-white/10 lg:hover:pl-8 transition-all duration-200" onClick={handleLinkClick}>{t('navigation.theySpokeAboutUs')}</Link>
+                          <Link to={siteConfig.buttonLinks.galeria} className="block px-8 lg:px-6 py-3 text-white/90 lg:text-white text-base lg:text-[0.9rem] font-primary tracking-wide lg:hover:bg-white/10 lg:hover:pl-8 transition-all duration-200" onClick={handleLinkClick}>{t('navigation.photoGallery')}</Link>
                         </div>
                       </li>
 
@@ -162,7 +164,7 @@ function Navbar() {
                             flex justify-between lg:block items-center"
                           aria-expanded={activeDropdown === 3}
                         >
-                          <span>Prepare sua Viagem</span>
+                          <span>{t('navigation.prepareYourTrip')}</span>
                           <span className="text-2xl lg:hidden">{activeDropdown === 3 ? '−' : '+'}</span>
                         </button>
                         <div className={`${activeDropdown === 3 ? 'block mt-2' : 'hidden'} lg:hidden lg:group-hover:block
@@ -170,8 +172,8 @@ function Navbar() {
                           lg:bg-primary-dark/95 lg:rounded-lg lg:py-2 lg:border lg:border-white/10 lg:shadow-lg
                           lg:opacity-0 lg:invisible lg:group-hover:opacity-100 lg:group-hover:visible
                           lg:translate-y-2 lg:group-hover:translate-y-0 lg:transition-all lg:duration-200`}>
-                          <Link to={siteConfig.buttonLinks.faq} className="block px-8 lg:px-6 py-3 text-white/90 lg:text-white text-base lg:text-[0.9rem] font-primary tracking-wide lg:hover:bg-white/10 lg:hover:pl-8 transition-all duration-200" onClick={handleLinkClick}>Perguntas Frequentes</Link>
-                          <Link to={siteConfig.buttonLinks.comoChegar} className="block px-8 lg:px-6 py-3 text-white/90 lg:text-white text-base lg:text-[0.9rem] font-primary tracking-wide lg:hover:bg-white/10 lg:hover:pl-8 transition-all duration-200" onClick={handleLinkClick}>Como Chegar</Link>
+                          <Link to={siteConfig.buttonLinks.faq} className="block px-8 lg:px-6 py-3 text-white/90 lg:text-white text-base lg:text-[0.9rem] font-primary tracking-wide lg:hover:bg-white/10 lg:hover:pl-8 transition-all duration-200" onClick={handleLinkClick}>{t('navigation.frequentlyAskedQuestions')}</Link>
+                          <Link to={siteConfig.buttonLinks.comoChegar} className="block px-8 lg:px-6 py-3 text-white/90 lg:text-white text-base lg:text-[0.9rem] font-primary tracking-wide lg:hover:bg-white/10 lg:hover:pl-8 transition-all duration-200" onClick={handleLinkClick}>{t('navigation.howToGet')}</Link>
                         </div>
                       </li>
                     </div>
@@ -184,7 +186,7 @@ function Navbar() {
                           className="hidden lg:block px-3 py-1 text-white text-sm font-medium border border-white/20 rounded
                             hover:bg-white/10 hover:border-accent transition-all duration-300"
                         >
-                          {language}
+                          {i18n.language.toUpperCase()}
                         </button>
                       </li>
                     </div>
@@ -198,7 +200,7 @@ function Navbar() {
                     className="w-full px-4 py-2 text-white text-base font-medium border border-white/20 rounded
                       hover:bg-white/10 transition-colors duration-300"
                   >
-                    {language}
+                    {i18n.language.toUpperCase()}
                   </button>
 
                   <a
@@ -208,7 +210,7 @@ function Navbar() {
                     className="block w-full bg-[#C4A24D] text-white text-base font-semibold uppercase tracking-wider px-4 py-3
                       rounded-full text-center hover:bg-[#D4B25D] transition-colors duration-300"
                   >
-                    Reservar
+                    {t('navigation.bookNow')}
                   </a>
                 </div>
               </div>
@@ -238,7 +240,7 @@ function Navbar() {
               className="bg-[#C4A24D] text-white font-semibold text-sm uppercase tracking-wider px-6 py-2.5
                 rounded-full hover:-translate-y-0.5 hover:shadow-lg transition-all duration-300"
             >
-              Reservar
+              {t('navigation.bookNow')}
             </a>
           </div>
         </div>

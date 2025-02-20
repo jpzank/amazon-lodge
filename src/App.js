@@ -1,6 +1,7 @@
 // src/App.js
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import './i18n';  // Import i18n configuration
 import './index.css';  // Make sure this is the only CSS import
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
@@ -28,8 +29,8 @@ import Galeria from './pages/Galeria';
 function App() {
   return (
     <Router>
-      <ScrollToTop />
-      <div className="min-h-screen flex flex-col bg-white">
+      <div className="App">
+        <ScrollToTop />
         <Navbar />
         <main className="flex-grow">
           <Routes>
