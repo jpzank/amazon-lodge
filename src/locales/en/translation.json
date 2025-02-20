@@ -18,7 +18,7 @@
     "conservation": "Conservation",
     "researchStation": "Research Station",
     "nascentNatural": "Natural Spring",
-    "theySpokeAboutUs": "They Spoke About Us",
+    "theySpokeAboutUs": "Media Press",
     "photoGallery": "Photo Gallery",
     "prepareYourTrip": "Prepare Your Trip",
     "frequentlyAskedQuestions": "Frequently Asked Questions",
@@ -1229,7 +1229,7 @@
   },
   "theySpokeAboutUs": {
     "hero": {
-      "title": "They Spoke About Us",
+      "title": "Media Press",
       "subtitle": "What they say about Jardim da Amazônia"
     },
     "news": [

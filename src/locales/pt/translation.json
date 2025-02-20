@@ -18,7 +18,7 @@
     "conservation": "Conservação",
     "researchStation": "Estação de Pesquisa",
     "nascentNatural": "Nascente Natural",
-    "theySpokeAboutUs": "Falaram de Nós",
+    "theySpokeAboutUs": "Mídia e Imprensa",
     "photoGallery": "Galeria de Fotos",
     "prepareYourTrip": "Prepare sua Viagem",
     "frequentlyAskedQuestions": "Perguntas Frequentes",
@@ -1248,7 +1248,7 @@
   },
   "theySpokeAboutUs": {
     "hero": {
-      "title": "Falaram de Nós",
+      "title": "Mídia e Imprensa",
       "subtitle": "O que dizem sobre o Jardim da Amazônia"
     },
     "news": [
@@ -1378,6 +1378,42 @@
       "title": "Realize Seu Sonho Conosco",
       "description": "Nossa equipe está pronta para ajudar você a criar experiências memoráveis",
       "contact": "Falar pelo WhatsApp"
+    }
+  },
+  "naturalSpring": {
+    "hero": {
+      "title": "A Nascente Natural",
+      "subtitle": "Coração do Nosso Santuário Ecológico"
+    },
+    "intro": {
+      "title": "Descubra a Pureza da Nossa Nascente",
+      "description": "No coração do Jardim da Amazônia, encontramos uma nascente natural que desempenha um papel fundamental na preservação do nosso ecossistema e na experiência dos nossos hóspedes. Esta nascente, fonte de conservação, garante a continuidade da vida em nossa propriedade, alimentando a piscina com água cristalina e potável."
+    },
+    "pool": {
+      "title": "A Piscina da Nascente",
+      "description1": "A piscina do Lodge é um verdadeiro reflexo da beleza natural que nos cerca. Alimentada diretamente pela nascente, a água permanece limpa e potável, oferecendo aos nossos hóspedes um espaço seguro e refrescante para relaxar.",
+      "description2": "As características naturais da piscina, como aquários e lagoas, proporcionam uma imersão completa na natureza, permitindo que você desfrute de um mergulho cercado pela serenidade da floresta."
+    },
+    "guidelines": {
+      "title": "Diretrizes de Preservação",
+      "quietEnvironment": {
+        "title": "Ambiente Silencioso",
+        "description": "Não é permitido o uso de sistemas de som nas áreas comuns"
+      },
+      "waterCare": {
+        "title": "Cuidados com a Água",
+        "description": "Se usar cosméticos, protetor solar ou repelente, por favor, use o chuveiro externo antes de entrar na água"
+      },
+      "childSupervision": {
+        "title": "Supervisão de Crianças",
+        "description": "Crianças devem estar acompanhadas dos pais ou responsáveis"
+      }
+    },
+    "cta": {
+      "title": "Onde a Natureza Encontra o Conforto",
+      "subtitle": "Pronto para descobrir nossa nascente natural?",
+      "bookNow": "Reserve Agora",
+      "contact": "Entre em Contato"
     }
   }
 } 
