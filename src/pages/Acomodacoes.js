@@ -29,6 +29,7 @@ import {
   MdFamilyRestroom
 } from 'react-icons/md';
 import { GiPalmTree, GiForestCamp } from 'react-icons/gi';
+import SEO from '../components/SEO';
 
 function Acomodacoes() {
   const { t } = useTranslation();
@@ -379,349 +380,355 @@ function Acomodacoes() {
   };
 
   return (
-    <div className="min-h-screen bg-white">
-      {/* Hero Section */}
-      <div 
-        className="relative h-[70vh] flex items-center justify-center text-center text-white mb-16"
-        style={heroStyle}
-      >
-        {/* Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/30 to-black/50" />
+    <>
+      <SEO 
+        title={t('meta.acomodacoes.title')}
+        description={t('meta.acomodacoes.description')}
+      />
+      <div className="min-h-screen bg-white">
+        {/* Hero Section */}
+        <div 
+          className="relative h-[70vh] flex items-center justify-center text-center text-white mb-16"
+          style={heroStyle}
+        >
+          {/* Overlay */}
+          <div className="absolute inset-0 bg-gradient-to-b from-black/30 to-black/50" />
 
-        {/* Content */}
-        <div className="relative z-10 max-w-[800px] px-8">
-          <h1 className="text-4xl md:text-6xl font-bold mb-4 tracking-wider drop-shadow-lg">
-            {t('accommodations.hero.title')}
-          </h1>
-          <p className="text-lg md:text-2xl mb-8 drop-shadow-md">
-            {t('accommodations.hero.subtitle')}
-          </p>
-        </div>
-      </div>
-
-      {/* Room Introduction */}
-      <section className="py-16 bg-background-light">
-        <div className="container mx-auto px-4 max-w-4xl">
-          <div className="flex flex-col items-center gap-6">
-            <div className="flex items-center gap-4">
-              <span className="text-4xl text-primary"><MdHotel /></span>
-            </div>
-            <p className="text-xl leading-relaxed text-text font-light text-justify">
-              {t('accommodations.intro.description')}
+          {/* Content */}
+          <div className="relative z-10 max-w-[800px] px-8">
+            <h1 className="text-4xl md:text-6xl font-bold mb-4 tracking-wider drop-shadow-lg">
+              {t('accommodations.hero.title')}
+            </h1>
+            <p className="text-lg md:text-2xl mb-8 drop-shadow-md">
+              {t('accommodations.hero.subtitle')}
             </p>
           </div>
         </div>
-      </section>
 
-      {/* Room Types Section */}
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4 max-w-7xl">
-          {accommodations.map((accommodation) => (
-            <div key={accommodation.id} className="bg-white rounded-xl overflow-hidden shadow-lg mb-8
-              hover:-translate-y-1 hover:shadow-xl transition-all duration-300">
-              <div className="flex flex-col md:flex-row">
-                {/* Room Image */}
-                <div className="md:w-1/2 relative h-[400px]">
-                  <img 
-                    src={accommodation.image.replace('/upload/', '/upload/c_scale,w_800,f_auto,q_auto/')} 
-                    alt={accommodation.name}
-                    className="w-full h-full object-cover"
-                    loading="lazy"
-                  />
-                </div>
+        {/* Room Introduction */}
+        <section className="py-16 bg-background-light">
+          <div className="container mx-auto px-4 max-w-4xl">
+            <div className="flex flex-col items-center gap-6">
+              <div className="flex items-center gap-4">
+                <span className="text-4xl text-primary"><MdHotel /></span>
+              </div>
+              <p className="text-xl leading-relaxed text-text font-light text-justify">
+                {t('accommodations.intro.description')}
+              </p>
+            </div>
+          </div>
+        </section>
 
-                {/* Room Content */}
-                <div className="md:w-1/2 p-8 flex flex-col justify-between">
-                  <div>
-                    <h2 className="text-2xl text-primary mb-3">{accommodation.name}</h2>
-                    <p className="text-base text-text leading-relaxed mb-6">
-                      {accommodation.description}
-                    </p>
-
-                    {/* Features */}
-                    <div className="flex justify-start items-center gap-6 mb-6">
-                      {accommodation.features.map((feature, index) => (
-                        <div key={index} className="flex items-center gap-2 text-text">
-                          <span className="text-xl text-primary">{feature.icon}</span>
-                          <span className="text-sm font-medium">{feature.name}</span>
-                        </div>
-                      ))}
-                    </div>
+        {/* Room Types Section */}
+        <section className="py-16 bg-gray-50">
+          <div className="container mx-auto px-4 max-w-7xl">
+            {accommodations.map((accommodation) => (
+              <div key={accommodation.id} className="bg-white rounded-xl overflow-hidden shadow-lg mb-8
+                hover:-translate-y-1 hover:shadow-xl transition-all duration-300">
+                <div className="flex flex-col md:flex-row">
+                  {/* Room Image */}
+                  <div className="md:w-1/2 relative h-[400px]">
+                    <img 
+                      src={accommodation.image.replace('/upload/', '/upload/c_scale,w_800,f_auto,q_auto/')} 
+                      alt={accommodation.name}
+                      className="w-full h-full object-cover"
+                      loading="lazy"
+                    />
                   </div>
 
-                  {/* Action Button */}
-                  <button
-                    onClick={() => handleShowDetails(accommodation)}
-                    className="btn-primary w-full mt-6"
-                  >
-                    {t('accommodations.details.viewDetails')}
-                  </button>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
+                  {/* Room Content */}
+                  <div className="md:w-1/2 p-8 flex flex-col justify-between">
+                    <div>
+                      <h2 className="text-2xl text-primary mb-3">{accommodation.name}</h2>
+                      <p className="text-base text-text leading-relaxed mb-6">
+                        {accommodation.description}
+                      </p>
 
-      {/* Design Philosophy Quote */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4 max-w-4xl">
-          <blockquote className="relative">
-            <div className="relative z-10">
-              <span className="text-5xl text-primary-dark/20 absolute -top-4 -left-6">"</span>
-              <p className="text-xl text-gray-700 leading-relaxed text-justify pl-8 pr-4">
-                {t('accommodations.designQuote.text')}
-              </p>
-              <span className="text-5xl text-primary-dark/20 absolute -bottom-8 -right-4">"</span>
-            </div>
-            <footer className="mt-8 text-right">
-              <cite className="text-gray-600 font-medium not-italic">— {t('accommodations.designQuote.author')}</cite>
-            </footer>
-          </blockquote>
-        </div>
-      </section>
+                      {/* Features */}
+                      <div className="flex justify-start items-center gap-6 mb-6">
+                        {accommodation.features.map((feature, index) => (
+                          <div key={index} className="flex items-center gap-2 text-text">
+                            <span className="text-xl text-primary">{feature.icon}</span>
+                            <span className="text-sm font-medium">{feature.name}</span>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
 
-      {/* Policies Section */}
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4 max-w-7xl">
-          <h2 className="text-3xl font-bold text-center mb-12">{t('accommodations.importantInfo.title')}</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {policies.map((policy, index) => (
-              <div
-                key={index}
-                className="bg-background-light rounded-2xl p-8 hover:shadow-lg transition-all duration-300"
-              >
-                <div className="flex items-center gap-4 mb-6">
-                  <span className="text-2xl text-primary">{policy.icon}</span>
-                  <h3 className="text-xl font-semibold text-primary">{policy.title}</h3>
-                </div>
-                <ul className="space-y-3">
-                  {policy.items.map((item, idx) => (
-                    <li
-                      key={idx}
-                      className={`text-text ${!item && 'h-4'} ${item === '' && 'border-b border-gray-200 my-4'}`}
+                    {/* Action Button */}
+                    <button
+                      onClick={() => handleShowDetails(accommodation)}
+                      className="btn-primary w-full mt-6"
                     >
-                      {item}
-                    </li>
-                  ))}
-                </ul>
+                      {t('accommodations.details.viewDetails')}
+                    </button>
+                  </div>
+                </div>
               </div>
             ))}
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* CTA Section */}
-      <section className="py-16 bg-primary text-white text-center">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            {t('accommodations.cta.title')}
-          </h2>
-          <p className="text-xl md:text-2xl text-white/90 mb-12 max-w-2xl mx-auto">
-            {t('accommodations.cta.subtitle')}
-          </p>
-          <div className="flex flex-col md:flex-row gap-6 justify-center">
-            <a
-              href={siteConfig.buttonLinks.bookNow}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-primary"
-            >
-              {t('accommodations.cta.bookNow')}
-            </a>
-            <Link
-              to={siteConfig.buttonLinks.contato}
-              className="btn-secondary"
-            >
-              {t('accommodations.cta.contact')}
-            </Link>
+        {/* Design Philosophy Quote */}
+        <section className="py-16 bg-white">
+          <div className="container mx-auto px-4 max-w-4xl">
+            <blockquote className="relative">
+              <div className="relative z-10">
+                <span className="text-5xl text-primary-dark/20 absolute -top-4 -left-6">"</span>
+                <p className="text-xl text-gray-700 leading-relaxed text-justify pl-8 pr-4">
+                  {t('accommodations.designQuote.text')}
+                </p>
+                <span className="text-5xl text-primary-dark/20 absolute -bottom-8 -right-4">"</span>
+              </div>
+              <footer className="mt-8 text-right">
+                <cite className="text-gray-600 font-medium not-italic">— {t('accommodations.designQuote.author')}</cite>
+              </footer>
+            </blockquote>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Room Details Modal */}
-      {selectedRoom && (
-        <div 
-          className="fixed inset-0 bg-black/60 z-50 flex items-center justify-center
-            transition-opacity duration-300"
-          onClick={handleCloseDetails}
-        >
-          <div 
-            className="bg-white rounded-2xl max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto
-              transform transition-all duration-300"
-            onClick={e => e.stopPropagation()}
-          >
-            {/* Gallery */}
-            <div className="relative h-[50vh] overflow-hidden bg-gray-100">
-              <div className="absolute inset-0 flex items-center justify-center">
-                {isImageLoading && (
-                  <div className="w-10 h-10 border-4 border-primary border-t-transparent rounded-full animate-spin"></div>
-                )}
-              </div>
-              <img
-                src={preloadedImages[currentImageIndex] || selectedRoom.gallery[currentImageIndex].src.replace('/upload/', '/upload/c_scale,w_1600,f_auto,q_auto/')}
-                alt={selectedRoom.name}
-                className={`w-full h-full object-cover cursor-pointer transition-all duration-500
-                  ${isImageLoading ? 'opacity-0' : 'opacity-100'}`}
-                onClick={(e) => {
-                  e.stopPropagation();
-                  setIsFullScreen(true);
-                }}
-                onLoad={() => setIsImageLoading(false)}
-              />
-
-              {/* Navigation Buttons */}
-              <button
-                onClick={handlePrevImage}
-                className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full
-                  bg-black/30 text-white flex items-center justify-center
-                  hover:bg-black/50 transition-colors duration-300"
-              >
-                <FaChevronLeft />
-              </button>
-              <button
-                onClick={handleNextImage}
-                className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full
-                  bg-black/30 text-white flex items-center justify-center
-                  hover:bg-black/50 transition-colors duration-300"
-              >
-                <FaChevronRight />
-              </button>
-
-              {/* Image Counter */}
-              <div className="absolute top-4 left-1/2 -translate-x-1/2 bg-black/30 text-white
-                px-4 py-2 rounded-full text-sm">
-                {currentImageIndex + 1} / {selectedRoom.gallery.length}
-              </div>
-
-              {/* Close Button */}
-              <button
-                onClick={handleCloseDetails}
-                className="absolute top-4 right-4 w-10 h-10 rounded-full bg-black/30 text-white
-                  flex items-center justify-center hover:bg-black/50 transition-colors duration-300"
-              >
-                <FaTimes />
-              </button>
-            </div>
-
-            {/* Content */}
-            <div className="p-6">
-              <h2 className="text-2xl text-primary font-bold mb-2">{selectedRoom.name}</h2>
-              <p className="text-base text-text leading-relaxed mb-4">{selectedRoom.description}</p>
-
-              {/* Features */}
-              <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-4">
-                {selectedRoom.features.map((feature, index) => (
-                  <div key={index} className="flex items-center gap-2">
-                    <span className="text-xl text-primary">{feature.icon}</span>
-                    <span className="text-sm text-text">{feature.name}</span>
-                  </div>
-                ))}
-              </div>
-
-              {/* Amenities */}
-              <h3 className="text-lg text-primary font-semibold mb-3">{t('accommodations.details.amenities')}</h3>
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-4">
-                {commonAmenities.map((amenity, index) => (
-                  <div key={index} className="flex items-center gap-2">
-                    <span className="text-lg text-primary">{amenity.icon}</span>
-                    <span className="text-sm text-text">{amenity.name}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
-
-      {/* Full Screen Image Modal with Loading States */}
-      {isFullScreen && selectedRoom && (
-        <div 
-          className="fixed inset-0 bg-black/90 z-[60] flex items-center justify-center"
-          onClick={() => setIsFullScreen(false)}
-        >
-          <div className="relative w-full h-full flex items-center justify-center">
-            <div className="absolute inset-0 flex items-center justify-center">
-              {isImageLoading && (
-                <div className="w-12 h-12 border-4 border-white border-t-transparent rounded-full animate-spin"></div>
-              )}
-            </div>
-            <img
-              key={currentImageIndex}
-              src={preloadedImages[currentImageIndex] || selectedRoom.gallery[currentImageIndex].src.replace('/upload/', '/upload/c_scale,w_2000,f_auto,q_auto/')}
-              alt={selectedRoom.name}
-              className={`max-h-screen max-w-full object-contain transition-all duration-500
-                ${isImageLoading ? 'opacity-0 scale-95' : 'opacity-100 scale-100'}`}
-              onLoad={() => setIsImageLoading(false)}
-            />
-            
-            {/* Apartment Label in Fullscreen */}
-            {selectedRoom.gallery[currentImageIndex].apt && (
-              <div className="absolute top-20 left-4 bg-black/70 text-white px-6 py-3 rounded-lg text-xl font-medium">
-                Apartment {selectedRoom.gallery[currentImageIndex].apt}
-              </div>
-            )}
-          </div>
-          
-          {/* Thumbnail Navigation */}
-          <div className="absolute bottom-0 left-0 right-0 p-4">
-            <div className="flex justify-center gap-2 overflow-x-auto py-2 max-w-4xl mx-auto">
-              {selectedRoom.gallery.map((image, index) => (
-                <button
+        {/* Policies Section */}
+        <section className="py-16 bg-gray-50">
+          <div className="container mx-auto px-4 max-w-7xl">
+            <h2 className="text-3xl font-bold text-center mb-12">{t('accommodations.importantInfo.title')}</h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {policies.map((policy, index) => (
+                <div
                   key={index}
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    setCurrentImageIndex(index);
-                  }}
-                  className={`w-20 h-20 flex-shrink-0 rounded-lg overflow-hidden border-2 transition-all
-                    ${currentImageIndex === index ? 'border-white scale-110' : 'border-transparent opacity-70'}`}
+                  className="bg-background-light rounded-2xl p-8 hover:shadow-lg transition-all duration-300"
                 >
-                  <img
-                    src={image.src.replace('/upload/', '/upload/c_scale,w_100,f_auto,q_auto/')}
-                    alt={`Thumbnail ${index + 1}`}
-                    className="w-full h-full object-cover"
-                    loading="lazy"
-                  />
-                </button>
+                  <div className="flex items-center gap-4 mb-6">
+                    <span className="text-2xl text-primary">{policy.icon}</span>
+                    <h3 className="text-xl font-semibold text-primary">{policy.title}</h3>
+                  </div>
+                  <ul className="space-y-3">
+                    {policy.items.map((item, idx) => (
+                      <li
+                        key={idx}
+                        className={`text-text ${!item && 'h-4'} ${item === '' && 'border-b border-gray-200 my-4'}`}
+                      >
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               ))}
             </div>
           </div>
+        </section>
 
-          {/* Navigation Buttons */}
-          <button
-            onClick={handlePrevImage}
-            className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full
-              bg-black/30 text-white flex items-center justify-center
-              hover:bg-black/50 transition-colors duration-300"
-          >
-            <FaChevronLeft />
-          </button>
-          <button
-            onClick={handleNextImage}
-            className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full
-              bg-black/30 text-white flex items-center justify-center
-              hover:bg-black/50 transition-colors duration-300"
-          >
-            <FaChevronRight />
-          </button>
-
-          {/* Image Counter */}
-          <div className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-black/30 text-white
-            px-4 py-2 rounded-full text-sm">
-            {currentImageIndex + 1} / {selectedRoom.gallery.length}
+        {/* CTA Section */}
+        <section className="py-16 bg-primary text-white text-center">
+          <div className="container mx-auto px-4">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              {t('accommodations.cta.title')}
+            </h2>
+            <p className="text-xl md:text-2xl text-white/90 mb-12 max-w-2xl mx-auto">
+              {t('accommodations.cta.subtitle')}
+            </p>
+            <div className="flex flex-col md:flex-row gap-6 justify-center">
+              <a
+                href={siteConfig.buttonLinks.bookNow}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-primary"
+              >
+                {t('accommodations.cta.bookNow')}
+              </a>
+              <Link
+                to={siteConfig.buttonLinks.contato}
+                className="btn-secondary"
+              >
+                {t('accommodations.cta.contact')}
+              </Link>
+            </div>
           </div>
+        </section>
 
-          {/* Close Button */}
-          <button
-            onClick={() => setIsFullScreen(false)}
-            className="absolute top-4 right-4 w-10 h-10 rounded-full bg-black/30 text-white
-              flex items-center justify-center hover:bg-black/50 transition-colors duration-300"
+        {/* Room Details Modal */}
+        {selectedRoom && (
+          <div 
+            className="fixed inset-0 bg-black/60 z-50 flex items-center justify-center
+              transition-opacity duration-300"
+            onClick={handleCloseDetails}
           >
-            <FaTimes />
-          </button>
-        </div>
-      )}
-    </div>
+            <div 
+              className="bg-white rounded-2xl max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto
+                transform transition-all duration-300"
+              onClick={e => e.stopPropagation()}
+            >
+              {/* Gallery */}
+              <div className="relative h-[50vh] overflow-hidden bg-gray-100">
+                <div className="absolute inset-0 flex items-center justify-center">
+                  {isImageLoading && (
+                    <div className="w-10 h-10 border-4 border-primary border-t-transparent rounded-full animate-spin"></div>
+                  )}
+                </div>
+                <img
+                  src={preloadedImages[currentImageIndex] || selectedRoom.gallery[currentImageIndex].src.replace('/upload/', '/upload/c_scale,w_1600,f_auto,q_auto/')}
+                  alt={selectedRoom.name}
+                  className={`w-full h-full object-cover cursor-pointer transition-all duration-500
+                    ${isImageLoading ? 'opacity-0' : 'opacity-100'}`}
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setIsFullScreen(true);
+                  }}
+                  onLoad={() => setIsImageLoading(false)}
+                />
+
+                {/* Navigation Buttons */}
+                <button
+                  onClick={handlePrevImage}
+                  className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full
+                    bg-black/30 text-white flex items-center justify-center
+                    hover:bg-black/50 transition-colors duration-300"
+                >
+                  <FaChevronLeft />
+                </button>
+                <button
+                  onClick={handleNextImage}
+                  className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full
+                    bg-black/30 text-white flex items-center justify-center
+                    hover:bg-black/50 transition-colors duration-300"
+                >
+                  <FaChevronRight />
+                </button>
+
+                {/* Image Counter */}
+                <div className="absolute top-4 left-1/2 -translate-x-1/2 bg-black/30 text-white
+                  px-4 py-2 rounded-full text-sm">
+                  {currentImageIndex + 1} / {selectedRoom.gallery.length}
+                </div>
+
+                {/* Close Button */}
+                <button
+                  onClick={handleCloseDetails}
+                  className="absolute top-4 right-4 w-10 h-10 rounded-full bg-black/30 text-white
+                    flex items-center justify-center hover:bg-black/50 transition-colors duration-300"
+                >
+                  <FaTimes />
+                </button>
+              </div>
+
+              {/* Content */}
+              <div className="p-6">
+                <h2 className="text-2xl text-primary font-bold mb-2">{selectedRoom.name}</h2>
+                <p className="text-base text-text leading-relaxed mb-4">{selectedRoom.description}</p>
+
+                {/* Features */}
+                <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-4">
+                  {selectedRoom.features.map((feature, index) => (
+                    <div key={index} className="flex items-center gap-2">
+                      <span className="text-xl text-primary">{feature.icon}</span>
+                      <span className="text-sm text-text">{feature.name}</span>
+                    </div>
+                  ))}
+                </div>
+
+                {/* Amenities */}
+                <h3 className="text-lg text-primary font-semibold mb-3">{t('accommodations.details.amenities')}</h3>
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-4">
+                  {commonAmenities.map((amenity, index) => (
+                    <div key={index} className="flex items-center gap-2">
+                      <span className="text-lg text-primary">{amenity.icon}</span>
+                      <span className="text-sm text-text">{amenity.name}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
+
+        {/* Full Screen Image Modal with Loading States */}
+        {isFullScreen && selectedRoom && (
+          <div 
+            className="fixed inset-0 bg-black/90 z-[60] flex items-center justify-center"
+            onClick={() => setIsFullScreen(false)}
+          >
+            <div className="relative w-full h-full flex items-center justify-center">
+              <div className="absolute inset-0 flex items-center justify-center">
+                {isImageLoading && (
+                  <div className="w-12 h-12 border-4 border-white border-t-transparent rounded-full animate-spin"></div>
+                )}
+              </div>
+              <img
+                key={currentImageIndex}
+                src={preloadedImages[currentImageIndex] || selectedRoom.gallery[currentImageIndex].src.replace('/upload/', '/upload/c_scale,w_2000,f_auto,q_auto/')}
+                alt={selectedRoom.name}
+                className={`max-h-screen max-w-full object-contain transition-all duration-500
+                  ${isImageLoading ? 'opacity-0 scale-95' : 'opacity-100 scale-100'}`}
+                onLoad={() => setIsImageLoading(false)}
+              />
+              
+              {/* Apartment Label in Fullscreen */}
+              {selectedRoom.gallery[currentImageIndex].apt && (
+                <div className="absolute top-20 left-4 bg-black/70 text-white px-6 py-3 rounded-lg text-xl font-medium">
+                  Apartment {selectedRoom.gallery[currentImageIndex].apt}
+                </div>
+              )}
+            </div>
+            
+            {/* Thumbnail Navigation */}
+            <div className="absolute bottom-0 left-0 right-0 p-4">
+              <div className="flex justify-center gap-2 overflow-x-auto py-2 max-w-4xl mx-auto">
+                {selectedRoom.gallery.map((image, index) => (
+                  <button
+                    key={index}
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      setCurrentImageIndex(index);
+                    }}
+                    className={`w-20 h-20 flex-shrink-0 rounded-lg overflow-hidden border-2 transition-all
+                      ${currentImageIndex === index ? 'border-white scale-110' : 'border-transparent opacity-70'}`}
+                  >
+                    <img
+                      src={image.src.replace('/upload/', '/upload/c_scale,w_100,f_auto,q_auto/')}
+                      alt={`Thumbnail ${index + 1}`}
+                      className="w-full h-full object-cover"
+                      loading="lazy"
+                    />
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            {/* Navigation Buttons */}
+            <button
+              onClick={handlePrevImage}
+              className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full
+                bg-black/30 text-white flex items-center justify-center
+                hover:bg-black/50 transition-colors duration-300"
+            >
+              <FaChevronLeft />
+            </button>
+            <button
+              onClick={handleNextImage}
+              className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full
+                bg-black/30 text-white flex items-center justify-center
+                hover:bg-black/50 transition-colors duration-300"
+            >
+              <FaChevronRight />
+            </button>
+
+            {/* Image Counter */}
+            <div className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-black/30 text-white
+              px-4 py-2 rounded-full text-sm">
+              {currentImageIndex + 1} / {selectedRoom.gallery.length}
+            </div>
+
+            {/* Close Button */}
+            <button
+              onClick={() => setIsFullScreen(false)}
+              className="absolute top-4 right-4 w-10 h-10 rounded-full bg-black/30 text-white
+                flex items-center justify-center hover:bg-black/50 transition-colors duration-300"
+            >
+              <FaTimes />
+            </button>
+          </div>
+        )}
+      </div>
+    </>
   );
 }
 

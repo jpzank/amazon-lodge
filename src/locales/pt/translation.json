@@ -24,6 +24,9 @@
     "frequentlyAskedQuestions": "Perguntas Frequentes",
     "bookNow": "Reservar"
   },
+  "breadcrumb": {
+    "home": "Início"
+  },
   "common": {
     "readMore": "Leia mais",
     "book": "Reserve agora",
@@ -165,7 +168,8 @@
       "information": {
         "title": "Informações",
         "faq": "Perguntas Frequentes",
-        "howToGet": "Como Chegar"
+        "howToGet": "Como Chegar",
+        "privacyPolicy": "Política de Privacidade"
       },
       "contact": {
         "title": "Contato",
@@ -1414,6 +1418,123 @@
       "subtitle": "Pronto para descobrir nossa nascente natural?",
       "bookNow": "Reserve Agora",
       "contact": "Entre em Contato"
+    }
+  },
+  "privacyPolicy": {
+    "hero": {
+      "title": "Política de Privacidade",
+      "subtitle": "Como protegemos seus dados"
+    },
+    "lastUpdated": "Última atualização: Março 2024",
+    "intro": {
+      "description": "O Jardim da Amazônia está comprometido em proteger sua privacidade e garantir a melhor experiência possível em nosso site. Esta política de privacidade explica como utilizamos cookies para melhorar sua navegação."
+    },
+    "cookies": {
+      "title": "Uso de Cookies",
+      "description": "O site utiliza cookies mínimos e essenciais para:",
+      "purposes": {
+        "consent": "Armazenar sua escolha sobre o uso de cookies",
+        "analytics": {
+          "title": "Coletar análises anônimas, que nos ajuda a:",
+          "items": [
+            "Entender como o site é utilizado",
+            "Melhorar a performance",
+            "Identificar problemas técnicos"
+          ]
+        }
+      },
+      "noPersonalData": "Não coletamos ou armazenamos nenhuma informação pessoal identificável através dos cookies.",
+      "control": "Você pode controlar o uso de cookies através das configurações do seu navegador, mas isso pode limitar algumas funcionalidades do site."
+    },
+    "booking": {
+      "title": "Reservas e Dados de Hospedagem",
+      "description": "Todas as reservas e processamento de dados relacionados à sua hospedagem são realizados através do sistema Omnibees. Ao clicar para fazer uma reserva, você será redirecionado para a plataforma Omnibees, que possui sua própria política de privacidade e termos de uso.",
+      "recommendation": "Recomendamos que você leia a política de privacidade da Omnibees antes de prosseguir com sua reserva:"
+    },
+    "contact": {
+      "title": "Contato sobre Privacidade",
+      "description": "Para questões relacionadas à privacidade ou uso de cookies em nosso site, entre em contato através de:",
+      "email": "atendimento@jardimamazonia.com"
+    },
+    "updates": {
+      "title": "Atualizações da Política",
+      "description": "Esta política pode ser atualizada periodicamente. Recomendamos que você revise regularmente para se manter informado sobre como protegemos sua privacidade."
+    }
+  },
+  "cookieConsent": {
+    "message": "Utilizamos cookies essenciais para melhorar sua experiência de navegação e análises anônimas para entender como nosso site é usado. Nenhuma informação pessoal é coletada.",
+    "learnMore": "Saiba mais",
+    "accept": "Aceitar",
+    "decline": "Recusar"
+  },
+  "meta": {
+    "home": {
+      "title": "Jardim da Amazônia - Eco Lodge na Amazônia Sul",
+      "description": "Experimente a biodiversidade única da Amazônia Sul no Jardim da Amazônia. Piscina natural, observação de aves, primatas e acomodações ecológicas em Mato Grosso."
+    },
+    "acomodacoes": {
+      "title": "Acomodações - Jardim da Amazônia",
+      "description": "Conheça nossos confortáveis bangalôs e apartamentos, projetados para proporcionar uma perfeita harmonia entre conforto e natureza. Experimente a autêntica hospitalidade amazônica."
+    },
+    "areasExternas": {
+      "title": "Áreas Externas - Jardim da Amazônia",
+      "description": "Explore nossas áreas externas incluindo piscinas naturais, jardins e espaços comuns. Mergulhe na beleza natural da Amazônia."
+    },
+    "birdwatching": {
+      "title": "Observação de Aves - Jardim da Amazônia",
+      "description": "Observe mais de 590 espécies de aves em seu habitat natural. Guias profissionais e trilhas especializadas para entusiastas da observação de aves."
+    },
+    "comoChegar": {
+      "title": "Como Chegar - Jardim da Amazônia",
+      "description": "Encontre direções detalhadas para o Jardim da Amazônia a partir dos aeroportos de Cuiabá e Sinop. Planeje sua viagem ao nosso paraíso amazônico."
+    },
+    "estacaoPesquisa": {
+      "title": "Estação de Pesquisa - Jardim da Amazônia",
+      "description": "Conheça nossa estação de pesquisa dedicada aos estudos da biodiversidade amazônica e esforços de conservação."
+    },
+    "eventosNatureza": {
+      "title": "Eventos da Natureza - Jardim da Amazônia",
+      "description": "Experimente fenômenos naturais únicos e eventos sazonais na floresta amazônica. Testemunhe os espetáculos da natureza."
+    },
+    "falaramDeNos": {
+      "title": "Mídia - Jardim da Amazônia",
+      "description": "Veja o que a mídia e nossos hóspedes dizem sobre o Jardim da Amazônia. Avaliações, depoimentos e cobertura da imprensa."
+    },
+    "faq": {
+      "title": "Perguntas Frequentes - Jardim da Amazônia",
+      "description": "Encontre respostas para perguntas frequentes sobre sua estadia no Jardim da Amazônia. Tudo que você precisa saber antes da sua visita."
+    },
+    "galeria": {
+      "title": "Galeria de Fotos - Jardim da Amazônia",
+      "description": "Navegue por nossa coleção de fotos deslumbrantes mostrando o lodge, a vida selvagem e a beleza natural do Jardim da Amazônia."
+    },
+    "gastronomia": {
+      "title": "Gastronomia - Jardim da Amazônia",
+      "description": "Saboreie a culinária regional e ingredientes frescos em nosso restaurante. Experimente os autênticos sabores amazônicos e pratos tradicionais."
+    },
+    "guiasCampo": {
+      "title": "Guias de Campo - Jardim da Amazônia",
+      "description": "Conheça nossos experientes guias de campo que enriquecerão sua experiência amazônica com seu conhecimento e expertise."
+    },
+    "nascenteNatural": {
+      "title": "Nascente Natural - Jardim da Amazônia",
+      "description": "Descubra nossa nascente natural de águas cristalinas, uma característica única do Jardim da Amazônia oferecendo águas refrescantes durante todo o ano."
+    },
+    "nossaHistoria": {
+      "title": "Nossa História - Jardim da Amazônia",
+      "description": "Conheça a história e missão do Jardim da Amazônia, nosso compromisso com a conservação e o turismo sustentável."
+    },
+    "primatas": {
+      "title": "Primatas - Jardim da Amazônia",
+      "description": "Observe 7 diferentes espécies de primatas em seu habitat natural. Tours guiados por especialistas para encontros únicos com a vida selvagem."
+    },
+    "safariBoat": {
+      "title": "Safari de Barco - Jardim da Amazônia",
+      "description": "Experimente nosso safari fluvial pelo Rio Claro. Observe a vida selvagem e aprecie a paisagem amazônica de uma perspectiva única."
+    },
+    "trilhas": {
+      "title": "Trilhas - Jardim da Amazônia",
+      "description": "Explore nossa rede de trilhas naturais pela floresta amazônica. Caminhadas guiadas para todos os níveis de experiência."
     }
   }
 } 

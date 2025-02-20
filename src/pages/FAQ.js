@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import PhotoCredit from '../components/PhotoCredit';
 import { useTranslation } from 'react-i18next';
+import SEO from '../components/SEO';
 
 const FAQ = () => {
   const { t } = useTranslation();
@@ -79,45 +80,51 @@ const FAQ = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-white">
-      {/* Hero Section */}
-      <div 
-        className="relative h-[60vh] flex items-center justify-center text-center text-white mb-16"
-        style={heroStyle}
-      >
-        <div className="absolute inset-0 bg-black/60 z-10"></div>
-        <div className="relative z-20 px-4">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6 tracking-wide text-shadow">
-            {t('faq.hero.title')}
-          </h1>
-          <p className="text-lg md:text-xl max-w-3xl mx-auto tracking-wide text-shadow">
-            {t('faq.hero.subtitle')}
-          </p>
+    <>
+      <SEO 
+        title={t('meta.faq.title')}
+        description={t('meta.faq.description')}
+        image="https://res.cloudinary.com/dxlhv2mji/image/upload/v1739842419/Jardim_da_Amazônia-3851_hpelww.jpg"
+      />
+      <div className="min-h-screen bg-white">
+        {/* Hero Section */}
+        <div 
+          className="relative h-[60vh] flex items-center justify-center text-center text-white mb-16"
+          style={heroStyle}
+        >
+          <div className="absolute inset-0 bg-black/60 z-10"></div>
+          <div className="relative z-20 px-4">
+            <h1 className="text-5xl md:text-6xl font-bold mb-6 tracking-wide text-shadow">
+              {t('faq.hero.title')}
+            </h1>
+            <p className="text-lg md:text-xl max-w-3xl mx-auto tracking-wide text-shadow">
+              {t('faq.hero.subtitle')}
+            </p>
+          </div>
+          <PhotoCredit photographer="Marlon Erthal" />
         </div>
-        <PhotoCredit photographer="Marlon Erthal" />
-      </div>
 
-      {/* FAQ Content */}
-      <section className="py-24 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-6xl mx-auto">
-            {sections.map((section) => (
-              <div key={section.id} className="space-y-6">
-                <h3 className="text-2xl font-semibold text-gray-900 mb-8">
-                  {t(`faq.sections.${section.id}.title`)}
-                </h3>
-              <div className="space-y-4">
-                  {section.questions.map((questionId, index) => (
-                    <div key={questionId} className="bg-white rounded-xl shadow-md">
-                  <button 
-                    className="w-full px-6 py-4 flex items-center justify-between hover:bg-gray-50 transition-colors duration-200"
-                        onClick={() => toggleItem(section.id, index)}
-                      >
-                        <h4 className="text-lg font-medium text-gray-900">
-                          {t(`faq.sections.${section.id}.questions.${questionId}.question`)}
-                        </h4>
-                        <span className={`transform transition-transform duration-200 ${expandedItems[`${section.id}-${index}`] ? 'rotate-180' : ''}`}>
-                      ▼
+        {/* FAQ Content */}
+        <section className="py-24 bg-white">
+          <div className="container mx-auto px-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-6xl mx-auto">
+              {sections.map((section) => (
+                <div key={section.id} className="space-y-6">
+                  <h3 className="text-2xl font-semibold text-gray-900 mb-8">
+                    {t(`faq.sections.${section.id}.title`)}
+                  </h3>
+                <div className="space-y-4">
+                    {section.questions.map((questionId, index) => (
+                      <div key={questionId} className="bg-white rounded-xl shadow-md">
+                    <button 
+                      className="w-full px-6 py-4 flex items-center justify-between hover:bg-gray-50 transition-colors duration-200"
+                          onClick={() => toggleItem(section.id, index)}
+                        >
+                          <h4 className="text-lg font-medium text-gray-900">
+                            {t(`faq.sections.${section.id}.questions.${questionId}.question`)}
+                          </h4>
+                          <span className={`transform transition-transform duration-200 ${expandedItems[`${section.id}-${index}`] ? 'rotate-180' : ''}`}>
+                        ▼
                     </span>
                   </button>
                       <div className={`px-6 overflow-hidden transition-all duration-200 ${expandedItems[`${section.id}-${index}`] ? 'max-h-96 pb-6' : 'max-h-0'}`}>
@@ -126,14 +133,15 @@ const FAQ = () => {
                     </p>
                   </div>
                 </div>
-                  ))}
+                    ))}
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
-    </div>
+        </section>
+      </div>
+    </>
   );
 }
 

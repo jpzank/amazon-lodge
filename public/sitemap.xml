@@ -1,107 +1,225 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:schema="http://schema.org">
         
     <!-- Home Page -->
     <url>
-        <loc>https://www.jardimamazonia.com.br/</loc>
-        <changefreq>weekly</changefreq>
+        <loc>https://www.jardimamazonia.com/</loc>
+        <lastmod>2024-02-20</lastmod>
+        <changefreq>daily</changefreq>
         <priority>1.0</priority>
+        <schema:Organization>
+            <schema:name>Jardim Da Amazônia Lodge</schema:name>
+            <schema:url>https://www.jardimamazonia.com</schema:url>
+            <schema:description>Experiência autêntica na Amazônia: um corredor ecológico único onde o Cerrado encontra a Floresta Amazônica. Refúgio de biodiversidade com mais de 570 espécies de aves e 30 espécies de mamíferos. Lodge sustentável oferecendo ecoturismo, observação de vida selvagem e pesquisa científica na Amazônia brasileira.</schema:description>
+            <schema:address>
+                <schema:streetAddress>RODOVIA MT 10 - KM 88</schema:streetAddress>
+                <schema:addressLocality>SÃO JOSÉ DO RIO CLARO</schema:addressLocality>
+                <schema:addressRegion>MATO GROSSO</schema:addressRegion>
+                <schema:postalCode>78435-000</schema:postalCode>
+                <schema:addressCountry>BR</schema:addressCountry>
+            </schema:address>
+            <schema:contactPoint>
+                <schema:telephone>+55 65 4042-0595</schema:telephone>
+                <schema:email>atendimento@jardimamazonia.com</schema:email>
+            </schema:contactPoint>
+            <schema:sameAs>
+                <schema:url>https://www.instagram.com/jardimamazonia</schema:url>
+                <schema:url>https://www.facebook.com/jardimamazonia</schema:url>
+            </schema:sameAs>
+            <schema:keywords>Amazônia, Amazon Rainforest, Ecoturismo Amazônia, Amazon Lodge, Observação de Aves Amazônia, Birdwatching Amazon, Floresta Amazônica, Biodiversidade Amazônica, Sustainable Tourism Amazon, Lodge Amazônia</schema:keywords>
+        </schema:Organization>
     </url>
 
     <!-- Acomodações e Estrutura -->
     <url>
-        <loc>https://www.jardimamazonia.com.br/acomodacoes</loc>
-        <changefreq>monthly</changefreq>
+        <loc>https://www.jardimamazonia.com/acomodacoes</loc>
+        <lastmod>2024-02-20</lastmod>
+        <changefreq>weekly</changefreq>
         <priority>0.9</priority>
+        <schema:LodgingBusiness>
+            <schema:name>Acomodações Jardim Amazônia</schema:name>
+            <schema:description>Hospedagem autêntica na Amazônia em uma casa histórica de 1986, inspirada nas palafitas tradicionais do Rio Roosevelt. Experiência única combinando conforto moderno com a arquitetura tradicional amazônica, mobiliada com peças de época selecionadas.</schema:description>
+            <schema:amenityFeature>Wi-Fi</schema:amenityFeature>
+            <schema:amenityFeature>Ar Condicionado</schema:amenityFeature>
+            <schema:amenityFeature>Restaurante Regional</schema:amenityFeature>
+            <schema:amenityFeature>Trilhas na Floresta Amazônica</schema:amenityFeature>
+            <schema:priceRange>$$$</schema:priceRange>
+            <schema:keywords>Lodge Amazônia, Hospedagem Amazônia, Amazon Accommodation, Pousada Amazônia, Sustainable Lodge Amazon</schema:keywords>
+        </schema:LodgingBusiness>
     </url>
     
     <url>
-        <loc>https://www.jardimamazonia.com.br/areas-externas</loc>
-        <changefreq>monthly</changefreq>
+        <loc>https://www.jardimamazonia.com/areas-externas</loc>
+        <lastmod>2024-02-20</lastmod>
+        <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
 
     <url>
-        <loc>https://www.jardimamazonia.com.br/gastronomia</loc>
-        <changefreq>monthly</changefreq>
+        <loc>https://www.jardimamazonia.com/gastronomia</loc>
+        <lastmod>2024-02-20</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Galeria -->
+    <url>
+        <loc>https://www.jardimamazonia.com/galeria</loc>
+        <lastmod>2024-02-20</lastmod>
+        <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
 
     <!-- Atividades -->
     <url>
-        <loc>https://www.jardimamazonia.com.br/birdwatching</loc>
-        <changefreq>monthly</changefreq>
+        <loc>https://www.jardimamazonia.com/birdwatching</loc>
+        <lastmod>2024-02-20</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+        <schema:TouristAttraction>
+            <schema:name>Top Hotspot Birdwatching na Amazônia</schema:name>
+            <schema:description>Principal destino de observação de aves na Amazônia brasileira, com mais de 570 espécies catalogadas. Corredor ecológico vital para preservação de aves amazônicas ameaçadas de extinção. Guias especializados e infraestrutura completa para birdwatching.</schema:description>
+            <schema:touristType>Observadores de Aves</schema:touristType>
+            <schema:availableLanguage>Português</schema:availableLanguage>
+            <schema:availableLanguage>Inglês</schema:availableLanguage>
+            <schema:keywords>Birdwatching Amazon, Observação de Aves Amazônia, Amazon Birds, Aves da Amazônia, Amazon Wildlife</schema:keywords>
+        </schema:TouristAttraction>
+    </url>
+
+    <url>
+        <loc>https://www.jardimamazonia.com/primatas</loc>
+        <lastmod>2024-02-20</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+        <schema:TouristAttraction>
+            <schema:name>Observação De Primatas na Amazônia</schema:name>
+            <schema:description>Experiência única de observação de primatas amazônicos em seu habitat natural, incluindo espécies raras como o Parauaçu (Pithecia mittermeieri) e o macaco-aranha-de-cara-preta (Ateles chamek). Pesquisa e conservação de primatas da Amazônia desde 2010.</schema:description>
+            <schema:touristType>Observadores de Vida Selvagem</schema:touristType>
+            <schema:availableLanguage>Português</schema:availableLanguage>
+            <schema:availableLanguage>Inglês</schema:availableLanguage>
+            <schema:keywords>Primatas Amazônia, Amazon Monkeys, Wildlife Amazon, Macacos Amazônia, Amazon Primates</schema:keywords>
+        </schema:TouristAttraction>
+    </url>
+
+    <url>
+        <loc>https://www.jardimamazonia.com/safari-boat</loc>
+        <lastmod>2024-02-20</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+        <schema:TouristAttraction>
+            <schema:name>Safari de Barco</schema:name>
+            <schema:description>Passeios de barco para explorar a vida selvagem dos rios amazônicos</schema:description>
+            <schema:touristType>Ecoturistas</schema:touristType>
+            <schema:availableLanguage>Português</schema:availableLanguage>
+            <schema:availableLanguage>Inglês</schema:availableLanguage>
+        </schema:TouristAttraction>
+    </url>
+
+    <url>
+        <loc>https://www.jardimamazonia.com/guias-campo</loc>
+        <lastmod>2024-02-20</lastmod>
+        <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
 
     <url>
-        <loc>https://www.jardimamazonia.com.br/primatas</loc>
-        <changefreq>monthly</changefreq>
+        <loc>https://www.jardimamazonia.com/trilhas</loc>
+        <lastmod>2024-02-20</lastmod>
+        <changefreq>weekly</changefreq>
         <priority>0.8</priority>
-    </url>
-
-    <url>
-        <loc>https://www.jardimamazonia.com.br/safari-boat</loc>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-
-    <url>
-        <loc>https://www.jardimamazonia.com.br/guias-campo</loc>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-
-    <url>
-        <loc>https://www.jardimamazonia.com.br/trilhas</loc>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
+        <schema:TouristAttraction>
+            <schema:name>Trilhas na Floresta Amazônica</schema:name>
+            <schema:description>Explore a Amazônia através de nossas trilhas ecológicas: Trilha do Jatobá (3.200m), Trilha do Angelim (800m), e Trilha do Piquia (1.500m). Caminhadas guiadas pela floresta amazônica com observação de fauna e flora nativas, incluindo árvores centenárias e espécies endêmicas.</schema:description>
+            <schema:touristType>Ecoturistas</schema:touristType>
+            <schema:availableLanguage>Português</schema:availableLanguage>
+            <schema:availableLanguage>Inglês</schema:availableLanguage>
+            <schema:keywords>Trilhas Amazônia, Amazon Trails, Hiking Amazon, Trekking Amazônia, Amazon Forest Tours</schema:keywords>
+        </schema:TouristAttraction>
     </url>
 
     <!-- Pesquisa e Natureza -->
     <url>
-        <loc>https://www.jardimamazonia.com.br/estacao-pesquisa</loc>
+        <loc>https://www.jardimamazonia.com/estacao-pesquisa</loc>
+        <lastmod>2024-02-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+        <schema:ResearchOrganization>
+            <schema:name>Estação de Pesquisa Amazônica</schema:name>
+            <schema:description>Centro de pesquisa dedicado ao estudo e conservação da biodiversidade amazônica. Local de encontro entre o Cerrado e a Floresta Amazônica, oferecendo oportunidades únicas para pesquisa científica e monitoramento ambiental.</schema:description>
+            <schema:keywords>Pesquisa Amazônia, Amazon Research, Scientific Research Amazon, Biodiversity Amazon</schema:keywords>
+        </schema:ResearchOrganization>
+    </url>
+
+    <url>
+        <loc>https://www.jardimamazonia.com/nascente-natural</loc>
+        <lastmod>2024-02-20</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
 
     <url>
-        <loc>https://www.jardimamazonia.com.br/nascente-natural</loc>
+        <loc>https://www.jardimamazonia.com/eventos-natureza</loc>
+        <lastmod>2024-02-20</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
+        <schema:Event>
+            <schema:name>Eventos de Natureza</schema:name>
+            <schema:description>Programação especial de eventos focados em natureza e conservação</schema:description>
+            <schema:eventType>Natureza</schema:eventType>
+            <schema:location>
+                <schema:name>Jardim Amazônia Lodge</schema:name>
+                <schema:address>Amazônia, Brasil</schema:address>
+            </schema:location>
+        </schema:Event>
     </url>
 
     <!-- Informações -->
     <url>
-        <loc>https://www.jardimamazonia.com.br/como-chegar</loc>
+        <loc>https://www.jardimamazonia.com/como-chegar</loc>
+        <lastmod>2024-02-20</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
 
     <url>
-        <loc>https://www.jardimamazonia.com.br/faq</loc>
+        <loc>https://www.jardimamazonia.com/faq</loc>
+        <lastmod>2024-02-20</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
 
     <!-- Institucional -->
     <url>
-        <loc>https://www.jardimamazonia.com.br/nossa-historia</loc>
+        <loc>https://www.jardimamazonia.com/nossa-historia</loc>
+        <lastmod>2024-02-20</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
 
     <url>
-        <loc>https://www.jardimamazonia.com.br/eventos-corporativos</loc>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
-    </url>
-
-    <url>
-        <loc>https://www.jardimamazonia.com.br/falaram-de-nos</loc>
+        <loc>https://www.jardimamazonia.com/falaram-de-nos</loc>
+        <lastmod>2024-02-20</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
+    </url>
+
+    <!-- Gastronomia -->
+    <url>
+        <loc>https://www.jardimamazonia.com/gastronomia</loc>
+        <lastmod>2024-02-20</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+        <schema:Restaurant>
+            <schema:name>Gastronomia Amazônica - Jardim Amazônia</schema:name>
+            <schema:description>Experiência gastronômica autêntica da Amazônia com conceito Farm to Table. Pratos preparados com ingredientes locais da floresta amazônica, respeitando tradições culinárias regionais e práticas sustentáveis.</schema:description>
+            <schema:servesCuisine>Amazônica</schema:servesCuisine>
+            <schema:servesCuisine>Brasileira</schema:servesCuisine>
+            <schema:servesCuisine>Regional</schema:servesCuisine>
+            <schema:keywords>Gastronomia Amazônica, Amazon Cuisine, Comida Amazônia, Amazon Food, Traditional Amazon Cuisine</schema:keywords>
+        </schema:Restaurant>
     </url>
 
 </urlset> 

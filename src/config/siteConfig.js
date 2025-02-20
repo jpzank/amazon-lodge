@@ -42,6 +42,7 @@ export const siteConfig = {
     contato: '/contato',
     reservas: '/reservas',
     galeria: '/galeria',
+    privacyPolicy: '/privacy-policy',
     
     // Research and Nature
     estacaoPesquisa: '/estacao-pesquisa',

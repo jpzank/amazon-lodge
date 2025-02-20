@@ -154,3 +154,9 @@ body {
 .text-body {
   @apply font-primary italic;
 }
+
+.main-content {
+  position: relative;
+  padding: 0;
+  margin: 0;
+}

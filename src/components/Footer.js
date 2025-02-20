@@ -45,6 +45,7 @@ function Footer() {
           <ul className="space-y-3">
             <li><Link to={siteConfig.buttonLinks.faq} className="text-white/80 hover:text-white transition-default text-[0.95rem]">{t('footer.sections.information.faq')}</Link></li>
             <li><Link to={siteConfig.buttonLinks.comoChegar} className="text-white/80 hover:text-white transition-default text-[0.95rem]">{t('footer.sections.information.howToGet')}</Link></li>
+            <li><Link to={siteConfig.buttonLinks.privacyPolicy} className="text-white/80 hover:text-white transition-default text-[0.95rem]">{t('footer.sections.information.privacyPolicy')}</Link></li>
           </ul>
         </div>
 

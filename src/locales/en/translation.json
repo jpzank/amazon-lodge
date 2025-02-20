@@ -24,6 +24,9 @@
     "frequentlyAskedQuestions": "Frequently Asked Questions",
     "bookNow": "Book Now"
   },
+  "breadcrumb": {
+    "home": "Home"
+  },
   "common": {
     "readMore": "Read more",
     "book": "Book now",
@@ -1415,6 +1418,101 @@
         "title": "Discovery of the Cone-billed Tanager",
         "description": "An important milestone for the region with the recording of the Cone-billed Tanager (Conothraupis mesoleuca), a critically endangered species. This discovery highlights the importance of our area for the conservation of rare species."
       }
+    }
+  },
+  "meta": {
+    "home": {
+      "title": "Jardim da Amazônia - Eco Lodge in Southern Amazon",
+      "description": "Experience the unique biodiversity of the Southern Amazon at Jardim da Amazônia. Natural pool, birdwatching, primate observation, and eco-friendly accommodations in Mato Grosso."
+    },
+    "acomodacoes": {
+      "title": "Accommodations - Jardim da Amazônia",
+      "description": "Discover our comfortable bungalows and apartments, designed to provide a perfect blend of comfort and nature. Experience authentic Amazon hospitality."
+    },
+    "areas-externas": {
+      "title": "External Areas - Jardim da Amazônia",
+      "description": "Explore our external areas including natural pools, gardens, and common spaces. Immerse yourself in the Amazon's natural beauty."
+    },
+    "gastronomia": {
+      "title": "Gastronomy - Jardim da Amazônia",
+      "description": "Savor regional cuisine and fresh ingredients in our restaurant. Experience authentic Amazon flavors and traditional dishes."
+    },
+    "birdwatching": {
+      "title": "Birdwatching - Jardim da Amazônia",
+      "description": "Observe over 590 bird species in their natural habitat. Professional guides and specialized trails for birdwatching enthusiasts."
+    },
+    "primatas": {
+      "title": "Primates - Jardim da Amazônia",
+      "description": "Observe 7 different primate species in their natural habitat. Expert-guided tours for unique wildlife encounters."
+    },
+    "safari-boat": {
+      "title": "Safari Boat - Jardim da Amazônia",
+      "description": "Experience our river safari along Rio Claro. Observe wildlife and enjoy the Amazon landscape from a unique perspective."
+    },
+    "guias-campo": {
+      "title": "Field Guides - Jardim da Amazônia",
+      "description": "Meet our experienced field guides who will enhance your Amazon experience with their knowledge and expertise."
+    },
+    "estacao-pesquisa": {
+      "title": "Research Station - Jardim da Amazônia",
+      "description": "Learn about our research station dedicated to Amazon biodiversity studies and conservation efforts."
+    },
+    "nascente-natural": {
+      "title": "Natural Spring - Jardim da Amazônia",
+      "description": "Discover our crystal-clear natural spring, a unique feature of Jardim da Amazônia offering refreshing waters year-round."
+    },
+    "nossaHistoria": {
+      "title": "Our History - Jardim da Amazônia",
+      "description": "Learn about the history and mission of Jardim da Amazônia, our commitment to conservation, and sustainable tourism."
+    },
+    "faq": {
+      "title": "FAQ - Jardim da Amazônia",
+      "description": "Find answers to frequently asked questions about your stay at Jardim da Amazônia. Everything you need to know before your visit."
+    },
+    "como-chegar": {
+      "title": "How to Get Here - Jardim da Amazônia",
+      "description": "Find detailed directions to Jardim da Amazônia from Cuiabá and Sinop airports. Plan your journey to our Amazon paradise."
+    }
+  },
+  "privacyPolicy": {
+    "hero": {
+      "title": "Privacy Policy",
+      "subtitle": "How we protect your data"
+    },
+    "lastUpdated": "Last updated: March 2024",
+    "intro": {
+      "description": "Jardim da Amazônia is committed to protecting your privacy and ensuring the best possible experience on our site. This privacy policy explains how we use cookies to improve your browsing experience."
+    },
+    "cookies": {
+      "title": "Use of Cookies",
+      "description": "The site uses minimal and essential cookies to:",
+      "purposes": {
+        "consent": "Store your choice about cookie usage",
+        "analytics": {
+          "title": "Collect anonymous analytics, which helps us:",
+          "items": [
+            "Understand how the site is used",
+            "Improve performance",
+            "Identify technical issues"
+          ]
+        }
+      },
+      "noPersonalData": "We do not collect or store any personally identifiable information through cookies.",
+      "control": "You can control the use of cookies through your browser settings, but this may limit some site functionalities."
+    },
+    "booking": {
+      "title": "Reservations and Accommodation Data",
+      "description": "All reservations and processing of data related to your stay are handled through the Omnibees system. When clicking to make a reservation, you will be redirected to the Omnibees platform, which has its own privacy policy and terms of use.",
+      "recommendation": "We recommend that you read Omnibees' privacy policy before proceeding with your reservation:"
+    },
+    "contact": {
+      "title": "Privacy Contact",
+      "description": "For questions related to privacy or cookie usage on our site, please contact us through:",
+      "email": "atendimento@jardimamazonia.com"
+    },
+    "updates": {
+      "title": "Policy Updates",
+      "description": "This policy may be updated periodically. We recommend that you review it regularly to stay informed about how we protect your privacy."
     }
   }
 } 
