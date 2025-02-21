@@ -49,42 +49,49 @@ const ComoChegar = () => {
 
         {/* Map and Location Section */}
         <section className="py-16 bg-white">
-          <div className="container mx-auto px-4 max-w-7xl">
+          <div className="container mx-auto px-4 max-w-4xl">
             <h2 className="text-3xl font-bold text-center mb-12">{t('howToGet.map.title')}</h2>
             
-            <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 mb-12">
-              <div className="lg:col-span-1">
-                <div className="bg-white rounded-2xl shadow-xl p-8 h-full">
-                  <div className="flex flex-col items-center gap-8">
-                    <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
-                      <FaMapMarkerAlt className="w-8 h-8 text-primary" />
-                    </div>
-                    <div className="text-center">
-                      <h3 className="text-2xl font-semibold text-gray-900 mb-4">{t('home.location.address.title')}</h3>
-                      <div className="space-y-2 text-gray-600">
-                        <p className="text-lg">RODOVIA MT 10 - KM 88</p>
-                        <p className="text-lg">SÃO JOSÉ DO RIO CLARO</p>
-                        <p className="text-lg">MATO GROSSO - BRASIL</p>
-                      </div>
-                    </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {/* Address Card */}
+              <div className="bg-white rounded-3xl shadow-md p-8">
+                <div className="flex flex-col items-center">
+                  <div className="w-12 h-12 bg-[#E8F0EA] rounded-full flex items-center justify-center mb-6">
+                    <FaMapMarkerAlt className="w-6 h-6 text-[#1A472A]" />
+                  </div>
+                  <h3 className="text-xl font-semibold mb-4">{t('home.location.address.title')}</h3>
+                  <div className="text-center space-y-2 text-gray-600">
+                    <p>RODOVIA MT 10 - KM 88</p>
+                    <p>SÃO JOSÉ DO RIO CLARO</p>
+                    <p>MATO GROSSO - BRASIL</p>
                   </div>
                 </div>
               </div>
-              
-              <div className="lg:col-span-3">
-                <div className="aspect-w-16 aspect-h-9 rounded-xl overflow-hidden shadow-lg h-full relative">
-                  <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3859.0805305575824!2d-56.63269900000001!3d-13.540246!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x93a19415152a9b05%3A0xd016e0d7d7b65c17!2sJardim%20da%20Amaz%C3%B4nia%20Lodge!5e0!3m2!1spt-BR!2sbr!4v1708534800317!5m2!1spt-BR!2sbr"
-                    width="100%"
-                    height="100%"
-                    style={{ border: 0 }}
-                    allowFullScreen=""
-                    loading="lazy"
-                    referrerPolicy="no-referrer-when-downgrade"
-                    className="rounded-xl"
-                    title={t('howToGet.map.title')}
-                  ></iframe>
-                </div>
+
+              {/* Map Button */}
+              <div className="md:col-span-2">
+                <a 
+                  href="https://maps.app.goo.gl/ChpGnni9eEjmZ13Q9"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block w-full"
+                >
+                  <div className="relative rounded-3xl overflow-hidden shadow-md bg-[#F5F5F5]">
+                    <div className="aspect-w-16 aspect-h-10">
+                      <img
+                        src="/Map_screenshot.png"
+                        alt={t('howToGet.map.alt')}
+                        className="w-full h-full object-contain"
+                      />
+                    </div>
+                    <div className="absolute inset-0 bg-black/10 flex items-center justify-center">
+                      <div className="bg-white rounded-full px-6 py-3 flex items-center gap-2">
+                        <FaMapMarkerAlt className="w-5 h-5" />
+                        <span className="font-medium">{t('howToGet.map.openInGoogleMaps')}</span>
+                      </div>
+                    </div>
+                  </div>
+                </a>
               </div>
             </div>
           </div>
