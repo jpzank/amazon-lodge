@@ -133,7 +133,8 @@
       ]
     },
     "map": {
-      "alt": "Mapa de Localização do Jardim da Amazônia"
+      "alt": "Mapa de Localização do Jardim da Amazônia",
+      "openInGoogleMaps": "Abrir no Google Maps"
     },
     "cta": {
       "title": "Venha Viver Esta Experiência",
@@ -1119,7 +1120,8 @@
       "description": "O Jardim da Amazônia está localizado em São José do Rio Claro, Mato Grosso, a 320 km de Cuiabá. Nossa localização privilegiada nos coloca no coração da transição entre a Amazônia e o Cerrado, oferecendo uma experiência única de biodiversidade."
     },
     "map": {
-      "title": "Localização"
+      "title": "Localização",
+      "openInGoogleMaps": "Abrir no Google Maps"
     },
     "access": {
       "title": "Opções de Acesso",

@@ -139,7 +139,9 @@
       "howToGet": "How to Get Here"
     },
     "map": {
-      "alt": "Jardim da Amazônia Location Map"
+      "alt": "Jardim da Amazônia Location Map",
+      "title": "Location",
+      "openInGoogleMaps": "Open in Google Maps"
     }
   },
   "footer": {
