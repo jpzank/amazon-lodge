@@ -104,6 +104,9 @@ const NossaHistoria = () => {
                   style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }} 
                   title="conheca_nossa_historia"
                   className="rounded-xl shadow-2xl"
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  sandbox="allow-same-origin allow-scripts allow-forms allow-popups allow-popups-to-escape-sandbox allow-presentation"
                 >
                 </iframe>
               </div>
@@ -249,12 +252,10 @@ const NossaHistoria = () => {
                   className="bg-white rounded-xl shadow-lg p-8 transition-transform duration-300 hover:-translate-y-2"
                   variants={cardVariants}
                 >
-                  <h3 className="text-2xl font-semibold text-primary mb-2">2017</h3>
-                  <h4 className="text-xl font-medium text-gray-900 mb-4">Global Big Day</h4>
+                  <h3 className="text-2xl font-semibold text-primary mb-2">{t('ourHistory.timeline.2017.year')}</h3>
+                  <h4 className="text-xl font-medium text-gray-900 mb-4">{t('ourHistory.timeline.2017.title')}</h4>
                   <p className="text-gray-600 leading-relaxed">
-                    Participação no Global Big Day, um dia dedicado ao conhecimento e 
-                    catalogação das aves da região, colocando nossa área no mapa mundial 
-                    de observação de aves.
+                    {t('ourHistory.timeline.2017.description')}
                   </p>
                 </motion.div>
               </motion.div>
@@ -273,11 +274,10 @@ const NossaHistoria = () => {
                   className="bg-white rounded-xl shadow-lg p-8 transition-transform duration-300 hover:-translate-y-2"
                   variants={cardVariants}
                 >
-                  <h3 className="text-2xl font-semibold text-primary mb-2">2022</h3>
-                  <h4 className="text-xl font-medium text-gray-900 mb-4">Pesquisas sobre Primatas</h4>
+                  <h3 className="text-2xl font-semibold text-primary mb-2">{t('ourHistory.timeline.2022.year')}</h3>
+                  <h4 className="text-xl font-medium text-gray-900 mb-4">{t('ourHistory.timeline.2022.title')}</h4>
                   <p className="text-gray-600 leading-relaxed">
-                    Início das pesquisas dedicadas aos primatas da região, expandindo nosso 
-                    conhecimento sobre a fauna local.
+                    {t('ourHistory.timeline.2022.description')}
                   </p>
                 </motion.div>
               </motion.div>
@@ -296,11 +296,10 @@ const NossaHistoria = () => {
                   className="bg-white rounded-xl shadow-lg p-8 transition-transform duration-300 hover:-translate-y-2"
                   variants={cardVariants}
                 >
-                  <h3 className="text-2xl font-semibold text-primary mb-2">2024</h3>
-                  <h4 className="text-xl font-medium text-gray-900 mb-4">Rota dos Primatas</h4>
+                  <h3 className="text-2xl font-semibold text-primary mb-2">{t('ourHistory.timeline.2024.year')}</h3>
+                  <h4 className="text-xl font-medium text-gray-900 mb-4">{t('ourHistory.timeline.2024.title')}</h4>
                   <p className="text-gray-600 leading-relaxed">
-                    Lançamento oficial da Rota dos Primatas de Mato Grosso, um novo capítulo 
-                    em nossa história de conservação e ecoturismo.
+                    {t('ourHistory.timeline.2024.description')}
                   </p>
                 </motion.div>
               </motion.div>
@@ -338,14 +337,10 @@ const NossaHistoria = () => {
                   className="bg-gradient-to-r from-primary/5 to-purple-500/5 rounded-xl shadow-lg p-8 transition-transform duration-300 hover:-translate-y-2 border-2 border-primary/20"
                   variants={cardVariants}
                 >
-                  <h3 className="text-3xl font-bold bg-gradient-to-r from-primary to-purple-600 bg-clip-text text-transparent mb-2 text-center">1997 - Presente</h3>
-                  <h4 className="text-xl font-medium text-gray-900 mb-4 text-center">Um Legado de Preservação</h4>
+                  <h3 className="text-3xl font-bold bg-gradient-to-r from-primary to-purple-600 bg-clip-text text-transparent mb-2 text-center">{t('ourHistory.timeline.legacy.year')}</h3>
+                  <h4 className="text-xl font-medium text-gray-900 mb-4 text-center">{t('ourHistory.timeline.legacy.title')}</h4>
                   <p className="text-gray-600 leading-relaxed">
-                    O trabalho pioneiro da família resultou na preservação de uma extensa área 
-                    de floresta amazônica primária intocada. Devotos da natureza, transformaram 
-                    o Jardim da Amazônia em um importante santuário ecológico, onde a 
-                    biodiversidade prospera e visitantes de todo o mundo podem testemunhar a 
-                    riqueza da flora e fauna amazônica em seu estado mais puro.
+                    {t('ourHistory.timeline.legacy.description')}
                   </p>
                 </motion.div>
               </motion.div>
@@ -357,19 +352,15 @@ const NossaHistoria = () => {
         <section className="py-24 bg-primary/5">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
-              <h2 className="text-4xl font-semibold text-gray-900 mb-8">Nossa Missão Continua</h2>
+              <h2 className="text-4xl font-semibold text-gray-900 mb-8">{t('ourHistory.mission.title')}</h2>
               <p className="text-xl text-gray-700 leading-relaxed mb-12">
-                Hoje, o Jardim da Amazônia é um testemunho vivo do compromisso da família 
-                Zanchet com a preservação ambiental. Continuamos a trabalhar para manter 
-                vivo o sonho de nossos fundadores, proporcionando experiências únicas de 
-                ecoturismo enquanto protegemos este precioso pedaço da Amazônia para as 
-                futuras gerações.
+                {t('ourHistory.mission.description')}
               </p>
               <Link 
                 to="/estacao-pesquisa" 
                 className="inline-flex items-center justify-center px-8 py-4 text-lg font-medium text-white bg-primary hover:bg-primary-dark transition-colors duration-300 rounded-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1"
               >
-                Conheça Nossa Estação de Pesquisa
+                {t('ourHistory.mission.cta')}
               </Link>
             </div>
           </div>

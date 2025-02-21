@@ -72,9 +72,9 @@ const ComoChegar = () => {
               </div>
               
               <div className="lg:col-span-3">
-                <div className="aspect-w-16 aspect-h-9 rounded-xl overflow-hidden shadow-lg h-full">
+                <div className="aspect-w-16 aspect-h-9 rounded-xl overflow-hidden shadow-lg h-full relative">
                   <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3878.9241309876206!2d-56.63488792350904!3d-13.540245537519661!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x93a19415152a9b05%3A0xd016e0d7d7b65c17!2sJardim%20da%20Amaz%C3%B4nia%20Lodge!5e1!3m2!1sen!2sbr!4v1735970088546!5m2!1sen!2sbr"
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15515.696523950482!2d-56.632699!3d-13.540246!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x93a19415152a9b05%3A0xd016e0d7d7b65c17!2sJardim%20da%20Amaz%C3%B4nia%20Lodge!5e0!3m2!1spt-BR!2sbr!4v1710876417447!5m2!1spt-BR!2sbr"
                     width="100%"
                     height="100%"
                     style={{ border: 0 }}
@@ -83,6 +83,25 @@ const ComoChegar = () => {
                     referrerPolicy="no-referrer-when-downgrade"
                     title={t('howToGet.map.title')}
                     className="w-full"
+                    sandbox="allow-scripts allow-same-origin allow-popups"
+                    onError={(e) => {
+                      e.target.style.display = 'none';
+                      document.getElementById('static-map').style.display = 'block';
+                    }}
+                  />
+                  <img
+                    id="static-map"
+                    src={`https://maps.googleapis.com/maps/api/staticmap?center=-13.540246,-56.632699&zoom=14&size=800x400&markers=color:red%7C-13.540246,-56.632699&key=YOUR_API_KEY`}
+                    alt="Jardim da Amazônia Lodge Location"
+                    className="w-full h-full object-cover hidden"
+                    style={{ position: 'absolute', top: 0, left: 0 }}
+                  />
+                  <a 
+                    href="https://www.google.com/maps/place/Jardim+da+Amaz%C3%B4nia+Lodge/@-13.540246,-56.632699,14z/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="absolute inset-0 z-10"
+                    aria-label="Open in Google Maps"
                   />
                 </div>
               </div>

@@ -1184,18 +1184,18 @@
     "timeline": {
       "1980s": {
         "year": "Anos 1980",
-        "title": "O Início da Jornada",
-        "description": "A história começa com a chegada da família Zanchet, vindos do Rio Grande do Sul para Mato Grosso."
+        "title": "A Jornada Começa",
+        "description": "A história começa com a chegada da família Zanchet, que veio do Rio Grande do Sul para o Mato Grosso."
       },
       "1986": {
         "year": "1986",
         "title": "Construção da Casa Original",
-        "description": "A fundação desta casa foi construída do zero, marcando o início físico da nossa presença neste pedaço da Amazônia."
+        "description": "A fundação desta casa foi construída do zero, marcando o início físico de nossa presença nesta parte da Amazônia."
       },
       "1997": {
         "year": "1997",
-        "title": "Nascimento da Pousada",
-        "description": "Por sugestão de um amigo, a ideia de construir uma pousada ganhou vida. Raquel Zanchet e Carmelita Zanchet dão início à Pousada Jardim da Amazônia, com a visão de desenvolver o ecoturismo brasileiro. No mesmo ano, Almor e Carmelita Zanchet investem no laboratório de piscicultura e iniciam as atividades de observação de aves, marcando o começo de uma nova era para o turismo ecológico na região."
+        "title": "Nascimento do Lodge",
+        "description": "Por sugestão de um amigo, nasceu a ideia de construir um lodge. Raquel Zanchet e Carmelita Zanchet iniciaram o Jardim da Amazônia Lodge, com a visão de desenvolver o ecoturismo brasileiro. No mesmo ano, Almor e Carmelita Zanchet investiram em um laboratório de piscicultura e iniciaram as atividades de observação de aves, marcando o início de uma nova era para o turismo ecológico na região."
       },
       "2000": {
         "year": "2000",
@@ -1204,9 +1204,34 @@
       },
       "2008": {
         "year": "2008",
-        "title": "Descoberta do Tiê-Bicudo",
-        "description": "Um marco importante para a região com o registro do Tiê-Bicudo (Conothraupis mesoleuca), uma espécie criticamente em extinção. Esta descoberta ressalta a importância da nossa área para a conservação de espécies raras."
+        "title": "Descoberta do Tie-bicudo",
+        "description": "Um marco importante para a região com o registro do Tie-bicudo (Conothraupis mesoleuca), uma espécie criticamente ameaçada. Esta descoberta destaca a importância de nossa área para a conservação de espécies raras."
+      },
+      "2017": {
+        "year": "2017",
+        "title": "Global Big Day",
+        "description": "Participação no Global Big Day, um dia dedicado ao conhecimento e catalogação das aves da região, colocando nossa área no mapa mundial de observação de aves."
+      },
+      "2022": {
+        "year": "2022",
+        "title": "Pesquisas sobre Primatas",
+        "description": "Início das pesquisas dedicadas aos primatas da região, expandindo nosso conhecimento sobre a fauna local."
+      },
+      "2024": {
+        "year": "2024",
+        "title": "Rota dos Primatas",
+        "description": "Lançamento oficial da Rota dos Primatas de Mato Grosso, um novo capítulo em nossa história de conservação e ecoturismo."
+      },
+      "legacy": {
+        "year": "1997 - Presente",
+        "title": "Um Legado de Preservação",
+        "description": "O trabalho pioneiro da família resultou na preservação de uma extensa área de floresta amazônica primária intocada. Devotos da natureza, transformaram o Jardim da Amazônia em um importante santuário ecológico, onde a biodiversidade prospera e visitantes de todo o mundo podem testemunhar a riqueza da flora e fauna amazônica em seu estado mais puro."
       }
+    },
+    "mission": {
+      "title": "Nossa Missão Continua",
+      "description": "Hoje, o Jardim da Amazônia é um testemunho vivo do compromisso da família Zanchet com a preservação ambiental. Continuamos a trabalhar para manter vivo o sonho de nossos fundadores, proporcionando experiências únicas de ecoturismo enquanto protegemos este precioso pedaço da Amazônia para as futuras gerações.",
+      "cta": "Conheça Nossa Estação de Pesquisa"
     }
   },
   "gallery": {

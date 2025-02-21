@@ -1425,7 +1425,32 @@
         "year": "2008",
         "title": "Discovery of the Cone-billed Tanager",
         "description": "An important milestone for the region with the recording of the Cone-billed Tanager (Conothraupis mesoleuca), a critically endangered species. This discovery highlights the importance of our area for the conservation of rare species."
+      },
+      "2017": {
+        "year": "2017",
+        "title": "Global Big Day",
+        "description": "Participation in the Global Big Day, a day dedicated to learning about and cataloging the region's birds, putting our area on the world map of bird observation."
+      },
+      "2022": {
+        "year": "2022",
+        "title": "Primate Research",
+        "description": "Beginning of research dedicated to the region's primates, expanding our knowledge of local fauna."
+      },
+      "2024": {
+        "year": "2024",
+        "title": "Primate Route",
+        "description": "Official launch of the Mato Grosso Primate Route, a new chapter in our history of conservation and ecotourism."
+      },
+      "legacy": {
+        "year": "1997 - Present",
+        "title": "A Legacy of Preservation",
+        "description": "The family's pioneering work resulted in the preservation of a large untouched area of primary Amazon rainforest. Nature devotees, they transformed Jardim da Amazônia into an important ecological sanctuary, where biodiversity thrives and visitors from around the world can witness the richness of Amazonian flora and fauna in its purest state."
       }
+    },
+    "mission": {
+      "title": "Our Mission Continues",
+      "description": "Today, Jardim da Amazônia is a living testimony to the Zanchet family's commitment to environmental preservation. We continue to work to keep our founders' dream alive, providing unique ecotourism experiences while protecting this precious piece of the Amazon for future generations.",
+      "cta": "Visit Our Research Station"
     }
   },
   "meta": {
