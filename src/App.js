@@ -2,6 +2,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/react';
 import './i18n';  // Import i18n configuration
 import './index.css';  // Make sure this is the only CSS import
 import Navbar from './components/Navbar';
@@ -62,6 +63,7 @@ function App() {
         <Footer />
         <CookieConsent />
         <Analytics />
+        <SpeedInsights />
       </div>
     </Router>
   );

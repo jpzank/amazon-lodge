@@ -53,27 +53,27 @@ const CookieConsent = () => {
   if (!showConsent) return null;
 
   return (
-    <div className="fixed bottom-0 left-0 right-0 bg-primary-dark/95 text-white p-4 z-50">
-      <div className="max-w-container mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
-        <div className="text-sm md:text-base">
+    <div className="fixed bottom-4 left-4 right-4 md:left-8 md:right-auto bg-white/95 text-gray-600 p-3 rounded-lg shadow-lg z-50 max-w-md">
+      <div className="flex flex-col gap-2">
+        <div className="text-xs md:text-sm">
           {t('cookieConsent.message')}
           <a 
             href="/privacy-policy" 
-            className="underline ml-1 hover:text-white/80"
+            className="text-primary-dark hover:underline ml-1"
           >
             {t('cookieConsent.learnMore')}
           </a>
         </div>
-        <div className="flex gap-4">
+        <div className="flex gap-2 justify-end">
           <button
             onClick={handleDecline}
-            className="px-4 py-2 text-sm border border-white/20 rounded hover:bg-white/10 transition-colors"
+            className="px-3 py-1 text-xs text-gray-500 hover:text-gray-700 transition-colors"
           >
             {t('cookieConsent.decline')}
           </button>
           <button
             onClick={handleAccept}
-            className="px-4 py-2 text-sm bg-white text-primary-dark rounded hover:bg-white/90 transition-colors"
+            className="px-3 py-1 text-xs bg-primary-dark text-white rounded hover:bg-primary-dark/90 transition-colors"
           >
             {t('cookieConsent.accept')}
           </button>

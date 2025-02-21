@@ -1501,10 +1501,10 @@
     }
   },
   "cookieConsent": {
-    "message": "Utilizamos cookies essenciais para melhorar sua experiência de navegação e análises anônimas para entender como nosso site é usado. Nenhuma informação pessoal é coletada.",
-    "learnMore": "Saiba mais",
-    "accept": "Aceitar",
-    "decline": "Recusar"
+    "message": "Usamos cookies para melhorar sua experiência. Nenhum dado pessoal é coletado.",
+    "learnMore": "Mais detalhes",
+    "accept": "OK",
+    "decline": "Não, obrigado"
   },
   "meta": {
     "home": {
