@@ -66,7 +66,7 @@ const Breadcrumb = () => {
     // Map URL segments to navigation keys
     const keyMap = {
       'eventos-natureza': 'natureEvents',
-      'areas-externas': 'areasExternas',
+      'lodge': 'lodge',
       'estacao-pesquisa': 'researchStation',
       'nascente-natural': 'nascentNatural',
       'guias-campo': 'fieldGuides',

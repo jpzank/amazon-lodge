@@ -3,7 +3,7 @@ export const siteConfig = {
   site: {
     name: 'Jardim da Amazônia',
     description: 'Um Refúgio de Riquezas Naturais',
-    baseUrl: process.env.REACT_APP_BASE_URL || 'https://jardimdaamazonia.com.br',
+    baseUrl: process.env.REACT_APP_BASE_URL || 'https://www.jardimamazonia.com',
     bookingUrl: 'https://book.omnibees.com/hotel/19972?lang=pt-BR&currencyId=16&version=4'
   },
 
@@ -15,8 +15,8 @@ export const siteConfig = {
     // Social Media and Contact
     whatsapp: 'https://wa.me/556540420595',
     instagram: 'https://instagram.com/jardimdaamazonia',
-    facebook: 'https://facebook.com/jardimdaamazonia',
-    tripadvisor: 'https://tripadvisor.com/jardimdaamazonia',
+    facebook: 'https://www.facebook.com/jdamazonia',
+    tripadvisor: 'https://www.tripadvisor.com.br/Hotel_Review-g2510096-d2500139-Reviews-or5-Jardim_Da_Amazonia_Lodge-Sao_Jose_do_Rio_Claro_State_of_Mato_Grosso.html',
     email: 'atendimento@jardimamazonia.com',
     
     // Main Navigation
@@ -28,7 +28,7 @@ export const siteConfig = {
     primates: '/primatas',
     gastronomy: '/gastronomia',
     accommodation: '/acomodacoes',
-    areasExternas: '/areas-externas',
+    areasExternas: '/lodge',
     trilhas: '/trilhas',
     guiasCampo: '/guias-campo',
     eventosCorporativos: '/eventos-corporativos',
@@ -39,8 +39,8 @@ export const siteConfig = {
     documents: '/documentos',
     faq: '/faq',
     comoChegar: '/como-chegar',
-    contato: '/contato',
-    reservas: '/reservas',
+    contato: '/como-chegar',
+    reservas: '/faq',
     galeria: '/galeria',
     privacyPolicy: '/privacy-policy',
     
@@ -123,50 +123,6 @@ export const siteConfig = {
         }
       ]
     },
-
-    testimonials: {
-      title: 'O QUE DIZEM NOSSOS VISITANTES',
-      items: [
-        {
-          quote: "Uma experiência maravilhosa que recomendo de coração! Tudo foi incrível: o local, os quartos, o atendimento – tudo impecável. A piscina de águas cristalinas e naturais foi inesquecível e me deixou uma eterna saudade.",
-          author: "Aquila Neves - Tapurah, MT",
-          date: "Fevereiro 2025"
-        },
-        {
-          quote: "Lugar tranquilo, de fácil acesso, longe do barulho, contato permanente com a natureza. Piscina natural de água cristalina, excelente recepção, feita pela família (Seo Almor é um Show de anfitrião). Pessoal nos atendeu maravilhosamente bem. Os bangalôs são nota 10, comida excelente.",
-          author: "Koczkoday - Mato Grosso",
-          date: "Novembro 2024"
-        },
-        {
-          quote: "Absolutely lovely Amazon hotel. This hotel has so many garden features, bird feeders, and ponds. It is just fun to walk around. We went on hikes to look for birds and animals. The spring-fed pool was a very nice place to cool off after a walk. Our dietary needs were accommodated with pleasure.",
-          author: "Julietravelsalot - Minnesota, USA",
-          date: "Setembro 2023"
-        },
-        {
-          quote: "Jardim da Amazônia – Uma incrível empresa familiar na linha de frente da conservação da Floresta Amazônica!",
-          author: "M Carr - USA",
-          date: "Abril 2023"
-        },
-        {
-          quote: "Paradise for birdwatchers! The diversity of species and professional guidance made our stay unforgettable.",
-          author: "John Miller - UK",
-          date: "Maio 2023"
-        }
-      ]
-    },
-
-    conservation: {
-      title: 'COMPROMISSO COM O FUTURO',
-      description: `Nossa dedicação à conservação da biodiversidade e ao turismo sustentável 
-        tem ajudado a preservar uma das últimas áreas intocadas de floresta 
-        amazônica primária, transformando este lugar em um importante santuário 
-        ecológico para as gerações futuras.`
-    },
-
-    cta: {
-      title: 'Sua Aventura Começa Aqui',
-      subtitle: 'Descubra experiências únicas no sul da Amazônia'
-    }
   }
 };
 
@@ -223,8 +179,7 @@ export const themeConfig = {
 // API endpoints configuration
 export const apiConfig = {
   endpoints: {
-    booking: process.env.REACT_APP_BOOKING_API || 'https://api.jardimdaamazonia.com.br/booking',
-    contact: process.env.REACT_APP_CONTACT_API || 'https://api.jardimdaamazonia.com.br/contact'
+    booking: process.env.REACT_APP_BOOKING_API || 'https://book.omnibees.com/hotel/19972?lang=pt-BR&currencyId=16&version=4'
   },
   timeout: 30000, // 30 seconds
   retryAttempts: 3

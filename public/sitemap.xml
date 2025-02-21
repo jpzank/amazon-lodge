@@ -7,13 +7,13 @@
     <!-- Home Page -->
     <url>
         <loc>https://www.jardimamazonia.com/</loc>
-        <lastmod>2024-02-20</lastmod>
+        <lastmod>2025-02-20</lastmod>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
         <schema:Organization>
             <schema:name>Jardim Da Amazônia Lodge</schema:name>
             <schema:url>https://www.jardimamazonia.com</schema:url>
-            <schema:description>Experiência autêntica na Amazônia: um corredor ecológico único onde o Cerrado encontra a Floresta Amazônica. Refúgio de biodiversidade com mais de 570 espécies de aves e 30 espécies de mamíferos. Lodge sustentável oferecendo ecoturismo, observação de vida selvagem e pesquisa científica na Amazônia brasileira.</schema:description>
+            <schema:description>Experiência autêntica na Amazônia em um corredor ecológico onde o Cerrado encontra a Floresta Amazônica. Refúgio de biodiversidade com mais de 590 espécies de aves e 30 espécies de mamíferos. Lodge sustentável oferecendo ecoturismo, observação de vida selvagem e pesquisa científica na Amazônia brasileira.</schema:description>
             <schema:address>
                 <schema:streetAddress>RODOVIA MT 10 - KM 88</schema:streetAddress>
                 <schema:addressLocality>SÃO JOSÉ DO RIO CLARO</schema:addressLocality>
@@ -36,7 +36,7 @@
     <!-- Acomodações e Estrutura -->
     <url>
         <loc>https://www.jardimamazonia.com/acomodacoes</loc>
-        <lastmod>2024-02-20</lastmod>
+        <lastmod>2025-02-20</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
         <schema:LodgingBusiness>
@@ -52,15 +52,15 @@
     </url>
     
     <url>
-        <loc>https://www.jardimamazonia.com/areas-externas</loc>
-        <lastmod>2024-02-20</lastmod>
+        <loc>https://www.jardimamazonia.com/lodge</loc>
+        <lastmod>2025-02-20</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
 
     <url>
         <loc>https://www.jardimamazonia.com/gastronomia</loc>
-        <lastmod>2024-02-20</lastmod>
+        <lastmod>2025-02-20</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
@@ -68,7 +68,7 @@
     <!-- Galeria -->
     <url>
         <loc>https://www.jardimamazonia.com/galeria</loc>
-        <lastmod>2024-02-20</lastmod>
+        <lastmod>2025-02-20</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
@@ -76,7 +76,7 @@
     <!-- Atividades -->
     <url>
         <loc>https://www.jardimamazonia.com/birdwatching</loc>
-        <lastmod>2024-02-20</lastmod>
+        <lastmod>2025-02-20</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
         <schema:TouristAttraction>
@@ -91,7 +91,7 @@
 
     <url>
         <loc>https://www.jardimamazonia.com/primatas</loc>
-        <lastmod>2024-02-20</lastmod>
+        <lastmod>2025-02-20</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
         <schema:TouristAttraction>
@@ -106,7 +106,7 @@
 
     <url>
         <loc>https://www.jardimamazonia.com/safari-boat</loc>
-        <lastmod>2024-02-20</lastmod>
+        <lastmod>2025-02-20</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
         <schema:TouristAttraction>
@@ -120,14 +120,14 @@
 
     <url>
         <loc>https://www.jardimamazonia.com/guias-campo</loc>
-        <lastmod>2024-02-20</lastmod>
+        <lastmod>2025-02-20</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
 
     <url>
         <loc>https://www.jardimamazonia.com/trilhas</loc>
-        <lastmod>2024-02-20</lastmod>
+        <lastmod>2025-02-20</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
         <schema:TouristAttraction>
@@ -143,7 +143,7 @@
     <!-- Pesquisa e Natureza -->
     <url>
         <loc>https://www.jardimamazonia.com/estacao-pesquisa</loc>
-        <lastmod>2024-02-20</lastmod>
+        <lastmod>2025-02-20</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
         <schema:ResearchOrganization>
@@ -155,14 +155,14 @@
 
     <url>
         <loc>https://www.jardimamazonia.com/nascente-natural</loc>
-        <lastmod>2024-02-20</lastmod>
+        <lastmod>2025-02-20</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
 
     <url>
         <loc>https://www.jardimamazonia.com/eventos-natureza</loc>
-        <lastmod>2024-02-20</lastmod>
+        <lastmod>2025-02-20</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
         <schema:Event>
@@ -179,14 +179,14 @@
     <!-- Informações -->
     <url>
         <loc>https://www.jardimamazonia.com/como-chegar</loc>
-        <lastmod>2024-02-20</lastmod>
+        <lastmod>2025-02-20</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
 
     <url>
         <loc>https://www.jardimamazonia.com/faq</loc>
-        <lastmod>2024-02-20</lastmod>
+        <lastmod>2025-02-20</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
@@ -194,14 +194,14 @@
     <!-- Institucional -->
     <url>
         <loc>https://www.jardimamazonia.com/nossa-historia</loc>
-        <lastmod>2024-02-20</lastmod>
+        <lastmod>2025-02-20</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
 
     <url>
         <loc>https://www.jardimamazonia.com/falaram-de-nos</loc>
-        <lastmod>2024-02-20</lastmod>
+        <lastmod>2025-02-20</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
     </url>
@@ -209,7 +209,7 @@
     <!-- Gastronomia -->
     <url>
         <loc>https://www.jardimamazonia.com/gastronomia</loc>
-        <lastmod>2024-02-20</lastmod>
+        <lastmod>2025-02-20</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
         <schema:Restaurant>

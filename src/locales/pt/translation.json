@@ -324,40 +324,44 @@
       }
     },
     "activities": {
-      "title": "Atividades Disponíveis",
+      "title": "Atividades",
       "items": {
         "birdwatching": {
           "title": "Observação de Aves",
-          "description": "Explore a rica diversidade de aves amazônicas nos arredores da nossa propriedade"
+          "description": "Explore a rica diversidade de aves em nosso santuário natural"
         },
         "recreation": {
-          "title": "Área de Lazer",
-          "description": "As crianças têm seu espaço garantido para a diversão na nossa mini-quadra de areia e na encantadora casa de bonecas"
+          "title": "Recreação",
+          "description": "Atividades ao ar livre para toda a família"
         },
         "photography": {
           "title": "Fotografia",
-          "description": "Capture momentos especiais em cenários deslumbrantes da natureza"
+          "description": "Cenários únicos para suas melhores fotos"
         },
         "meditation": {
           "title": "Meditação",
-          "description": "Encontre paz e tranquilidade em cada canto do nosso espaço.",
-          "note": "Traga seu tapetinho!"
+          "description": "Encontre paz e tranquilidade em nossa área zen",
+          "note": "Aulas disponíveis sob consulta"
         }
       }
     },
     "sustainability": {
       "title": "Sustentabilidade",
-      "description": "Nossas áreas externas foram desenvolvidas utilizando materiais locais e técnicas que minimizam o impacto ambiental, garantindo a preservação do ecossistema natural.",
+      "description": "No Jardim da Amazônia, a sustentabilidade não é apenas um conceito, mas uma prática diária. Nosso compromisso com o meio ambiente se reflete em cada aspecto de nossas operações.",
       "features": [
-        "Iluminação de baixo impacto via energia solar",
-        "Móveis feitos de madeira recuperada",
-        "Projetos de monitoramento de fauna",
-        "Preservação da vegetação nativa"
+        "Energia solar",
+        "Tratamento de água natural",
+        "Compostagem orgânica",
+        "Coleta seletiva",
+        "Produtos biodegradáveis",
+        "Horta orgânica",
+        "Educação ambiental",
+        "Preservação da fauna e flora"
       ]
     },
     "cta": {
-      "title": "Venha Conhecer Nossos Espaços",
-      "description": "Reserve sua estadia e desfrute de todas essas experiências únicas",
+      "title": "Venha Viver Esta Experiência",
+      "description": "Reserve sua estadia e descubra o verdadeiro significado de conexão com a natureza.",
       "button": "Reserve Agora"
     }
   },
@@ -559,8 +563,16 @@
       "description": "Fique por dentro das novidades de birdwatching do Jardim da Amazônia dentro dos principais sites de birdwatching:",
       "links": {
         "ebird": "E-bird",
-        "wikiaves": "WikiAves"
+        "birdlife": "Birdlife",
+        "wikiaves": "WikiAves",
+        "save": "SAVE Brasil"
       }
+    },
+    "saveBrasil": {
+      "title": "Amigos da SAVE Brasil",
+      "partnership": "Como parceiros da SAVE Brasil, apoiamos diretamente a proteção das aves e seus habitats através do programa de doação Amigos da SAVE, que oferece benefícios exclusivos aos participantes.",
+      "description": "O Jardim da Amazônia é um orgulhoso membro do programa Amigos da SAVE Brasil, uma iniciativa dedicada à proteção das aves e à conservação da natureza. Como parte desta rede, contribuímos ativamente para a preservação de espécies ameaçadas de extinção e a restauração de seus habitats.",
+      "button": "Saiba mais"
     }
   },
   "primatas": {
@@ -680,7 +692,7 @@
         },
         "caiman": {
           "title": "Jacaré Anão",
-          "description": "Espécie de jacaré típica da Amazônia Sul, menor que seus parentes. Pode ser avistado nas margens dos rios e em áreas alagadas durante o safari."
+          "description": "Espécie de jacaré típica do sul da Amazônia. Pode ser avistado nas margens dos rios e em áreas alagadas durante o safari."
         },
         "tapir": {
           "title": "Anta",
@@ -1425,7 +1437,7 @@
       "title": "Política de Privacidade",
       "subtitle": "Como protegemos seus dados"
     },
-    "lastUpdated": "Última atualização: Março 2024",
+    "lastUpdated": "Última atualização: Fevereiro 2025",
     "intro": {
       "description": "O Jardim da Amazônia está comprometido em proteger sua privacidade e garantir a melhor experiência possível em nosso site. Esta política de privacidade explica como utilizamos cookies para melhorar sua navegação."
     },
@@ -1469,8 +1481,12 @@
   },
   "meta": {
     "home": {
-      "title": "Jardim da Amazônia - Eco Lodge na Amazônia Sul",
-      "description": "Experimente a biodiversidade única da Amazônia Sul no Jardim da Amazônia. Piscina natural, observação de aves, primatas e acomodações ecológicas em Mato Grosso."
+      "title": "Jardim da Amazônia - Eco Lodge no Sul da Amazônia",
+      "description": "Experimente a biodiversidade do sul da Amazônia no Jardim da Amazônia. Piscina natural, observação de aves, primatas e acomodações ecológicas em Mato Grosso."
+    },
+    "lodge": {
+      "title": "O Lodge - Jardim da Amazônia",
+      "description": "Descubra nosso lodge sustentável na Amazônia, com piscina natural, áreas de convivência e espaços projetados para uma experiência única em harmonia com a natureza."
     },
     "acomodacoes": {
       "title": "Acomodações - Jardim da Amazônia",
@@ -1535,6 +1551,91 @@
     "trilhas": {
       "title": "Trilhas - Jardim da Amazônia",
       "description": "Explore nossa rede de trilhas naturais pela floresta amazônica. Caminhadas guiadas para todos os níveis de experiência."
+    }
+  },
+  "lodge": {
+    "hero": {
+      "title": "O Lodge",
+      "subtitle": "Um refúgio exclusivo em harmonia com a natureza"
+    },
+    "intro": {
+      "quote": "O trabalho pioneiro no Jardim da Amazônia resultou na preservação de uma grande área intocada de floresta amazônica primária. Devotos da natureza, a família Zanchet investiu na atividade de observação de aves no ano de 1997, tornando esse lugar um importante santuário ecológico.",
+      "author": "Alex Robinson"
+    },
+    "areas": {
+      "naturalPool": {
+        "title": "Piscina Natural",
+        "description": "Nossa piscina natural é alimentada por uma nascente de água cristalina, proporcionando um refrescante mergulho em meio à natureza. Com deck de madeira e espreguiçadeiras, é o lugar perfeito para relaxar.",
+        "features": {
+          "water": "Água potável de nascente",
+          "deck": "Deck para banho de sol",
+          "immersion": "Imersão total na natureza",
+          "path": "Passarela pela floresta para acesso exclusivo"
+        }
+      },
+      "trails": {
+        "title": "Trilhas",
+        "description": "Explore nossas trilhas ecológicas, cuidadosamente mantidas para proporcionar uma experiência segura e enriquecedora em meio à floresta amazônica.",
+        "features": [
+          "Trilhas guiadas",
+          "Lagoas exuberantes",
+          "Pontos de observação",
+          "Áreas de descanso"
+        ]
+      },
+      "communalArea": {
+        "title": "Área de Convivência",
+        "description": "Espaço aconchegante para momentos de descontração, leitura ou simplesmente apreciar a natureza. Equipado com redes, sofás e mesas, é ideal para socialização.",
+        "features": [
+          "Lounge ao ar livre",
+          "Área de leitura",
+          "Wi-Fi disponível",
+          "Iluminação ambiente",
+          "Casa de bonecas",
+          "Mini-quadra de areia"
+        ]
+      }
+    },
+    "activities": {
+      "title": "Atividades",
+      "items": {
+        "birdwatching": {
+          "title": "Observação de Aves",
+          "description": "Explore a rica diversidade de aves em nosso santuário natural"
+        },
+        "recreation": {
+          "title": "Recreação",
+          "description": "Atividades ao ar livre para toda a família"
+        },
+        "photography": {
+          "title": "Fotografia",
+          "description": "Cenários únicos para suas melhores fotos"
+        },
+        "meditation": {
+          "title": "Meditação",
+          "description": "Encontre paz e tranquilidade em nossa área zen",
+          "note": "Aulas disponíveis sob consulta"
+        }
+      }
+    },
+    "sustainability": {
+      "title": "Sustentabilidade",
+      "description": "No Jardim da Amazônia, a sustentabilidade não é apenas um conceito, mas uma prática diária. Nosso compromisso com o meio ambiente se reflete em cada aspecto de nossas operações.",
+      "features": [
+        "Energia solar",
+        "Tratamento de água natural",
+        "Compostagem orgânica",
+        "Coleta seletiva",
+        "Produtos biodegradáveis",
+        "Horta orgânica",
+        "Educação ambiental",
+        "Preservação da fauna e flora"
+      ]
+    },
+    "cta": {
+      "title": "Venha Viver Esta Experiência",
+      "description": "Reserve sua estadia e descubra o verdadeiro significado de conexão com a natureza.",
+      "button": "Reserve Agora"
     }
   }
 } 

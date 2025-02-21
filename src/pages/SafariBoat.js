@@ -96,7 +96,9 @@ const SafariBoat = () => {
                 <ul className="space-y-3">
                   {t('safariBoat.checklist.protection.items', { returnObjects: true }).map((item, index) => (
                     <li key={index} className="flex items-center space-x-3 text-gray-700">
-                      <div className="flex-shrink-0 w-5 h-5 border-2 border-primary rounded-sm"></div>
+                      <svg className="w-5 h-5 text-primary flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                      </svg>
                       <span>{item}</span>
                     </li>
                   ))}
@@ -107,7 +109,9 @@ const SafariBoat = () => {
                 <ul className="space-y-3">
                   {t('safariBoat.checklist.equipment.items', { returnObjects: true }).map((item, index) => (
                     <li key={index} className="flex items-center space-x-3 text-gray-700">
-                      <div className="flex-shrink-0 w-5 h-5 border-2 border-primary rounded-sm"></div>
+                      <svg className="w-5 h-5 text-primary flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                      </svg>
                       <span>{item}</span>
                     </li>
                   ))}

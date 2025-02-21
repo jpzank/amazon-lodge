@@ -149,7 +149,7 @@ const ComoChegar = () => {
             <h2 className="text-3xl font-bold text-center mb-12">{t('howToGet.contact.title')}</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <a
-                href="https://wa.me/5566996897408"
+                href="https://wa.me/556540420595"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center justify-center gap-4 bg-green-500 text-white py-4 px-8 rounded-lg hover:bg-green-600 transition-colors duration-300"
@@ -158,7 +158,7 @@ const ComoChegar = () => {
                 <span className="text-lg font-medium">WhatsApp</span>
               </a>
               <a
-                href="mailto:contato@jardimdaamazonia.com.br"
+                href="mailto:atendimento@jardimamazonia.com"
                 className="flex items-center justify-center gap-4 bg-primary text-white py-4 px-8 rounded-lg hover:bg-primary-dark transition-colors duration-300"
               >
                 <FaEnvelope className="w-6 h-6" />

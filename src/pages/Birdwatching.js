@@ -426,7 +426,7 @@ const Birdwatching = () => {
             </p>
             <div className="flex justify-center gap-6">
               <a 
-                href="https://ebird.org/hotspot/L4154796"
+                href="https://ebird.org/hotspot/L968651"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-primary hover:bg-primary-dark transition-colors duration-300"
@@ -434,12 +434,49 @@ const Birdwatching = () => {
                 {t('birdwatching.references.links.ebird')}
               </a>
               <a 
-                href="https://www.wikiaves.com.br/wiki/jardim_da_amazonia"
+                href="https://datazone.birdlife.org/site/factsheet/rio-claro"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-primary hover:bg-primary-dark transition-colors duration-300"
+              >
+                {t('birdwatching.references.links.birdlife')}
+              </a>
+              <a 
+                href="https://www.wikiaves.com.br/municipio_5107305"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-primary hover:bg-primary-dark transition-colors duration-300"
               >
                 {t('birdwatching.references.links.wikiaves')}
+              </a>
+              <a 
+                href="https://www.savebrasil.org.br/beneficios-amigos-save"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-primary hover:bg-primary-dark transition-colors duration-300"
+              >
+                {t('birdwatching.references.links.save')}
+              </a>
+            </div>
+          </div>
+        </section>
+
+        {/* SAVE Brasil Section */}
+        <section className="py-16 bg-gray-50">
+          <div className="container mx-auto px-4 max-w-4xl">
+            <h2 className="text-4xl font-semibold text-center mb-16 relative">
+              {t('birdwatching.saveBrasil.title')}
+              <span className="absolute bottom-[-1rem] left-1/2 transform -translate-x-1/2 w-20 h-1 bg-primary"></span>
+            </h2>
+            <div className="text-lg text-gray-700 leading-relaxed mb-12 text-center">
+              <p className="mb-8">{t('birdwatching.saveBrasil.partnership')}</p>
+              <a 
+                href="https://www.savebrasil.org.br/beneficios-amigos-save"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center px-8 py-4 border border-transparent text-lg font-semibold rounded-md text-white bg-primary hover:bg-primary-dark transition-colors duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+              >
+                {t('birdwatching.saveBrasil.button')}
               </a>
             </div>
           </div>

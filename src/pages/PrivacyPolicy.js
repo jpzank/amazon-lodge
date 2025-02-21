@@ -12,16 +12,21 @@ function PrivacyPolicy() {
         description={t('privacyPolicy.intro.description')}
       />
       
-      <div className="relative bg-gray-900 py-12 sm:py-16">
-        <div className="absolute inset-0 bg-black/50" />
-        <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="mx-auto max-w-2xl text-center text-white">
-            <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">
-              {t('privacyPolicy.hero.title')}
-            </h1>
-            <p className="mt-4 text-base leading-7">
-              {t('privacyPolicy.hero.subtitle')}
-            </p>
+      {/* Hero Section */}
+      <div className="relative isolate overflow-hidden">
+        <div className="relative h-[40vh] min-h-[400px] bg-black bg-cover bg-center bg-no-repeat">
+          <div className="absolute inset-0 bg-black/60" />
+          <div className="absolute inset-0 flex items-center">
+            <div className="mx-auto max-w-7xl px-6 lg:px-8">
+              <div className="mx-auto max-w-2xl text-center text-white">
+                <h1 className="font-primary text-4xl font-semibold tracking-tight text-white sm:text-6xl">
+                  {t('privacyPolicy.hero.title')}
+                </h1>
+                <p className="mt-6 text-lg leading-8 text-gray-300 font-primary">
+                  {t('privacyPolicy.hero.subtitle')}
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -29,7 +34,7 @@ function PrivacyPolicy() {
       <div className="mx-auto max-w-4xl px-6 lg:px-8 bg-white">
         <div className="py-8">
           <div className="prose prose-sm max-w-none">
-            <p className="text-xs text-gray-500 mb-6">
+            <p className="text-sm text-gray-500 mb-6">
               {t('privacyPolicy.lastUpdated')}
             </p>
 

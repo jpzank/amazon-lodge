@@ -171,7 +171,7 @@ const Home = () => {
                 <img
                   src="/Logo Jd Amazonia.png"
                   alt="Jardim Amazônia Logo"
-                  className="relative w-56 md:w-[18rem] lg:w-[22rem] drop-shadow-lg p-4"
+                  className="relative w-56 md:w-[18rem] lg:w-[19.8rem] drop-shadow-lg p-4"
                   loading="eager"
                   fetchpriority="high"
                   data-atropos-offset="5"

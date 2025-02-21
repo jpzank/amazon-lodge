@@ -168,7 +168,8 @@
       "information": {
         "title": "Information",
         "faq": "Frequently Asked Questions",
-        "howToGet": "How to Get Here"
+        "howToGet": "How to Get Here",
+        "privacyPolicy": "Privacy Policy"
       },
       "contact": {
         "title": "Contact",
@@ -558,8 +559,15 @@
       "description": "Stay up to date with Jardim da Amazônia's birdwatching news on the main birdwatching websites:",
       "links": {
         "ebird": "E-bird",
-        "wikiaves": "WikiAves"
+        "wikiaves": "WikiAves",
+        "save": "SAVE Brasil"
       }
+    },
+    "saveBrasil": {
+      "title": "Friends of SAVE Brasil",
+      "partnership": "As partners of SAVE Brasil, we directly support the protection of birds and their habitats through the Friends of SAVE donation program, which offers exclusive benefits to participants.",
+      "description": "Jardim da Amazônia is a proud member of the Friends of SAVE Brasil program, an initiative dedicated to bird protection and nature conservation. As part of this network, we actively contribute to the preservation of endangered species and the restoration of their habitats.",
+      "button": "Learn More"
     }
   },
   "primatas": {
@@ -679,7 +687,7 @@
         },
         "caiman": {
           "title": "Dwarf Caiman",
-          "description": "A caiman species typical of the Southern Amazon, smaller than its relatives. Can be spotted on riverbanks and in flooded areas during the safari."
+          "description": "A caiman species typical of the Southern Amazon. Can be spotted on riverbanks and in flooded areas during the safari."
         },
         "tapir": {
           "title": "Tapir",
@@ -1479,7 +1487,7 @@
       "title": "Privacy Policy",
       "subtitle": "How we protect your data"
     },
-    "lastUpdated": "Last updated: March 2024",
+    "lastUpdated": "Last updated: February 2025",
     "intro": {
       "description": "Jardim da Amazônia is committed to protecting your privacy and ensuring the best possible experience on our site. This privacy policy explains how we use cookies to improve your browsing experience."
     },
@@ -1513,6 +1521,91 @@
     "updates": {
       "title": "Policy Updates",
       "description": "This policy may be updated periodically. We recommend that you review it regularly to stay informed about how we protect your privacy."
+    }
+  },
+  "lodge": {
+    "hero": {
+      "title": "The Lodge",
+      "subtitle": "An exclusive refuge in harmony with nature"
+    },
+    "intro": {
+      "quote": "The pioneering work at Jardim da Amazônia has resulted in the preservation of a large untouched area of primary Amazon rainforest. Devoted to nature, the Zanchet family invested in birdwatching activities in 1997, making this place an important ecological sanctuary.",
+      "author": "Alex Robinson"
+    },
+    "areas": {
+      "naturalPool": {
+        "title": "Natural Pool",
+        "description": "Our natural pool is fed by a crystal-clear spring, providing a refreshing dip in the midst of nature. With wooden deck and loungers, it's the perfect place to relax.",
+        "features": {
+          "water": "Spring drinking water",
+          "deck": "Sunbathing deck",
+          "immersion": "Total nature immersion",
+          "path": "Exclusive forest walkway access"
+        }
+      },
+      "trails": {
+        "title": "Trails",
+        "description": "Explore our ecological trails, carefully maintained to provide a safe and enriching experience in the midst of the Amazon rainforest.",
+        "features": [
+          "Guided trails",
+          "Lush lagoons",
+          "Observation points",
+          "Rest areas"
+        ]
+      },
+      "communalArea": {
+        "title": "Communal Area",
+        "description": "Cozy space for moments of relaxation, reading, or simply enjoying nature. Equipped with hammocks, sofas, and tables, it's ideal for socializing.",
+        "features": [
+          "Outdoor lounge",
+          "Reading area",
+          "Wi-Fi available",
+          "Ambient lighting",
+          "Playhouse",
+          "Mini sand court"
+        ]
+      }
+    },
+    "activities": {
+      "title": "Activities",
+      "items": {
+        "birdwatching": {
+          "title": "Birdwatching",
+          "description": "Explore the rich diversity of birds in our natural sanctuary"
+        },
+        "recreation": {
+          "title": "Recreation",
+          "description": "Outdoor activities for the whole family"
+        },
+        "photography": {
+          "title": "Photography",
+          "description": "Unique settings for your best photos"
+        },
+        "meditation": {
+          "title": "Meditation",
+          "description": "Find peace and tranquility in our zen area",
+          "note": "Classes available upon request"
+        }
+      }
+    },
+    "sustainability": {
+      "title": "Sustainability",
+      "description": "At Jardim da Amazônia, sustainability is not just a concept, but a daily practice. Our commitment to the environment is reflected in every aspect of our operations.",
+      "features": [
+        "Solar energy",
+        "Natural water treatment",
+        "Organic composting",
+        "Selective waste collection",
+        "Biodegradable products",
+        "Organic garden",
+        "Environmental education",
+        "Flora and fauna preservation"
+      ]
+    },
+    "cta": {
+      "title": "Come Live This Experience",
+      "description": "Book your stay and discover the true meaning of connection with nature.",
+      "button": "Book Now"
     }
   }
 } 

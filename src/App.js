@@ -11,7 +11,7 @@ import Breadcrumb from './components/Breadcrumb';
 import CookieConsent from './components/CookieConsent';
 import Home from './pages/Home';
 import Acomodacoes from './pages/Acomodacoes';
-import AreasExternas from './pages/AreasExternas';
+import Lodge from './pages/Lodge';
 import Gastronomia from './pages/Gastronomia';
 import Birdwatching from './pages/Birdwatching';
 import Primatas from './pages/Primatas';
@@ -40,7 +40,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/acomodacoes" element={<Acomodacoes />} />
-          <Route path="/areas-externas" element={<AreasExternas />} />
+          <Route path="/lodge" element={<Lodge />} />
           <Route path="/gastronomia" element={<Gastronomia />} />
           <Route path="/birdwatching" element={<Birdwatching />} />
           <Route path="/primatas" element={<Primatas />} />
