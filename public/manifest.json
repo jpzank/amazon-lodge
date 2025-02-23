@@ -1,7 +1,7 @@
 {
   "short_name": "Jardim Amazônia",
   "name": "Jardim da Amazônia Lodge",
-  "description": "Experiências únicas de ecoturismo no coração da Amazônia",
+  "description": "Experiência de ecoturismo e birdwatching no coração da Amazônia",
   "icons": [
     {
       "src": "favicon.ico",
@@ -9,13 +9,13 @@
       "type": "image/x-icon"
     },
     {
-      "src": "logo192.png",
+      "src": "Logo Jd Amazonia.png",
       "type": "image/png",
       "sizes": "192x192",
       "purpose": "any maskable"
     },
     {
-      "src": "logo512.png",
+      "src": "Logo Jd Amazonia.png",
       "type": "image/png",
       "sizes": "512x512",
       "purpose": "any maskable"

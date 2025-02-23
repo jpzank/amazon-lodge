@@ -1634,5 +1634,123 @@
       "description": "Book your stay and discover the true meaning of connection with nature.",
       "button": "Book Now"
     }
+  },
+  "menu": {
+    "food": {
+      "title": "Menu",
+      "sections": {
+        "nonAlcoholic": {
+          "title": "NON-ALCOHOLIC BEVERAGES",
+          "juices": {
+            "title": "Natural Juices",
+            "items": {
+              "grapeAndLemonade": "Grape Juice, Special Lemonade"
+            }
+          },
+          "water": {
+            "title": "Water",
+            "items": {
+              "still": "Still Water",
+              "sparkling": "Sparkling Water"
+            }
+          },
+          "softDrinks": {
+            "title": "Soft Drinks",
+            "items": {
+              "list": "Coca-Cola, Coca-Cola Zero, Guaraná, Schweppes"
+            }
+          },
+          "energyDrinks": {
+            "title": "Energy Drinks"
+          }
+        },
+        "alcoholic": {
+          "title": "ALCOHOLIC BEVERAGES",
+          "beers": {
+            "title": "Beers",
+            "items": {
+              "longNeck": "Long Neck",
+              "can": "Can"
+            }
+          },
+          "drinks": {
+            "title": "Drinks and Cachaça",
+            "items": {
+              "caipirinha": "Caipirinha (Cachaça and lime)",
+              "caipiroska": "Caipiroska (Vodka and seasonal fruits)",
+              "cachacaShot": "Cachaça Shot (Colonial or Seleta)",
+              "campari": "Double Campari on ice"
+            }
+          }
+        },
+        "appetizers": {
+          "title": "APPETIZERS AND SNACKS",
+          "items": {
+            "coldCuts": {
+              "name": "Special House Cold Cuts",
+              "description": "Black olives, Cucumber and Cheese"
+            },
+            "fishStrips": {
+              "name": "House Fish Strips",
+              "description": "Matrinxã, Pintado or fish of the day"
+            },
+            "grilledCheese": {
+              "name": "Grilled Ham and Cheese",
+              "description": "Cheese, ham and tomato on white bread"
+            }
+          }
+        },
+        "quickDishes": {
+          "title": "QUICK DISHES",
+          "notice": "Available after buffet hours for guests",
+          "items": {
+            "gnocchi": {
+              "name": "Cassava Gnocchi with Tomato Sauce",
+              "description": "Tomato sauce with basil"
+            },
+            "spaghetti": {
+              "name": "Neapolitan Spaghetti",
+              "description": "Tomato sauce with basil"
+            }
+          }
+        },
+        "desserts": {
+          "title": "DESSERTS",
+          "items": {
+            "sagu": {
+              "name": "Sago Pudding",
+              "description": "Tapioca pearls cooked in sweetened red wine, served chilled"
+            },
+            "quickPie": {
+              "name": "Quick Pie",
+              "description": "Luscious chocolate ice cream dessert topped with airy whipped egg whites and crispy toasted coconut"
+            },
+            "iceCreamPudding": {
+              "name": "Ice Cream Pudding Cup",
+              "description": "Creamy, frozen custard-style dessert, blending the richness of ice cream, topped with a luscious chocolate syrup"
+            }
+          }
+        }
+      },
+      "footer": {
+        "dietaryRestrictions": "Please inform our staff about any dietary restrictions or allergies.",
+        "review": "Enjoyed your experience? Share your feedback!",
+        "reviewButton": "Rate us on Google"
+      }
+    },
+    "wine": {
+      "title": "Wine List",
+      "sections": {
+        "red": {
+          "title": "RED WINES"
+        },
+        "whiteAndSparkling": {
+          "title": "SPARKLING + WHITE WINES"
+        }
+      },
+      "footer": {
+        "pairing": "Perfect pairing with our sustainable gastronomy"
+      }
+    }
   }
 } 

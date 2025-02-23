@@ -18,7 +18,7 @@ function Cestas() {
         <div className="cestas-content max-w-3xl mx-auto">
           <div className="flex justify-between items-start mb-8 border-b border-black pb-4">
             <div>
-              <img src="/Logo_Jardim_Amazonia_COLORIDO.png" alt="Jardim da Amazônia" className="h-20 w-auto" />
+              <img src="/Logo Jd Amazonia.png" alt="Jardim da Amazônia" className="h-20 w-auto" />
             </div>
             <div className="text-right">
               <h1 className="text-2xl font-bold text-black mb-1">CESTAS DE PIQUENIQUE</h1>

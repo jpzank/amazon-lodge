@@ -18,11 +18,10 @@ function Menu() {
         <div className="menu-content max-w-3xl mx-auto">
           <div className="flex justify-between items-start mb-0.5 border-b border-black pb-0.5">
             <div>
-              <img src="/Logo_Jardim_Amazonia_COLORIDO.png" alt="Jardim da Amazônia" className="h-20 w-auto" />
+              <img src="/Logo Jd Amazonia.png" alt="Jardim da Amazônia" className="h-20 w-auto" />
             </div>
             <div className="text-right pt-1">
               <h1 className="text-xl font-bold text-black mb-0 leading-none">CARDÁPIO</h1>
-              <p className="text-sm text-gray-600 italic leading-tight">Sabores de Casa na Floresta</p>
             </div>
           </div>
 
@@ -80,7 +79,7 @@ function Menu() {
                   Refrigerantes
                 </h3>
                 <div className="flex items-baseline justify-between w-full mb-0.5 leading-tight">
-                  <span className="pr-1 text-sm text-gray-800 bg-white">Coca-Cola, Coca-Cola Zero, Guaraná, Sprite, Schweppes</span>
+                  <span className="pr-1 text-sm text-gray-800 bg-white">Coca-Cola, Coca-Cola Zero, Guaraná, Schweppes</span>
                   <div className="flex-1 mx-1 border-b border-dotted border-black relative -top-1"></div>
                   <div className="flex flex-col items-end gap-0.5 pl-1 bg-white">
                     <span className="font-semibold text-black whitespace-nowrap text-sm leading-tight">R$ 8</span>
@@ -174,9 +173,7 @@ function Menu() {
               </h2>
               
               <div className="pl-1">
-                <h3 className="text-base font-semibold text-gray-800 mb-0.5 relative pl-2 before:content-[''] before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 before:w-1 before:h-1 before:bg-black before:rounded-full leading-tight">
-                  Sanduíches e Lanches
-                </h3>
+                
                 <div className="flex items-baseline justify-between w-full mb-0.5 leading-tight">
                   <div>
                     <span className="pr-1 text-sm text-gray-800 bg-white">Prato de Frios Especial da Casa</span>
@@ -276,7 +273,6 @@ function Menu() {
           <div className="mt-6 pt-4 border-t border-gray-300 text-center">
             <div className="flex items-center justify-center gap-1 mb-1.5 italic">
               <span className="text-sm text-black">🌿</span>
-              <p>Sabores de Casa na Floresta</p>
             </div>
             
             <div className="flex justify-center items-center gap-8 mb-1.5">
@@ -289,7 +285,7 @@ function Menu() {
             </div>
 
             <div className="flex justify-center">
-              <img src="/QRCode.jpg" alt="Google Review QR Code" className="max-w-[60px]" />
+              <img src="/QR Code - Google Review.png" alt="Google Review QR Code" className="max-w-[60px]" />
             </div>
           </div>
         </div>

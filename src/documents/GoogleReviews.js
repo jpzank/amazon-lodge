@@ -37,7 +37,7 @@ function GoogleReviews() {
 
             <div className="flex-1 text-center md:text-right">
               <img 
-                src="/QRCode.jpg" 
+                src="/QR Code - Google Review.png" 
                 alt="QR Code para avaliação" 
                 className="w-48 h-48 mx-auto md:ml-auto"
               />
@@ -50,7 +50,7 @@ function GoogleReviews() {
 
           <div className="flex justify-center border-t border-gray-200 pt-8">
             <img 
-              src="/Logo_Jardim_Amazonia_COLORIDO.png" 
+              src="/Logo Jd Amazonia.png" 
               alt="Jardim da Amazônia" 
               className="h-16 w-auto"
             />

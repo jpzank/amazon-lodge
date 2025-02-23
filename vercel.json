@@ -1,7 +1,9 @@
 {
   "redirects": [
     { "source": "/general-9", "destination": "/", "permanent": true },
+    { "source": "/home-upcoming-retreats-1-1", "destination": "/", "permanent": true },
     { "source": "/a-pousada", "destination": "/lodge", "permanent": true },
+    { "source": "/rooms", "destination": "/acomodacoes", "permanent": true },
     { "source": "/the-lodge", "destination": "/lodge", "permanent": true },
     { "source": "/localizacao", "destination": "/como-chegar", "permanent": true },
     { "source": "/location", "destination": "/como-chegar", "permanent": true },

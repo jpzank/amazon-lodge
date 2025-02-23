@@ -1664,5 +1664,123 @@
       "description": "Reserve sua estadia e descubra o verdadeiro significado de conexão com a natureza.",
       "button": "Reserve Agora"
     }
+  },
+  "menu": {
+    "food": {
+      "title": "Cardápio",
+      "sections": {
+        "nonAlcoholic": {
+          "title": "BEBIDAS NÃO ALCOÓLICAS",
+          "juices": {
+            "title": "Sucos Naturais",
+            "items": {
+              "grapeAndLemonade": "Uva Integral, Limonada Especial"
+            }
+          },
+          "water": {
+            "title": "Águas",
+            "items": {
+              "still": "Água sem gás",
+              "sparkling": "Água com gás"
+            }
+          },
+          "softDrinks": {
+            "title": "Refrigerantes",
+            "items": {
+              "list": "Coca-Cola, Coca-Cola Zero, Guaraná, Schweppes"
+            }
+          },
+          "energyDrinks": {
+            "title": "Energéticos"
+          }
+        },
+        "alcoholic": {
+          "title": "BEBIDAS ALCOÓLICAS",
+          "beers": {
+            "title": "Cervejas",
+            "items": {
+              "longNeck": "Long Neck",
+              "can": "Lata"
+            }
+          },
+          "drinks": {
+            "title": "Drinks e Cachaças",
+            "items": {
+              "caipirinha": "Caipirinha (Cachaça e limão)",
+              "caipiroska": "Caipiroska (Vodka e frutas da estação)",
+              "cachacaShot": "Dose de Cachaça (Colonial ou Seleta)",
+              "campari": "Dupla dose de Campari com gelo"
+            }
+          }
+        },
+        "appetizers": {
+          "title": "ENTRADAS E PETISCOS",
+          "items": {
+            "coldCuts": {
+              "name": "Prato de Frios Especial da Casa",
+              "description": "Azeitona preta, Pepino e Queijo"
+            },
+            "fishStrips": {
+              "name": "Tirinhas de Peixe da Casa",
+              "description": "Matrinxã, Pintado ou peixe do dia"
+            },
+            "grilledCheese": {
+              "name": "Tostex Misto",
+              "description": "Queijo, presunto e tomate no pão de forma"
+            }
+          }
+        },
+        "quickDishes": {
+          "title": "PRATOS RÁPIDOS",
+          "notice": "Disponíveis após o horário do buffet para hóspedes",
+          "items": {
+            "gnocchi": {
+              "name": "Nhoque de Mandioca ao Sugo",
+              "description": "Molho de tomate com manjericão"
+            },
+            "spaghetti": {
+              "name": "Spaguetti Napolitano",
+              "description": "Molho de tomate com manjericão"
+            }
+          }
+        },
+        "desserts": {
+          "title": "SOBREMESAS",
+          "items": {
+            "sagu": {
+              "name": "Sagu",
+              "description": "Pérolas de tapioca cozidas em vinho tinto adoçado, servido gelado"
+            },
+            "quickPie": {
+              "name": "Torta Pra-já",
+              "description": "Deliciosa sobremesa de sorvete de chocolate coberta com claras em neve e coco torrado crocante"
+            },
+            "iceCreamPudding": {
+              "name": "Pudim de Sorvetão no Potinho",
+              "description": "Sobremesa cremosa estilo pudim congelado, combinando a riqueza do sorvete, coberto com uma deliciosa calda de chocolate"
+            }
+          }
+        }
+      },
+      "footer": {
+        "dietaryRestrictions": "Por favor, informe nossa equipe sobre restrições alimentares ou alergias.",
+        "review": "Gostou da experiência? Compartilhe sua opinião!",
+        "reviewButton": "Avalie-nos no Google"
+      }
+    },
+    "wine": {
+      "title": "Carta de Vinhos",
+      "sections": {
+        "red": {
+          "title": "VINHOS TINTOS"
+        },
+        "whiteAndSparkling": {
+          "title": "ESPUMANTES + VINHOS BRANCOS"
+        }
+      },
+      "footer": {
+        "pairing": "Harmonização perfeita com nossa gastronomia sustentável"
+      }
+    }
   }
 } 

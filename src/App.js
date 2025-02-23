@@ -30,6 +30,7 @@ import Template from './pages/Template';
 import EventosNatureza from './pages/EventosNatureza';
 import Galeria from './pages/Galeria';
 import PrivacyPolicy from './pages/PrivacyPolicy';
+import InteractiveMenu from './pages/InteractiveMenu';
 
 function App() {
   return (
@@ -59,6 +60,7 @@ function App() {
           <Route path="/eventos-natureza" element={<EventosNatureza />} />
           <Route path="/galeria" element={<Galeria />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/menu" element={<InteractiveMenu />} />
         </Routes>
         <Footer />
         <CookieConsent />

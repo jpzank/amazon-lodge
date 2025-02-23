@@ -18,7 +18,7 @@ function Receptivo() {
         <div className="receptivo-content max-w-3xl mx-auto">
           <div className="flex flex-col items-center mb-8 pb-8 border-b-2 border-gray-200">
             <img 
-              src="/Logo_Jardim_Amazonia_COLORIDO.png" 
+              src="/Logo Jd Amazonia.png" 
               alt="Jardim da Amazônia Lodge"
               className="h-24 w-auto mb-4"
             />
