@@ -1751,6 +1751,21 @@
       "footer": {
         "pairing": "Perfect pairing with our sustainable gastronomy"
       }
+    },
+    "schedule": {
+      "operatingHours": "Operating Hours",
+      "serviceTypes": "Service Types",
+      "breakfastLabel": "Breakfast",
+      "lunchLabel": "Lunch",
+      "dinnerLabel": "Dinner",
+      "breakfast": "7:00 AM - 9:30 AM",
+      "lunch": "12:00 PM - 2:30 PM",
+      "dinner": "7:00 PM - 9:30 PM",
+      "weekdays": "Monday-Friday",
+      "weekends": "Saturday-Sunday",
+      "groups": "Groups and Events",
+      "dailySpecial": "Daily Special",
+      "buffet": "Buffet"
     }
   }
 } 

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { GiWineBottle, GiGrapes } from 'react-icons/gi';
 import { CLOUDINARY_BASE_URL } from '../config/cloudinaryConfig';
 import { useTranslation } from 'react-i18next';
@@ -6,25 +6,6 @@ import { useTranslation } from 'react-i18next';
 function InteractiveMenu() {
   const [activeTab, setActiveTab] = useState('food'); // 'food' or 'wine'
   const { t, i18n } = useTranslation();
-  const [language, setLanguage] = useState(i18n.language);
-
-  // Listen to language changes from anywhere in the app
-  useEffect(() => {
-    // Initial sync with i18n language
-    setLanguage(i18n.language);
-
-    const handleLanguageChange = (lng) => {
-      setLanguage(lng);
-    };
-
-    // Subscribe to language changes
-    i18n.on('languageChanged', handleLanguageChange);
-
-    // Cleanup subscription
-    return () => {
-      i18n.off('languageChanged', handleLanguageChange);
-    };
-  }, [i18n]);
 
   const toggleLanguage = () => {
     const newLang = i18n.language === 'pt' ? 'en' : 'pt';
@@ -37,7 +18,7 @@ function InteractiveMenu() {
       <section 
         className="relative py-24 bg-cover bg-center bg-[#1a472a]"
         style={{
-          backgroundImage: `url(${CLOUDINARY_BASE_URL}/v1739834837/Jardim_da_Amazônia-2094_kvrs1j.jpg)`,
+          backgroundImage: `url(${CLOUDINARY_BASE_URL}/v1739835351/Jardim_da_Amazônia-2855_asjqeo)`,
         }}
       >
         <div className="absolute inset-0 bg-black/60"></div>
@@ -49,6 +30,54 @@ function InteractiveMenu() {
           </div>
         </div>
       </section>
+
+      {/* Meal Times and Service Information */}
+      <div className="border-t border-b border-[#1a472a]/20 py-4 mb-6">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto">
+            <div className="grid grid-cols-1 gap-4">
+              {/* Operating Hours */}
+              <div className="text-sm text-gray-600">
+                <div className="mb-4">
+                  <p className="text-[#1a472a] font-medium mb-2">{t('menu.schedule.operatingHours')}</p>
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-2">
+                    <div className="flex items-center space-x-2">
+                      <span className="text-[#1a472a]">•</span>
+                      <span>{t('menu.schedule.breakfastLabel')}: {t('menu.schedule.breakfast')}</span>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <span className="text-[#1a472a]">•</span>
+                      <span>{t('menu.schedule.lunchLabel')}: {t('menu.schedule.lunch')}</span>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <span className="text-[#1a472a]">•</span>
+                      <span>{t('menu.schedule.dinnerLabel')}: {t('menu.schedule.dinner')}</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div>
+                  <p className="text-[#1a472a] font-medium mb-2">{t('menu.schedule.serviceTypes')}</p>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+                    <div className="flex items-center space-x-2">
+                      <span className="text-[#1a472a]">•</span>
+                      <span>{t('menu.schedule.weekdays')}: {t('menu.schedule.dailySpecial')}</span>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <span className="text-[#1a472a]">•</span>
+                      <span>{t('menu.schedule.weekends')}: {t('menu.schedule.buffet')}</span>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <span className="text-[#1a472a]">•</span>
+                      <span>{t('menu.schedule.groups')}: {t('menu.schedule.buffet')}</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
       {/* Language Toggle */}
       <div className="fixed top-4 right-4 z-50">
@@ -453,7 +482,10 @@ function InteractiveMenu() {
                     <div>
                       <div className="flex justify-between items-baseline">
                         <h4 className="font-medium text-gray-800">KALEU MALBEC-BONARDA</h4>
-                        <span className="font-semibold">R$ 120,00</span>
+                        <div className="ml-4 flex items-baseline">
+                          <div className="border-b border-dotted border-gray-300 flex-grow w-16"></div>
+                          <span className="font-semibold whitespace-nowrap">R$ 120</span>
+                        </div>
                       </div>
                       <p className="text-sm text-gray-600">Mendoza | Aitor Ider Balbo</p>
                     </div>
@@ -461,7 +493,10 @@ function InteractiveMenu() {
                     <div>
                       <div className="flex justify-between items-baseline">
                         <h4 className="font-medium text-gray-800">ZAPA MALBEC</h4>
-                        <span className="font-semibold">R$ 140,00</span>
+                        <div className="ml-4 flex items-baseline">
+                          <div className="border-b border-dotted border-gray-300 flex-grow w-16"></div>
+                          <span className="font-semibold whitespace-nowrap">R$ 140</span>
+                        </div>
                       </div>
                       <p className="text-sm text-gray-600">Mendoza | Familia Falasconza</p>
                     </div>
@@ -475,7 +510,10 @@ function InteractiveMenu() {
                     <div>
                       <div className="flex justify-between items-baseline">
                         <h4 className="font-medium text-gray-800">RAVANAL SELECTION TERRIOR CARMENERE</h4>
-                        <span className="font-semibold">R$ 120,00</span>
+                        <div className="ml-4 flex items-baseline">
+                          <div className="border-b border-dotted border-gray-300 flex-grow w-16"></div>
+                          <span className="font-semibold whitespace-nowrap">R$ 120</span>
+                        </div>
                       </div>
                       <p className="text-sm text-gray-600">Valle Central | Vinos Ravanal</p>
                     </div>
@@ -483,7 +521,10 @@ function InteractiveMenu() {
                     <div>
                       <div className="flex justify-between items-baseline">
                         <h4 className="font-medium text-gray-800">VIU MANENT RESERVA CARBERNET SAUVIGNON</h4>
-                        <span className="font-semibold">R$ 170,00</span>
+                        <div className="ml-4 flex items-baseline">
+                          <div className="border-b border-dotted border-gray-300 flex-grow w-16"></div>
+                          <span className="font-semibold whitespace-nowrap">R$ 170</span>
+                        </div>
                       </div>
                       <p className="text-sm text-gray-600">Valle Colchagua | Viu Manent</p>
                     </div>
@@ -491,7 +532,10 @@ function InteractiveMenu() {
                     <div>
                       <div className="flex justify-between items-baseline">
                         <h4 className="font-medium text-gray-800">DON CAYTANO PINOT NOIR</h4>
-                        <span className="font-semibold">R$ 120,00</span>
+                        <div className="ml-4 flex items-baseline">
+                          <div className="border-b border-dotted border-gray-300 flex-grow w-16"></div>
+                          <span className="font-semibold whitespace-nowrap">R$ 120</span>
+                        </div>
                       </div>
                       <p className="text-sm text-gray-600">Valle Central</p>
                     </div>
@@ -510,7 +554,10 @@ function InteractiveMenu() {
                 <div>
                   <div className="flex justify-between items-baseline">
                     <h4 className="font-medium text-gray-800">BOSSA BRUT</h4>
-                    <span className="font-semibold">R$ 145,00</span>
+                    <div className="ml-4 flex items-baseline">
+                      <div className="border-b border-dotted border-gray-300 flex-grow w-16"></div>
+                      <span className="font-semibold whitespace-nowrap">R$ 145</span>
+                    </div>
                   </div>
                   <p className="text-sm text-gray-600">Bento Gonçalves | Cave Hermann</p>
                 </div>
@@ -521,7 +568,10 @@ function InteractiveMenu() {
                     <div>
                       <div className="flex justify-between items-baseline">
                         <h4 className="font-medium text-gray-800">ZAPA TORRONTES</h4>
-                        <span className="font-semibold">R$ 140,00</span>
+                        <div className="ml-4 flex items-baseline">
+                          <div className="border-b border-dotted border-gray-300 flex-grow w-16"></div>
+                          <span className="font-semibold whitespace-nowrap">R$ 140</span>
+                        </div>
                       </div>
                       <p className="text-sm text-gray-600">Mendoza | Familia Falascomza</p>
                     </div>
@@ -529,7 +579,10 @@ function InteractiveMenu() {
                     <div>
                       <div className="flex justify-between items-baseline">
                         <h4 className="font-medium text-gray-800">RAVANAL SELECTION TERRIOR SAUVIGNON BLANC</h4>
-                        <span className="font-semibold">R$ 120,00</span>
+                        <div className="ml-4 flex items-baseline">
+                          <div className="border-b border-dotted border-gray-300 flex-grow w-16"></div>
+                          <span className="font-semibold whitespace-nowrap">R$ 120</span>
+                        </div>
                       </div>
                       <p className="text-sm text-gray-600">Valle Central | Vinos Ravanal</p>
                     </div>
@@ -537,7 +590,10 @@ function InteractiveMenu() {
                     <div>
                       <div className="flex justify-between items-baseline">
                         <h4 className="font-medium text-gray-800">RAVANAL SELECTION TERRIOR CHARDONNAY</h4>
-                        <span className="font-semibold">R$ 120,00</span>
+                        <div className="ml-4 flex items-baseline">
+                          <div className="border-b border-dotted border-gray-300 flex-grow w-16"></div>
+                          <span className="font-semibold whitespace-nowrap">R$ 120</span>
+                        </div>
                       </div>
                       <p className="text-sm text-gray-600">Valle Central | Vinos Ravanal</p>
                     </div>
@@ -555,8 +611,8 @@ function InteractiveMenu() {
             <footer className="text-center pt-8 pb-6">
               <div className="max-w-sm mx-auto bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
                 <div className="p-6 space-y-4">
-                  <div className="flex items-center justify-center space-x-2 mb-3">
-                    <span className="text-yellow-400 text-2xl">⭐</span>
+                  <div className="flex flex-col items-center justify-center">
+                    <div className="text-yellow-400 text-2xl mb-2">⭐⭐⭐⭐⭐</div>
                     <h3 className="text-gray-800 font-medium text-lg">
                       {t('menu.food.footer.review')}
                     </h3>
@@ -570,11 +626,6 @@ function InteractiveMenu() {
                     {t('menu.food.footer.reviewButton')}
                   </a>
                   <div className="pt-2">
-                    <img 
-                      src="/QR Code - Google Review.png" 
-                      alt="Google Review QR Code" 
-                      className="w-24 mx-auto hover:scale-110 transition-transform cursor-pointer" 
-                    />
                   </div>
                 </div>
               </div>

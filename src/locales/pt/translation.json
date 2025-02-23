@@ -1781,6 +1781,21 @@
       "footer": {
         "pairing": "Harmonização perfeita com nossa gastronomia sustentável"
       }
+    },
+    "schedule": {
+      "operatingHours": "Horários de Funcionamento",
+      "serviceTypes": "Tipos de Serviço",
+      "breakfastLabel": "Café",
+      "lunchLabel": "Almoço",
+      "dinnerLabel": "Jantar",
+      "breakfast": "07:00 - 09:30",
+      "lunch": "12:00 - 14:30",
+      "dinner": "19:00 - 21:30",
+      "weekdays": "Segunda-Sexta",
+      "weekends": "Sábado-Domingo",
+      "groups": "Grupos e Eventos",
+      "dailySpecial": "Prato do Dia",
+      "buffet": "Buffet"
     }
   }
 } 
