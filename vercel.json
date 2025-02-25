@@ -45,11 +45,9 @@
       ]
     }
   ],
-  "routes": [
-    {
-      "src": "/api/vitals",
-      "methods": ["POST"],
-      "dest": "/api/vitals"
+  "functions": {
+    "api/*.js": {
+      "memory": 128
     }
-  ]
+  }
 } 
