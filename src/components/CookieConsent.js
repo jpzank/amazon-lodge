@@ -1,9 +1,7 @@
 import React from 'react';
-import { useTranslation } from 'react-i18next';
 import { inject } from '@vercel/analytics';
 
 const CookieConsent = () => {
-  const { t } = useTranslation();
   const [showConsent, setShowConsent] = React.useState(true);
 
   // Simple function to set cookie
@@ -53,31 +51,26 @@ const CookieConsent = () => {
   if (!showConsent) return null;
 
   return (
-    <div className="fixed bottom-4 left-4 right-4 md:left-8 md:right-auto bg-white/95 text-gray-600 p-3 rounded-lg shadow-lg z-50 max-w-md">
-      <div className="flex flex-col gap-2">
-        <div className="text-xs md:text-sm">
-          {t('cookieConsent.message')}
-          <a 
-            href="/privacy-policy" 
-            className="text-primary-dark hover:underline ml-1"
-          >
-            {t('cookieConsent.learnMore')}
-          </a>
-        </div>
-        <div className="flex gap-2 justify-end">
-          <button
-            onClick={handleDecline}
-            className="px-3 py-1 text-xs text-gray-500 hover:text-gray-700 transition-colors"
-          >
-            {t('cookieConsent.decline')}
-          </button>
-          <button
-            onClick={handleAccept}
-            className="px-3 py-1 text-xs bg-primary-dark text-white rounded hover:bg-primary-dark/90 transition-colors"
-          >
-            {t('cookieConsent.accept')}
-          </button>
-        </div>
+    <div className="fixed bottom-4 left-4 z-[49] animate-fadeIn">
+      <div className="relative bg-white/90 backdrop-blur-sm text-gray-700 py-2 px-3 rounded-lg shadow-md border border-gray-100 flex flex-col items-center gap-2 max-w-[140px]">
+        <button 
+          onClick={handleDecline}
+          className="absolute -top-1 -left-1 bg-white/90 text-gray-400 hover:text-gray-600 text-[10px] rounded-full flex items-center justify-center w-5 h-5 shadow-sm border border-gray-100"
+          aria-label="Close"
+        >
+          ✕
+        </button>
+        
+        <span className="text-[10px] leading-tight text-center">
+          Cookies para melhorar experiência
+        </span>
+        
+        <button
+          onClick={handleAccept}
+          className="bg-primary-dark text-white text-[11px] font-medium px-4 py-1 rounded-full hover:bg-primary-dark/90 transition-colors w-full"
+        >
+          OK
+        </button>
       </div>
     </div>
   );
