@@ -197,7 +197,7 @@ export const folderImageMapping = {
   "logo": {
     "icon-jardim-amazonia-icon-ewbegs": "ICON_Jardim_Amazonia_ICON_ewbegs",
     "old-logo-px6hs1": "old_logo_px6hs1",
-    "icon-jardim-amazonia-mono-aig95p": "ICON_Jardim_Amazonia_MONO_aig95p",
+    "icon-jardim-amazonia-mono-aig95p": "Logo_Jardim_Amazonia_MONO_tfjrct",
     "logo-jardim-amazonia-mono-tfjrct": "Logo_Jardim_Amazonia_MONO_tfjrct",
     "logo-jardim-amazonia-full-si8vyk": "Logo_Jardim_Amazonia_FULL_si8vyk"
   },

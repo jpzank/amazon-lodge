@@ -80,6 +80,29 @@ export const siteConfig = {
       ]
     },
 
+    conservation: {
+      title: 'CONSERVAÇÃO',
+      subtitle: 'Preservando o futuro da Amazônia',
+      description: 'Comprometidos com a preservação da biodiversidade, atuamos em diversas frentes de conservação e pesquisa científica.',
+      items: [
+        {
+          id: 'research',
+          title: 'Pesquisa Científica',
+          desc: 'Apoiamos cientistas e pesquisadores em estudos sobre a fauna e flora locais.'
+        },
+        {
+          id: 'education',
+          title: 'Educação Ambiental',
+          desc: 'Programas educativos para comunidades locais e visitantes.'
+        },
+        {
+          id: 'sustainable',
+          title: 'Turismo Sustentável',
+          desc: 'Práticas de baixo impacto que beneficiam o meio ambiente e a comunidade.'
+        }
+      ]
+    },
+
     recognition: {
       items: [
         {

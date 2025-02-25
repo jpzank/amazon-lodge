@@ -68,3 +68,37 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+## Logging System
+
+This project implements a centralized logging system with environment-aware behavior:
+
+### Usage
+
+```javascript
+import logger from '../utils/logger';
+
+// Different logging levels
+logger.error('This is an error message');
+logger.warn('This is a warning message');
+logger.info('This is an info message');
+logger.debug('This is a debug message');
+logger.trace('This is a trace message'); // Only shown when REACT_APP_TRACE_LOGGING=true
+```
+
+### Features
+
+- **Environment-aware**: Prevents logs from appearing in production (except errors)
+- **Consistent formatting**: All logs follow the same format
+- **Multiple log levels**: error, warn, info, debug, trace
+- **Trace logging**: Ultra-verbose logging that can be enabled with an environment variable
+
+### Configuration
+
+To enable trace logging for component debugging:
+
+```
+REACT_APP_TRACE_LOGGING=true npm start
+```
+
+For implementing error tracking services like Sentry in production, edit the `logger.js` file.
