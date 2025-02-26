@@ -12,9 +12,6 @@
     { "source": "/location", "destination": "/como-chegar", "permanent": true },
     { "source": "/restaurante", "destination": "/gastronomia", "permanent": true },
     { "source": "/restaurant", "destination": "/gastronomia", "permanent": true },
-    { "source": "http://jardimamazonia.com", "destination": "https://www.jardimamazonia.com", "permanent": true },
-    { "source": "http://www.jardimamazonia.com", "destination": "https://www.jardimamazonia.com", "permanent": true },
-    { "source": "https://jardimamazonia.com", "destination": "https://www.jardimamazonia.com", "permanent": true },
     { "source": "/suldamazonia", "destination": "/", "permanent": true },
     { "source": "/estacaodepesquisa", "destination": "/estacao-pesquisa", "permanent": true },
     { "source": "/_frog", "destination": "/", "permanent": true },
@@ -55,9 +52,7 @@
       ]
     }
   ],
-  "functions": {
-    "api/*.js": {
-      "memory": 128
-    }
-  }
+  "framework": "create-react-app",
+  "buildCommand": "npm run build",
+  "outputDirectory": "build"
 } 
