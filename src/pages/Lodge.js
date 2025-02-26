@@ -70,7 +70,9 @@ const Lodge = () => {
       <SEO 
         title={t('meta.lodge.title')}
         description={t('meta.lodge.description')}
-        image="https://res.cloudinary.com/dxlhv2mji/image/upload/v1739842392/Jardim_da_Amazônia-3829_hauhip.jpg"
+        image="https://res.cloudinary.com/dxlhv2mji/image/upload/v1736085785/lodge-hero_kqnp26.jpg"
+        canonicalUrl="https://www.jardimamazonia.com/lodge"
+        noindex={false}
       />
       <div className="min-h-screen bg-white">
         {/* Hero Section */}

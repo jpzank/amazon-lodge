@@ -8,7 +8,7 @@ export const cld = new Cloudinary({
 });
 
 export const CLOUDINARY_BASE_URL = 'https://res.cloudinary.com/dxlhv2mji/image/upload';
-export const DEFAULT_TRANSFORMATIONS = 'f_auto,q_auto';
+export const DEFAULT_TRANSFORMATIONS = 'f_auto,q_auto:eco,w_auto,c_limit';
 
 export const folderImageMapping = {
   "home": {
@@ -1227,3 +1227,43 @@ export function getImagePhotographer(
 
 export type CloudinaryFolders = keyof typeof folderImageMapping;
 export type CloudinaryImageNames<T extends CloudinaryFolders> = keyof typeof folderImageMapping[T];
+
+export function getResponsiveImage(
+  folder: keyof typeof folderImageMapping,
+  imageName: string,
+  options: {
+    maxWidth?: number;
+    quality?: number;
+    format?: 'auto' | 'webp' | 'jpg' | 'png';
+  } = {}
+): string {
+  const { maxWidth = 1200, quality = 'auto', format = 'auto' } = options;
+  const transformations = [
+    `f_${format}`,
+    typeof quality === 'number' ? `q_${quality}` : 'q_auto:eco',
+    `w_auto,c_limit,w_${maxWidth}`,
+    'dpr_auto'
+  ].join(',');
+  
+  return getFolderImage(folder, imageName, transformations);
+}
+
+export function getThumbnailImage(
+  folder: keyof typeof folderImageMapping,
+  imageName: string,
+  options: {
+    width?: number;
+    height?: number;
+    quality?: number;
+  } = {}
+): string {
+  const { width = 200, height = 200, quality = 60 } = options;
+  const transformations = [
+    'f_auto',
+    `q_${quality}`,
+    `w_${width},h_${height},c_fill,g_auto`,
+    'e_blur:200,e_grayscale'
+  ].join(',');
+  
+  return getFolderImage(folder, imageName, transformations);
+}

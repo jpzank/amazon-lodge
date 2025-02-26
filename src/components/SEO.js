@@ -5,23 +5,30 @@ import { useLocation } from 'react-router-dom';
 const SEO = ({ 
   title, 
   description,
-  image = 'https://res.cloudinary.com/dxvjcuqyy/image/upload/v1708472386/Jardim_da_Amazônia-1_nmhh66.jpg',
-  url,
-  keywords = 'Amazonia birdwatching, Amazon rainforest research, bird watching Brazil, Amazon wildlife observation, scientific research Amazon, biodiversity studies, Amazon nature lodge, bird species Amazon, wildlife photography Amazon, ecological research station'
+  image = 'https://res.cloudinary.com/dxlhv2mji/image/upload/v1736085785/gatronomia-hero_kqnp26.jpg',
+  keywords = '',
+  noindex = false,
+  canonicalUrl = null
 }) => {
   const location = useLocation();
-  const siteName = 'Jardim da Amazônia';
-  const baseUrl = 'https://www.jardimamazonia.com';
-  const fullUrl = url || `${baseUrl}${location.pathname}`;
+  const { pathname } = location;
+  const siteName = 'Jardim Amazônia Lodge';
+  const fullUrl = `https://www.jardimamazonia.com${pathname}`;
   
+  // Define the canonical URL - either provided or current URL
+  const canonical = canonicalUrl || fullUrl;
+
+  // Check if this page is a redirect target
+  const isRedirectTarget = ['/lodge', '/acomodacoes', '/como-chegar', '/gastronomia'].includes(pathname);
+
   // Structured data for better search engine understanding
   const structuredData = {
     '@context': 'https://schema.org',
-    '@type': ['TouristAttraction', 'LodgingBusiness', 'ResearchProject'],
+    '@type': 'LodgingBusiness',
     name: siteName,
     description,
     image,
-    url: fullUrl,
+    url: canonical,
     address: {
       '@type': 'PostalAddress',
       addressCountry: 'BR',
@@ -59,8 +66,22 @@ const SEO = ({
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
 
+      {/* Indexing directives */}
+      {noindex || isRedirectTarget ? (
+        <meta name="robots" content="noindex, follow" />
+      ) : (
+        <meta name="robots" content="index, follow" />
+      )}
+      
+      {/* Canonical URL */}
+      <link rel="canonical" href={canonical} />
+
+      {/* Language alternates */}
+      <link rel="alternate" hreflang="pt-BR" href={`${canonical}?lang=pt`} />
+      <link rel="alternate" hreflang="en" href={`${canonical}?lang=en`} />
+      <link rel="alternate" hreflang="x-default" href={canonical} />
+
       {/* Additional meta tags for search engines */}
-      <meta name="robots" content="index, follow" />
       <meta name="googlebot" content="index, follow" />
       <meta name="language" content="English, Portuguese" />
       <meta name="revisit-after" content="7 days" />
@@ -69,7 +90,7 @@ const SEO = ({
       <meta property="og:title" content={`${title} | ${siteName} - Amazon Birdwatching & Research Station`} />
       <meta property="og:description" content={description} />
       <meta property="og:image" content={image} />
-      <meta property="og:url" content={fullUrl} />
+      <meta property="og:url" content={canonical} />
       <meta property="og:type" content="website" />
       <meta property="og:site_name" content={siteName} />
       <meta property="og:locale" content="en_US" />

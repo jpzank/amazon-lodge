@@ -11,6 +11,7 @@ import {
   MdOutlineCake
 } from 'react-icons/md';
 import { BsCheckCircle } from 'react-icons/bs';
+import SEO from '../components/SEO';
 
 const EventosNatureza = () => {
   const { t } = useTranslation();
@@ -84,6 +85,12 @@ const EventosNatureza = () => {
 
   return (
     <div className="min-h-screen bg-white">
+      <SEO 
+        title={t('meta.eventosNatureza.title')}
+        description={t('meta.eventosNatureza.description')}
+        canonicalUrl="https://www.jardimamazonia.com/eventos-natureza"
+        noindex={false}
+      />
       {/* Hero Section */}
       <div 
         className="relative h-[60vh] flex items-center justify-center text-center text-white"
