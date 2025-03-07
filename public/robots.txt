@@ -29,4 +29,4 @@ Disallow: /*?*query=
 Crawl-delay: 10
 
 # Sitemap
-Sitemap: https://www.jardimamazonia.com.br/sitemap.xml
+Sitemap: https://www.jardimdaamazonia.com.br/sitemap.xml

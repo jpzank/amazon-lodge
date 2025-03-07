@@ -3,7 +3,7 @@ export const siteConfig = {
   site: {
     name: 'Jardim da Amazônia',
     description: 'Um Refúgio de Riquezas Naturais',
-    baseUrl: process.env.REACT_APP_BASE_URL || 'https://www.jardimamazonia.com',
+    baseUrl: process.env.REACT_APP_BASE_URL || 'https://www.jardimdaamazonia.com',
     bookingUrl: 'https://book.omnibees.com/hotel/19972?lang=pt-BR&currencyId=16&version=4'
   },
 
@@ -17,7 +17,7 @@ export const siteConfig = {
     instagram: 'https://instagram.com/jardimdaamazonia',
     facebook: 'https://www.facebook.com/jdamazonia',
     tripadvisor: 'https://www.tripadvisor.com.br/Hotel_Review-g2510096-d2500139-Reviews-or5-Jardim_Da_Amazonia_Lodge-Sao_Jose_do_Rio_Claro_State_of_Mato_Grosso.html',
-    email: 'atendimento@jardimamazonia.com',
+    email: 'atendimento@jardimdaamazonia.com',
     
     // Main Navigation
     home: '/',

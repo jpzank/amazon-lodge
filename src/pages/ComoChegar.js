@@ -165,7 +165,7 @@ const ComoChegar = () => {
                 <span className="text-lg font-medium">WhatsApp</span>
               </a>
               <a
-                href="mailto:atendimento@jardimamazonia.com"
+                href="mailto:atendimento@jardimdaamazonia.com"
                 className="flex items-center justify-center gap-4 bg-primary text-white py-4 px-8 rounded-lg hover:bg-primary-dark transition-colors duration-300"
               >
                 <FaEnvelope className="w-6 h-6" />

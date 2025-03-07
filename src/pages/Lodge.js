@@ -71,7 +71,7 @@ const Lodge = () => {
         title={t('meta.lodge.title')}
         description={t('meta.lodge.description')}
         image="https://res.cloudinary.com/dxlhv2mji/image/upload/v1736085785/lodge-hero_kqnp26.jpg"
-        canonicalUrl="https://www.jardimamazonia.com/lodge"
+        canonicalUrl="https://www.jardimdaamazonia.com/lodge"
         noindex={false}
       />
       <div className="min-h-screen bg-white">

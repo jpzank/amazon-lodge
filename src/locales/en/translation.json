@@ -1014,7 +1014,7 @@
         "questions": {
           "howTo": {
             "question": "How can I make a reservation?",
-            "answer": "You can make reservations through:\n- Our website\n- Email: reservas@jardimamazonia.com\n- WhatsApp: +55 65 4042-0595"
+            "answer": "You can make reservations through:\n- Our website\n- Email: reservas@jardimdaamazonia.com\n- WhatsApp: +55 65 4042-0595"
           },
           "cancellation": {
             "question": "What is your cancellation policy?",
@@ -1543,7 +1543,7 @@
     "contact": {
       "title": "Privacy Contact",
       "description": "For questions related to privacy or cookie usage on our site, please contact us through:",
-      "email": "atendimento@jardimamazonia.com"
+      "email": "atendimento@jardimdaamazonia.com"
     },
     "updates": {
       "title": "Policy Updates",

@@ -147,7 +147,7 @@ const EstacaoPesquisa = () => {
             </p>
             <div className="flex justify-center">
               <a 
-                href="mailto:adm@jardimamazonia.com"
+                href="mailto:adm@jardimdaamazonia.com"
                 className="inline-flex items-center justify-center px-10 py-4 bg-primary text-white text-lg font-medium rounded-xl hover:bg-primary-dark transition-all duration-300 transform hover:-translate-y-1 shadow-lg hover:shadow-xl"
               >
                 {t('researchStation.contact.button')}

@@ -88,7 +88,7 @@ const EventosNatureza = () => {
       <SEO 
         title={t('meta.eventosNatureza.title')}
         description={t('meta.eventosNatureza.description')}
-        canonicalUrl="https://www.jardimamazonia.com/eventos-natureza"
+        canonicalUrl="https://www.jardimdaamazonia.com/eventos-natureza"
         noindex={false}
       />
       {/* Hero Section */}

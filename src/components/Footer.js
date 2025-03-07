@@ -55,7 +55,7 @@ function Footer() {
             <li>
               <strong className="text-white font-medium">{t('footer.sections.contact.email')}</strong>
               <a href={`mailto:${siteConfig.buttonLinks.email}`} className="text-white/80 hover:text-white transition-default text-[0.95rem] ml-1">
-                atendimento@jardimamazonia.com
+                atendimento@jardimdaamazonia.com
               </a>
             </li>
             <li>

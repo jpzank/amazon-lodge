@@ -13,7 +13,7 @@ const SEO = ({
   const location = useLocation();
   const { pathname } = location;
   const siteName = 'Jardim Amazônia Lodge';
-  const fullUrl = `https://www.jardimamazonia.com${pathname}`;
+  const fullUrl = `https://www.jardimdaamazonia.com${pathname}`;
   
   // Define the canonical URL - either provided or current URL
   const canonical = canonicalUrl || fullUrl;

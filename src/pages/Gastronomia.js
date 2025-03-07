@@ -13,7 +13,7 @@ const Gastronomia = () => {
         title={t('meta.gastronomia.title')}
         description={t('meta.gastronomia.description')}
         image="https://res.cloudinary.com/dxlhv2mji/image/upload/v1736085785/gatronomia-hero_kqnp26.jpg"
-        canonicalUrl="https://www.jardimamazonia.com/gastronomia"
+        canonicalUrl="https://www.jardimdaamazonia.com/gastronomia"
         noindex={false}
       />
       <div className="min-h-screen bg-white">

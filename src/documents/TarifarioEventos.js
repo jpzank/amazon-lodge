@@ -257,7 +257,7 @@ function TarifarioEventos() {
             <p>Valores sujeitos a alteração sem aviso prévio.</p>
             <p className="mt-2">
               Para mais informações e reservas: <br />
-              WhatsApp: (65) 99675-1401 | E-mail: atendimento@jardimamazonia.com
+              WhatsApp: (65) 99675-1401 | E-mail: atendimento@jardimdaamazonia.com
             </p>
           </div>
         </div>
