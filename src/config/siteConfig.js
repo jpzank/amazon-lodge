@@ -167,7 +167,7 @@ export const themeConfig = {
     fontFamily: {
       primary: "'Montserrat', sans-serif",
       secondary: "'Lato', sans-serif",
-      tertiary: "'Poppins', sans-serif"
+      tertiary: "'Montserrat', sans-serif"
     },
     fontSize: {
       xs: '0.75rem',

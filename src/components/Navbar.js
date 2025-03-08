@@ -55,18 +55,18 @@ function Navbar() {
   }, [location]);
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 h-20 lg:h-[80px] z-50 transition-colors duration-300
+    <nav className={`fixed top-0 left-0 right-0 h-16 lg:h-[64px] z-50 transition-colors duration-300
       ${isScrolled || !isHome ? 'bg-primary-dark/85' : 'bg-transparent hover:bg-primary-dark/85'}`}>
-      <div className="max-w-[1920px] mx-auto h-full px-4 lg:px-12">
+      <div className="max-w-[1920px] mx-auto h-full px-4 lg:px-8">
         <div className="h-full flex items-center justify-between">
           {/* Logo */}
-          <div className="w-[200px]">
+          <div className="w-[180px]">
             {!isHome && (
-              <Link to={siteConfig.buttonLinks.home} className="h-[50px] lg:h-[70px] flex items-center" onClick={handleLinkClick}>
+              <Link to={siteConfig.buttonLinks.home} className="h-[40px] lg:h-[50px] flex items-center" onClick={handleLinkClick}>
                 <img src="/logo-white.png" alt="Jardim da Amazônia" className="h-full w-auto transition-transform duration-300" />
               </Link>
             )}
-            {isHome && <div className="h-[50px] lg:h-[70px]" />}
+            {isHome && <div className="h-[40px] lg:h-[50px]" />}
           </div>
 
           {/* Center Navigation */}
@@ -81,12 +81,12 @@ function Navbar() {
                 <div className="flex-1 overflow-y-auto py-6 lg:py-0 lg:overflow-visible">
                   <ul className="flex flex-col lg:flex-row lg:items-center lg:justify-center w-full">
                     {/* Main Menu Items */}
-                    <div className="flex flex-col lg:flex-row lg:gap-16 lg:items-center">
+                    <div className="flex flex-col lg:flex-row lg:gap-10 lg:items-center">
                       {/* Hospedagem Dropdown */}
                       <li className="w-full lg:w-auto lg:h-full lg:relative group">
                         <button
                           onClick={() => handleDropdownClick(0)}
-                          className="w-full lg:w-auto px-6 lg:px-4 py-3 lg:py-8 text-white text-lg lg:text-base font-medium 
+                          className="w-full lg:w-auto px-6 lg:px-3 py-3 lg:py-6 text-white text-lg lg:text-sm font-medium 
                             uppercase tracking-wider font-primary hover:text-white/80 transition-colors duration-300
                             flex justify-between lg:block items-center"
                           aria-expanded={activeDropdown === 0}
@@ -110,7 +110,7 @@ function Navbar() {
                       <li className="w-full lg:w-auto lg:h-full lg:relative group">
                         <button
                           onClick={() => handleDropdownClick(1)}
-                          className="w-full lg:w-auto px-6 lg:px-4 py-3 lg:py-8 text-white text-lg lg:text-base font-medium 
+                          className="w-full lg:w-auto px-6 lg:px-3 py-3 lg:py-6 text-white text-lg lg:text-sm font-medium 
                             uppercase tracking-wider font-primary hover:text-white/80 transition-colors duration-300
                             flex justify-between lg:block items-center"
                           aria-expanded={activeDropdown === 1}
@@ -135,7 +135,7 @@ function Navbar() {
                       <li className="w-full lg:w-auto lg:h-full lg:relative group">
                         <button
                           onClick={() => handleDropdownClick(2)}
-                          className="w-full lg:w-auto px-6 lg:px-4 py-3 lg:py-8 text-white text-lg lg:text-base font-medium 
+                          className="w-full lg:w-auto px-6 lg:px-3 py-3 lg:py-6 text-white text-lg lg:text-sm font-medium 
                             uppercase tracking-wider font-primary hover:text-white/80 transition-colors duration-300
                             flex justify-between lg:block items-center"
                           aria-expanded={activeDropdown === 2}
@@ -159,7 +159,7 @@ function Navbar() {
                       <li className="w-full lg:w-auto lg:h-full lg:relative group">
                         <button
                           onClick={() => handleDropdownClick(3)}
-                          className="w-full lg:w-auto px-6 lg:px-4 py-3 lg:py-8 text-white text-lg lg:text-base font-medium 
+                          className="w-full lg:w-auto px-6 lg:px-3 py-3 lg:py-6 text-white text-lg lg:text-sm font-medium 
                             uppercase tracking-wider font-primary hover:text-white/80 transition-colors duration-300
                             flex justify-between lg:block items-center"
                           aria-expanded={activeDropdown === 3}
@@ -179,28 +179,38 @@ function Navbar() {
                     </div>
 
                     {/* Language and Reserve Buttons */}
-                    <div className="lg:flex items-center gap-6">
-                      <li className="lg:flex items-center gap-6">
-                        <button
-                          onClick={toggleLanguage}
-                          className="hidden lg:block px-3 py-1 text-white text-sm font-medium border border-white/20 rounded
-                            hover:bg-white/10 hover:border-accent transition-all duration-300"
-                        >
-                          {i18n.language.toUpperCase()}
-                        </button>
-                      </li>
+                    <div className="flex items-center">
+                      {/* Vertical Divider */}
+                      <div className="hidden lg:block h-6 w-px bg-white/20 mx-4"></div>
+                      
+                      {/* Language Toggle - Desktop */}
+                      <button 
+                        onClick={toggleLanguage}
+                        className="lg:mx-3 px-3 lg:px-3 py-1 lg:py-1 text-white text-lg lg:text-sm font-medium 
+                          uppercase tracking-wider font-primary hover:text-white/80 transition-all duration-300 
+                          flex items-center justify-center rounded-full border-2 border-white/40 bg-white/15 
+                          hover:bg-white/25 hover:border-white/50 hover:scale-105 
+                          min-w-[42px] h-[42px] shadow-sm relative overflow-hidden"
+                        aria-label={i18n.language === 'pt' ? 'Mudar para inglês' : 'Change to Portuguese'}
+                      >
+                        <span className="relative z-10">{i18n.language === 'pt' ? 'pt' : 'en'}</span>
+                        <span className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/10 to-white/0 opacity-0 hover:opacity-100 transition-opacity duration-500"></span>
+                      </button>
                     </div>
                   </ul>
                 </div>
 
                 {/* Bottom Actions - Mobile Only */}
                 <div className="lg:hidden border-t border-white/10 p-6 space-y-4">
+                  {/* Language Toggle - Mobile */}
                   <button
                     onClick={toggleLanguage}
-                    className="w-full px-4 py-2 text-white text-base font-medium border border-white/20 rounded
-                      hover:bg-white/10 transition-colors duration-300"
+                    className="flex items-center justify-center px-4 py-2 text-white text-base font-medium 
+                      border-2 border-white/40 bg-white/15 rounded-full w-[80px] mx-auto
+                      hover:bg-white/25 hover:border-white/50 hover:scale-105 transition-all duration-300 shadow-sm"
+                    aria-label={i18n.language === 'pt' ? 'Mudar para inglês' : 'Change to Portuguese'}
                   >
-                    {i18n.language.toUpperCase()}
+                    {i18n.language === 'pt' ? 'pt' : 'en'}
                   </button>
 
                   <a
@@ -217,31 +227,28 @@ function Navbar() {
             </div>
           </div>
 
-          {/* Mobile Menu Button */}
-          <button
-            className="lg:hidden flex flex-col justify-center gap-1.5 w-8 h-8 z-50"
-            onClick={toggleMenu}
-            aria-label="Toggle menu"
-          >
-            <span className={`block w-6 h-0.5 bg-white transition-all duration-300 transform origin-center
-              ${isOpen ? 'rotate-45 translate-y-2' : ''}`} />
-            <span className={`block w-6 h-0.5 bg-white transition-opacity duration-300
-              ${isOpen ? 'opacity-0' : ''}`} />
-            <span className={`block w-6 h-0.5 bg-white transition-all duration-300 transform origin-center
-              ${isOpen ? '-rotate-45 -translate-y-2' : ''}`} />
-          </button>
-
-          {/* Right Section with Reservar Button */}
-          <div className="hidden lg:flex items-center w-[200px] justify-end">
+          {/* Book Now Button and Mobile Menu Toggle */}
+          <div className="flex items-center">
+            {/* Book Now Button */}
             <a
               href={siteConfig.buttonLinks.bookNow}
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-[#C4A24D] text-white font-semibold text-sm uppercase tracking-wider px-6 py-2.5
-                rounded-full hover:-translate-y-0.5 hover:shadow-lg transition-all duration-300"
+              className="hidden md:flex items-center justify-center h-8 px-4 text-sm font-medium text-primary bg-white rounded-full 
+                transition-all duration-300 hover:-translate-y-0.5 hover:shadow-md"
             >
               {t('navigation.bookNow')}
             </a>
+
+            {/* Mobile Menu Toggle */}
+            <button
+              onClick={toggleMenu}
+              className="ml-4 lg:hidden flex flex-col items-center justify-center w-10 h-10 rounded-full"
+            >
+              <span className={`w-6 h-0.5 bg-white mb-1.5 transition-transform duration-300 ${isOpen ? 'transform rotate-45 translate-y-2' : ''}`}></span>
+              <span className={`w-6 h-0.5 bg-white transition-opacity duration-300 ${isOpen ? 'opacity-0' : ''}`}></span>
+              <span className={`w-6 h-0.5 bg-white mt-1.5 transition-transform duration-300 ${isOpen ? 'transform -rotate-45 -translate-y-2' : ''}`}></span>
+            </button>
           </div>
         </div>
       </div>

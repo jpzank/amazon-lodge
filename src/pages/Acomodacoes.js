@@ -87,7 +87,7 @@ function Acomodacoes() {
         { icon: <MdNaturePeople />, name: t('accommodations.rooms.familyBungalow.features.view') },
         { icon: <FaHeart />, name: t('accommodations.rooms.familyBungalow.features.ideal') }
       ],
-      image: 'https://res.cloudinary.com/dxlhv2mji/image/upload/q_100,f_auto,c_limit,w_2000/v1739834451/Jardim_da_Amazônia-1085_rba1ha.jpg',
+      image: 'https://res.cloudinary.com/dxlhv2mji/image/upload/q_100,f_auto,c_limit,w_2000/v1739921362/Jardim_da_Amazônia-756_qpla99.jpg',
       gallery: [
         {
           src: 'https://res.cloudinary.com/dxlhv2mji/image/upload/q_100,f_auto,c_limit,w_2000/v1739921284/Jardim_da_Amazônia-675_ppk2tk.jpg'
@@ -120,7 +120,7 @@ function Acomodacoes() {
         { icon: <MdNaturePeople />, name: t('accommodations.rooms.gardenBungalow.features.view') },
         { icon: <FaHeart />, name: t('accommodations.rooms.gardenBungalow.features.ideal') }
       ],
-      image: 'https://res.cloudinary.com/dxlhv2mji/image/upload/q_100,f_auto,c_limit,w_2000/v1739833672/Jardim_da_Amazônia-131_trfay9.jpg',
+      image: 'https://res.cloudinary.com/dxlhv2mji/image/upload/q_100,f_auto,c_limit,w_2000/v1739919619/Jardim_da_Amazônia-1_nmhh66.jpg',
       gallery: [
         {
           src: 'https://res.cloudinary.com/dxlhv2mji/image/upload/q_100,f_auto,c_limit,w_2000/v1739919654/Jardim_da_Amazônia-16_soj6ut.jpg'

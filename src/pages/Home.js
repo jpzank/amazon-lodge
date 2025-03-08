@@ -19,18 +19,20 @@ const Home = () => {
   const heroImages = useMemo(() => ({
     desktop: [
       'Jardim_da_Amazônia-1_nmhh66',
-      'Jardim_da_Amazônia-3234_h1mjwq',
-      'Jardim_da_Amazônia-3471_yxyety',
-      'Jardim_da_Amazônia-3806_tg99vp',
-      'Jardim_da_Amazônia-254_krb2na',
+      'Jardim_da_Amazônia-3014_dotnjn',
+      'Jardim_da_Amazônia-2790_wgu7st',
       'fogo-no-rio_u7cpws.png',
+      'Jardim_da_Amazônia-3434_jsn8sr',
+      'Jardim_da_Amazônia-3806_tg99vp',
     ],
     mobile: [
       'Jardim_da_Amazônia-3238_fb5k3w',
+      'Jardim_da_Amazônia-3868_wajqd7',
       'Jardim_da_Amazônia-3427_jshmzs',
       'Jardim_da_Amazônia-1165_ztchyn',
       'arvore_almazonia_f9qkkf',
-      'Jardim_da_Amazônia-3602_sisbpp'
+      'MANOEL_RUEDI_90_dedxfy',
+      'Jardim_da_Amazônia-3602_sisbpp',
     ]
   }), []);
 
@@ -166,9 +168,9 @@ const Home = () => {
                 innerClassName="rounded-full"
               >
                 <img
-                  src="/Logo Jd Amazonia.png"
+                  src="/Logo_Jardim_Amazonia_white_whole1.png"
                   alt="Jardim Amazônia Logo"
-                  className="relative w-56 md:w-[18rem] lg:w-[19.8rem] drop-shadow-lg p-4"
+                  className="relative w-64 md:w-[22rem] lg:w-[24rem] drop-shadow-lg p-4"
                   loading="eager"
                   fetchpriority="high"
                   data-atropos-offset="5"
@@ -182,15 +184,15 @@ const Home = () => {
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
             <div className="text-center mb-8">
-              <h2 className="text-4xl font-bold mb-4">
-                <span className="block text-lg mb-2 font-normal">{t('home.welcome.greeting')}</span>
-                <span className="block text-5xl">{t('home.welcome.title')}</span>
+              <h2 className="mb-4">
+                <span className="block text-lg mb-3 font-light tracking-wider text-primary">{t('home.welcome.greeting')}</span>
+                <span className="block text-5xl font-normal tracking-wide">{t('home.welcome.title')}</span>
               </h2>
-              <p className="text-xl text-gray-600">{t('home.welcome.subtitle')}</p>
+              <p className="text-xl text-gray-600 font-light max-w-3xl mx-auto italic">{t('home.welcome.subtitle')}</p>
             </div>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center max-w-6xl mx-auto">
               <div className="space-y-8">
-                <p className="text-lg text-gray-700 leading-relaxed text-justify">
+                <p className="text-base text-gray-700 leading-relaxed text-justify">
                   {t('home.about.description')}
                 </p>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">

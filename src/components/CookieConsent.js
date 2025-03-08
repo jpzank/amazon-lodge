@@ -1,8 +1,12 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { inject } from '@vercel/analytics';
+import { useLocation } from 'react-router-dom';
 
 const CookieConsent = () => {
+  const { t } = useTranslation();
   const [showConsent, setShowConsent] = React.useState(true);
+  const location = useLocation();
 
   // Simple function to set cookie
   const setCookie = (value) => {
@@ -48,29 +52,38 @@ const CookieConsent = () => {
     }
   }, []);
 
+  // Don't show on homepage
+  if (location.pathname === '/') return null;
+  
+  // Don't show if already accepted
   if (!showConsent) return null;
 
   return (
-    <div className="fixed bottom-4 left-4 z-[49] animate-fadeIn">
-      <div className="relative bg-white/90 backdrop-blur-sm text-gray-700 py-2 px-3 rounded-lg shadow-md border border-gray-100 flex flex-col items-center gap-2 max-w-[140px]">
-        <button 
-          onClick={handleDecline}
-          className="absolute -top-1 -left-1 bg-white/90 text-gray-400 hover:text-gray-600 text-[10px] rounded-full flex items-center justify-center w-5 h-5 shadow-sm border border-gray-100"
-          aria-label="Close"
-        >
-          ✕
-        </button>
-        
-        <span className="text-[10px] leading-tight text-center">
-          Cookies para melhorar experiência
-        </span>
-        
-        <button
-          onClick={handleAccept}
-          className="bg-primary-dark text-white text-[11px] font-medium px-4 py-1 rounded-full hover:bg-primary-dark/90 transition-colors w-full"
-        >
-          OK
-        </button>
+    <div className="fixed bottom-0 left-0 right-0 bg-primary-dark/95 text-white p-4 z-50">
+      <div className="max-w-container mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+        <div className="text-sm md:text-base">
+          {t('cookieConsent.message')}
+          <a 
+            href="/privacy-policy" 
+            className="underline ml-1 hover:text-white/80"
+          >
+            {t('cookieConsent.learnMore')}
+          </a>
+        </div>
+        <div className="flex gap-4">
+          <button
+            onClick={handleDecline}
+            className="px-4 py-2 text-sm border border-white/20 rounded hover:bg-white/10 transition-colors"
+          >
+            {t('cookieConsent.decline')}
+          </button>
+          <button
+            onClick={handleAccept}
+            className="px-4 py-2 text-sm bg-white text-primary-dark rounded hover:bg-white/90 transition-colors"
+          >
+            {t('cookieConsent.accept')}
+          </button>
+        </div>
       </div>
     </div>
   );

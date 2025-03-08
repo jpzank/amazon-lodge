@@ -83,9 +83,12 @@ function InteractiveMenu() {
       <div className="fixed top-4 right-4 z-50">
         <button
           onClick={toggleLanguage}
-          className="px-4 py-2 bg-white rounded-full shadow-md text-sm font-semibold hover:bg-gray-50 transition-colors"
+          className="px-4 py-2 bg-white/90 border-2 border-primary/20 rounded-full shadow-md text-sm font-semibold 
+            text-primary hover:bg-white hover:scale-105 hover:shadow-lg transition-all duration-300 flex items-center"
+          aria-label={i18n.language === 'pt' ? 'Mudar para inglês' : 'Change to Portuguese'}
         >
-          {i18n.language.toUpperCase()}
+          <span className="material-icons text-primary/70 text-sm mr-1">language</span>
+          {i18n.language === 'pt' ? 'PT' : 'EN'}
         </button>
       </div>
 
