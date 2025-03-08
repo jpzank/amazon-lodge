@@ -79,6 +79,17 @@ function Navbar() {
                 
                 {/* Menu Items */}
                 <div className="flex-1 overflow-y-auto py-6 lg:py-0 lg:overflow-visible">
+                  {/* Mobile Close Button */}
+                  <div className="lg:hidden flex justify-end px-6 pb-4">
+                    <button 
+                      onClick={toggleMenu}
+                      className="text-white text-3xl h-12 w-12 flex items-center justify-center rounded-full hover:bg-white/10"
+                      aria-label="Close menu"
+                    >
+                      ×
+                    </button>
+                  </div>
+                  
                   <ul className="flex flex-col lg:flex-row lg:items-center lg:justify-center w-full">
                     {/* Main Menu Items */}
                     <div className="flex flex-col lg:flex-row lg:gap-10 lg:items-center">
@@ -92,7 +103,7 @@ function Navbar() {
                           aria-expanded={activeDropdown === 0}
                         >
                           <span>{t('navigation.accommodation')}</span>
-                          <span className="text-2xl lg:hidden">{activeDropdown === 0 ? '−' : '+'}</span>
+                          <span className="text-2xl lg:hidden w-10 h-10 flex items-center justify-center">{activeDropdown === 0 ? '−' : '+'}</span>
                         </button>
                         <div className={`${activeDropdown === 0 ? 'block mt-2' : 'hidden'} lg:hidden lg:group-hover:block
                           lg:absolute lg:top-full lg:left-1/2 lg:-translate-x-1/2 lg:mt-0 lg:w-[220px]
@@ -116,7 +127,7 @@ function Navbar() {
                           aria-expanded={activeDropdown === 1}
                         >
                           <span>{t('navigation.experiences')}</span>
-                          <span className="text-2xl lg:hidden">{activeDropdown === 1 ? '−' : '+'}</span>
+                          <span className="text-2xl lg:hidden w-10 h-10 flex items-center justify-center">{activeDropdown === 1 ? '−' : '+'}</span>
                         </button>
                         <div className={`${activeDropdown === 1 ? 'block mt-2' : 'hidden'} lg:hidden lg:group-hover:block
                           lg:absolute lg:top-full lg:left-1/2 lg:-translate-x-1/2 lg:mt-0 lg:w-[220px]
@@ -141,7 +152,7 @@ function Navbar() {
                           aria-expanded={activeDropdown === 2}
                         >
                           <span>{t('navigation.conservation')}</span>
-                          <span className="text-2xl lg:hidden">{activeDropdown === 2 ? '−' : '+'}</span>
+                          <span className="text-2xl lg:hidden w-10 h-10 flex items-center justify-center">{activeDropdown === 2 ? '−' : '+'}</span>
                         </button>
                         <div className={`${activeDropdown === 2 ? 'block mt-2' : 'hidden'} lg:hidden lg:group-hover:block
                           lg:absolute lg:top-full lg:left-1/2 lg:-translate-x-1/2 lg:mt-0 lg:w-[220px]
@@ -165,7 +176,7 @@ function Navbar() {
                           aria-expanded={activeDropdown === 3}
                         >
                           <span>{t('navigation.prepareYourTrip')}</span>
-                          <span className="text-2xl lg:hidden">{activeDropdown === 3 ? '−' : '+'}</span>
+                          <span className="text-2xl lg:hidden w-10 h-10 flex items-center justify-center">{activeDropdown === 3 ? '−' : '+'}</span>
                         </button>
                         <div className={`${activeDropdown === 3 ? 'block mt-2' : 'hidden'} lg:hidden lg:group-hover:block
                           lg:absolute lg:top-full lg:left-1/2 lg:-translate-x-1/2 lg:mt-0 lg:w-[220px]
@@ -183,17 +194,17 @@ function Navbar() {
                       {/* Vertical Divider */}
                       <div className="hidden lg:block h-6 w-px bg-white/20 mx-4"></div>
                       
-                      {/* Language Toggle - Desktop */}
+                      {/* Language Toggle - Desktop only */}
                       <button 
                         onClick={toggleLanguage}
                         className="lg:mx-3 px-3 lg:px-3 py-1 lg:py-1 text-white text-lg lg:text-sm font-medium 
                           uppercase tracking-wider font-primary hover:text-white/80 transition-all duration-300 
                           flex items-center justify-center rounded-full border-2 border-white/40 bg-white/15 
                           hover:bg-white/25 hover:border-white/50 hover:scale-105 
-                          min-w-[42px] h-[42px] shadow-sm relative overflow-hidden"
+                          min-w-[42px] h-[42px] shadow-sm relative overflow-hidden hidden lg:flex"
                         aria-label={i18n.language === 'pt' ? 'Mudar para inglês' : 'Change to Portuguese'}
                       >
-                        <span className="relative z-10">{i18n.language === 'pt' ? 'pt' : 'en'}</span>
+                        <span className="relative z-10">{i18n.language === 'pt' ? 'PT' : 'EN'}</span>
                         <span className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/10 to-white/0 opacity-0 hover:opacity-100 transition-opacity duration-500"></span>
                       </button>
                     </div>
@@ -202,23 +213,26 @@ function Navbar() {
 
                 {/* Bottom Actions - Mobile Only */}
                 <div className="lg:hidden border-t border-white/10 p-6 space-y-4">
-                  {/* Language Toggle - Mobile */}
-                  <button
-                    onClick={toggleLanguage}
-                    className="flex items-center justify-center px-4 py-2 text-white text-base font-medium 
-                      border-2 border-white/40 bg-white/15 rounded-full w-[80px] mx-auto
-                      hover:bg-white/25 hover:border-white/50 hover:scale-105 transition-all duration-300 shadow-sm"
-                    aria-label={i18n.language === 'pt' ? 'Mudar para inglês' : 'Change to Portuguese'}
-                  >
-                    {i18n.language === 'pt' ? 'pt' : 'en'}
-                  </button>
-
+                  {/* Language Toggle - Mobile Only */}
+                  <div className="flex justify-between items-center mb-4">
+                    <button
+                      onClick={toggleLanguage}
+                      className="flex items-center justify-center px-4 py-2 text-white text-base font-medium 
+                        border-2 border-white/40 bg-white/15 rounded-full w-[60px]
+                        hover:bg-white/25 hover:border-white/50 transition-all duration-300 shadow-sm"
+                      aria-label={i18n.language === 'pt' ? 'Mudar para inglês' : 'Change to Portuguese'}
+                    >
+                      {i18n.language === 'pt' ? 'PT' : 'EN'}
+                    </button>
+                    <span className="text-white/60 text-sm">Idioma / Language</span>
+                  </div>
+                
                   <a
                     href={siteConfig.buttonLinks.bookNow}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="block w-full bg-[#C4A24D] text-white text-base font-semibold uppercase tracking-wider px-4 py-3
-                      rounded-full text-center hover:bg-[#D4B25D] transition-colors duration-300"
+                      rounded-full text-center hover:bg-[#d2af5b] transition-colors duration-300"
                   >
                     {t('navigation.bookNow')}
                   </a>
@@ -240,14 +254,14 @@ function Navbar() {
               {t('navigation.bookNow')}
             </a>
 
-            {/* Mobile Menu Toggle */}
+            {/* Mobile Menu Toggle - Only show when closed */}
             <button
               onClick={toggleMenu}
-              className="ml-4 lg:hidden flex flex-col items-center justify-center w-10 h-10 rounded-full"
+              className={`ml-4 lg:hidden flex flex-col items-center justify-center w-10 h-10 rounded-full ${isOpen ? 'hidden' : 'flex'}`}
             >
-              <span className={`w-6 h-0.5 bg-white mb-1.5 transition-transform duration-300 ${isOpen ? 'transform rotate-45 translate-y-2' : ''}`}></span>
-              <span className={`w-6 h-0.5 bg-white transition-opacity duration-300 ${isOpen ? 'opacity-0' : ''}`}></span>
-              <span className={`w-6 h-0.5 bg-white mt-1.5 transition-transform duration-300 ${isOpen ? 'transform -rotate-45 -translate-y-2' : ''}`}></span>
+              <span className="w-6 h-0.5 bg-white mb-1.5"></span>
+              <span className="w-6 h-0.5 bg-white"></span>
+              <span className="w-6 h-0.5 bg-white mt-1.5"></span>
             </button>
           </div>
         </div>
